@@ -1,0 +1,302 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "name_tag_screen",
+  "$schema": "https://kalmemarq.github.io/Bugrock-JSON-UI-Schemas/ui.schema.json",
+  "name_tag_form@common_dialogs.main_panel_no_buttons": {
+    "$title_panel": "common_dialogs.standard_title_label",
+    "$title_size": [
+      "100% - 14px",
+      10
+    ],
+    "size": [
+      232,
+      152
+    ],
+    "$text_name": "Set Name Tag",
+    "$title_text_binding_type": "none",
+    "$child_control": "name_tag_screen.name_tag_form_scrolling_content",
+    "layer": 2,
+    "offset": [
+      10,
+      980
+    ],
+    "controls": [
+      { //defualt stuff
+        "common_panel@common.common_panel": {
+          "$dialog_background": "$custom_background"
+        }
+      },
+      { //defualt stuff
+        "title_label@common_dialogs.title_label": {}
+      },
+      { //defualt stuff
+        "panel_indent": {
+          "type": "panel",
+          "size": "$panel_indent_size",
+          "offset": [
+            0,
+            23
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "inside_header_panel@$child_control": {}
+            }
+          ]
+        }
+      },
+      {
+        "tag_title": {
+          "type": "label",
+          "text": "controller.buttonTip.renameItem",
+          "layer": 2,
+          "offset": [
+            -10,
+            -1040
+          ]
+        }
+      },
+      {
+        "Black": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "size": [
+            "1000%",
+            "1000%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            -1000
+          ],
+          "layer": 0,
+          "alpha": 0,
+          "anims": [
+            "@crafting.blackanm"
+          ]
+        }
+      },
+      { // custom image (idk why i cant use "modifications"
+        "name_tag": {
+          "type": "image",
+          "offset": [
+            -24,
+            -988.5
+          ],
+          "size": [
+            288,
+            96
+          ],
+          "layer": 4,
+          "texture": "textures/ui/name_name_tag"
+        }
+      },
+      {
+        "close_button@common.close_button": {
+          "$pressed_button_name": "button.cancel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [
+            32,
+            32
+          ],
+          "hover_control": "hover",
+          "default_control": "default",
+          "pressed_control": "pressed",
+          "locked_control": "locked",
+          "$button_state_panel": "common_buttons.new_ui_button_panel",
+          "$hover_button_texture": "textures/ui/button_borderless_lighthover",
+          "$pressed_button_texture": "textures/ui/button_borderless_lightpressed",
+          "$locked_button_texture": "textures/ui/disabledButtonNoBorder",
+          "$default_button_texture": "textures/ui/button_borderless_light",
+          "$close_button_offset": [
+            -32,
+            -938
+          ],
+          "bindings": [
+            {
+              "binding_name": "#submit_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "default@$button_state_panel": {
+                "$new_ui_button_texture": "$default_button_texture",
+                "$text_color": "$default_text_color",
+                "$secondary_text_color": "$light_button_secondary_default_text_color",
+                "$content_alpha": "$default_content_alpha",
+                "$border_color": "$light_border_default_color",
+                "$border_layer": 2,
+                "$default_state": true,
+                "$button_alpha": "$default_button_alpha",
+                "layer": 1
+              }
+            },
+            {
+              "hover@$button_state_panel": {
+                "$new_ui_button_texture": "$hover_button_texture",
+                "$text_color": "$hover_text_color",
+                "$secondary_text_color": "$light_button_secondary_hover_text_color",
+                "$content_alpha": 1,
+                "$border_color": "$light_border_hover_color",
+                "$border_layer": 4,
+                "$hover_state": true,
+                "$button_alpha": "$default_hover_alpha",
+                "layer": 4 // This is several layers higher than default in case two buttons share a border and that shared border needs to turn with with either button hover/press state
+              }
+            },
+            {
+              "pressed@$button_state_panel": {
+                "$new_ui_button_texture": "$pressed_button_texture",
+                "$text_color": "$pressed_text_color",
+                "$secondary_text_color": "$light_button_secondary_pressed_text_color",
+                "$button_offset|default": "$button_pressed_offset",
+                "$content_alpha": "$pressed_alpha",
+                "$border_color": "$light_border_pressed_color",
+                "$border_layer": 5,
+                "$pressed_state": true,
+                "$button_alpha": "$default_pressed_alpha",
+                "layer": 5
+              }
+            },
+            {
+              "locked@$button_state_panel": {
+                "$new_ui_button_texture": "$locked_button_texture",
+                "$text_color": "$locked_text_color",
+                "$secondary_text_color": "$light_button_secondary_locked_text_color",
+                "$content_alpha": "$locked_alpha",
+                "$border_color": "$light_border_locked_color",
+                "$button_image": "common_buttons.locked_button_image",
+                "$border_layer": 1,
+                "$locked_state": true,
+                "layer": 1
+              }
+            },
+            {
+              "icon_image": {
+                "type": "image",
+                "size": [
+                  25,
+                  25
+                ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": 4,
+                "texture": "textures/ui/cancel"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "name_tag_form_scrolling_content": {
+    "type": "panel",
+    "size": [
+      "100% - 4px",
+      "100%c"
+    ],
+    "offset": [
+      2,
+      -984
+    ],
+    "orientation": "vertical",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "generated_form@server_form.generated_contents": {}
+      },
+      {
+        "submit_button@common_buttons.light_text_button": {
+          "$pressed_button_name": "button.submit_custom_form",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [
+            32,
+            32
+          ],
+          "offset": [
+            12,
+            38.5
+          ],
+          "$button_text": " ",
+          "controls": [
+            {
+              "default@$button_state_panel": {
+                "$new_ui_button_texture": "$default_button_texture",
+                "$text_color": "$default_text_color",
+                "$secondary_text_color": "$light_button_secondary_default_text_color",
+                "$content_alpha": "$default_content_alpha",
+                "$border_color": "$light_border_default_color",
+                "$border_layer": 2,
+                "$default_state": true,
+                "$button_alpha": "$default_button_alpha",
+                "layer": 1
+              }
+            },
+            {
+              "hover@$button_state_panel": {
+                "$new_ui_button_texture": "$hover_button_texture",
+                "$text_color": "$hover_text_color",
+                "$secondary_text_color": "$light_button_secondary_hover_text_color",
+                "$content_alpha": 1,
+                "$border_color": "$light_border_hover_color",
+                "$border_layer": 4,
+                "$hover_state": true,
+                "$button_alpha": "$default_hover_alpha",
+                "layer": 4 // This is several layers higher than default in case two buttons share a border and that shared border needs to turn with with either button hover/press state
+              }
+            },
+            {
+              "pressed@$button_state_panel": {
+                "$new_ui_button_texture": "$pressed_button_texture",
+                "$text_color": "$pressed_text_color",
+                "$secondary_text_color": "$light_button_secondary_pressed_text_color",
+                "$button_offset|default": "$button_pressed_offset",
+                "$content_alpha": "$pressed_alpha",
+                "$border_color": "$light_border_pressed_color",
+                "$border_layer": 5,
+                "$pressed_state": true,
+                "$button_alpha": "$default_pressed_alpha",
+                "layer": 5
+              }
+            },
+            {
+              "locked@$button_state_panel": {
+                "$new_ui_button_texture": "$locked_button_texture",
+                "$text_color": "$locked_text_color",
+                "$secondary_text_color": "$light_button_secondary_locked_text_color",
+                "$content_alpha": "$locked_alpha",
+                "$border_color": "$light_border_locked_color",
+                "$button_image": "common_buttons.locked_button_image",
+                "$border_layer": 1,
+                "$locked_state": true,
+                "layer": 1
+              }
+            },
+            {
+              "icon_image": {
+                "type": "image",
+                "size": [
+                  25,
+                  25
+                ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": 4,
+                "texture": "textures/ui/confirm"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

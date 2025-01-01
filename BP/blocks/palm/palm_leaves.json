@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:palm_leaves",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.leaves"
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "palm_leaves",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "vc:j_village_high_roof_houses"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/high_connection",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/leatherworker",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/double_house",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/cartorgapher",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      }
+    ],
+    "fallback": "vc:j_village_path_high_end"
+  }
+}

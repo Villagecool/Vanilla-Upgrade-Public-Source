@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:elax_stairs"
+    },
+    "tags": [ "crafting_table" ],
+    "group": "wooden_stairs",
+    "pattern": [
+      "#  ",
+      "## ",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:elax_planks"
+      }
+    },
+    "unlock": [
+        {
+            "item": "vc:elax_planks",
+            "data": 4
+        }
+    ],
+    "result": {
+      "item": "vc:elax_stairs",
+      "count": 4
+    }
+  }
+}

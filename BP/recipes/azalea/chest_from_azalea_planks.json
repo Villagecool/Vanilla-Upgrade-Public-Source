@@ -1,0 +1,26 @@
+{
+    "format_version": "1.16",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "minecraft:chest_from_azalea_planks"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "AAA",
+            "A A",
+            "AAA"
+        ],
+        "key": {
+            "A": {
+                "item": "vc:azalea_planks"
+            }
+        },
+        "result": {
+            "item": "chest",
+            "count": 1
+        },
+        "priority": 2
+    }
+}

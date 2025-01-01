@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:soul_sandstone_doubleslab",
+			"menu_category": {
+				"category": "commands",
+				"group": "itemGroup.name.commands"
+			}
+		},
+		"components": {
+			"tag:stone": {},
+			"tag:sandstone": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 10
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "soul_sandstone_bottom"
+				}
+			}
+		}
+	}
+}

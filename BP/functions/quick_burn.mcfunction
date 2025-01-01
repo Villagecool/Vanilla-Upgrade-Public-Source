@@ -1,0 +1,1 @@
+execute unless entity @e[type=vc:cause_fire,r=1] run summon vc:cause_fire ~~~

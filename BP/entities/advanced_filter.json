@@ -1,0 +1,94 @@
+{
+	"format_version": "1.18.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "vc:advanced_hopper",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"vc:die": {
+				"minecraft:transformation": {
+					"drop_inventory": true,
+					"into": "red:tets",
+					"drop_equipment": false,
+					"delay": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:inventory": {
+				"container_type": "inventory",
+				"inventory_size": 21,
+				"private": false,
+				"can_be_siphoned_from": false
+			},
+			"minecraft:nameable": {},
+			//"minecraft:can_have_equipment": {},
+			//"minecraft:equippable": {},
+			//"minecraft:equip_item": {},
+			"minecraft:behavior.pickup_items": {
+				"priority": 4,
+				"max_dist": 3,
+				"goal_radius": 2,
+				"speed_multiplier": 0.5,
+				"can_pickup_to_hand_or_equipment": true
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"event": "vc:die",
+						"filters": {
+							"test": "distance_to_nearest_player",
+							"operator": ">=",
+							"value": 2
+						}
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "any",
+					"deals_damage": false
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0,
+				"width": 0
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 0,
+						"height": 0,
+						"pivot": [
+							0,
+							0,
+							0
+						]
+					}
+				]
+			}
+		},
+		"events": {
+			"vc:die": {
+				"queue_command": {
+					"command": [
+						"execute as @s run scriptevent vc:hopper.checkDrop"
+					],
+					"target": "self"
+				},
+				"add": {
+					"component_groups": [
+						"vc:die"
+					]
+				}
+			}
+		}
+	}
+}

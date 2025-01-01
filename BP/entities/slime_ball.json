@@ -1,0 +1,84 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vc:slime_ball",
+      "runtime_identifier": "minecraft:arrow",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "land": {
+        "minecraft:spawn_entity": {
+          "entities": {
+            "min_wait_time": 0,
+            "max_wait_time": 0,
+            "spawn_item": "minecraft:slime_ball",
+            "single_use": true,
+            "num_to_spawn": 1,
+            "should_leash": false
+          }
+        },
+		"minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:type_family": {
+        "family": [ "slimeball" ]
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": 1,
+            "knockback": true
+          },
+          "definition_event": {
+            "affect_projectile": true,
+            "event_trigger": {
+              "event": "particle",
+              "target": "self"
+            }
+          }
+        },
+        "anchor": 1,
+        "power": 1.0,
+        "gravity": 0.03,
+        "angle_offset": 0.0,
+        "offset": [ 0, -0.1, 0 ]
+      },
+	    "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 100.0,
+          "max_dropped_ticks": 7,
+          "use_motion_prediction_hints": true
+        }
+      }
+    },
+    "events": {
+      "particle": {
+        "queue_command": {
+          "command": [
+            "particle vc:slimesplat ~~~",
+            "playsound mob.slime.big @a ~~~"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "land"
+          ]
+        }
+      }
+    }
+  }
+}

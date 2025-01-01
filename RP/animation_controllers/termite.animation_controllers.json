@@ -1,0 +1,57 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.termite.climb": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "blend_transition": 0.2,
+                    "blend_via_shortest_path": true,
+                    "transitions": [
+                        {
+                            "celebrating": "q.is_wall_climbing"
+                        }
+                    ]
+                },
+                "celebrating": {
+                    "animations": [
+                        "climb"
+                    ],
+                    "blend_transition": 0.2,
+                    "blend_via_shortest_path": true,
+                    "transitions": [
+                        {
+                            "default": "!q.is_wall_climbing"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.termite.eat": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "blend_transition": 0.2,
+                    "blend_via_shortest_path": true,
+                    "transitions": [
+                        {
+                            "celebrating": "query.is_grazing || query.is_saddled"
+                        }
+                    ]
+                },
+                "celebrating": {
+                    "animations": [
+                        "eat"
+                    ],
+                    "blend_transition": 0.2,
+                    "blend_via_shortest_path": true,
+                    "transitions": [
+                        {
+                            "default": "!query.is_grazing && !query.is_saddled"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

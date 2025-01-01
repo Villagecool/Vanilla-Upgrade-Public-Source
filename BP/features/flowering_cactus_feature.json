@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:growing_plant_feature": {
+		"description": {
+			"identifier": "vc:flowering_cactus_feature"
+		},
+		"growth_direction": "UP",
+		"allow_water": false,
+		"body_blocks": [
+			[
+				{
+					"name": "minecraft:cactus"
+				},
+				100
+			]
+		],
+		"head_blocks": [
+			[
+				{
+					"name": "vc:flowering_cactus"
+				},
+				100
+			]
+		],
+		"height_distribution": [
+			[
+				{
+					"range_min": 1,
+					"range_max": 4
+				},
+				2
+			]
+		]
+	}
+}

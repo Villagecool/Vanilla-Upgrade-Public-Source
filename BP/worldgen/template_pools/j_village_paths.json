@@ -1,0 +1,83 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "vc:j_village_paths"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/paths/fork",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4,
+        "projection": "rigid"
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/paths/large_split",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 3,
+        "projection": "rigid"
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/paths/long_curve",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2,
+        "projection": "rigid"
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/paths/long_path",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2,
+        "projection": "rigid"
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/paths/small_curve",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 3,
+        "projection": "rigid"
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/paths/small_path",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4,
+        "projection": "rigid"
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/paths/small_split",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2,
+        "projection": "rigid"
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/double_house",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 3,
+        "projection": "rigid"
+      }
+    ],
+    "fallback": "vc:j_village_floor_houses"
+  }
+}

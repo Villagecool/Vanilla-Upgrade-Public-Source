@@ -1,0 +1,96 @@
+{
+  "format_version": "1.17.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vc:fly",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "fly",
+          "magmacube",
+          "inanimate",
+          "mob"
+        ]
+      },
+      "minecraft:variant": {
+        "value": 1
+      },
+      "minecraft:collision_box": {
+        "width": 0.1,
+        "height": 0.1
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.float_wander": {
+        "xz_dist": 2,
+        "y_dist": 2,
+        "y_offset": -2.0,
+        "random_reselect": true,
+        "float_duration": [
+          0.1,
+          0.35
+        ]
+      },
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:navigation.float": {
+        "can_path_over_water": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_fly": {},
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "fall",
+          "deals_damage": false
+        }
+      },
+      "minecraft:health": {
+        "value": 6,
+        "max": 6
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/empty.json"
+      },
+      "minecraft:nameable": {},
+      "minecraft:persistent": {},
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      }
+    },
+    "events": {
+      "p": {
+        "run_command": {
+          "command": [
+            "particle vc:firefly ~~~"
+          ]
+        }
+      }
+    }
+  }
+}

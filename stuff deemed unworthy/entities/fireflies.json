@@ -1,0 +1,88 @@
+{
+  "format_version": "1.17.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vc:fireflies",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "fireflies", "inanimate", "mob" ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 0.5
+      },
+      "minecraft:despawn":{
+        "remove_child_entities": true,
+        "filters": { 
+          "all_of": [
+            {
+              "test": "hourly_clock_time",
+              "operator": ">",
+              "value": 24000
+            },
+            {
+              "test": "hourly_clock_time",
+              "operator": "<",
+              "value": 12000
+            }
+          ] 
+        }
+      },
+      "minecraft:timer": {
+        "time": 0,
+        "time_down_event": {
+          "event": "p",
+          "target": "self"
+        }
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "any",
+          "deals_damage": false
+        }
+      },
+      "minecraft:health": {
+        "value": 6,
+        "max": 6
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/empty.json"
+      },
+      "minecraft:nameable": {
+      },
+      "minecraft:persistent": {
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      }
+    },
+
+    "events": {
+      "p": {
+        "run_command": {
+          "command": [
+            "particle vc:firefly ~~~"
+          ]
+        }
+      }
+    }
+  }
+}

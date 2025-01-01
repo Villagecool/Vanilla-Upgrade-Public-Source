@@ -1,0 +1,46 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "vc:glorium_stuff_floor"
+		},
+		"features": [
+			[
+				"vc:glorium_crystals1",
+				5
+			],
+			[
+				"vc:glorium_crystals2",
+				5
+			],
+			[
+				"vc:glorium_crystals3",
+				5
+			],
+			[
+				"vc:glorium_mushroom1",
+				1
+			],
+			[
+				"vc:glorium_mushroom2",
+				1
+			],
+			[
+				"vc:glorium_mushroom3",
+				1
+			],
+			[
+				"vc:glorium_mushroom_small",
+				20
+			],
+			[
+				"vc:glorium_roots",
+				20
+			],
+			[
+				"vc:glorium_vines_up",
+				20
+			]
+		]
+	}
+}

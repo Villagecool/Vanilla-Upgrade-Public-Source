@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"category": "commands",
+				"group": "itemGroup.name.commands"
+			},
+			"identifier": "biome_indicate:lumerison"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "lumerison_moss"
+				}
+			},
+			"minecraft:geometry": "geometry.none",
+			"minecraft:selection_box": false,
+			"minecraft:collision_box": false
+		}
+	}
+}

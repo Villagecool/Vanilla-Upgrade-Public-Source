@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+	  "controller.render.wolf": {
+		"arrays": {
+		  "textures": {
+			"Array.skins": [
+			  "Texture.white",
+			  "Texture.dark",
+			  "Texture.dalmation",
+			  "Texture.golden",
+			  "Texture.grey"
+			]
+		  }
+		},
+		"geometry": "Geometry.default",
+		"materials": [ { "*": "Material.overlay" } ],
+		"textures": [
+		  "Array.skins[query.variant]"
+		]
+	  }
+	}
+  }
+  

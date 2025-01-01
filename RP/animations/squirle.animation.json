@@ -1,0 +1,43 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.squirle.pos": {
+			"loop": true,
+			"bones": {
+				"tail": {
+					"rotation": [27.5, 0, 0]
+				},
+				"leg0": {
+					"rotation": [-17.5, 0, 0]
+				},
+				"leg1": {
+					"rotation": [17.5, 0, 0]
+				},
+				"leg2": {
+					"rotation": [17.5, 0, 0]
+				},
+				"leg3": {
+					"rotation": [-17.5, 0, 0]
+				}
+			}
+		},
+		"animation.squirle.sit": {
+			"loop": true,
+			"bones": {
+				"tail": {
+					"rotation": [0, 0, 35]
+				},
+				"head": {
+					"rotation": [0, 0, 72.5]
+				},
+				"leg0": {
+					"rotation": [0, 0, 25]
+				},
+				"waist": {
+					"rotation": [-80, 0, 0],
+					"position": [0, 3, -3]
+				}
+			}
+		}
+	}
+}

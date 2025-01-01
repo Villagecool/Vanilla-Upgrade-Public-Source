@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "minecraft:wither_bone_meal_from_bone"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "group": "bonemeal",
+    "ingredients": [
+      {
+        "item": "vc:wither_bone"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "vc:wither_bone"
+      }
+    ],
+    "result": {
+      "item": "vc:wither_bone_meal",
+      "count": 3
+    }
+  }
+}

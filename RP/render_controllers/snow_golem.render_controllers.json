@@ -1,0 +1,17 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.snowgolem.face": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [ "Texture.face1", "Texture.face2", "Texture.face3", "Texture.face4", "Texture.face5", "Texture.face6" ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        { "*": "Material.face" }
+      ],
+      "textures": [ "Array.skins[query.variant]" ]
+    }
+  }
+}

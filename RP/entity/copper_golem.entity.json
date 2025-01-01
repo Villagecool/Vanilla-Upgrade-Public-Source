@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:copper_golem",
+      "materials": {
+        "default": "villager_v2"
+      },
+      "textures": {
+        "default": "textures/entity/copper_golem/copper_golem",
+        "default2": "textures/entity/copper_golem/exposed_copper_golem",
+        "default3": "textures/entity/copper_golem/weathered_copper_golem",
+        "default4": "textures/entity/copper_golem/okidized_copper_golem"
+      },
+      "geometry": {
+        "default": "geometry.copper_golem"
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "spin_head": "animation.copper_golem.spin_head",
+        "press_button": "animation.copper_golem.press_button",
+        "move": "animation.quadruped.walk"
+      },
+      "scripts": {
+        "animate": [
+          "look_at_target",
+          {
+            "move": "query.modified_move_speed"
+          },
+          {
+            "press_button": "query.can_fly"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.copper_golem"
+      ],
+      "spawn_egg": {
+        "base_color": "#E48872",
+        "overlay_color": "#882E2E"
+      }
+    }
+  }
+}

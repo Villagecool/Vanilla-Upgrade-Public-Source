@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "minecraft:cracked_end_stone_bricks_furnace"
+        },
+        "input": "minecraft:end_bricks",
+        "output": "vc:end_bricks_cracked",
+        "tags": [
+            "furnace"
+        ]
+    }
+}

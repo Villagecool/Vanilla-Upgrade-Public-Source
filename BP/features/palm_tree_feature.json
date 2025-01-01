@@ -1,0 +1,26 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "vc:palm_tree_feature"
+		},
+		"features": [
+			[
+				"vc:palm_tree1",
+				10
+			],
+			[
+				"vc:palm_tree2",
+				10
+			],
+			[
+				"vc:palm_tree3",
+				10
+			],
+			[
+				"vc:palm_tree_big",
+				1
+			]
+		]
+	}
+}

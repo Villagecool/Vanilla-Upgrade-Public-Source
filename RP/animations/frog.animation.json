@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.frog.move": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this + 15.0", 0]
+				},
+				"head": {
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				},
+				"foot1": {
+					"rotation": ["variable.jump_rotation * 50.0 - this", 0, 0]
+				},
+				"foot2": {
+					"rotation": ["variable.jump_rotation * 50.0 - this", 0, 0]
+				}
+			}
+		},
+		"animation.frog.croak": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"mouth": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.12": [1.3, 1.6, 1.3],
+						"0.28": [1, 1, 1]
+					}
+				}
+			}
+		}
+	}
+}

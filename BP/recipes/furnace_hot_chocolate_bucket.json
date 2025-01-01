@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "minecraft:hot_chocolate_bucket"
+    },
+
+    
+    "tags": ["furnace"],
+    "input": "vc:chocolate_milk_bucket",
+    "output": "vc:hot_chocolate_bucket"
+  }
+  
+}

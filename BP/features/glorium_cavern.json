@@ -1,0 +1,15 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "vc:glorium_cavern"
+		},
+		"early_out": "none",
+		"features": [
+			"vc:glorium_cavern_ceiling",
+			"vc:glorium_cavern_floor",
+			"vc:glorium_cavern_deepslate_ceiling",
+			"vc:glorium_cavern_deepslate_floor"
+		]
+	}
+}

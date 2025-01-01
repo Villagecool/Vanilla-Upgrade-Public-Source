@@ -1,0 +1,24 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "minecraft:jungle_village_feature"
+    },
+    "iterations": 50,
+    "coordinate_eval_order": "zyx",
+    "x": {
+      "extent": [ -128, 128 ],
+      "distribution": "gaussian"
+    },
+    "z": {
+      "extent": [ -128, 128 ],
+      "distribution": "gaussian"
+    },
+    "y": {
+      "extent": [ -2, 1 ],
+      "distribution": "gaussian"
+    },
+    "project_input_to_floor": true,
+    "places_feature": "minecraft:village_jungle_houses_feature"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "vc:coconut"
+    },
+    "tags": [ "crafting_table" ],
+    "ingredients": ["vc:coconut_slice","vc:coconut_slice"],
+    "unlock": [
+        {
+            "item": "vc:coconut_slice"
+        }
+    ],
+    "result": {
+      "item": "vc:coconut"
+    }
+  }
+}

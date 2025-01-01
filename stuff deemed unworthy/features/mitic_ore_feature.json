@@ -1,0 +1,19 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "vc:mitic_ore_feature"
+		},
+		"count": 5,
+		"replace_rules": [
+			{
+				"places_block": "vc:mitic_ore",
+				"may_replace": ["minecraft:end_stone"]
+			},
+			{
+				"places_block": "vc:mitic_ore_endslate",
+				"may_replace": ["vc:endslate"]
+			}
+		]
+	}
+}

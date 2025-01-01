@@ -1,0 +1,78 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vc:blind",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "vc:blind": {
+        "minecraft:mob_effect": {
+          "effect_range": 15,
+          "mob_effect": "blindness",
+          "effect_time": 5,
+          "entity_filter": {
+            "any_of": [
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+              }
+            ]
+          }
+        }
+      },
+      "vc:dies": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "none"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 1.975
+      },
+      "minecraft:health": {
+        "value": 6,
+        "max": 6
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/empty.json"
+      },
+      "minecraft:nameable": {},
+      "minecraft:persistent": {},
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "vc:blind"
+          ]
+        }
+      },
+      "vc:invis": {
+        "queue_command": {
+          "command": [
+            "event entity @e[type=vc:illusioner,c=1] vc:invis"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "vc:dies"
+          ]
+        }
+      }
+    }
+  }
+}

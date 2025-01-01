@@ -1,0 +1,26 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.nautilus",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "waist",
+					"pivot": [0, 4.5, 0],
+					"cubes": [
+						{"origin": [-2.5, 1, -2], "size": [5, 8, 8], "pivot": [-0.5, 5, 2], "rotation": [-25, 0, 0], "uv": [0, 0]},
+						{"origin": [-2.5, 2, -5], "size": [5, 4, 6], "inflate": -0.1, "uv": [0, 16]},
+						{"origin": [-2.5, 2, -2], "size": [5, 4, 0], "inflate": -0.15, "uv": [6, 16]}
+					]
+				}
+			]
+		}
+	]
+}

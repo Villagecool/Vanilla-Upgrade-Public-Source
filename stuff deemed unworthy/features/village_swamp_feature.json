@@ -1,0 +1,13 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:aggregate_feature": {
+      "description": {
+        "identifier": "minecraft:village_swamp_feature"
+      },
+      "features": [
+        "minecraft:swamp_village_feature",
+        "vc:swamp_well"
+      ]
+    }
+  }
+  

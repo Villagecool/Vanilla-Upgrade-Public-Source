@@ -1,0 +1,24 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.flower",
+        "category": "nature"
+      },
+      "identifier": "vc:lavender"
+    },
+    "components": {
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": "lavender",
+      "minecraft:display_name": {
+        "value": "tile.vc:lavender.name"
+      },
+      "minecraft:custom_components": ["vc:lavender"],
+      "minecraft:block_placer": {
+        "block": "vc:lavender",
+        "replace_block_item": true
+      }
+    }
+  }
+}

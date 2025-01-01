@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:ministrosity",
+      "materials": { "default": "villager_v2" },
+      "textures": {
+        "default": "textures/entity/ministrosity",
+        "mushroom": "textures/entity/mushroom_ministrosity"
+      },
+      "geometry": {
+        "default": "geometry.ministrosity"
+      },
+      "animations": {
+        "setup": "animation.ministrosity.idle",
+        "walk": "animation.ministrosity.walk",
+        "attack": "animation.ministrosity.attack"
+      },
+      "scripts": {
+        "animate": [
+          { "setup": "!query.is_moving" },
+          { "walk": "query.is_moving" },
+          { "attack": "variable.attack_time > 0.0" }
+        ]
+      },
+      "render_controllers": [ "controller.render.ministrosity" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 2
+      }
+    }
+  }
+}

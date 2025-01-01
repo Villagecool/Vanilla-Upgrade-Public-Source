@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "vc:pumice_feature"
+    },
+    "count": 3,
+    "places_block": "vc:pumice",
+    "may_replace": [
+      "minecraft:basalt"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:cut_gloricalium_block"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "##",
+      "##"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:gloricalium_block"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:gloricalium_block"
+      }
+    ],
+    "result": {
+      "item": "vc:cut_gloricalium_block",
+      "count": 4
+    }
+  }
+}

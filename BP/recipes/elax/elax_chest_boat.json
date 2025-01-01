@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "vc:elax_chest_boat"
+    },
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "minecraft:chest"
+      },
+      {
+        "item": "minecraft:boat",
+        "data": 6
+      }
+    ],
+    "unlock": [
+        {
+            "item": "vc:elax_planks",
+            "data": 4
+        }
+    ],
+    "result": {
+      "item": "minecraft:chest_boat",
+      "data": 6
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:single_block_feature": {
+      "description": {
+        "identifier": "vc:elax_biome_indicator_feature"
+      },
+      "places_block": {
+        "name": "biome_indicate:elax"
+      },
+      "enforce_placement_rules": true,
+      "enforce_survivability_rules": true,
+      "may_replace": [
+        "air"
+      ]
+    }
+  }

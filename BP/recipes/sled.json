@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:sled"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "  #",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "planks"
+      }
+    },
+    "unlock": [
+      {
+        "tag": "minecraft:planks"
+      }
+    ],
+    "result": {
+      "item": "vc:sled",
+      "count": 1
+    }
+  }
+}

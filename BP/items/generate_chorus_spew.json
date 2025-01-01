@@ -1,0 +1,63 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"category": "commands",
+				"group": "itemGroup.name.commands"
+			},
+			"identifier": "no:generate_chorus_spew"
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "air",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": false,
+			"minecraft:on_placed": {
+				"event": "vc:grow"
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "vc:grow"
+				}
+			},
+			"minecraft:queued_ticking": {
+				"looping": true,
+				"interval_range": [
+					1,
+					1
+				],
+				"on_tick": {
+					"event": "vc:grow"
+				}
+			}
+		},
+		"events": {
+			"vc:grow": {
+				"run_command": {
+					"command": [
+						"/execute if block ~~~1 chorus_plant run setblock ~~~ vc:chorus_spew[\"vc:face\"=0,\"vc:can_decay\"=true]",
+						"/execute if block ~~~-1 chorus_plant run setblock ~~~ vc:chorus_spew[\"vc:face\"=1,\"vc:can_decay\"=true]",
+						"/execute if block ~1~~ chorus_plant run setblock ~~~ vc:chorus_spew[\"vc:face\"=2,\"vc:can_decay\"=true]",
+						"/execute if block ~-1~~ chorus_plant run setblock ~~~ vc:chorus_spew[\"vc:face\"=3,\"vc:can_decay\"=true]",
+						"/execute if block ~~~2 chorus_plant unless block ~~1~2 chorus_plant run setblock ~~~1 vc:chorus_spew[\"vc:face\"=0,\"vc:can_decay\"=true]",
+						"/execute if block ~~~-2 chorus_plant unless block ~~1~-2 chorus_plant run setblock ~~~-1 vc:chorus_spew[\"vc:face\"=1,\"vc:can_decay\"=true]",
+						"/execute if block ~2~~ chorus_plant unless block ~2~1~ chorus_plant run setblock ~1~~ vc:chorus_spew[\"vc:face\"=2,\"vc:can_decay\"=true]",
+						"/execute if block ~-2~~ chorus_plant unless block ~-2~1~ chorus_plant run setblock ~-1~~ vc:chorus_spew[\"vc:face\"=3,\"vc:can_decay\"=true]",
+						"/execute if block ~~~3 chorus_plant unless block ~~1~3 chorus_plant run setblock ~~~2 vc:chorus_spew[\"vc:face\"=0,\"vc:can_decay\"=true]",
+						"/execute if block ~~~-3 chorus_plant unless block ~~1~-3 chorus_plant run setblock ~~~-2 vc:chorus_spew[\"vc:face\"=1,\"vc:can_decay\"=true]",
+						"/execute if block ~3~~ chorus_plant unless block ~3~1~ chorus_plant run setblock ~2~~ vc:chorus_spew[\"vc:face\"=2,\"vc:can_decay\"=true]",
+						"/execute if block ~-3~~ chorus_plant unless block ~-3~1~ chorus_plant run setblock ~-2~~ vc:chorus_spew[\"vc:face\"=3,\"vc:can_decay\"=true]",
+						"/execute unless block ~-1~~ chorus_plant unless block ~1~~ chorus_plant unless block ~~~-1 chorus_plant unless block ~~~1 chorus_plant run setblock ~~~ air"
+					]
+				}
+			}
+		}
+	}
+}

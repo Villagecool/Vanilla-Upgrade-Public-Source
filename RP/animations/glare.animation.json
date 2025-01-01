@@ -1,0 +1,13 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.glare.angry": {
+			"loop": true,
+			"bones": {
+				"eyes": {
+					"position": [0, 0, -1]
+				}
+			}
+		}
+	}
+}

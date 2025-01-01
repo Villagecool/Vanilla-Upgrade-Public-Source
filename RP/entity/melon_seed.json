@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:melon_seed",
+      "materials": {
+        "default": "snowball"
+      },
+      "textures": {
+        "default": "textures/items/seeds_melon"
+      },
+      "geometry": {
+        "default": "geometry.melon_seed"
+      },
+      "render_controllers": [ "controller.render.item_sprite" ],
+      "animations": {
+        "flying": "animation.arrow.move"
+      },
+      "scripts": {
+        "animate": [
+          "flying"
+        ]
+      }
+    }
+  }
+} 

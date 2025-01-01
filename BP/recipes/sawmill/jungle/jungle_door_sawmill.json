@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:jungle_door_sawmill"
+    },
+    "tags": [
+      "sawmill"
+    ],
+    "pattern": [
+      "###",
+      "#Z#",
+      "###"
+    ],
+    "key": {
+      "Z": {
+        "item": "planks",
+        "data": 3
+      }
+    },
+    "result": {
+      "item": "jungle_door",
+      "count": 3
+    }
+  }
+}

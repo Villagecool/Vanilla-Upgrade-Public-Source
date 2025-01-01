@@ -1,0 +1,102 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:sapling_bakewood"
+		},
+		"components": {
+			"tag:plant": {},
+			"minecraft:destroy_time": 3,
+			"minecraft:block_light_absorption": 0.0,
+			"minecraft:loot": "loot_tables/blocks/sapling_bakewood.json",
+			 
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"grass",
+							"podzol",
+							"dirt"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:creative_category": {
+				"category": "Commands",
+				"group": "itemGroup.name.commands"
+			},
+			"minecraft:flammable": {
+				"flame_odds": 5,
+				"burn_odds": 5
+			},
+			"minecraft:on_interact": {
+				"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+				"event": "vc:grow"
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "vc:grow",
+					"target": "self"
+				}
+			},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					12,
+					12
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sapling_bakewood",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			}
+		},
+		"events": {
+			"vc:grow": {
+				"randomize": [
+					{
+						"weight": 10,
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"particle minecraft:crop_growth_emitter ~~~", "playsound item.bone_meal.use @a ~~~"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"particle minecraft:crop_growth_emitter ~~~", "playsound item.bone_meal.use @a ~~~", "structure load bakewood_tree ~-3~~-3"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"particle minecraft:crop_growth_emitter ~~~", "playsound item.bone_meal.use @a ~~~", "structure load bakewood_tree ~-3~1~-3", "setblock ~~~ vc:bakewood_log"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

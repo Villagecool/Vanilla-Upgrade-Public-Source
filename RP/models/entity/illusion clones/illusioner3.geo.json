@@ -1,0 +1,97 @@
+{
+	"format_version": "1.10.0",
+	"geometry.illusioner_clone3": {
+		"texturewidth": 64,
+		"textureheight": 64,
+		"visible_bounds_width": 5,
+		"visible_bounds_height": 3,
+		"visible_bounds_offset": [0, 1.5, 0],
+		"bones": [
+			{
+				"name": "clone3",
+				"pivot": [11, 24, -11]
+			},
+			{
+				"name": "body",
+				"parent": "clone3",
+				"pivot": [11, 24, -11],
+				"cubes": [
+					{"origin": [7, 12, -14], "size": [8, 12, 6], "uv": [16, 20]},
+					{"origin": [7, 4, -14], "size": [8, 20, 6], "uv": [0, 38], "inflate": 0.5}
+				]
+			},
+			{
+				"name": "head",
+				"parent": "body",
+				"pivot": [11, 24, -11],
+				"cubes": [
+					{"origin": [7, 24, -15], "size": [8, 10, 8], "uv": [0, 0]},
+					{"origin": [7, 24, -15], "size": [8, 10, 8], "uv": [32, 0], "inflate": 0.5}
+				]
+			},
+			{
+				"name": "nose",
+				"parent": "head",
+				"pivot": [11, 26, -11],
+				"cubes": [
+					{"origin": [10, 23, -17], "size": [2, 4, 2], "uv": [24, 0]}
+				]
+			},
+			{
+				"name": "arms",
+				"parent": "body",
+				"pivot": [11, 22, -11],
+				"cubes": [
+					{"origin": [3, 16, -13], "size": [4, 8, 4], "uv": [44, 22]},
+					{"origin": [15, 16, -13], "size": [4, 8, 4], "uv": [44, 22], "mirror": true},
+					{"origin": [7, 16, -13], "size": [8, 4, 4], "uv": [40, 38]}
+				]
+			},
+			{
+				"name": "leg0",
+				"parent": "body",
+				"pivot": [9, 12, -11],
+				"cubes": [
+					{"origin": [7, 0, -13], "size": [4, 12, 4], "uv": [0, 22]}
+				]
+			},
+			{
+				"name": "leg1",
+				"parent": "body",
+				"pivot": [13, 12, -11],
+				"mirror": true,
+				"cubes": [
+					{"origin": [11, 0, -13], "size": [4, 12, 4], "uv": [0, 22]}
+				]
+			},
+			{
+				"name": "rightarm",
+				"parent": "body",
+				"pivot": [6, 22, -11],
+				"cubes": [
+					{"origin": [3, 12, -13], "size": [4, 12, 4], "uv": [40, 46]}
+				],
+				"locators": {
+					"right_hand": [5, 12, -11]
+				}
+			},
+			{
+				"name": "rightItem",
+				"parent": "rightarm",
+				"pivot": [5.5, 16, -10.5]
+			},
+			{
+				"name": "leftarm",
+				"parent": "body",
+				"pivot": [16, 22, -11],
+				"mirror": true,
+				"cubes": [
+					{"origin": [15, 12, -13], "size": [4, 12, 4], "uv": [40, 46]}
+				],
+				"locators": {
+					"left_hand": [17, 12, -11]
+				}
+			}
+		]
+	}
+}

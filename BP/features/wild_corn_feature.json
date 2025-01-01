@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "vc:wild_corn_feature"
+		},
+		"structure_name": "mystructure:wild_corn",
+		"adjustment_radius": 4,
+		"facing_direction": "random",
+		"constraints": {
+            "grounded": {},
+            "unburied": {},
+			"block_intersection": {
+				"block_allowlist": [
+                    "air",
+					"short_grass",
+					"fern",
+					"tall_grass"
+				]
+			}
+		}
+	}
+}

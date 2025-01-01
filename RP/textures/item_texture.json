@@ -1,0 +1,401 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"advanced_filter": {
+			"textures": "textures/items/advanced_filter"
+		},
+		"advanced_hopper_item": {
+			"textures": "textures/items/advanced_hopper"
+		},
+		"aloe_gel": {
+			"textures": "textures/items/aloe_gel"
+		},
+		"aloe_soup": {
+			"textures": "textures/items/aloe_soup"
+		},
+		"aloe_vera": {
+			"textures": "textures/items/aloe_vera"
+		},
+		"aloe_vera_golden": {
+			"textures": "textures/items/aloe_vera_golden"
+		},
+		"azalea_door_item": {
+			"textures": "textures/items/door_azalea"
+		},
+		"bakewood_door_item": {
+			"textures": "textures/items/door_bakewood"
+		},
+		"banner_pattern_bourdure_indented": {
+			"textures": "textures/items/banner_pattern_bourdure_indented"
+		},
+		"banner_pattern_creeper": {
+			"textures": "textures/items/banner_pattern_creeper"
+		},
+		"banner_pattern_feild_mason": {
+			"textures": "textures/items/banner_pattern_feild_mason"
+		},
+		"banner_pattern_flower": {
+			"textures": "textures/items/banner_pattern_flower"
+		},
+		"banner_pattern_globe": {
+			"textures": "textures/items/banner_pattern_globe"
+		},
+		"banner_pattern_skull": {
+			"textures": "textures/items/banner_pattern_skull"
+		},
+		"banner_pattern_snout": {
+			"textures": "textures/items/banner_pattern_snout"
+		},
+		"banner_pattern_thing": {
+			"textures": "textures/items/banner_pattern_thing"
+		},
+		"bat_wing": {
+			"textures": "textures/items/bat_wing"
+		},
+		"bat_wing_cooked": {
+			"textures": "textures/items/bat_wing_cooked"
+		},
+		"blindness_potion": {
+			"textures": "textures/items/potion_bottle_blindness"
+		},
+		"blue_berries": {
+			"textures": "textures/items/blue_berries"
+		},
+		"blueberry_cake_item": {
+			"textures": "textures/items/cake_blueberry"
+		},
+		"blue_tutrle_shell": {
+			"textures": "textures/items/blue_shell"
+		},
+		"bone_meal_meal": {
+			"textures": "textures/items/bone_meal_meal"
+		},
+		"book_maged": {
+			"textures": "textures/items/book_maged"
+		},
+		"book_maged_a": {
+			"textures": "textures/items/book_maged_a"
+		},
+		"bragoneese": {
+			"textures": "textures/items/bragoneese"
+		},
+		"bubble_flower": {
+			"textures": "textures/blocks/bubble_flower"
+		},
+		"bundle": {
+			"textures": "textures/items/bundle"
+		},
+		"burger": {
+			"textures": "textures/items/burger"
+		},
+		"cattail": {
+			"textures": "textures/blocks/cattail"
+		},
+		"charhood": {
+			"textures": "textures/items/charhood"
+		},
+		"cheese_wheel": {
+			"textures": "textures/items/cheese_wheel"
+		},
+		"chocolate_cake_item": {
+			"textures": "textures/items/cake_chocolate"
+		},
+		"chocolate_milk_bucket": {
+			"textures": "textures/items/bucket_milk_chocolate"
+		},
+		"cocojuice": {
+			"textures": "textures/items/cocojuice"
+		},
+		"coconut": {
+			"textures": "textures/items/coconut"
+		},
+		"coconut_husk": {
+			"textures": "textures/items/coconut_husk"
+		},
+		"coconut_slice": {
+			"textures": "textures/items/coconut_slice"
+		},
+		"compressed_copper": {
+			"textures": "textures/items/compressed_copper"
+		},
+		"compressed_copper_bars": {
+			"textures": "textures/blocks/compressed_copper_bars"
+		},
+		"compressed_copper_door_item": {
+			"textures": "textures/items/door_compressed_copper"
+		},
+		"copper_wrench": {
+			"textures": "textures/items/copper_wrench"
+		},
+		"corn": {
+			"textures": "textures/items/corn"
+		},
+		"corn_kernels": {
+			"textures": "textures/items/corn_kernels"
+		},
+		"cornbread": {
+			"textures": "textures/items/cornbread"
+		},
+		"cotton_seeds": {
+			"textures": "textures/items/seeds_cotton"
+		},
+		"cotton_ball": {
+			"textures": [
+				"textures/items/cotton_ball.png",
+				"textures/items/cotton_ball_open.png",
+				"textures/items/cotton_ball_open_back.png",
+				"textures/items/cotton_ball_open_front.png"
+			]
+		},
+		"crab_claw": {
+			"textures": "textures/items/crab_claw"
+		},
+		"crab_claw_cooked": {
+			"textures": "textures/items/crab_claw_cooked"
+		},
+		"crystalized_experience": {
+			"textures": "textures/items/crystalized_experience"
+		},
+		"cursed_campfire": {
+			"textures": "textures/items/cursed_campfire"
+		},
+		"duck_cooked": {
+			"textures": "textures/items/duck_cooked"
+		},
+		"duck_raw": {
+			"textures": "textures/items/duck_raw"
+		},
+		"egg_fried": {
+			"textures": "textures/items/egg_fried"
+		},
+		"egg_giant": {
+			"textures": "textures/items/egg_giant"
+		},
+		"elax_door_item": {
+			"textures": "textures/items/door_elax"
+		},
+		"end_gateway": {
+			"textures": "textures/blocks/end_gateway"
+		},
+		"glareizer": {
+			"textures": "textures/items/glareizer"
+		},
+		"glareizer_high": {
+			"textures": "textures/items/glareizer_high"
+		},
+		"glareizer_low": {
+			"textures": "textures/items/glareizer_low"
+		},
+		"glareizer_mid": {
+			"textures": "textures/items/glareizer_med"
+		},
+		"glass_door_item": {
+			"textures": "textures/items/door_glass"
+		},
+		"gloricalium_sheet": {
+			"textures": "textures/items/gloricalium_sheet"
+		},
+		"glorium_crushed": {
+			"textures": "textures/items/glorium_crushed"
+		},
+		"glorium_shard": {
+			"textures": "textures/items/glorium_shard"
+		},
+		"glorium_crystals": {
+			"textures": "textures/blocks/glorium_crystals"
+		},
+		"glorium_crystals_medium": {
+			"textures": "textures/blocks/glorium_crystals_medium"
+		},
+		"glorium_crystals_small": {
+			"textures": "textures/blocks/glorium_crystals_small"
+		},
+		"glorium_crystals_tiny": {
+			"textures": "textures/blocks/glorium_crystals_tiny"
+		},
+		"glorium_vines": {
+			"textures": "textures/blocks/glorium_vines"
+		},
+		"glow_berry_cake_item": {
+			"textures": "textures/items/cake_glow_berry"
+		},
+		"glowing_mushroom": {
+			"textures": "textures/blocks/glowing_mushroom"
+		},
+		"glowing_roots": {
+			"textures": "textures/blocks/glowing_roots"
+		},
+		"green_pedals": {
+			"textures": "textures/items/green_pedals"
+		},
+		"honey_cake_item": {
+			"textures": "textures/items/cake_honey"
+		},
+		"hot_chocolate_bucket": {
+			"textures": "textures/items/bucket_hot_chocolate"
+		},
+		"illusion_pearl": {
+			"textures": "textures/items/illusion_pearl"
+		},
+		"lavender": {
+			"textures": "textures/blocks/lavender_top"
+		},
+		"levitation_potion": {
+			"textures": "textures/items/potion_bottle_levitation"
+		},
+		"lotus": {
+			"textures": "textures/items/lotus"
+		},
+		"lumerison_fungus": {
+			"textures": "textures/blocks/lumerison_fungus"
+		},
+		"lumerison_roots": {
+			"textures": "textures/blocks/lumerison_root"
+		},
+		"maganset": {
+			"textures": "textures/items/magnaset"
+		},
+		"milk_potion": {
+			"textures": "textures/items/potion_bottle_milk"
+		},
+		"minecart_dispenser": {
+			"textures": "textures/items/minecart_dispenser"
+		},
+		"mixed_crystals": {
+			"textures": "textures/items/mixed_shard"
+		},
+		"mudfruit": {
+			"textures": "textures/items/mudfruit"
+		},
+		"palm_door_item": {
+			"textures": "textures/items/door_palm"
+		},
+		"palm_trailings": {
+			"textures": "textures/blocks/palm_trailings"
+		},
+		"penguin_egg": {
+			"textures": "textures/items/penguin_egg"
+		},
+		"popcorn": {
+			"textures": "textures/items/popcorn"
+		},
+		"rail_conjunction": {
+			"textures": "textures/blocks/rail_conjunction"
+		},
+		"record_mist": {
+			"textures": "textures/items/record_mist"
+		},
+		"record_subhour": {
+			"textures": "textures/items/record_subhour"
+		},
+		"record_triangle": {
+			"textures": "textures/items/record_triangle"
+		},
+		"rope_item": {
+			"textures": "textures/items/rope"
+		},
+		"rotten_saddle": {
+			"textures": "textures/items/rotten_saddle"
+		},
+		"rotten_tomato": {
+			"textures": "textures/items/rotten_tomato"
+		},
+		"sapling_bakewood": {
+			"textures": "textures/blocks/sapling_bakewood"
+		},
+		"sapling_elax": {
+			"textures": "textures/blocks/sapling_elax"
+		},
+		"sapling_palm": {
+			"textures": "textures/blocks/sapling_palm"
+		},
+		"scroll": {
+			"textures": "textures/items/scroll"
+		},
+		"scroll_unwritten": {
+			"textures": "textures/items/scroll_unwritten"
+		},
+		"sea_pineapple": {
+			"textures": "textures/items/sea_pineapple"
+		},
+		"seeds_cotton": {
+			"textures": "textures/items/seeds_cotton"
+		},
+		"silver_birch_trailings": {
+			"textures": "textures/blocks/silver_birch_trailings"
+		},
+		"sled": {
+			"textures": "textures/items/sled"
+		},
+		"soap": {
+			"textures": "textures/items/soap"
+		},
+		"soulbush": {
+			"textures": "textures/blocks/soulbush"
+		},
+		"soul_vines": {
+			"textures": "textures/blocks/soul_vines"
+		},
+		"sparse_egg": {
+			"textures": "textures/items/sparse_egg"
+		},
+		"spaticius": {
+			"textures": "textures/items/spaticius"
+		},
+		"splash_potion_of_blindness": {
+			"textures": "textures/items/potion_bottle_splash_blindness"
+		},
+		"splash_potion_of_levitation": {
+			"textures": "textures/items/potion_bottle_splash_levitation"
+		},
+		"splash_potion_of_milk": {
+			"textures": "textures/items/potion_bottle_splash_milk"
+		},
+		"sweet_berry_pie": {
+			"textures": "textures/items/sweet_berry_pie"
+		},
+		"tomato": {
+			"textures": "textures/items/tomato"
+		},
+		"tomato_golden": {
+			"textures": "textures/items/tomato_golden"
+		},
+		"tomato_seeds": {
+			"textures": "textures/items/seeds_tomato"
+		},
+		"totem_2": {
+			"textures": "textures/items/totem_2"
+		},
+		"tumbleweed": {
+			"textures": "textures/blocks/tumbleweed"
+		},
+		"warped_nether_wart": {
+			"textures": "textures/items/warped_nether_wart"
+		},
+		"wither_bone": {
+			"textures": "textures/items/wither_bone"
+		},
+		"wither_bone_meal": {
+			"textures": "textures/items/wither_bone_meal"
+		},
+		"xp": {
+			"textures": "textures/items/xp"
+		},
+		"zalu_plant": {
+			"textures": "textures/blocks/zalu_plant"
+		},
+		"zalu_roots": {
+			"textures": "textures/blocks/zalu_roots"
+		},
+		"frozen_feather": {
+			"textures": "textures/items/frozen_feather"
+		},
+		"gloricalium_scrap": {
+			"textures": "textures/items/gloricalium_scrap"
+		},
+		"vc_elax_syrup_item": {
+			"textures": "textures/items/elax_syrup_ball"
+		}
+	}
+}

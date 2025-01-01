@@ -1,0 +1,40 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.giant.shockwave": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"detected": "(query.is_casting || query.is_delayed_attacking == 1) && query.health > 100"
+						},
+						{
+							"detected-mad": "(query.is_casting || query.is_delayed_attacking == 1) && query.health <= 100"
+						}
+					]
+				},
+				"detected": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"animations": [
+						"punch"
+					]
+				},
+				"detected-mad": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"animations": [
+						"punch-mad"
+					]
+				}
+			}
+		}
+	}
+}

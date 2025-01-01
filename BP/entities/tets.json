@@ -1,0 +1,378 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "red:tets",
+			"is_summonable": true,
+			"is_spawnable": false
+		},
+		"component_groups": {
+			"desp": {
+				"minecraft:instant_despawn": {}
+			},
+			"can_cook": {
+				"minecraft:is_saddled": {}
+			},
+			"rotator": {
+				"minecraft:type_family": {
+					"family": [
+						"rotator"
+					]
+				},
+				"minecraft:inside_block_notifier": {
+					"block_list": [
+						{
+							"block": {
+								"name": "vc:rotator"
+							},
+							"exited_block_event": {
+								"event": "ded"
+							}
+						}
+					]
+				}
+			},
+			"breezer": {
+				"minecraft:type_family": {
+					"family": [
+						"breezer"
+					]
+				},
+				"minecraft:inside_block_notifier": {
+					"block_list": [
+						{
+							"block": {
+								"name": "vc:breezer"
+							},
+							"exited_block_event": {
+								"event": "ded"
+							}
+						}
+					]
+				}
+			},
+			"blazer": {
+				"minecraft:type_family": {
+					"family": [
+						"blazer"
+					]
+				},
+				"minecraft:inside_block_notifier": {
+					"block_list": [
+						{
+							"block": {
+								"name": "vc:blazer"
+							},
+							"exited_block_event": {
+								"event": "ded"
+							}
+						}
+					]
+				}
+			},
+			"compressed_copper_door": {
+				"minecraft:type_family": {
+					"family": [
+						"compressed_copper_door"
+					]
+				},
+				"minecraft:inside_block_notifier": {
+					"block_list": [
+						{
+							"block": {
+								"name": "vc:compressed_copper_door"
+							},
+							"exited_block_event": {
+								"event": "ded"
+							}
+						}
+					]
+				}
+			},
+			"compressed_copper_trapdoor": {
+				"minecraft:type_family": {
+					"family": [
+						"compressed_copper_trapdoor"
+					]
+				},
+				"minecraft:inside_block_notifier": {
+					"block_list": [
+						{
+							"block": {
+								"name": "vc:compressed_copper_trapdoor"
+							},
+							"exited_block_event": {
+								"event": "ded"
+							}
+						}
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:inside_block_notifier": {
+				"block_list": [
+					{
+						"block": {
+							"name": "minecraft:air"
+						},
+						"entered_block_event": {
+							"event": "ded"
+						}
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": false,
+				"name_actions": [
+					{
+						"name_filter": "rotator",
+						"on_named": {
+							"event": "add_rotator"
+						}
+					},
+					{
+						"name_filter": "compressed_copper_door",
+						"on_named": {
+							"event": "add_compressed_copper_door"
+						}
+					},
+					{
+						"name_filter": "breezer",
+						"on_named": {
+							"event": "add_breezer"
+						}
+					},
+					{
+						"name_filter": "blazer",
+						"on_named": {
+							"event": "add_blazer"
+						}
+					},
+					{
+						"name_filter": "compressed_copper_trapdoor",
+						"on_named": {
+							"event": "add_compressed_copper_trapdoor"
+						}
+					}
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:scale": {
+				"value": 0
+			}
+		},
+		"events": {
+			"rotator": {
+				"queue_command": {
+					"command": [
+						"scoreboard objectives add onof dummy",
+						"scoreboard players set @s onof 2",
+						"function TestForPower",
+						"execute if entity @s[scores={onof=1}] run fill ~ ~ ~ ~ ~ ~ vc:rotator_powered[\"vc:direction\"=\"counterclockwise\"] replace vc:rotator[\"vc:direction\"=\"counterclockwise\"]",
+						"execute if entity @s[scores={onof=1}] run fill ~ ~ ~ ~ ~ ~ vc:rotator_powered[\"vc:direction\"=\"clockwise\"] replace vc:rotator[\"vc:direction\"=\"clockwise\"]",
+						"execute if entity @s[scores={onof=2}] run fill ~ ~ ~ ~ ~ ~ vc:rotator[\"vc:direction\"=\"counterclockwise\"] replace vc:rotator_powered[\"vc:direction\"=\"counterclockwise\",\"vc:anm\"=4]",
+						"execute if entity @s[scores={onof=2}] run fill ~ ~ ~ ~ ~ ~ vc:rotator[\"vc:direction\"=\"clockwise\"] replace vc:rotator_powered[\"vc:direction\"=\"clockwise\",\"vc:anm\"=4]"
+					],
+					"target": "self"
+				}
+			},
+			"compressed_copper_door": {
+				"queue_command": {
+					"command": [
+						"scoreboard objectives add onof dummy",
+						"scoreboard players set @s onof 2",
+						"function TestForPower",
+						"function power_door"
+					],
+					"target": "self"
+				}
+			},
+			"breezer": {
+				"queue_command": {
+					"command": [
+						"scoreboard objectives add onof dummy",
+						"scoreboard players set @s onof 2",
+						"function TestForPower",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:breezer[\"minecraft:facing_direction\"=\"up\",\"vc:active\"=false] replace vc:breezer[\"minecraft:facing_direction\"=\"up\",\"vc:active\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:breezer[\"minecraft:facing_direction\"=\"down\",\"vc:active\"=false] replace vc:breezer[\"minecraft:facing_direction\"=\"down\",\"vc:active\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:breezer[\"minecraft:facing_direction\"=\"north\",\"vc:active\"=false] replace vc:breezer[\"minecraft:facing_direction\"=\"north\",\"vc:active\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:breezer[\"minecraft:facing_direction\"=\"east\",\"vc:active\"=false] replace vc:breezer[\"minecraft:facing_direction\"=\"east\",\"vc:active\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:breezer[\"minecraft:facing_direction\"=\"south\",\"vc:active\"=false] replace vc:breezer[\"minecraft:facing_direction\"=\"south\",\"vc:active\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:breezer[\"minecraft:facing_direction\"=\"west\",\"vc:active\"=false] replace vc:breezer[\"minecraft:facing_direction\"=\"west\",\"vc:active\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:breezer[\"minecraft:facing_direction\"=\"up\",\"vc:active\"=true] replace vc:breezer[\"minecraft:facing_direction\"=\"up\",\"vc:active\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:breezer[\"minecraft:facing_direction\"=\"down\",\"vc:active\"=true] replace vc:breezer[\"minecraft:facing_direction\"=\"down\",\"vc:active\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:breezer[\"minecraft:facing_direction\"=\"north\",\"vc:active\"=true] replace vc:breezer[\"minecraft:facing_direction\"=\"north\",\"vc:active\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:breezer[\"minecraft:facing_direction\"=\"east\",\"vc:active\"=true] replace vc:breezer[\"minecraft:facing_direction\"=\"east\",\"vc:active\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:breezer[\"minecraft:facing_direction\"=\"south\",\"vc:active\"=true] replace vc:breezer[\"minecraft:facing_direction\"=\"south\",\"vc:active\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:breezer[\"minecraft:facing_direction\"=\"west\",\"vc:active\"=true] replace vc:breezer[\"minecraft:facing_direction\"=\"west\",\"vc:active\"=false]"
+					],
+					"target": "self"
+				}
+			},
+			"blazer": {
+				"queue_command": {
+					"command": [
+						"scoreboard objectives add onof dummy",
+						"scoreboard players set @s onof 2",
+						"function TestForPower",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:blazer[\"minecraft:facing_direction\"=\"up\",\"vc:active\"=false] replace vc:blazer[\"minecraft:facing_direction\"=\"up\",\"vc:active\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:blazer[\"minecraft:facing_direction\"=\"down\",\"vc:active\"=false] replace vc:blazer[\"minecraft:facing_direction\"=\"down\",\"vc:active\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:blazer[\"minecraft:facing_direction\"=\"north\",\"vc:active\"=false] replace vc:blazer[\"minecraft:facing_direction\"=\"north\",\"vc:active\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:blazer[\"minecraft:facing_direction\"=\"east\",\"vc:active\"=false] replace vc:blazer[\"minecraft:facing_direction\"=\"east\",\"vc:active\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:blazer[\"minecraft:facing_direction\"=\"south\",\"vc:active\"=false] replace vc:blazer[\"minecraft:facing_direction\"=\"south\",\"vc:active\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:blazer[\"minecraft:facing_direction\"=\"west\",\"vc:active\"=false] replace vc:blazer[\"minecraft:facing_direction\"=\"west\",\"vc:active\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:blazer[\"minecraft:facing_direction\"=\"up\",\"vc:active\"=true] replace vc:blazer[\"minecraft:facing_direction\"=\"up\",\"vc:active\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:blazer[\"minecraft:facing_direction\"=\"down\",\"vc:active\"=true] replace vc:blazer[\"minecraft:facing_direction\"=\"down\",\"vc:active\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:blazer[\"minecraft:facing_direction\"=\"north\",\"vc:active\"=true] replace vc:blazer[\"minecraft:facing_direction\"=\"north\",\"vc:active\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:blazer[\"minecraft:facing_direction\"=\"east\",\"vc:active\"=true] replace vc:blazer[\"minecraft:facing_direction\"=\"east\",\"vc:active\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:blazer[\"minecraft:facing_direction\"=\"south\",\"vc:active\"=true] replace vc:blazer[\"minecraft:facing_direction\"=\"south\",\"vc:active\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:blazer[\"minecraft:facing_direction\"=\"west\",\"vc:active\"=true] replace vc:blazer[\"minecraft:facing_direction\"=\"west\",\"vc:active\"=false]"
+					],
+					"target": "self"
+				}
+			},
+			"compressed_copper_trapdoor": {
+				"queue_command": {
+					"command": [
+						"scoreboard objectives add onof dummy",
+						"scoreboard players set @e[type=red:tets,dx=0,dy=0,dz=0] onof 2",
+						"function TestForPower",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=1},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false] replace vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"true] replace vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"true] replace vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"true] replace vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"true] replace vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"true] replace vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"true] replace vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"true] replace vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"true] replace vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=false,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=true] replace vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=true] replace vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=true] replace vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=true] replace vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=0,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true] replace vc:compressed_copper_trapdoor[\"vc:face\"=2,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true] replace vc:compressed_copper_trapdoor[\"vc:face\"=3,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true] replace vc:compressed_copper_trapdoor[\"vc:face\"=4,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false]",
+						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true] replace vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false]"
+					]
+				}
+			},
+			"ded": {
+				"add": {
+					"component_groups": [
+						"desp"
+					]
+				}
+			},
+			"add_rotator": {
+				"add": {
+					"component_groups": [
+						"rotator"
+					]
+				}
+			},
+			"add_compressed_copper_door": {
+				"add": {
+					"component_groups": [
+						"compressed_copper_door"
+					]
+				}
+			},
+			"add_breezer": {
+				"add": {
+					"component_groups": [
+						"breezer"
+					]
+				}
+			},
+			"add_blazer": {
+				"add": {
+					"component_groups": [
+						"blazer"
+					]
+				}
+			},
+			"add_compressed_copper_trapdoor": {
+				"add": {
+					"component_groups": [
+						"compressed_copper_trapdoor"
+					]
+				}
+			},
+			"vc:test_redstone": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "is_family",
+							"value": "rotator"
+						},
+						"trigger": "rotator"
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"value": "breezer"
+						},
+						"trigger": "breezer"
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"value": "blazer"
+						},
+						"trigger": "blazer"
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"value": "compressed_copper_door"
+						},
+						"trigger": "compressed_copper_door"
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"value": "compressed_copper_trapdoor"
+						},
+						"trigger": "compressed_copper_trapdoor"
+					}
+				]
+			}
+		}
+	}
+}

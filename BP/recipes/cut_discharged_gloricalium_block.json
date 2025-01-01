@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:cut_discharged_gloricalium_block"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "##",
+      "##"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:discharged_gloricalium_block"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:gloricalium_block"
+      }
+    ],
+    "result": {
+      "item": "vc:cut_discharged_gloricalium_block",
+      "count": 4
+    }
+  }
+}

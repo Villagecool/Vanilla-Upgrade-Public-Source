@@ -1,0 +1,232 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:cotton_seeds",
+			"states": {
+				"vc:growth": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"tag:crop": {},
+			"tag:plant": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.1
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:custom_components": [
+				"vc:crop"
+			],
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"minecraft:farmland"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:loot": "loot_tables/blocks/cotton_plant0.json",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "cotton_plant_1",
+					"render_method": "alpha_test",
+					"face_dimming": false
+				}
+			},
+			"minecraft:collision_box": false
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:growth') == 0",
+				"components": {
+					"minecraft:loot": "loot_tables/blocks/cotton_plant0.json",
+					"minecraft:selection_box": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							4,
+							14
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cotton_plant_1",
+							"render_method": "alpha_test",
+							"face_dimming": false
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:growth') == 1",
+				"components": {
+					"minecraft:loot": "loot_tables/blocks/cotton_plant0.json",
+					"minecraft:selection_box": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							9,
+							14
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cotton_plant_2",
+							"render_method": "alpha_test",
+							"face_dimming": false
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:growth') == 2",
+				"components": {
+					"minecraft:loot": "loot_tables/blocks/cotton_plant1.json",
+					"minecraft:selection_box": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cotton_plant_3",
+							"render_method": "alpha_test",
+							"face_dimming": false
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:growth') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.doublecrop_other",
+					"minecraft:loot": "loot_tables/blocks/cotton_plant2.json",
+					"minecraft:selection_box": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cotton_plant_4",
+							"render_method": "alpha_test",
+							"face_dimming": false
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:growth') == 4",
+				"components": {
+					"minecraft:geometry": "geometry.doublecrop_other",
+					"minecraft:loot": "loot_tables/blocks/cotton_plant3.json",
+					"minecraft:selection_box": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cotton_plant_5",
+							"render_method": "alpha_test",
+							"face_dimming": false
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:growth') == 5",
+				"components": {
+					"minecraft:geometry": "geometry.doublecrop_other",
+					"minecraft:loot": "loot_tables/blocks/cotton_plant4.json",
+					"minecraft:selection_box": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cotton_plant_6",
+							"render_method": "alpha_test",
+							"face_dimming": false
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:growth') == 6",
+				"components": {
+					"minecraft:geometry": "geometry.doublecrop_other",
+					"minecraft:loot": "loot_tables/blocks/cotton_plant4.json",
+					"minecraft:selection_box": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cotton_plant_7",
+							"render_method": "alpha_test",
+							"face_dimming": false
+						}
+					}
+				}
+			}
+		]
+	}
+}

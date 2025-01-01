@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:oak_door_sawmill"
+    },
+    "tags": [
+      "sawmill"
+    ],
+    "pattern": [
+      "###",
+      "#Z#",
+      "###"
+    ],
+    "key": {
+      "Z": {
+        "item": "planks"
+      }
+    },
+    "result": {
+      "item": "wooden_door",
+      "count": 3
+    }
+  }
+}

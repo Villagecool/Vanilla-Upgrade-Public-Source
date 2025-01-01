@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "vc:glorium_stuff_roof"
+		},
+		"features": [
+			[
+				"vc:glorium_vines_down",
+				40
+			],
+			[
+				"vc:glorium_blossom",
+				4
+			]
+		]
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.stoneBrick"
+			},
+			"identifier": "vc:endslate"
+		},
+		"components": {
+			"tag:diamond_pick_diggable": {},
+			"tag:iron_pick_diggable": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "endslate"
+				}
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 9
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 20
+			}
+		}
+	}
+}

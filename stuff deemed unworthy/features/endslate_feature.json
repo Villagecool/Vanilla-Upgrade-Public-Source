@@ -1,0 +1,17 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "vc:endslate_feature"
+    },
+    "count": 69,
+    "replace_rules": [
+      {
+        "places_block": "vc:endslate",
+        "may_replace": [
+          "minecraft:end_stone"
+        ]
+      }
+    ]
+  }
+}

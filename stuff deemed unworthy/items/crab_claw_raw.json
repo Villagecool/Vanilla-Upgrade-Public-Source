@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.rawFood",
+        "category": "nature"
+      },
+      "identifier": "vc:crab_claw"
+    },
+    "components": {
+      "minecraft:use_duration": 2.61,
+      "minecraft:use_animation": "eat",
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": {
+        "texture": "crab_claw"
+      },
+      "minecraft:food": {
+        "nutrition": 4,
+        "saturation_modifier": 5,
+        "can_always_eat": true
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:bamboo_slab_sawmill"
+    },
+    "tags": [
+      "sawmill"
+    ],
+    "pattern": [
+      "A00",
+      "000",
+      "000"
+    ],
+    "key": {
+      "A": {
+        "item": "bamboo_planks"
+      }
+    },
+    "result": {
+      "item": "bamboo_slab",
+      "count": 2
+    }
+  }
+}

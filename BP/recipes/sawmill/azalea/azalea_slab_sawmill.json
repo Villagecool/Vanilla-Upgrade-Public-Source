@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:azalea_slab_sawmill"
+    },
+
+    
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "A00",
+      "000",
+      "000"
+    ],
+    "key": {
+      "A": {
+        "item": "vc:azalea_planks",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "vc:azalea_slab",
+      "count": 2
+    }
+  }
+}

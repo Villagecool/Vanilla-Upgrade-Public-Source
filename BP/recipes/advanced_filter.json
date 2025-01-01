@@ -1,0 +1,35 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vc:advanced_filter"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "#G#",
+      "#P#",
+      "# #"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stick"
+      },
+      "G": {
+        "item": "vc:gloricalium_sheet"
+      },
+      "P": {
+        "item": "minecraft:paper"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:gloricalium_sheet"
+      }
+    ],
+    "result": {
+      "item": "vc:advanced_filter"
+    }
+  }
+}

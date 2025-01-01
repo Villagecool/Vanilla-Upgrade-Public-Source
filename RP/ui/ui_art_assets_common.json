@@ -1,0 +1,27 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "common_art",
+  "title_image": {
+    "layer": 19
+  },
+  "title_panel_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "vanilla@VU_title.vu_title_combo": {}
+          }
+        ]
+      }
+    ],
+    "layer": 19,
+    "anims": [
+      "@VU_title.titleMove"
+    ]
+  }
+}

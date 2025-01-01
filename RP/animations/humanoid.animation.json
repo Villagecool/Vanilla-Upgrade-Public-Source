@@ -1,0 +1,208 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.humanoid.fall": {
+			"animation_length": 0.5,
+			"override_previous_animation": true,
+			"bones": {
+				"root": {
+					"rotation": ["40 - this", 0, 0],
+					"position": [0, 0, "8 - this"]
+				},
+				"head": {
+					"rotation": ["32.5 - this", 0, 0],
+					"position": ["0 - this", 0, 0]
+				},
+				"leftArm": {
+					"rotation": ["-242.5 - this", 0, 0]
+				},
+				"rightArm": {
+					"rotation": ["-202.5 - this", 0, 0]
+				},
+				"leftLeg": {
+					"rotation": ["65 - this", 0, 0]
+				},
+				"rightLeg": {
+					"rotation": ["95 - this", 0, 0]
+				}
+			}
+		},
+		"animation.humanoid.spawn": {
+			"animation_length": 0.66667,
+			"bones": {
+				"root": {
+					"scale": {
+						"0.0": [1.8, 0.4, 1],
+						"0.1667": [0.6, 2.9, 1],
+						"0.3333": [1.5, 0.7, 1],
+						"0.5": [2.3, 1, 2.3],
+						"0.6667": [1, 1, 1]
+					}
+				}
+			}
+		},
+		"animation.humanoid.sleep.bag": {
+			"bones": {
+				"root": {
+					"rotation": [90, 0, 0],
+					"position": [0, 20, 28]
+				}
+			}
+		},
+		"animation.player.fallold": {
+			"loop": true,
+			"animation_length": 0.25,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": [90, 0, 0],
+						"0.125": [90, 0, 0],
+						"0.25": [90, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 3, 14],
+						"0.125": [0, 3, 14],
+						"0.25": [0, 3, 14]
+					}
+				},
+				"head": {
+					"rotation": [-47.5, 0, 0]
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [117.5, 0, 0],
+						"0.125": [142.5, 0, 0],
+						"0.25": [117.5, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [102.5, 0, 0],
+						"0.125": [77.5, 0, 0],
+						"0.25": [102.5, 0, 0]
+					}
+				},
+				"leftLeg": {
+					"rotation": {
+						"0.0": [60, 0, 0],
+						"0.125": [105, 0, 0],
+						"0.25": [60, 0, 0]
+					}
+				},
+				"rightLeg": {
+					"rotation": {
+						"0.0": [97.5, 0, 0],
+						"0.125": [60, 0, 0],
+						"0.25": [97.5, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.player.getup": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.625,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": [90, 0, 0],
+						"0.625": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 3, 14],
+						"0.625": [0, 0, 0]
+					}
+				},
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2083": [-50, 0, 0],
+						"0.4167": [0, 0, 0],
+						"0.625": [0, 0, 0]
+					},
+					"position": {
+						"0.2083": [0, 0, 0],
+						"0.4167": [0, 0, 7],
+						"0.625": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2083": [-60, 0, 0],
+						"0.625": [0, 0, 0]
+					},
+					"position": [0, 0, 0]
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2083": [-60, 0, 0],
+						"0.625": [0, 0, 0]
+					},
+					"position": [0, 0, 0]
+				},
+				"leftLeg": {
+					"rotation": {
+						"0.2083": [0, 0, 0],
+						"0.4167": [-42.5, 0, 0],
+						"0.625": [0, 0, 0]
+					},
+					"position": {
+						"0.2083": [0, 0, 0],
+						"0.4167": [0, 0, 7],
+						"0.625": [0, 0, 0]
+					}
+				},
+				"rightLeg": {
+					"rotation": {
+						"0.2083": [0, 0, 0],
+						"0.4167": [-42.5, 0, 0],
+						"0.625": [0, 0, 0]
+					},
+					"position": {
+						"0.2083": [0, 0, 0],
+						"0.4167": [0, 0, 7],
+						"0.625": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.humanoid.hurt": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"root": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.0833": [0.1, 0, 0],
+						"0.1667": [0, 0, 0],
+						"0.25": [0.1, 0, 0],
+						"0.3333": [0, 0, 0],
+						"0.4167": [0.1, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.5833": [0.1, 0, 0],
+						"0.6667": [0, 0, 0],
+						"0.75": [0.1, 0, 0],
+						"0.8333": [0, 0, 0],
+						"0.9167": [0.1, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"waist": {
+					"rotation": [12.5, 0, 0]
+				},
+				"leftArm": {
+					"rotation": [-19.39243, 22.79919, 27.30492]
+				}
+			}
+		},
+		"animation.humanoid.shadows": {
+			"loop": true,
+			"bones": {
+				"offset1": {
+					"position": ["math.random(-2,2)*math.sin(query.anim_time*200)", 0, "math.random(-2,2)*math.sin(query.anim_time*200)"]
+				}
+			}
+		}
+	}
+}

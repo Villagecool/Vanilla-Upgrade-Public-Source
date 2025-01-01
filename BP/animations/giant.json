@@ -1,0 +1,23 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.giant.punch": {
+			"timeline": {
+				"0.75": [
+					"/execute as @e[r=15,type=!vc:giant] at @e[r=15,type=!vc:giant] run execute unless block ~~-0.2~ air run scriptevent vc:shockwave 0.5",
+					"/camerashake add @a[r=15] 1 1"
+				]
+			},
+			"animation_length": 1
+		},
+		"animation.giant.punch-mad": {
+			"timeline": {
+				"0.75": [
+					"/execute as @e[r=15,type=!vc:giant] at @e[r=15,type=!vc:giant] run execute unless block ~~-0.2~ air run scriptevent vc:shockwave 1 ",
+					"/camerashake add @a[r=15] 3 1"
+				]
+			},
+			"animation_length": 1
+		}
+	}
+}

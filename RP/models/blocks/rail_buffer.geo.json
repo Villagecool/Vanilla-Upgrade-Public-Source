@@ -1,0 +1,261 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.rail_buffer",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [
+					0,
+					0.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-8,
+								10,
+								-4
+							],
+							"size": [
+								16,
+								7,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										16,
+										7
+									],
+									"material_instance": "buffer"
+								}
+							}
+						},
+						{
+							"origin": [
+								-8,
+								5,
+								-5
+							],
+							"size": [
+								16,
+								4,
+								2
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										16,
+										4
+									],
+									"material_instance": "planks"
+								},
+								"east": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										2,
+										4
+									],
+									"material_instance": "planks"
+								},
+								"south": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										16,
+										4
+									],
+									"material_instance": "planks"
+								},
+								"west": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										2,
+										4
+									],
+									"material_instance": "planks"
+								},
+								"up": {
+									"uv": [
+										16,
+										2
+									],
+									"uv_size": [
+										-16,
+										-2
+									],
+									"material_instance": "planks"
+								},
+								"down": {
+									"uv": [
+										16,
+										2
+									],
+									"uv_size": [
+										-16,
+										-2
+									],
+									"material_instance": "planks"
+								}
+							}
+						},
+						{
+							"origin": [
+								-8,
+								1,
+								-8
+							],
+							"size": [
+								16,
+								0,
+								4
+							],
+							"uv": {
+								"up": {
+									"uv": [
+										16,
+										16
+									],
+									"uv_size": [
+										-16,
+										-4
+									],
+									"material_instance": "rail"
+								}
+							}
+						},
+						{
+							"origin": [
+								-6,
+								0,
+								-4
+							],
+							"size": [
+								2,
+								5,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										2,
+										11
+									],
+									"uv_size": [
+										2,
+										5
+									],
+									"material_instance": "rail"
+								}
+							}
+						},
+						{
+							"origin": [
+								4,
+								0,
+								-4
+							],
+							"size": [
+								2,
+								5,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										12,
+										11
+									],
+									"uv_size": [
+										2,
+										5
+									],
+									"material_instance": "rail"
+								}
+							}
+						},
+						{
+							"origin": [
+								3,
+								9,
+								-4
+							],
+							"size": [
+								2,
+								1,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										12,
+										0
+									],
+									"uv_size": [
+										2,
+										1
+									],
+									"material_instance": "rail"
+								}
+							}
+						},
+						{
+							"origin": [
+								-5,
+								9,
+								-4
+							],
+							"size": [
+								2,
+								1,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										2,
+										0
+									],
+									"uv_size": [
+										2,
+										1
+									],
+									"material_instance": "rail"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

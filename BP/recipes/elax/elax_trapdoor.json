@@ -1,0 +1,31 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:elax_trapdoor"
+    },
+    "tags": [ 
+      "crafting_table" 
+    ],
+    "group": "wooden_trap_door",
+    "pattern": [
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:elax_planks"
+      }
+    },
+    "unlock": [
+        {
+            "item": "vc:elax_planks",
+            "data": 4
+        }
+    ],
+    "result": {
+      "item": "vc:elax_trapdoor",
+      "count": 2
+    }
+  }
+}

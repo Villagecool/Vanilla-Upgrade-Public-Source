@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:coconut",
+      "materials": {
+        "default": "snowball"
+      },
+      "textures": {
+        "default": "textures/blocks/coconut"
+      },
+      "geometry": {
+        "default": "geometry.coconut"
+      },
+      "render_controllers": [ "controller.render.item_sprite" ]
+    }
+  }
+} 

@@ -1,0 +1,64 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.termite.eat": {
+			"loop": true,
+			"animation_length": 0.3333,
+			"bones": {
+				"head": {
+					"rotation": {
+						"0.0": [20, 0, 0],
+						"0.1667": [7.5, 0, 0],
+						"0.3333": [20, 0, 0]
+					}
+				},
+				"rightMouth": {
+					"rotation": {
+						"0.0": [0, 67.5, 0],
+						"0.1667": [0, -30, 0],
+						"0.3333": [0, 67.5, 0]
+					}
+				},
+				"leftMouth": {
+					"rotation": {
+						"0.0": [0, -67.5, 0],
+						"0.1667": [0, 30, 0],
+						"0.3333": [0, -67.5, 0]
+					}
+				}
+			}
+		},
+		"animation.termite.walk": {
+			"loop": true,
+			"bones": {
+				"leg_R1": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17 + 180) * 80.21) * query.modified_move_speed * 0.5", 0, 0]
+				},
+				"leg_L1": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17) * 80.21) * query.modified_move_speed", 0, 0]
+				},
+				"leg_R2": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17) * 80.21) * query.modified_move_speed", 0, 0]
+				},
+				"leg_L2": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17 + 180) * 80.21) * query.modified_move_speed * 0.5", 0, 0]
+				},
+				"leg_L3": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17 + 180) * 80.21) * query.modified_move_speed * 0.5", 0, 0]
+				},
+				"leg_R3": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17) * 80.21) * query.modified_move_speed", 0, 0]
+				}
+			}
+		},
+		"animation.termite.climb": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [-85, 0, 0],
+					"position": [0, 0, -3]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,153 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vc:sled",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "break": {
+        "minecraft:spawn_entity": {
+          "entities": {
+            "min_wait_time": 0,
+            "max_wait_time": 0,
+            "spawn_item": "vc:sled",
+            "single_use": true,
+            "num_to_spawn": 1,
+            "should_leash": false
+          }
+        },
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:is_stackable": {},
+      "minecraft:type_family": {
+        "family": [
+          "sled",
+          "inanimate"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.98,
+        "height": 0.3
+      },
+      "minecraft:rideable": {
+        "seat_count": 1,
+        "interact_text": "action.interact.ride.minecart",
+        "pull_in_entities": true,
+        "seats": {
+          //"lock_rider_rotation": 0,
+          "position": [
+            0,
+            0.2,
+            -0.3
+          ]
+        }
+      },
+      "minecraft:physics": {},
+      "minecraft:leashable": {
+        "soft_distance": 4.0,
+        "hard_distance": 6.0,
+        "max_distance": 10.0
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:timer": {
+        "time": 0,
+        "time_down_event": {
+          "event": "speedup",
+          "target": "self"
+        }
+      },
+      "minecraft:movement": {
+        "value": 0.05
+      },
+      "minecraft:navigation.generic": {
+        "is_amphibious": true,
+        "can_path_over_water": true,
+        "can_swim": false,
+        "can_walk": true,
+        "can_sink": false,
+        "avoid_damage_blocks": false
+      },
+      "minecraft:input_ground_controlled": {},
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "operator": "equals",
+                "value": "player"
+              },
+              "event": "break"
+            },
+            "deals_damage": false
+          },
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 60.0,
+          "max_dropped_ticks": 20,
+          "use_motion_prediction_hints": true
+        },
+        "conditional_values": [
+          {
+            "max_optimized_distance": 0.0,
+            "max_dropped_ticks": 0,
+            "use_motion_prediction_hints": true,
+            "conditional_values": [
+              {
+                "test": "is_moving",
+                "subject": "self",
+                "operator": "==",
+                "value": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "events": {
+      "break": {
+        "queue_command": {
+          "command": [
+            "playsound mob.armor_stand.break @a ~~~"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "break"
+          ]
+        }
+      },
+      "speedup": {
+        "queue_command": {
+          "command": [
+            "execute if block ^^-1^1 air run effect @s speed 1 10 true",
+            "execute if block ^^-1^1 air if block ^^-2^2 air run effect @s speed 2 15 true",
+            "execute if block ^^-1^1 air if block ^^-2^2 air if block ^^-3^3 air run effect @s speed 3 20 true",
+            "execute if block ^^-1^1 air if block ^^-2^2 air if block ^^-3^3 air if block ^^-4^4 air run effect @s speed 4 20 true",
+            "execute if block ^^-1^1 air if block ^^-2^2 air if block ^^-3^3 air if block ^^-4^4 air if block ^^-5^5 air run effect @s speed 5 20 true",
+            "execute if block ^^-1^1 snow_layer run effect @s speed 1 10 true",
+            "execute if block ^^-1^1 snow_layer if block ^^-2^2 snow_layer run effect @s speed 2 15 true",
+            "execute if block ^^-1^1 snow_layer if block ^^-2^2 snow_layer if block ^^-3^3 snow_layer run effect @s speed 3 20 true",
+            "execute if block ^^-1^1 snow_layer if block ^^-2^2 snow_layer if block ^^-3^3 snow_layer if block ^^-4^4 snow_layer run effect @s speed 4 20 true",
+            "execute if block ^^-1^1 snow_layer if block ^^-2^2 snow_layer if block ^^-3^3 snow_layer if block ^^-4^4 snow_layer if block ^^-5^5 snow_layer run effect @s speed 5 20 true"
+          ]
+        }
+      }
+    }
+  }
+}

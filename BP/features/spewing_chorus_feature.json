@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "vc:spewing_chorus_feature"
+		},
+		"features": [
+			[
+				"vc:spewing_chorus1",
+				10
+			],
+			[
+				"vc:spewing_chorus2",
+				10
+			]
+		]
+	}
+}

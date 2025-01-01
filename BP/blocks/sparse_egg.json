@@ -1,0 +1,98 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"is_hidden_in_commands": true
+			},
+			"identifier": "vc:sparse_egg",
+			"states": {
+				"vc:cracked": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"tag:egg": {},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2
+			},
+			"minecraft:custom_components": [
+				"vc:egg"
+			],
+			"minecraft:geometry": "geometry.egg_sparse",
+			"minecraft:selection_box": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					16,
+					14
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					16,
+					14
+				]
+			},
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sparse_egg_side",
+					"render_method": "alpha_test"
+				},
+				"up": {
+					"texture": "sparse_egg_top",
+					"render_method": "alpha_test"
+				},
+				"down": {
+					"texture": "sparse_egg_bottom",
+					"render_method": "alpha_test"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:cracked') == true",
+				"components": {
+					"minecraft:tick": {
+						"interval_range": [
+							50,
+							200
+						],
+						"looping": true
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "sparse_egg_side_cracked",
+							"render_method": "alpha_test"
+						},
+						"up": {
+							"texture": "sparse_egg_top_cracked",
+							"render_method": "alpha_test"
+						},
+						"down": {
+							"texture": "sparse_egg_bottom",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			}
+		]
+	}
+}

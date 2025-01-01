@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:soul_sandstone_carved"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "#",
+      "#"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:soul_sandstone_slab"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:soul_sandstone"
+      }
+    ],
+    "result": {
+      "item": "vc:soul_sandstone_carved",
+      "data": 0
+    }
+  }
+}

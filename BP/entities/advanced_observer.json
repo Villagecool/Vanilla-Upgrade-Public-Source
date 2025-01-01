@@ -1,0 +1,83 @@
+{
+	"format_version": "1.18.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "vc:advanced_observer",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"vc:die": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:nameable": {
+				"always_show": true
+			},
+			"minecraft:inside_block_notifier": {
+				"block_list": [
+					{
+						"block": {
+							"name": "vc:advanced_observer"
+						},
+						"exited_block_event": {
+							"event": "vc:die"
+						}
+					},
+					{
+						"block": {
+							"name": "air"
+						},
+						"entered_block_event": {
+							"event": "vc:die"
+						}
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "any",
+					"deals_damage": false
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0,
+				"width": 0
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 0,
+						"height": 0,
+						"pivot": [
+							0,
+							0,
+							0
+						]
+					}
+				]
+			}
+		},
+		"events": {
+			"vc:die": {
+				"queue_command": {
+					"command": [
+						"execute as @s run scriptevent vc:hopper.checkDrop"
+					],
+					"target": "self"
+				},
+				"add": {
+					"component_groups": [
+						"vc:die"
+					]
+				}
+			}
+		}
+	}
+}

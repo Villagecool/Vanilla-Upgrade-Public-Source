@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:cherry_slab_sawmill"
+    },
+
+    
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "A00",
+      "000",
+      "000"
+    ],
+    "key": {
+      "A": {
+        "item": "cherry_planks",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "cherry_slab",
+      "count": 2
+    }
+  }
+}

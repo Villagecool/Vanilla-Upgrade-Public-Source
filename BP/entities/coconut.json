@@ -1,0 +1,116 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vc:coconut",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          {
+            "is_on_ground": "query.is_on_ground"
+          }
+        ]
+      },
+      "animations": {
+        "is_on_ground": "controller.animation.breakcoconut"
+      }
+    },
+    "component_groups": {
+      "break": {
+        "minecraft:spawn_entity": {
+          "entities": {
+            "min_wait_time": 0,
+            "max_wait_time": 0,
+            "spawn_item": "vc:coconut_slice",
+            "single_use": true,
+            "num_to_spawn": 2,
+            "should_leash": false
+          }
+        },
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "coconut",
+          "inanimate",
+          "mob"
+        ]
+      },
+      "minecraft:area_attack": {
+        "damage_range": 0.5,
+        "damage_per_tick": 4,
+        "cause": "contact",
+        "entity_filter": {
+          "any_of": [
+            {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            {
+              "test": "is_family",
+              "subject": "other",
+              "value": "mob"
+            }
+          ]
+        }
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 0.5
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "any",
+          "deals_damage": false
+        }
+      },
+      "minecraft:health": {
+        "value": 6,
+        "max": 6
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/empty.json"
+      },
+      "minecraft:nameable": {},
+      "minecraft:persistent": {},
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      }
+    },
+    "events": {
+      "break": {
+        "queue_command": {
+          "command": [
+            "playsound random.bonk @a ~~~"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "break"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "vc:flowering_cactus_feature_rules",
+            "places_feature": "vc:flowering_cactus_floor_snap_feature"
+        },
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": [
+                {
+                    "any_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "desert"
+                        }
+                    ]
+                }
+            ]
+        },
+        "distribution": {
+            "iterations": 3,
+            "x": {
+                "distribution": "gaussian",
+                "extent": [
+                    -15,
+                    15
+                ]
+            },
+            "y": {
+                "distribution": "gaussian",
+                "extent": [
+                    0,
+                    91
+                ]
+            },
+            "z": {
+                "distribution": "gaussian",
+                "extent": [
+                    -15,
+                    15
+                ]
+            }
+        }
+    }
+}

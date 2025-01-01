@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:aggregate_feature": {
+    "description": {
+      "identifier": "vc:glowing_mycelum_pach_mix_feature"
+    },
+    "features": [
+      "vc:glowing_mycelium_patch_deepslate_feature",
+      "vc:glowing_mycelium_patch_feature"
+    ]
+  }
+}

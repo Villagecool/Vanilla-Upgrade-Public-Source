@@ -1,0 +1,126 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:rail_conjunction",
+			"menu_category": {
+				"category": "commands",
+				"group": "itemGroup.name.Commands"
+			},
+			"states": {
+				"vc:face": [
+					1,
+					2
+				],
+				"vc:rail_direction": [
+					0,
+					1
+				]
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
+			}
+		},
+		"components": {
+			"tag:diamond_pick_diggable": {},
+			"tag:gold_pick_diggable": {},
+			"tag:iron_pick_diggable": {},
+			"tag:rail": {},
+			"tag:metal": {},
+			"minecraft:light_dampening": 0,
+			"minecraft:geometry": "geometry.rail",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "rail_conjunction",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:tick": {
+				"interval_range": [
+					1,
+					1
+				],
+				"looping": true
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					2,
+					16
+				]
+			},
+			"minecraft:collision_box": false
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'north' || query.block_state('minecraft:cardinal_direction') == 'south'",
+				"components": {
+					"tag:rail": {}
+					//"minecraft:on_interact": {
+					//	"event": "vc:r1"
+					//}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'east' || query.block_state('minecraft:cardinal_direction') == 'west'",
+				"components": {
+					"tag:rail": {}
+					//"minecraft:on_interact": {
+					//	"event": "vc:r2"
+					//}
+				}
+			}
+		]
+		//"events": {
+		//	"vc:run": {
+		//		"run_command": {
+		//			"command": [
+		//				"/execute if entity @e[type=minecart,r=1.5] unless entity @e[type=minecart,x=~,y=~,z=~0.6,r=1] unless entity @e[type=minecart,x=~,y=~,z=~,r=0.8] run tp @e[type=minecart,x=~0.5,y=~,z=~,r=0.8] ~-1.3~~",
+		//				"/execute if entity @e[type=minecart,r=1.5] unless entity @e[type=minecart,x=~,y=~,z=~-0.5,r=1] unless entity @e[type=minecart,x=~,y=~,z=~,r=0.8] run tp @e[type=minecart,x=~-0.5,y=~,z=~,r=0.8] ~1.3~~"
+		//			]
+		//		}
+		//	},
+		//	"vc:r1": {
+		//		"run_command": {
+		//			"command": [
+		//				"/playsound block.anvil.land @a[r=15] ~~~",
+		//				"/setblock ~~~ no:rail_conjunction[\"minecraft:cardinal_direction\"=\"east\"]"
+		//			]
+		//		}
+		//	},
+		//	"vc:r2": {
+		//		"run_command": {
+		//			"command": [
+		//				"/playsound block.anvil.land @a[r=15] ~~~",
+		//				"/setblock ~~~ no:rail_conjunction[\"minecraft:cardinal_direction\"=\"north\"]"
+		//			]
+		//		}
+		//	},
+		//	"vc:run2": {
+		//		"run_command": {
+		//			"command": [
+		//				"execute @e[family=minecart,r=0.8] ~~~ tp @s ^-0.4^^"
+		//			]
+		//		}
+		//	}
+		//}
+	}
+}

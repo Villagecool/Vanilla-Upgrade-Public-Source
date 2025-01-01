@@ -1,0 +1,213 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:crusher",
+			"menu_category": {
+				"category": "none",
+				"group": "itemGroup.name.anchors"
+			},
+			"states": {
+				"vc:active": [
+					false,
+					true
+				]
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:facing_direction"
+					]
+				}
+			}
+		},
+		"components": {
+			//"minecraft:on_placed": {
+			//	"event": "vc:redstone"
+			//},
+			//"minecraft:random_ticking": {
+			//	"on_tick": {
+			//		"event": "vc:redstone"
+			//	}
+			//},
+			"minecraft:queued_ticking": {
+				"interval_range": [
+					1,
+					1
+				],
+				"looping": true,
+				"on_tick": {
+					"event": "vc:tick"
+				}
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 20
+			},
+			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "dropper_side",
+					"render_method": "alpha_test"
+				},
+				"south": {
+					"texture": "crusher_front",
+					"render_method": "alpha_test"
+				},
+				"up": {
+					"texture": "dropper_top",
+					"render_method": "alpha_test"
+				},
+				"down": {
+					"texture": "dropper_top",
+					"render_method": "alpha_test"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:active') == true",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "dropper_side",
+							"render_method": "alpha_test"
+						},
+						"south": {
+							"texture": "crusher_front_on",
+							"render_method": "alpha_test"
+						},
+						"up": {
+							"texture": "dropper_top",
+							"render_method": "alpha_test"
+						},
+						"down": {
+							"texture": "dropper_top",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('minecraft:facing_direction') == 'up' || query.block_state('minecraft:facing_direction') == 'down') && query.block_state('vc:active') == true",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "dropper_top",
+							"render_method": "alpha_test"
+						},
+						"north": {
+							"texture": "crusher_front_on",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('minecraft:facing_direction') == 'up' || query.block_state('minecraft:facing_direction') == 'down') && query.block_state('vc:active') == false",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "dropper_top",
+							"render_method": "alpha_test"
+						},
+						"north": {
+							"texture": "crusher_front",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:facing_direction') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:facing_direction') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:facing_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:facing_direction') == 'up'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							-90,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:facing_direction') == 'down'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							90,
+							0,
+							0
+						]
+					}
+				}
+			}
+		],
+		"events": {
+			"vc:tick": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"/scriptevent vc:checkRedstone vc:active"
+							]
+						}
+					},
+					{
+						"condition": "query.block_state('vc:active') == true",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"/playsound crusher.chomp @a ~~~"
+									]
+								}
+							},
+							{
+								"condition": "math.random_integer(1,25) == 1",
+								"run_command": {
+									"command": "/scriptevent vc:breakBlock"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

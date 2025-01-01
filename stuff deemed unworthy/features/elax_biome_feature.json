@@ -1,0 +1,25 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "vc:elax_biome_feature"
+    },
+    "iterations": 100,
+    "coordinate_eval_order": "zyx",
+    "scatter_chance": "100",
+    "x": {
+      "extent": [ 0, 1000 ],
+      "distribution": "gaussian"
+    },
+    "z": {
+      "extent": [ 0, 1000 ],
+      "distribution": "gaussian"
+    },
+    "y": {
+      "extent": [ -2, 1 ],
+      "distribution": "gaussian"
+    },
+    "project_input_to_floor": true,
+    "places_feature": "vc:end_grass_patch_snap_to_surface_feature"
+  }
+}

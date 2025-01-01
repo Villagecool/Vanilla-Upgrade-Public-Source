@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "vc:saloon_feature"
+		},
+		"structure_name": "mystructure:saloon",
+		"adjustment_radius": 4,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"unburied": {},
+			"block_intersection": {
+				"block_allowlist": [
+					"air",
+					"sand",
+					"red_sand",
+					"cactus",
+					"deadbush"
+				]
+			}
+		}
+	}
+}

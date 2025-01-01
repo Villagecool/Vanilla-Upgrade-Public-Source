@@ -1,0 +1,16 @@
+{
+    "materials": {
+        "version": "1.0.0",
+        "vc:reverse_cull:": {
+            "+states": [
+                "InvertCulling"
+            ],
+            "+defines": [
+                "ENABLE_FOG",
+                "ENABLE_LIGHT",
+                "USE_EMISSIVE",
+                "USE_ONLY_EMISSIVE"
+            ]
+        }
+    }
+}

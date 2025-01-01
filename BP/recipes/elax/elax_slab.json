@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:elax_slab"
+    },
+    "tags": [ "crafting_table" ],
+    "group": "wooden_slab",
+    "pattern": [
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:elax_planks"
+      }
+    },
+    "unlock": [
+        {
+            "item": "vc:elax_planks",
+            "data": 4
+        }
+    ],
+    "result": {
+      "item": "vc:elax_slab",
+      "count": 6
+    }
+  }
+}

@@ -1,0 +1,26 @@
+	{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "vc:goodlands_veg"
+		},
+		"features": [
+			[
+				"vc:lavender_feature",
+				3
+			],
+			[
+				"vc:green_pedals_feature",
+				8
+			],
+			[
+				"vc:bubble_flower_feature",
+				2
+			],
+			[
+				"vc:flowering_cactus_floor_snap_feature",
+				1
+			]
+		]
+	}
+}

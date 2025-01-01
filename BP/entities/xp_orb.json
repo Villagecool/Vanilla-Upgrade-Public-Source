@@ -1,0 +1,129 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "minecraft:xp_orb",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "minecraft:look_to_start_drowned_transformation": {
+                "minecraft:environment_sensor": {
+                    "triggers": {
+                        "filters": {
+                            "test": "in_water_or_rain",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": true
+                        },
+                        "event": "minecraft:start_transforming"
+                    }
+                }
+            },
+            "minecraft:start_drowned_transformation": {
+                "minecraft:environment_sensor": {
+                    "triggers": {
+                        "filters": {
+                            "test": "in_water_or_rain",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": false
+                        },
+                        "event": "minecraft:stop_transforming"
+                    }
+                },
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": 30,
+                    "time_down_event": {
+                        "event": "minecraft:convert_to_drowned"
+                    }
+                }
+            },
+            "minecraft:convert_to_drowned": {
+                "minecraft:spawn_entity": {
+                    "entities": {
+                        "max_wait_time": 5,
+                        "min_wait_time": 5,
+                        "num_to_spawn": 1,
+                        "single_use": true,
+                        "spawn_item": "vc:crystalized_experience"
+                    }
+                },
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.25,
+                "height": 0.25
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "inanimate"
+                ]
+            },
+            "minecraft:health": {
+                "value": 5,
+                "max": 5
+            },
+            "minecraft:buoyant": {
+                "apply_gravity": false,
+                "liquid_blocks": [
+                    "minecraft:flowing_water",
+                    "minecraft:water"
+                ]
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "max_optimized_distance": 80.0,
+                    "max_dropped_ticks": 10,
+                    "use_motion_prediction_hints": true
+                }
+            }
+        },
+        "events": {
+            "minecraft:start_transforming": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:start_drowned_transformation"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "minecraft:look_to_start_drowned_transformation"
+                    ]
+                }
+            },
+            "minecraft:stop_transforming": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:look_to_start_drowned_transformation"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "minecraft:start_drowned_transformation"
+                    ]
+                }
+            },
+            "minecraft:convert_to_drowned": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:convert_to_drowned"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "minecraft:start_drowned_transformation"
+                    ]
+                }
+            }
+        }
+    }

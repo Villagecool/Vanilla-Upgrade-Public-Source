@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:mangrove_stairs_sawmill"
+    },
+
+    
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "0A0",
+      "000",
+      "000"
+    ],
+    "key": {
+      "A": {
+        "item": "mangrove_planks",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "mangrove_stairs",
+      "count": 1
+    }
+  }
+}

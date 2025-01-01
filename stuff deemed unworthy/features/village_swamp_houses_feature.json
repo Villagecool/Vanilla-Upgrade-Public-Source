@@ -1,0 +1,19 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "minecraft:village_swamp_houses_feature"
+    },
+    "features": [
+      [ "vc:swamp_farm1", 1 ],
+      [ "vc:swamp_farm2", 1 ],
+      [ "vc:swamp_house_1", 3 ],
+      [ "vc:swamp_house_2", 3 ],
+      [ "vc:swamp_house_3", 3 ],
+      [ "vc:swamp_pot", 0.1 ],
+      [ "vc:swamp_sheperd_house", 1 ],
+      [ "vc:swamp_stable_1", 1 ],
+      [ "vc:swamp_stable_2", 1 ]
+    ]
+  }
+}

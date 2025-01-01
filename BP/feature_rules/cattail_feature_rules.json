@@ -1,0 +1,57 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "vc:cattail_feature_rules",
+			"places_feature": "vc:cattail_floor_snap_feature"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"all_of": [
+						{
+							"any_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "beach"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "shore"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 10,
+			"scatter_chance": 100.0,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					-16,
+					16
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					"query.heightmap(v.worldx, v.worldz) - 2",
+					"query.heightmap(v.worldx, v.worldz)"
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					-16,
+					16
+				]
+			}
+		}
+	}
+}

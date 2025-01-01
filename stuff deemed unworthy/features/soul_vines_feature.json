@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:growing_plant_feature": {
+		"description": {
+			"identifier": "vc:soul_vines_feature"
+		},
+
+		"body_blocks": [
+			["vc:soul_vines", 100]
+		],
+
+        "growth_direction": "down",
+        "height_distribution":  [
+            [{"range_min": 8, "range_max": 12}, 4]
+        ]
+	}
+}

@@ -1,0 +1,38 @@
+{ "frames": [
+        {
+            "filename": "0.aseprite",
+            "frame": { "x": 0, "y": 0, "w": 16, "h": 16},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16},
+            "SourceSize": {"w": 16, "h": 16},
+            "druation": 100
+        },
+        {
+            "filename": "1.aseprite",
+            "frame": { "x": 16, "y": 0, "w": 16, "h": 16},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": { "x": 16, "y": 0, "w": 16, "h": 16},
+            "SourceSize": {"w": 16, "h": 16},
+            "druation": 100
+        },
+        {
+            "filename": "2.aseprite",
+            "frame": { "x": 32, "y": 0, "w": 16, "h": 16},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": { "x": 32, "y": 0, "w": 16, "h": 16},
+            "SourceSize": {"w": 16, "h": 16},
+            "druation": 100
+        }
+    ],
+    "meta": {
+     "app": "http://www.aseprite.org/",
+     "version": "1.2.29-x64",
+     "image": "Thief02.png",
+     "format": "RGBA8888",
+     "size": { "w": 48, "h": 16 },
+     "scale": "1"
+    }
+}

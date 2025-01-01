@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.codlin",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-2, 4, -8], "size": [4, 6, 8], "uv": [0, 10]},
+						{"origin": [0, 10, -6], "size": [0, 4, 7], "pivot": [0, 0, 0], "rotation": [5, 0, 0], "uv": [16, 3]},
+						{"origin": [0, 9, 1], "size": [0, 1, 2], "uv": [0, 0]},
+						{"origin": [-2, 5, 0], "size": [4, 4, 6], "uv": [18, 18]},
+						{"origin": [-5, 7, 5], "size": [10, 0, 10], "pivot": [0, 0, 0], "rotation": [-2.5, 0, 0], "uv": [0, 0]},
+						{"origin": [-5, -1, -8], "size": [1, 5, 5], "pivot": [0, 0, 0], "rotation": [0, 0, 29], "uv": [23, 28]},
+						{"origin": [4, -1, -8], "size": [1, 5, 5], "pivot": [0, 0, 0], "rotation": [0, 0, -29], "uv": [11, 28]},
+						{"origin": [-2, 5, -12], "size": [4, 5, 4], "uv": [0, 24]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,197 @@
+{
+    "format_version": "1.20.30",
+    "minecraft:block": {
+        "description": {
+            "identifier": "vc:bakewood_fence_gate",
+            "menu_category": {
+                "category": "construction",
+                "group": "itemGroup.name.fenceGate"
+            },
+            "states": {
+                "vc:face": [
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "vc:open": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "components": {
+            "tag:wood": {},
+            "minecraft:flammable": {
+                "catch_chance_modifier": 5,
+                "destroy_chance_modifier": 20
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2.5
+            },
+            "minecraft:light_dampening": 0,
+             
+            "minecraft:geometry": "geometry.fence_gate",
+            "minecraft:on_player_placing": {
+                "event": "vc:place"
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:on_interact": {
+                "event": "vc:open"
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "bakewood_planks",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    2,
+                    -1
+                ],
+                "size": [
+                    16,
+                    14,
+                    2
+                ]
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    2,
+                    -1
+                ],
+                "size": [
+                    16,
+                    14,
+                    2
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('vc:open') == false",
+                "components": {
+                    "minecraft:geometry": "geometry.fence_gate",
+                    "minecraft:on_interact": {
+                        "event": "vc:open"
+                    },
+                    "tag:fence": {},
+                    "minecraft:queued_ticking": {
+                        "interval_range": [
+                            0,
+                            0
+                        ],
+                        "looping": true,
+                        "on_tick": {
+                            "event": "vc:shape",
+                            "target": "self"
+                        }
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -1
+                        ],
+                        "size": [
+                            16,
+                            14,
+                            2
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('vc:open') == true",
+                "components": {
+                    "minecraft:geometry": "geometry.fence_gate_open",
+                    "minecraft:on_interact": {
+                        "event": "vc:close"
+                    },
+                    "minecraft:collision_box": false
+                }
+            },
+            {
+                "condition": "query.block_state('vc:face') == 3",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('vc:face') == 4",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('vc:face') == 5",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            270,
+                            0
+                        ]
+                    }
+                }
+            }
+        ],
+        "events": {
+            "vc:place": {
+                "set_block_state": {
+                    "vc:face": "(query.cardinal_player_facing)"
+                }
+            },
+            "vc:shape": {
+                "run_command": {
+                    "command": [
+                        "fill ~~1~ ~~1~ vc:fence_collision replace air"
+                    ]
+                }
+            },
+            "vc:open": {
+                "run_command": {
+                    "command": [
+                        "playsound random.door_open @a[r=5] ~ ~ ~ 0.4"
+                    ]
+                },
+                "set_block_state": {
+                    "vc:open": true
+                }
+            },
+            "vc:close": {
+                "run_command": {
+                    "command": [
+                        "playsound random.door_close @a[r=5] ~ ~ ~ 0.4"
+                    ]
+                },
+                "set_block_state": {
+                    "vc:open": false
+                }
+            }
+        }
+    }
+}

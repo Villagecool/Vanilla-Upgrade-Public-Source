@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:palm_trapdoor_sawmill"
+    },
+
+    
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "000",
+      "BBG",
+      "000"
+    ],
+    "key": {
+      "G": {
+        "item": "vc:palm_planks",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "vc:palm_trapdoor",
+      "count": 5,
+      "data": 0
+    }
+  }
+}

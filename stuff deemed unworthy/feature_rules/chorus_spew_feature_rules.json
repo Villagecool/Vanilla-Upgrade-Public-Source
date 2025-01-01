@@ -1,0 +1,49 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "vc:chorus_spew_feature_rules",
+			"places_feature": "vc:chorus_spew_feature"
+		},
+		"conditions": {
+			"placement_pass": "final_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "the_end"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": "math.random_integer(40, 50)",
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					15
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					5,
+					80
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					15
+				]
+			}
+		}
+	}
+}

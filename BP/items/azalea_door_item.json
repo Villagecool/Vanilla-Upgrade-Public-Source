@@ -1,0 +1,26 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.door",
+        "category": "construction"
+      },
+      "identifier": "vc:azalea_door"
+    },
+    "components": {
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": "azalea_door_item",
+      "minecraft:display_name": {
+        "value": "item.vc:azalea_door_item"
+      },
+      "minecraft:custom_components": [
+        "vc:door"
+      ],
+      "minecraft:block_placer": {
+        "block": "vc:azalea_door",
+        "replace_block_item": true
+      }
+    }
+  }
+}

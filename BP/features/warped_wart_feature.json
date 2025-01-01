@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "vc:warped_wart_feature"
+		},
+		"count": 69,
+		"replace_rules": [
+			{
+				"places_block": {
+					"name": "vc:warped_wart",
+					"states": {
+						"vc:growth": 3
+					}
+				},
+				"may_replace": [
+					"nether_wart"
+				]
+			}
+		]
+	}
+}

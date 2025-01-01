@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "vc:elax_tree2_feature"
+		},
+		"structure_name": "mystructure:elax_tree2",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_whitelist": [
+					"minecraft:air"
+				]
+			}
+		}
+	}
+}

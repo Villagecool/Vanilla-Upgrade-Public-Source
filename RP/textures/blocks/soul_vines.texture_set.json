@@ -1,0 +1,7 @@
+{
+    "format_version":"1.16.100",
+    "minecraft:texture_set":{
+        "color":"soul_vines",
+        "metalness_emissive_roughness":"rtx_support/soul_vines_mer"
+    }
+}

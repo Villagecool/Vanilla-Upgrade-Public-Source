@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.wolfbetter": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [ "Texture.white", "Texture.dark", "Texture.dalmation", "Texture.golden", "Texture.grey" ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ 
+        "Array.skins[query.variant]",
+        "Texture.angry[query.is_angry]", 
+        "Texture.tame[query.has_owner]"
+      ]
+    }
+  }
+}

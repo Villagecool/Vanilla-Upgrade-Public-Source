@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "minecraft:diamond_helmet.illager",
+      "item": { "minecraft:diamond_helmet": "query.owner_identifier == 'minecraft:vindicator' || query.owner_identifier == 'minecraft:evocation_illager' || query.owner_identifier == 'minecraft:pillager' || query.owner_identifier == 'vc:bandager' || query.owner_identifier == 'vc:bombardier' || query.owner_identifier == 'vc:cyborg' || query.owner_identifier == 'vc:flyillager' || query.owner_identifier == 'vc:gillager' || query.owner_identifier == 'vc:illusionist' || query.owner_identifier == 'vc:mage' || query.owner_identifier == 'vc:manipulator' || query.owner_identifier == 'vc:necromancer' || query.owner_identifier == 'vc:pirate' || query.owner_identifier == 'vc:shapeshifter'" },
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/models/armor/diamond_1",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.illager.armor.helmet"
+      },
+      "scripts": {
+        "parent_setup": "variable.helmet_layer_visible = 0.0;"
+      },
+      "render_controllers": [ "controller.render.armor" ]
+    }
+  }
+}

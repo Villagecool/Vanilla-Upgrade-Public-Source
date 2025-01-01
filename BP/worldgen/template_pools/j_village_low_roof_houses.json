@@ -1,0 +1,35 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "vc:j_village_low_roof_houses"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/mid_house",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/low_connection",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/double_house",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 5
+      }
+    ],
+    "fallback": "vc:j_village_path_low_end"
+  }
+}

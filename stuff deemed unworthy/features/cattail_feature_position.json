@@ -1,0 +1,17 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:growing_plant_feature": {
+      "description": {
+        "identifier": "vc:cattail_feature_position"
+      },
+      "body_blocks": [
+        ["vc:cattail", 1]
+      ],
+      "head_blocks": [
+        ["vc:cattail", 1]
+      ],
+  
+      "growth_direction": "up",
+      "height_distribution": [[{ "range_min": 2, "range_max": 3 }, 1]]
+    }
+  }

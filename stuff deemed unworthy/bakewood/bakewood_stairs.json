@@ -1,0 +1,194 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:bakewood_stairs",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.stairs"
+			},
+			"traits": {
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:vertical_half"
+					]
+				}
+			},
+			"states": {
+				"vc:face": [
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"tag:wood": {},
+			"tag:stairs": {},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 20
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:geometry": "geometry.stairs",
+			"minecraft:on_player_placing": {
+				"event": "vc:place"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "bakewood_planks",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					8,
+					16
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:face') == 3",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:face') == 4",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:face') == 5",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom'",
+				"components": {
+					"minecraft:on_step_on": {
+						"event": "vc:collision",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top'",
+				"components": {
+					"minecraft:geometry": "geometry.stairs_upper",
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							16,
+							16
+						]
+					}
+				}
+			}
+		],
+		"events": {
+			"vc:place": {
+				"set_block_state": {
+					"vc:face": "query.cardinal_facing_2d"
+				}
+			},
+			"vc:othrplace": {
+				"set_block_state": {
+					"vc:face": "query.cardinal_facing_2d"
+				}
+			},
+			"vc:collision": {
+				"sequence": [
+					{
+						"condition": "(1.0)",
+						"run_command": {
+							"command": [
+								"/execute unless block ~~1~ air unless block ~~1~ vc:stairs_collision run setblock ~~~ air destroy"
+							]
+						}
+					},
+					{
+						"condition": "query.block_state('vc:face') == 2",
+						"run_command": {
+							"command": [
+								"/setblock ~ ~1 ~ vc:stairs_collision[\"vc:face\"=0]"
+							]
+						}
+					},
+					{
+						"condition": "query.block_state('vc:face') == 3",
+						"run_command": {
+							"command": [
+								"/setblock ~ ~1 ~ vc:stairs_collision[\"vc:face\"=1]"
+							]
+						}
+					},
+					{
+						"condition": "query.block_state('vc:face') == 4",
+						"run_command": {
+							"command": [
+								"/setblock ~ ~1 ~ vc:stairs_collision[\"vc:face\"=2]"
+							]
+						}
+					},
+					{
+						"condition": "query.block_state('vc:face') == 5",
+						"run_command": {
+							"command": [
+								"/setblock ~ ~1 ~ vc:stairs_collision[\"vc:face\"=3]"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

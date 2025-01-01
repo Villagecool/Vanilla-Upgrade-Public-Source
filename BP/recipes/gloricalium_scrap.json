@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "minecraft:gloricalium_scrap"
+    },
+    "tags": [
+      "furnace",
+      "blast_furnace"
+    ],
+    "input": "vc:glorium_shard",
+    "output": "vc:gloricalium_scrap"
+  }
+}

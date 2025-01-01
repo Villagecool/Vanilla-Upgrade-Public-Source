@@ -1,0 +1,91 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:lavender",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.flower"
+			},
+			"states": {
+				"vc:upper_bit": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"tag:plant": {},
+			"tag:non_solid": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.1
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:flammable": {
+				"catch_chance_modifier": 30,
+				"destroy_chance_modifier": 100
+			},
+			"minecraft:custom_components": [
+				"vc:lavender"
+			],
+			"minecraft:selection_box": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					16,
+					12
+				]
+			},
+			"minecraft:collision_box": false,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"grass_block",
+							"dirt",
+							"podzol",
+							"red_sand",
+							"sandstone",
+							"red_sandstone",
+							"sand",
+							"blue_terracotta",
+							"hardened_clay",
+							"vc:lavender"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "lavender_bottom",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:upper_bit') == true",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "lavender_top",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
+						}
+					}
+				}
+			}
+		]
+	}
+}

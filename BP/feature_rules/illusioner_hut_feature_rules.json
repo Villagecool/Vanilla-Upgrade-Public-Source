@@ -1,0 +1,45 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "vc:illusioner_hut_feature_rules",
+			"places_feature": "vc:illusioner_hut"
+		},
+		"conditions": {
+			"placement_pass": "before_surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"all_of": [
+						{
+							"any_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "frozen"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 1,
+			"x": {
+				"distribution": "fixed_grid",
+				"extent": [
+					100,
+					100
+				]
+			},
+			"y": "math.round(math.random(0,20)) == 0 ? query.heightmap(v.worldx, v.worldz) : -65",
+			"z": {
+				"distribution": "fixed_grid",
+				"extent": [
+					100,
+					100
+				]
+			}
+		}
+	}
+}

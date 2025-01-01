@@ -1,0 +1,24 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vc:totem_of_illusion",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:icon": "totem_2",
+      "minecraft:custom_components": [
+        "vc:totem_of_illusion"
+      ],
+      "minecraft:hover_text_color": "yellow",
+      "minecraft:allow_off_hand": true,
+      "minecraft:cooldown": {
+        "category": "illusion",
+        "duration": 20
+      }
+    }
+  }
+}

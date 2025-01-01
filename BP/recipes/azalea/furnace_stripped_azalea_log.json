@@ -1,0 +1,11 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "minecraft:furnace_stripped_azalea_log"
+    },
+    "tags": ["furnace"],
+    "input": "vc:stripped_azalea_log",
+    "output": "minecraft:coal:1"
+  }
+}

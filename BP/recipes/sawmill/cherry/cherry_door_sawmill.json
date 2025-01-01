@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:cherry_door_sawmill"
+    },
+
+    
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "ddd",
+      "dAd",
+      "ddd"
+    ],
+    "key": {
+      "A": {
+        "item": "cherry_planks",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "cherry_door",
+      "count": 3,
+      "data": 0
+    }
+  }
+}

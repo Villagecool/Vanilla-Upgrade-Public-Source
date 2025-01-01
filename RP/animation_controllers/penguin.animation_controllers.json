@@ -1,0 +1,73 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.penguin.general": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target",
+						"bob"
+					],
+					"transitions": [
+						{
+							"slide": "query.is_moving && query.variant == 1"
+						},
+						{
+							"waddle": "query.is_moving && !query.variant == 1"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"slide": {
+					"animations": [
+						"look_at_target",
+						"slide"
+					],
+					"transitions": [
+						{
+							"waddle": "query.is_moving && !query.variant == 1"
+						},
+						{
+							"default": "!query.is_moving"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"waddle": {
+					"animations": [
+						"look_at_target",
+						"waddle"
+					],
+					"transitions": [
+						{
+							"slide": "query.is_moving && query.variant == 1"
+						},
+						{
+							"default": "!query.is_moving"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"sitting": {
+					"animations": [
+						"look_at_target",
+						"sitting"
+					],
+					"transitions": [
+						{
+							"slide": "!query.is_sitting && query.is_moving && query.variant == 1"
+						},
+						{
+							"waddle": "!query.is_sitting && query.is_moving && !query.variant == 1"
+						},
+						{
+							"default": "!query.is_sitting && !query.is_moving"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

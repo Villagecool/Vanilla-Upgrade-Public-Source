@@ -1,0 +1,16 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "vc:glorium_blossom"
+		},
+		"places_block": "vc:glorium_blossom",
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": true,
+		"may_replace": [
+			"air",
+			"water",
+			"flowing_water"
+		]
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:jigsaw": {
+    "description": {
+      "identifier": "vc:jungle_village"
+    },
+    "step": "surface_structures",
+    "terrain_adaptation": "beard_thin",
+    "start_pool": "vc:jungle_temple",
+    "max_depth": 7,
+    "start_height": 0,
+    "biome_filters": [
+      {
+        "test": "has_biome_tag",
+        "operator": "==",
+        "value": "jungle"
+      }
+    ],
+    "heightmap_projection": "world_surface"
+  }
+}

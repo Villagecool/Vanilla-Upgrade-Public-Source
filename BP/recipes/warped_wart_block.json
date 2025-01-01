@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:warped_wart_block"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:warped_wart"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:warped_wart"
+      }
+    ],
+    "result": {
+      "item": "minecraft:warped_wart_block"
+    }
+  }
+}

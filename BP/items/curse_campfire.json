@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "delete:curse_campfire",
+			"menu_category": {
+				"is_hidden_in_commands": true
+			}
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "delete:curse_campfire"
+			},
+			"minecraft:should_despawn": true,
+			"minecraft:hover_text_color": "dark_purple"
+		}
+	}
+}

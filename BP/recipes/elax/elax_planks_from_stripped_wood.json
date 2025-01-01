@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:elax_planks_from_stripped_wood"
+    },
+    "tags": [ "crafting_table" ],
+    "group": "planks",
+    "pattern": [
+      "#"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:stripped_elax_wood"
+      }
+    },
+    "unlock": [
+        {
+          "item": "vc:stripped_elax_wood"
+        }
+    ],
+    "result": {
+      "item": "vc:elax_planks",
+      "count": 4
+    }
+  }
+}

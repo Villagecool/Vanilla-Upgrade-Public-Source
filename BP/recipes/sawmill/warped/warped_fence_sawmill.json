@@ -1,0 +1,26 @@
+	{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:warped_fence_sawmill"
+    },
+
+    
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "000",
+      "000",
+      "0A0"
+    ],
+    "key": {
+      "A": {
+        "item": "warped_planks",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "warped_fence",
+      "count": 8
+    }
+  }
+}

@@ -1,0 +1,96 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                      *
++*   (c) Microsoft. All rights reserved.                  *
++*********************************************************/
+{
+  "namespace": "globalpause",
+  "vanilla_animation0": {
+    "anim_type": "offset",
+    "frame_step": 16,
+    "easing": "linear",
+    "from": [
+      0,
+      2000
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "duration": 0.1
+  },
+  "message": {
+    "type": "label",
+    "color": "$body_text_color",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "layer": 2,
+    "shadow": false,
+    "text": "globalPauseScreen.message"
+  },
+  "quit_button@common_buttons.light_text_form_fitting_button": {
+    "$pressed_button_name": "button.menu_quit",
+    "$button_text": "globalPauseScreen.quit",
+    "layer": 2,
+    "offset": [
+      0,
+      "10%"
+    ]
+  },
+  "globalpause_screen@common.base_screen": {
+    "$screen_content": "globalpause.pause_screen_content"
+  },
+  "pause_screen_content": {
+    "type": "panel",
+    "$fill_alpha|default": 0.8,
+    "variables": [
+      {
+        "requires": "$is_holographic",
+        "$fill_alpha": 1.0
+      }
+    ],
+    "controls": [
+      {
+        "transparentFill": {
+          "type": "image",
+          "texture": "textures/ui/control",
+          "layer": -1,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "alpha": "$fill_alpha"
+        }
+      },
+      {
+        "message@globalpause.message": {}
+      },
+      {
+        "vanilla": {
+          "type": "image",
+          "texture": "textures/ui/vanilla",
+          "size": [
+            32,
+            32
+          ],
+          "uv_size": [
+            16,
+            16
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            15,
+            -133
+          ],
+          "layer": 15,
+          "anims": [
+            "@globalpause.vanilla_animation0"
+          ]
+        }
+      },
+      {
+        "quit_button@globalpause.quit_button": {}
+      }
+    ]
+  }
+}

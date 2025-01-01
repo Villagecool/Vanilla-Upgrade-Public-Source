@@ -1,0 +1,25 @@
+{
+	"format_version": "1.19.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:compressed_copper_doubleslab",
+			"menu_category": {
+				"category": "commands",
+				"group": "itemGroup.name.commands"
+			}
+		},
+		"components": {
+			"tag:metal": {},
+			"tag:copper": {},
+			"minecraft:loot": "loot_tables/blocks/compressed_copper_doubleslab.json",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 25
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "compressed_copper"
+				}
+			}
+		}
+	}
+}

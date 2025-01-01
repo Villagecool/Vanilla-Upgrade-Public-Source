@@ -1,0 +1,46 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.frost",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [16, 2, 16],
+							"uv": {
+								"north": {"uv": [0, 14], "uv_size": [16, 2], "material_instance": "snow"},
+								"east": {"uv": [0, 14], "uv_size": [16, 2], "material_instance": "snow"},
+								"south": {"uv": [0, 14], "uv_size": [16, 2], "material_instance": "snow"},
+								"west": {"uv": [0, 14], "uv_size": [16, 2], "material_instance": "snow"},
+								"up": {"uv": [16, 16], "uv_size": [-16, -16], "material_instance": "snow"},
+								"down": {"uv": [16, 16], "uv_size": [-16, -16], "material_instance": "snow"}
+							}
+						},
+						{
+							"origin": [-8, -7, -8],
+							"size": [16, 7, 16],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 7], "material_instance": "snow_side"},
+								"east": {"uv": [0, 0], "uv_size": [16, 7], "material_instance": "snow_side"},
+								"south": {"uv": [0, 0], "uv_size": [16, 7], "material_instance": "snow_side"},
+								"west": {"uv": [0, 0], "uv_size": [16, 7], "material_instance": "snow_side"},
+								"up": {"uv": [16, 16], "uv_size": [-16, -16], "material_instance": "snow"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

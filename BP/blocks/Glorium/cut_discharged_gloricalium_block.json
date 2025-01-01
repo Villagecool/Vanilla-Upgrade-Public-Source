@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:cut_discharged_gloricalium_block",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.metals"
+			}
+		},
+		"components": {
+			"minecraft:map_color": "#357C8A",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 14
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"texture": "cut_discharged_gloricalium_block"
+				}
+			}
+		}
+	}
+}

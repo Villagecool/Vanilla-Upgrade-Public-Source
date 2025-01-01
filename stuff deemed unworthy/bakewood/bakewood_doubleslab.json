@@ -1,0 +1,85 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:bakewood_doubleslab",
+			"menu_category": {
+				"category": "commands",
+				"group": "itemGroup.name.commands"
+			},
+			"states": {
+				"vc:face": [
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"tag:wood": {},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 20
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2.5
+			},
+			"minecraft:loot": "loot_tables/blocks/bakewood_doubleslab.json",
+			"minecraft:on_player_placing": {
+				"event": "vc:place"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "bakewood_planks",
+					"render_method": "blend"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:face') == 3",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:face') == 4",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:face') == 5",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			}
+		],
+		"events": {
+			"vc:place": {
+				"set_block_state": {
+					"vc:face": "(query.cardinal_player_facing)"
+				}
+			}
+		}
+	}
+}

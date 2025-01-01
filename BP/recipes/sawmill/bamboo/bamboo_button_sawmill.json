@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vc:bamboo_button_sawmill"
+    },
+    "tags": [
+      "sawmill"
+    ],
+    "pattern": [
+      "mmm",
+      "mmm",
+      "Amm"
+    ],
+    "key": {
+      "A": {
+        "item": "bamboo_planks"
+      }
+    },
+    "result": {
+      "item": "bamboo_button",
+      "count": 54
+    }
+  }
+}

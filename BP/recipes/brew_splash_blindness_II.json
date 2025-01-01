@@ -1,0 +1,15 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "minecraft:brew_splash_blindness_II"
+    },
+
+    "tags": [ "brewing_stand" ],
+
+    "input": "vc:potion_of_blindness_II",
+    "reagent": "minecraft:gunpowder",
+    "output": "vc:splash_potion_of_blindness_II"
+  }
+
+}

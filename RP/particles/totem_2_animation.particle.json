@@ -1,0 +1,54 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "vc:totem_2_animation",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/items/totem_2"
+			}
+		},
+		"curves": {
+			"v.yspeed": {
+				"type": "linear",
+				"input": "v.particle_age",
+				"horizontal_range": "v.particle_lifetime",
+				"nodes": [0, 0.5, 1, 0]
+			}
+		},
+		"events": {
+			"boom": {
+				"particle_effect": {
+					"effect": "vc:totem_2_animation_boom",
+					"type": "emitter"
+				},
+				"sound_effect": {
+					"event_name": "random.totem_2.explode"
+				}
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 1
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 6
+			},
+			"minecraft:emitter_shape_point": {},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 1.8
+			},
+			"minecraft:particle_lifetime_events": {
+				"expiration_event": "boom"
+			},
+			"minecraft:particle_initial_speed": 5,
+			"minecraft:particle_motion_parametric": {
+				"relative_position": ["math.sin(variable.particle_age*600)*math.clamp(2-variable.particle_age, 0, 200)", "math.sin(variable.particle_age*80)*6", "math.cos(variable.particle_age*600)*math.clamp(2-variable.particle_age, 0, 200)"]
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [0.5, 0.5],
+				"facing_camera_mode": "rotate_xyz"
+			}
+		}
+	}
+}

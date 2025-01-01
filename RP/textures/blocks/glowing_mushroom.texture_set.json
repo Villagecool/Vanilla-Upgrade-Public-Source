@@ -1,0 +1,7 @@
+{
+    "format_version":"1.16.100",
+    "minecraft:texture_set":{
+        "color":"glowing_mushroom",
+        "metalness_emissive_roughness":"rtx_support/glowing_mushroom_mer"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:template_pool": {
+        "description": {
+            "identifier": "vc:j_village_path_high_end"
+        },
+        "elements": [
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "junglevillage/high_bridge_end",
+                    "processors": "mike:stone_brick_replacement"
+                },
+                "weight": 4
+            }
+        ]
+    }
+}

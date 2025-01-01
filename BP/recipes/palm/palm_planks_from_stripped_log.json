@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:palm_planks_from_stripped_log"
+    },
+    "tags": [ "crafting_table" ],
+    "group": "planks",
+    "pattern": [
+      "#"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:stripped_palm_log"
+      }
+    },
+    "unlock": [
+        {
+          "item": "vc:stripped_palm_log"
+        }
+    ],
+    "result": {
+      "item": "vc:palm_planks",
+      "count": 4
+    }
+  }
+}

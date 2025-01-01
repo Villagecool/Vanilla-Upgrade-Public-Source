@@ -1,0 +1,7 @@
+{
+    "format_version":"1.16.100",
+    "minecraft:texture_set":{
+        "color":"spew_top",
+        "metalness_emissive_roughness":"rtx_support/spew_top_mer"
+    }
+}

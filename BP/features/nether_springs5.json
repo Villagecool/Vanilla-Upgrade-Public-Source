@@ -1,0 +1,21 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "vc:nether_springs5"
+		},
+		"structure_name": "mystructure:nether_springs5",
+		"adjustment_radius": 4,
+		"facing_direction": "random",
+		"constraints": {
+            "grounded": {},
+			"block_intersection": {
+				"block_allowlist": [
+                    "air",
+                    "lava",
+                    "flowing_lava"
+				]
+			}
+		}
+	}
+}

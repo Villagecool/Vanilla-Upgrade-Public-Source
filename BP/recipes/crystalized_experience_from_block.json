@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "vc:crystalized_experience_from_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "vc:crystalized_experience_block"
+			}
+		},
+		"pattern": [
+			"#"
+		],
+		"unlock": [
+			{
+				"item": "vc:crystalized_experience"
+			}
+		],
+		"result": {
+			"item": "vc:crystalized_experience",
+			"count": 9
+		}
+	}
+}

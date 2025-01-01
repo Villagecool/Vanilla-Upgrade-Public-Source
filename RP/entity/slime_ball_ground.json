@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:slime_ball_ground",
+      "materials": {
+        "default": "blaze_head"
+      },
+      "textures": {
+        "default": "textures/items/slimeball"
+      },
+      "geometry": {
+        "default": "geometry.item_sprite"
+      },
+      "render_controllers": [ "controller.render.item_sprite" ],
+      "animations": {
+        "flying": "animation.actor.billboard"
+      },
+      "particle_effects": {
+        "snowballpoof": "minecraft:knockback_roar_particle"
+      },
+      "scripts": {
+        "animate": [
+          "flying"
+        ]
+      }
+    }
+  }
+} 

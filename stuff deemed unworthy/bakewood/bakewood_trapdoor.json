@@ -1,0 +1,276 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:bakewood_trapdoor",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.trapdoor"
+			},
+			"states": {
+				"vc:up": [
+					0,
+					1
+				],
+				"vc:face": [
+					2,
+					3,
+					4,
+					5
+				],
+				"vc:open": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"tag:wood": {},
+			"tag:non_solid": {},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 20
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:geometry": "geometry.trapdoor",
+			"minecraft:on_player_placing": {
+				"event": "vc:place"
+			},
+			"minecraft:on_interact": {
+				"event": "vc:open"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "bakewood_trapdoor",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:transformation": {
+				"rotation": [
+					0,
+					0,
+					180
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					5
+				],
+				"size": [
+					16,
+					16,
+					3
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					5
+				],
+				"size": [
+					16,
+					16,
+					3
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:face') == 2 && query.block_state('vc:up') == 1",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:face') == 3 && query.block_state('vc:up') == 1",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:face') == 4 && query.block_state('vc:up') == 1",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:face') == 5 && query.block_state('vc:up') == 1",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:face') == 2 && query.block_state('vc:up') == 0",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							180
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:face') == 3 && query.block_state('vc:up') == 0",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							180
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:face') == 4 && query.block_state('vc:up') == 0",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							180
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:face') == 5 && query.block_state('vc:up') == 0",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							180
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:open') == false",
+				"components": {
+					"minecraft:geometry": "geometry.trapdoor",
+					"minecraft:on_interact": {
+						"event": "vc:open"
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							16
+						]
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:open') == true",
+				"components": {
+					"minecraft:geometry": "geometry.trapdoor_open",
+					"minecraft:on_interact": {
+						"event": "vc:close"
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							5
+						],
+						"size": [
+							16,
+							16,
+							3
+						]
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							5
+						],
+						"size": [
+							16,
+							16,
+							3
+						]
+					}
+				}
+			}
+		],
+		"events": {
+			"vc:place": {
+				"set_block_state": {
+					"vc:face": "query.cardinal_facing_2d",
+					"vc:up": "query.block_face == 1?1:0"
+				}
+			},
+			"vc:open": {
+				"run_command": {
+					"command": [
+						"playsound open.wooden_door @a[r=5] ~ ~ ~ 0.4"
+					]
+				},
+				"set_block_state": {
+					"vc:open": true
+				}
+			},
+			"vc:close": {
+				"run_command": {
+					"command": [
+						"playsound close.wooden_door @a[r=5] ~ ~ ~ 0.4"
+					]
+				},
+				"set_block_state": {
+					"vc:open": false
+				}
+			}
+		}
+	}
+}

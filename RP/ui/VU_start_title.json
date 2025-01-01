@@ -1,0 +1,119 @@
+{
+  "namespace": "VU_start_title",
+  "move_wait0": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "from": [
+      0,
+      200
+    ],
+    "to": [
+      0,
+      200
+    ],
+    "duration": 0.7,
+    "next": "@VU_start_title.move_anm1"
+  },
+  "move_wait2": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "from": [
+      0,
+      200
+    ],
+    "to": [
+      0,
+      200
+    ],
+    "duration": 0.5,
+    "next": "@VU_start_title.move_anm1"
+  },
+  "move_anm1": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "from": [
+      0,
+      200
+    ],
+    "to": [
+      0,
+      -45
+    ],
+    "duration": 0.3
+  },
+  "size_wait0": {
+    "anim_type": "size",
+    "easing": "linear",
+    "from": [
+      "200%",
+      "200%"
+    ],
+    "to": [
+      "200%",
+      "200%"
+    ],
+    "duration": 0.7,
+    "next": "@VU_start_title.size_anm1"
+  },
+  "size_wait2": {
+    "anim_type": "size",
+    "easing": "linear",
+    "from": [
+      "200%",
+      "200%"
+    ],
+    "to": [
+      "200%",
+      "200%"
+    ],
+    "duration": 0.5,
+    "next": "@VU_start_title.size_anm1"
+  },
+  "size_anm1": {
+    "anim_type": "size",
+    "easing": "linear",
+    "from": [
+      "200%",
+      "200%"
+    ],
+    "to": [
+      "60%",
+      "60%"
+    ],
+    "duration": 0.3
+  },
+  "upgrade": {
+    "type": "image",
+    "texture": "textures/ui/upgrade",
+    "size": [
+      "60%",
+      "60%"
+    ],
+    "offset": [
+      0,
+      -45
+    ],
+    "layer": 1,
+    "anims": [
+      "@VU_start_title.move_wait0",
+      "@VU_start_title.size_wait0"
+    ]
+  },
+  "vanilla": {
+    "type": "image",
+    "texture": "textures/ui/vanilla",
+    "size": [
+      "60%",
+      "60%"
+    ],
+    "offset": [
+      0,
+      -45
+    ],
+    "layer": 1,
+    "anims": [
+      "@VU_start_title.move_wait2",
+      "@VU_start_title.size_wait2"
+    ]
+  }
+}

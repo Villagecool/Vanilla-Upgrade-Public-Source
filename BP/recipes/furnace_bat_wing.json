@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "minecraft:furnace_bat_wing"
+    },
+
+    
+    "tags": ["furnace", "smoker", "campfire", "soul_campfire"],
+    "input": "vc:bat_wing",
+    "output": "vc:bat_wing_cooked"
+  }
+  
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:bone_meal_meal"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "#",
+      "B"
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:bowl"
+      },
+      "#": {
+        "item": "minecraft:bone_meal"
+      }
+    },
+    "unlock": [
+        {
+            "item": "minecraft:bone_meal"
+        }
+    ],
+    "result": {
+      "item": "vc:bone_meal_meal"
+    }
+  }
+}

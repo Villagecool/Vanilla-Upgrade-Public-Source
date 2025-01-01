@@ -1,0 +1,17 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "minecraft:stonecutter_discharged_gloricalium_grate2"
+    },
+    "tags": [
+      "stonecutter"
+    ],
+    "priority": 1,
+    "ingredients" : ["vc:discharged_gloricalium_block"],
+    "result": {
+      "item": "vc:discharged_gloricalium_grate",
+      "count": 1
+    }
+  }
+}

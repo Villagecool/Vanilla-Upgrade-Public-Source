@@ -1,0 +1,29 @@
+	{
+  "format_version": "1.21.30",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.crop",
+        "category": "nature"
+      },
+      "identifier": "vc:popcorn"
+    },
+    "components": {
+      "minecraft:use_modifiers": {
+        "movement_modifier": 0.4,
+        "use_duration": 1.61
+      },
+      "minecraft:use_animation": "eat",
+      "tag:minecraft:is_food": {},
+      "minecraft:max_stack_size": 64,
+      "minecraft:display_name": {
+        "value": "Popcorn"
+      },
+      "minecraft:icon": "popcorn",
+      "minecraft:food": {
+        "nutrition": 3,
+        "saturation_modifier": 5
+      }
+    }
+  }
+}

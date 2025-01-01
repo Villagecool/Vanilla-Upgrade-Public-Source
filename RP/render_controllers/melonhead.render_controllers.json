@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.melonheadfront": {
+      "geometry": "Geometry.front",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [
+        "Texture.front"
+      ]
+    },
+    "controller.render.melonheadside": {
+      "geometry": "Geometry.side",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [
+        "Texture.side"
+      ]
+    },
+    "controller.render.melonheadtop": {
+      "geometry": "Geometry.top",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [
+        "Texture.top"
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:charcoal_from_block"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "#"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:charcoal_block"
+      }
+    },
+    "result": {
+      "item": "minecraft:charcoal",
+      "count": 9
+    }
+  }
+}

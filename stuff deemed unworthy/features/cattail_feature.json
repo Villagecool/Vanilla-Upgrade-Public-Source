@@ -1,0 +1,24 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "vc:cattail_feature"
+    },
+    "iterations": 100,
+    "coordinate_eval_order": "zyx",
+    "x": {
+      "extent": [ -5, 5 ],
+      "distribution": "gaussian"
+    },
+    "y": {
+      "extent": [ -3, 3 ],
+      "distribution": "gaussian"
+    },
+    "z": {
+      "extent": [ -5, 5 ],
+      "distribution": "gaussian"
+    },
+    "project_input_to_floor": true,
+    "places_feature": "vc:cattail_random_feature"
+  }
+}

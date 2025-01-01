@@ -1,0 +1,48 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "vc:endslate_feature_rules",
+      "places_feature": "vc:endslate_feature"
+    },
+    "conditions": {
+      "placement_pass": "after_surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "any_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "the_end"
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 100,
+      "coordinate_eval_order": "zyx",
+      "x": {
+        "distribution": "uniform",
+        "extent": [
+          -5,
+          5
+        ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [
+          5,
+          32
+        ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [
+          -5,
+          5
+        ]
+      }
+    }
+  }
+}

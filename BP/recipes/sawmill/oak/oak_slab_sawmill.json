@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:oak_slab_sawmill"
+    },
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "bvc",
+      "gay",
+      "ape"
+    ],
+    "key": {
+      "b": {
+        "item": "planks:0"
+      }
+    },
+    "result": {
+      "item": "wooden_slab",
+      "count": 2
+    }
+  }
+}

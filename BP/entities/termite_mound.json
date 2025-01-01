@@ -1,0 +1,141 @@
+{
+	"format_version": "1.18.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "vc:termite_mound",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"vc:die": {
+				"minecraft:transformation": {
+					"drop_inventory": true,
+					"into": "red:tets",
+					"drop_equipment": false,
+					"delay": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:inventory": {
+				"container_type": "minecart_hopper",
+				"can_be_siphoned_from": true,
+				"inventory_size": 5,
+				"private": true
+			},
+			"minecraft:behavior.equip_item": {
+				"priority": 2
+			},
+			"minecraft:nameable": {},
+			"minecraft:rideable": {
+				"family_types": [
+					"termite"
+				],
+				"seat_count": 5,
+				"seats": {
+					"max_rider_count": 5,
+					"min_rider_count": 0,
+					"position": [
+						0,
+						0.5,
+						0
+					]
+				}
+			},
+			//"minecraft:can_have_equipment": {},
+			//"minecraft:equippable": {},
+			//"minecraft:equip_item": {},
+			"minecraft:behavior.pickup_items": {
+				"priority": 4,
+				"max_dist": 3,
+				"goal_radius": 2,
+				"speed_multiplier": 0.5,
+				"can_pickup_to_hand_or_equipment": true
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": [
+					20,
+					40
+				],
+				"time_down_event": {
+					"event": "vc:evict_rider"
+				}
+			},
+			"minecraft:inside_block_notifier": {
+				"block_list": [
+					{
+						"block": {
+							"name": "vc:termite_mound"
+						},
+						"exited_block_event": {
+							"event": "vc:die"
+						}
+					}
+				]
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"value": false
+						},
+						"event": "vc:tick",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "any",
+					"deals_damage": false
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0,
+				"width": 0
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 0,
+						"height": 0,
+						"pivot": [
+							0,
+							0,
+							0
+						]
+					}
+				]
+			}
+		},
+		"events": {
+			"vc:evict_rider": {
+				"queue_command": {
+					"command": [
+						"execute as @e[type=vc:termite,r=1.5,c=1] run playsound block.beehive.exit @a ~~~",
+						"execute as @e[type=vc:termite,r=1.5,c=1] run ride @s stop_riding"
+					]
+				}
+			},
+			"vc:tick": {
+				"queue_command": {
+					"command": "scriptevent vc:termite_mound"
+				}
+			},
+			"vc:die": {
+				"add": {
+					"component_groups": [
+						"vc:die"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "vc:j_village_floor_houses"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/blacksmith",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/butcher",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 3
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/farm",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 5
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/fisherman_pond",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/large_animal_pen",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 3
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/small_animal_pen",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 3
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/small_hut",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 5
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/small_hut_chest",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 3
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/path1",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/mid_house",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 8
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/double_house",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 8
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/temple",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      }
+    ]
+  }
+}

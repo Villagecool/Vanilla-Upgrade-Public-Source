@@ -1,0 +1,45 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "category": "equipment"
+      },
+      "identifier": "vc:copper_wrench"
+    },
+    "components": {
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability",
+            "items": [
+              "vc:copper_wrench",
+              "minecraft:copper_ingot"
+            ]
+          }
+        ]
+      },
+      "minecraft:enchantable": {
+        "slot": "flintsteel",
+        "value": 10
+      },
+      "minecraft:damage": {
+        "value": 6
+      },
+      "minecraft:custom_components": [
+        "vc:copper_wrench"
+      ],
+      "minecraft:can_destroy_in_creative": false
+      "minecraft:hand_equipped": true,
+      "minecraft:durability": {
+        "max_durability": 100,
+        "damage_chance": {
+          "min": 5,
+          "max": 10
+        }
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:icon": "copper_wrench"
+    }
+  }
+}

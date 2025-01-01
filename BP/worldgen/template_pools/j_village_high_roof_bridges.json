@@ -1,0 +1,26 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "vc:j_village_high_roof_bridges"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/high_large_bridge",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "junglevillage/high_small_bridge",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:fly",
+      "materials": { 
+        "default": "villager_v2" 
+      },
+      "textures": {
+        "default": "textures/particle/firefly"
+      },
+      "scripts": {
+        "animate": [
+          "pos"
+        ]
+      },
+      "animations": {
+        "pos": "animation.actor.billboard"
+      },
+      "geometry": {
+        "default": "geometry.fly"
+      },
+      "render_controllers": [ 
+        "controller.render.zombie"
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 14
+      }
+    }
+  }
+}

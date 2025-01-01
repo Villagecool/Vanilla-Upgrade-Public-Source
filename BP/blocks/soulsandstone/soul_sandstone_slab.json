@@ -1,0 +1,111 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:soul_sandstone_slab",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.slab"
+			},
+			"traits": {
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:vertical_half"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 7
+			},
+			"minecraft:custom_components": [
+				"vc:slab"
+			],
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 6
+			},
+			"minecraft:material_instances": {
+				"down": {
+					"texture": "soul_sandstone_bottom",
+					"render_method": "alpha_test"
+				},
+				"*": {
+					"texture": "soul_sandstone_normal",
+					"render_method": "alpha_test"
+				},
+				"up": {
+					"texture": "soul_sandstone_top",
+					"render_method": "alpha_test"
+				}
+			}
+		},
+		"permutations": [
+			// Bottom Slab
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom'",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.slab"
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top'",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.slab_upper"
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					}
+				}
+			}
+		]
+	}
+}

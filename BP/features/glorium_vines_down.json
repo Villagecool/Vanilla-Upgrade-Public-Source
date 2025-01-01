@@ -1,0 +1,50 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:growing_plant_feature": {
+		"description": {
+			"identifier": "vc:glorium_vines_down"
+		},
+		"growth_direction": "DOWN",
+		"allow_water": true,
+		"body_blocks": [
+			[
+				{
+					"name": "vc:glorium_vines",
+					"states": {
+						"minecraft:vertical_half": "top",
+						"vc:blockshape": 0
+					}
+				},
+				100
+			]
+		],
+		"head_blocks": [
+			[
+				{
+					"name": "vc:glorium_vines",
+					"states": {
+						"minecraft:vertical_half": "top",
+						"vc:blockshape": 1
+					}
+				},
+				100
+			]
+		],
+		"height_distribution": [
+			[
+				{
+					"range_min": 1,
+					"range_max": 3
+				},
+				2
+			],
+			[
+				{
+					"range_min": 3,
+					"range_max": 6
+				},
+				1
+			]
+		]
+	}
+}

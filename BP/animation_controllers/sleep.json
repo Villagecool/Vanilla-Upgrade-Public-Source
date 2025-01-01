@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.sleep": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "walking": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[tag=sleep,r=3] ~~~",
+            "/playanimation @p[tag=sleep,r=3] animation.player.sleepbag \"query.scoreboard('sleep') == 0\""
+          ]
+        },
+        "walking2": {
+          "transitions": [
+            {
+              "default": "(query.scoreboard('sleep') == 0"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[tag=sleep,r=3] ~~~",
+            "/playanimation @p[tag=sleep,r=3] root root 5 \"query.scoreboard('sleep') == 0\""
+          ]
+        },
+        "walking": {
+          "transitions": [
+            {
+              "default": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[tag=sleep,r=3] ~~~",
+            "/playanimation @p[tag=sleep,r=3] animation.player.sleepbag \"query.scoreboard('sleep') == 0\""
+          ]
+        }
+      }
+    }
+  }
+}

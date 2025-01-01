@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vc:bamboo_trapdoor_sawmill"
+    },
+    "tags": [
+      "sawmill"
+    ],
+    "pattern": [
+      "000",
+      "BBG",
+      "000"
+    ],
+    "key": {
+      "G": {
+        "item": "bamboo_planks",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "bamboo_trapdoor",
+      "count": 5
+    }
+  }
+}

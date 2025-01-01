@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:tomato_golden"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "#T#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:gold_nugget"
+      },
+      "T": {
+        "item": "vc:tomato"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:tomato"
+      }
+    ],
+    "result": {
+      "item": "vc:tomato_golden"
+    }
+  }
+}

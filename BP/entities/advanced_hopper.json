@@ -1,0 +1,252 @@
+{
+	"format_version": "1.18.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "vc:advanced_hopper",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"vc:die": {
+				"minecraft:transformation": {
+					"drop_inventory": true,
+					"into": "red:tets",
+					"drop_equipment": false,
+					"delay": 0
+				}
+			},
+			"vc:locked": {
+				"minecraft:inventory": {
+					"container_type": "minecart_hopper",
+					"inventory_size": 5,
+					"private": false,
+					"can_be_siphoned_from": false
+				}
+			},
+			"vc:unlocked": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": [
+						0.25,
+						0.25
+					],
+					"time_down_event": {
+						"event": "vc:tick2"
+					}
+				},
+				"minecraft:inventory": {
+					"container_type": "minecart_hopper",
+					"inventory_size": 5,
+					"private": false,
+					"can_be_siphoned_from": false
+				}
+			},
+			"vc:open": {
+				"minecraft:collision_box": {
+					"height": 1.1,
+					"width": 1.1
+				},
+				"minecraft:custom_hit_test": {
+					"hitboxes": [
+						{
+							"width": 1.1,
+							"height": 1.1,
+							"pivot": [
+								0,
+								0,
+								0
+							]
+						}
+					]
+				}
+			},
+			"vc:close": {
+				"minecraft:collision_box": {
+					"height": 0,
+					"width": 0
+				},
+				"minecraft:custom_hit_test": {
+					"hitboxes": [
+						{
+							"width": 0,
+							"height": 0,
+							"pivot": [
+								0,
+								0,
+								0
+							]
+						}
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:inventory": {
+				"container_type": "minecart_hopper",
+				"inventory_size": 5,
+				"private": false
+			},
+			"minecraft:behavior.equip_item": {
+				"priority": 2
+			},
+			"minecraft:nameable": {},
+			//"minecraft:can_have_equipment": {},
+			//"minecraft:equippable": {},
+			//"minecraft:equip_item": {},
+			"minecraft:behavior.pickup_items": {
+				"priority": 4,
+				"max_dist": 3,
+				"goal_radius": 2,
+				"speed_multiplier": 0.5,
+				"can_pickup_to_hand_or_equipment": true
+			},
+			"minecraft:inside_block_notifier": {
+				"block_list": [
+					{
+						"block": {
+							"name": "vc:advanced_hopper"
+						},
+						"exited_block_event": {
+							"event": "vc:die"
+						}
+					},
+					{
+						"block": {
+							"name": "air"
+						},
+						"entered_block_event": {
+							"event": "vc:die"
+						}
+					}
+				]
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"event": "vc:tick",
+						"filters": {
+							"test": "has_equipment",
+							"operator": "not",
+							"domain": "head",
+							"value": "air"
+						}
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "any",
+					"deals_damage": false
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0,
+				"width": 0
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 0,
+						"height": 0,
+						"pivot": [
+							0,
+							0,
+							0
+						]
+					}
+				]
+			}
+		},
+		"events": {
+			"vc:tick": {
+				"queue_command": {
+					"command": [
+						//"execute as @s run scriptevent vc:hopper.tickFilter"
+					],
+					"target": "self"
+				}
+			},
+			"vc:tick2": {
+				"queue_command": {
+					"command": [
+						//"execute as @s run scriptevent vc:hopper.tickFilter2"
+					],
+					"target": "self"
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"vc:unlocked"
+					]
+				}
+			},
+			"vc:die": {
+				"queue_command": {
+					"command": [
+						"execute as @s run scriptevent vc:hopper.checkDrop"
+					],
+					"target": "self"
+				},
+				"add": {
+					"component_groups": [
+						"vc:die"
+					]
+				}
+			},
+			"vc:open": {
+				"add": {
+					"component_groups": [
+						"vc:open"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"vc:close"
+					]
+				}
+			},
+			"vc:close": {
+				"remove": {
+					"component_groups": [
+						"vc:open"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"vc:close"
+					]
+				}
+			},
+			"vc:lock": {
+				"add": {
+					"component_groups": [
+						"vc:locked"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"vc:unlocked"
+					]
+				}
+			},
+			"vc:unlock": {
+				"add": {
+					"component_groups": [
+						"vc:unlocked"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"vc:locked"
+					]
+				}
+			}
+		}
+	}
+}

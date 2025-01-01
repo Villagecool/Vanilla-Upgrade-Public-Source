@@ -1,0 +1,14 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:single_block_feature": {
+      "description": {
+        "identifier": "vc:small_glowing_mushroom_feature"
+      },
+      "places_block": "no:glowing_mushroom",
+      "enforce_placement_rules": true,
+      "enforce_survivability_rules": true,
+      "may_replace": [
+        "minecraft:air"
+      ]
+    }
+  }

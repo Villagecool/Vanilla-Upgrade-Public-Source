@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.evoker.casting" : {
+			"loop" : true,
+			"bones" : {
+				"arms" : {
+					"scale" : 0.0
+				},
+				"leftarm" : {
+					"rotation" : [ "math.cos(query.life_time * 763.4) * 14.3239 - this", "-this", "-135.0 - this" ],
+					"scale" : 1.0
+				},
+				"rightarm" : {
+					"rotation" : [ "math.cos(query.life_time * 763.4) * 14.3239 - this", "-this", "135.0 - this" ],
+					"scale" : 1.0
+				}
+			}
+		},
+		"animation.evoker.bow_and_arrow" : {
+			"loop" : true,
+			"bones" : {
+				"leftArm" : {
+					"rotation" : [ "query.target_x_rotation - 90.0 - math.sin(query.life_time * 76.8) * 2.865 - this", "query.target_y_rotation + 28.65", "-(math.cos(query.life_time * 103.2) * 2.865) - 2.865" ]
+				},
+				"rightArm" : {
+					"rotation" : [ "query.target_x_rotation - 90.0 + math.sin(query.life_time * 76.8) * 2.865 - this", "query.target_y_rotation - 5.73", "(math.cos(query.life_time * 103.2) * 2.865) + 2.865" ]
+				},
+				"arms" : {
+					"scale" : [0, 0, 0]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:vegetation_patch_feature": {
+		"description": {
+			"identifier": "vc:goodlands"
+		},
+		"replaceable_blocks": [
+			"red_sand",
+			"sand",
+			"red_sandstone",
+			"sandstone",
+			"orange_terracotta",
+			"white_terracotta",
+			"light_gray_terracotta",
+			"brown_terracotta",
+			"red_terracotta",
+			"hardened_clay"
+		],
+		"ground_block": "blue_terracotta",
+		"vegetation_feature": "vc:goodlands_veg",
+		"surface": "floor",
+		"depth": 4,
+		"extra_deep_block_chance": 0.5,
+		"vertical_range": 5,
+		"vegetation_chance": 0.4,
+		"horizontal_radius": 6,
+		"extra_edge_column_chance": 0.75
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.sapling"
+			},
+			"identifier": "vc:sapling_bakewood"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "no:sapling_bakewood"
+			},
+			"minecraft:icon": {
+				"texture": "sapling_bakewood"
+			},
+			"minecraft:use_duration": 0.5
+		}
+	}
+}

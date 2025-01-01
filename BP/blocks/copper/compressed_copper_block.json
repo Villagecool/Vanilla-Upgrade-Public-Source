@@ -1,0 +1,24 @@
+{
+	"format_version": "1.19.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:compressed_copper_block",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.copper"
+			}
+		},
+		"components": {
+			"tag:metal": {},
+			"tag:copper": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 25
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "compressed_copper"
+				}
+			}
+		}
+	}
+}

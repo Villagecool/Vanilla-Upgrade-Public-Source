@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "vc:carnavorus_chorus_growth_feature"
+		},
+		"structure_name": "mystructure:carnavorus_chorus_growth",
+		"adjustment_radius": 4,
+		"facing_direction": "random",
+		"constraints": {
+            "grounded": {},
+            "unburied": {},
+			"block_intersection": {
+				"block_allowlist": [
+                    "air"
+				]
+			}
+		}
+	}
+}

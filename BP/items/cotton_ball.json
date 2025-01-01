@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vc:cotton_ball",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.seed"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:bundle_interaction": {
+        "num_viewable_slots": 1
+      },
+      "minecraft:stacked_by_data": true,
+      "minecraft:storage_item": {
+        "allow_nested_storage_items": false,
+        "max_slots": 1,
+        "max_weight_limit": 64
+      },
+      "minecraft:icon": "cotton_ball"
+    }
+  }
+}

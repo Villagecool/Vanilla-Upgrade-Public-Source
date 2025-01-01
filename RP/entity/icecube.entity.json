@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:icecube",
+      "materials": {
+        "default": "slime_outer"
+      },
+      "textures": {
+        "default": "textures/blocks/ice"
+      },
+      "geometry": {
+        "default": "geometry.icecube"
+      },
+      "render_controllers": [ {"controller.render.zombie" : "query.is_alive"} ]
+    }
+  }
+}

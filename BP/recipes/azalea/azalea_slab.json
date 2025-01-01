@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:azalea_slab"
+    },
+    "tags": [ "crafting_table" ],
+    "group": "wooden_slab",
+    "pattern": [
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:azalea_planks"
+      }
+    },
+    "unlock": [
+        {
+            "item": "vc:azalea_planks",
+            "data": 4
+        }
+    ],
+    "result": {
+      "item": "vc:azalea_slab",
+      "count": 6
+    }
+  }
+}

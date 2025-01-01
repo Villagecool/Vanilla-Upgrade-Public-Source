@@ -1,0 +1,39 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "vc:breezer_from_discharged"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"BGB",
+			"RIR",
+			"NDN"
+		],
+		"key": {
+			"G": {
+				"item": "vc:discharged_gloricalium_grate"
+			},
+			"B": {
+				"item": "minecraft:wind_charge"
+			},
+			"R": {
+				"item": "minecraft:breeze_rod"
+			},
+			"I": {
+				"item": "minecraft:iron_ingot"
+			},
+			"N": {
+				"item": "minecraft:copper_ingot"
+			},
+			"D": {
+				"item": "minecraft:redstone"
+			}
+		},
+		"result": {
+			"item": "vc:breezer"
+		}
+	}
+}

@@ -1,0 +1,66 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "vc:glareizer",
+      "materials": {
+        "default": "entity_emissive_alpha"
+      },
+      "item": "vc:glareizer",
+      "scripts": {
+        "pre_animation": [
+          "variable.glareizer_angle = math.clamp(1 - query.body_x_rotation / 45.1, 0.0, 1.0);",
+          "variable.glareizer_angle = 0;",
+          //"variable.strength = math.round(query.time_of_day*4);",
+          "variable.strength = math.round(query.cooldown_time_remaining('slot.weapon.mainhand',0));"
+        ],
+        "animate": [
+          {
+            "first_person": "c.is_first_person"
+          },
+          {
+            "third_person": "!c.is_first_person"
+          },
+          {
+            "none": "variable.strength <= 0.0"
+          },
+          {
+            "low": "variable.strength == 1.0"
+          },
+          {
+            "med": "variable.strength == 2.0"
+          },
+          {
+            "high": "variable.strength >= 3.0"
+          }
+        ]
+      },
+      "animations": {
+        "first_person": "animation.glareizer.first_person",
+        "third_person": "animation.glareizer.third_person",
+        "none": "animation.glareizer.sound_none",
+        "low": "animation.glareizer.sound_low",
+        "med": "animation.glareizer.sound_med",
+        "high": "animation.glareizer.sound_high"
+      },
+      "geometry": {
+        "default": "geometry.glareizer"
+      },
+      "textures": {
+        "default": "textures/items/glareizer",
+        "low": "textures/items/glareizer_low",
+        "med": "textures/items/glareizer_med",
+        "high": "textures/items/glareizer_high"
+      },
+      "sound_effects": {
+        "none": "glareizer.none",
+        "low": "glareizer.low",
+        "med": "glareizer.med",
+        "high": "glareizer.high"
+      },
+      "render_controllers": [
+        "controller.render.glareizer"
+      ]
+    }
+  }
+}

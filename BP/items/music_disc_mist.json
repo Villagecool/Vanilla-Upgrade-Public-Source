@@ -1,0 +1,24 @@
+{
+  "format_version": "1.20.40",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vc:music_disc_mist",
+      "menu_category": {
+        "category": "items",
+        "group": "itemGroup.name.record"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:display_name": {
+        "value": "§bMusic Disc\n§7For_Builds - Mist"
+      },
+      "minecraft:record": {
+        "comparator_signal": 5,
+        "duration": 76,
+        "sound_event": "lt.reaction.miscmystical"
+      },
+      "minecraft:icon": "record_mist"
+    }
+  }
+}

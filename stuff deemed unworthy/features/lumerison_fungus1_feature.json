@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "vc:lumerison_fungus1_feature"
+		},
+		"structure_name": "mystructure:lumerison_fungus1",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_whitelist": [
+					"minecraft:air"
+				]
+			}
+		}
+	}
+}

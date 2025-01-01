@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "vc:gyser_feature"
+		},
+		"features": [
+			[
+				"vc:gyser1",
+				1
+			],
+			[
+				"vc:gyser2",
+				1
+			]
+		]
+	}
+}

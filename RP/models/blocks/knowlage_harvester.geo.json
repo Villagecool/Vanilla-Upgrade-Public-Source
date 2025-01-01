@@ -1,0 +1,117 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.knowlage_harvester",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [16, 12, 16],
+							"uv": {
+								"north": {"uv": [0, 4], "uv_size": [16, 12], "material_instance": "side"},
+								"east": {"uv": [0, 4], "uv_size": [16, 12], "material_instance": "side"},
+								"south": {"uv": [0, 4], "uv_size": [16, 12], "material_instance": "side"},
+								"west": {"uv": [0, 4], "uv_size": [16, 12], "material_instance": "side"},
+								"up": {"uv": [16, 16], "uv_size": [-16, -16], "material_instance": "top"},
+								"down": {"uv": [16, 16], "uv_size": [-16, -16], "material_instance": "down"}
+							}
+						},
+						{
+							"origin": [-8, 12, -1],
+							"size": [7, 12, 0],
+							"pivot": [-4.5, 18, -1],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"north": {"uv": [4, 4], "uv_size": [7, 12], "material_instance": "crystal2"}
+							}
+						},
+						{
+							"origin": [-8, 12, -1],
+							"size": [7, 12, 0],
+							"pivot": [-4.5, 18, -1],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [4, 4], "uv_size": [7, 12], "material_instance": "crystal2"}
+							}
+						},
+						{
+							"origin": [-4, 12, 4],
+							"size": [8, 15, 0],
+							"pivot": [-0.5, 19, 4],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"north": {"uv": [0, 1], "uv_size": [8, 15], "material_instance": "crystal1"}
+							}
+						},
+						{
+							"origin": [-4, 12, 4],
+							"size": [8, 15, 0],
+							"pivot": [-0.5, 19, 4],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [0, 1], "uv_size": [8, 15], "material_instance": "crystal1"}
+							}
+						},
+						{
+							"origin": [2, 12, 0],
+							"size": [6, 10, 0],
+							"pivot": [5, 17, 0],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"north": {"uv": [9, 6], "uv_size": [6, 10], "material_instance": "crystal1"}
+							}
+						},
+						{
+							"origin": [2, 12, 0],
+							"size": [6, 10, 0],
+							"pivot": [5, 17, 0],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [9, 6], "uv_size": [6, 10], "material_instance": "crystal1"}
+							}
+						}
+					]
+				},
+				{
+					"name": "book",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-3, 6, -2.1],
+							"size": [6, 10, 2],
+							"pivot": [-2.25, 12, 0],
+							"rotation": [-90, 0, 0],
+							"uv": {
+								"north": {"uv": [6, 0], "uv_size": [6, 10], "material_instance": "book"},
+								"east": {"uv": [12, 0], "uv_size": [2, 10], "material_instance": "book"},
+								"south": {"uv": [12, 0], "uv_size": [-6, 10], "material_instance": "book"}
+							}
+						},
+						{
+							"origin": [-3, 7, -2.1],
+							"size": [5, 8, 2],
+							"pivot": [-2.25, 12, 0],
+							"rotation": [-90, 0, 0],
+							"uv": {
+								"west": {"uv": [14, 0], "uv_size": [2, 8], "material_instance": "book"},
+								"up": {"uv": [5, 12], "uv_size": [-5, -2], "material_instance": "book"},
+								"down": {"uv": [5, 12], "uv_size": [-5, -2], "material_instance": "book"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:elax_stairs_sawmill"
+    },
+
+    
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "0A0",
+      "000",
+      "000"
+    ],
+    "key": {
+      "A": {
+        "item": "vc:elax_planks",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "vc:elax_stairs",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.no_see_block",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "fluid",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "bottom",
+					"parent": "fluid",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [16, 0, 16],
+							"uv": {
+								"up": {"uv": [16, 16], "uv_size": [-16, -16], "material_instance": "in"},
+								"down": {"uv": [16, 16], "uv_size": [-16, -16], "material_instance": "out"}
+							}
+						}
+					]
+				},
+				{
+					"name": "top",
+					"parent": "fluid",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 16, -8],
+							"size": [16, 0, 16],
+							"uv": {
+								"up": {"uv": [16, 16], "uv_size": [-16, -16], "material_instance": "out"},
+								"down": {"uv": [16, 16], "uv_size": [-16, -16], "material_instance": "in"}
+							}
+						}
+					]
+				},
+				{
+					"name": "nz",
+					"parent": "fluid",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [16, 16, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "out"},
+								"south": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "in"}
+							}
+						}
+					]
+				},
+				{
+					"name": "z",
+					"parent": "fluid",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, 8],
+							"size": [16, 16, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "in"},
+								"south": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "out"}
+							}
+						}
+					]
+				},
+				{
+					"name": "nx",
+					"parent": "fluid",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [8, 0, -8],
+							"size": [0, 16, 16],
+							"uv": {
+								"east": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "in"},
+								"west": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "out"}
+							}
+						}
+					]
+				},
+				{
+					"name": "x",
+					"parent": "fluid",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [0, 16, 16],
+							"uv": {
+								"east": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "out"},
+								"west": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "in"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

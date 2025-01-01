@@ -1,0 +1,43 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.cake4",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 180, 0],
+					"cubes": [
+						{
+							"origin": [1, 0, -7],
+							"size": [6, 8, 14],
+							"uv": {
+								"north": {"uv": [9, 8], "uv_size": [6, 8]},
+								"east": {"uv": [17, 23], "uv_size": [14, 8]},
+								"south": {"uv": [1, 8], "uv_size": [6, 8]},
+								"west": {"uv": [1, 8], "uv_size": [14, 8]},
+								"up": {"uv": [23, 15], "uv_size": [-6, -14]},
+								"down": {"uv": [7, 31], "uv_size": [-6, -14]}
+							}
+						},
+						{
+							"origin": [1, 8.1, -7],
+							"size": [6, 0, 14],
+							"uv": {
+								"up": {"uv": [14, 30], "uv_size": [-12, -28], "material_instance": "topping"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

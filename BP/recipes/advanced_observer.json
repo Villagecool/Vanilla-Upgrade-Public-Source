@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:advanced_observer"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " F ",
+      "COC"
+    ],
+    "key": {
+      "F": {
+        "item": "vc:advanced_filter"
+      },
+      "C": {
+        "item": "vc:gloricalium_sheet"
+      },
+      "O": {
+        "item": "minecraft:observer"
+      }
+    },
+    "unlock": [
+        {
+            "item": "vc:advanced_filter"
+        }
+    ],
+    "result": {
+      "item": "vc:advanced_observer"
+    }
+  }
+}

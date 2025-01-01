@@ -1,0 +1,18 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "vc:volcano_types_feature"
+    },
+    "features": [
+      [
+        "vc:volcano_feature",
+        1
+      ],
+      [
+        "vc:volcano_rock_feature",
+        2
+      ]
+    ]
+  }
+}

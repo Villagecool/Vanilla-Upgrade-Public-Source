@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:blue_nether_brick_slab"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:blue_nether_brick"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:blue_nether_brick"
+      }
+    ],
+    "result": {
+      "item": "vc:blue_nether_brick_slab",
+      "count": 2
+    }
+  }
+}

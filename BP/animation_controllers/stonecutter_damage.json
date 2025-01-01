@@ -1,0 +1,68 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.stonecutter_damaage": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "walking": "(1.0)"
+            },
+						{
+							"detected": "query.is_on_ground"
+						}
+          ],
+          "on_entry": [
+            "/execute @a ~~~ /fill ~5~5~5 ~-5~-3~-5 vc:fletching_table_custom 0 replace fletching_table",
+            "/execute @a ~~~ /fill ~5~5~5 ~-5~-3~-5 vc:mellon 0 replace melon_block",
+            "/execute @a ~~~ /fill ~20~5~20 ~-5~-3~-5 no:generate_villager 0 replace no:block_villager",
+            "/execute @a ~~~ /fill ~20~5~20 ~-5~-3~-5 no:generate_termite 0 replace no:block_termite",
+            "/execute as @e at @e if block ~~~ run stonecutter_block run /damage @s 1 contact",
+            "/execute as @e at @e if block ~~~ run stonecutter_block run /damage @s 1 contact",
+            "/execute as @e at @e if block ~~~ run stonecutter_block run /damage @s 1 contact",
+            "/execute as @e at @e if block ~~~ run stonecutter_block run /damage @s 1 contact"
+          ]
+        },
+        "walking": {
+          "transitions": [
+            {
+              "default": "(1.0)"
+            },
+						{
+							"detected": "query.is_on_ground"
+						}
+          ],
+          "on_entry": [
+            "/execute @a ~~~ /fill ~5~5~5 ~-5~-3~-5 vc:fletching_table_custom 0 replace fletching_table",
+            "/execute @a ~~~ /fill ~5~5~5 ~-5~-3~-5 vc:mellon 0 replace melon_block",
+            "/execute as @e at @e if block ~~~ run stonecutter_block run /damage @s 1 contact",
+            "/execute as @e at @e if block ~~~ run stonecutter_block run /damage @s 1 contact",
+            "/execute as @e at @e if block ~~~ run stonecutter_block run /damage @s 1 contact",
+            "/execute as @e at @e if block ~~~ run stonecutter_block run /damage @s 1 contact"
+          ]
+        }
+      }
+    },
+    
+    "controller.animation.remove_fall": {
+      "states": {
+        "detected": {
+          "transitions": [
+            {
+              "default": "(1.0)"
+            }
+          ],
+          "on_entry": ["/event entity @s minecraft:remove_fall"]
+        },
+        "default": {
+          "transitions": [
+            {
+              "detected": "(1.0)"
+            }
+          ],
+          "on_entry": ["/event entity @s minecraft:remove_fall"]
+        }
+      }
+    }
+  }
+}

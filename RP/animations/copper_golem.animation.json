@@ -1,0 +1,38 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.copper_golem.walk": {
+			"loop": true
+		},
+		"animation.copper_golem.spin_head": {
+			"animation_length": 0.52,
+			"bones": {
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.52": [0, 360, 0]
+					}
+				}
+			}
+		},
+		"animation.copper_golem.press_button": {
+			"loop": true,
+			"animation_length": 0.25,
+			"bones": {
+				"arm1": {
+					"rotation": [137.5, 0, 0]
+				},
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 1.5],
+						"0.125": [0, 0, -1.5],
+						"0.25": [0, 0, 1.5]
+					}
+				},
+				"arm2": {
+					"rotation": [137.5, 0, 0]
+				}
+			}
+		}
+	}
+}

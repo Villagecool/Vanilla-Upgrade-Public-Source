@@ -1,0 +1,39 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vc:rotator"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "PPP",
+      "CWC",
+      "CRC"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:planks"
+      },
+      "C": {
+        "item": "minecraft:cobblestone"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "W": {
+        "item": "vc:copper_wrench"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:copper_wrench"
+      }
+    ],
+    "result": {
+      "item": "vc:rotator",
+      "count": 1
+    }
+  }
+}

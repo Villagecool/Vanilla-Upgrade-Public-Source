@@ -1,0 +1,45 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.tables"
+			},
+			"identifier": "vc:sawmill"
+		},
+		"components": {
+			"tag:wood": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 5
+			},
+			"minecraft:light_dampening": 5,
+			"minecraft:geometry": "geometry.sawmill",
+			"minecraft:crafting_table": {
+				"table_name": "Sawmill",
+				"grid_size": 3,
+				"crafting_tags": [
+					"sawmill"
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sawmill",
+					"render_method": "alpha_test"
+				},
+				"saw": {
+					"texture": "sawmill",
+					"render_method": "alpha_test"
+				},
+				"top": {
+					"texture": "sawmill_top",
+					"render_method": "alpha_test"
+				},
+				"side": {
+					"texture": "sawmill_side",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

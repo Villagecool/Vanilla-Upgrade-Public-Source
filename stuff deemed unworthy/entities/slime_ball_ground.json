@@ -1,0 +1,95 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vc:slime_ball_ground",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "minecraft:break": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:explode": {
+        "fuse_length": 50,
+        "fuse_lit": true,
+        "power": 0,
+        "causes_fire": false,
+        "destroy_affected_by_griefing": true
+      },
+      "minecraft:type_family": {
+        "family": [
+          "ball"
+        ]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "operator": "==",
+                "value": "wolf"
+              },
+              "event": "break"
+            },
+            "deals_damage": false
+          },
+          {
+            "on_damage": {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "operator": "!=",
+                "value": "wolf"
+              }
+            },
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 100.0,
+          "max_dropped_ticks": 7,
+          "use_motion_prediction_hints": true
+        }
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "run_command": {
+          "command": [
+            "playsound mob.slime.big @a ~~~"
+          ]
+        }
+      },
+      "break": {
+        "run_command": {
+          "command": [
+            "particle vc:slimesplat ~~~",
+            "playsound mob.slime.big @a ~~~"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:break"
+          ]
+        }
+      }
+    }
+  }
+}

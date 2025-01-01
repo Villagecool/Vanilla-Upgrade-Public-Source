@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:custom_splash_potion",
+      "materials": {
+        "default": "snowball"
+      },
+      "textures": {
+        "blindness": "textures/items/potion_bottle_splash_blindness",
+        "levitation": "textures/items/potion_bottle_splash_levitation"
+      },
+      "geometry": {
+        "default": "geometry.item_sprite"
+      },
+      "render_controllers": [ "controller.render.custom_splash_potion" ],
+      "animations": {
+        "flying": "animation.actor.billboard"
+      },
+      "particle_effects": {
+        "snowballpoof": "minecraft:evoker_spell"
+      },
+      "scripts": {
+        "animate": [
+          "flying"
+        ]
+      }
+    }
+  }
+} 

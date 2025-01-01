@@ -1,0 +1,11 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "minecraft:furnace_stripped_elax_log"
+    },
+    "tags": ["furnace"],
+    "input": "vc:stripped_elax_log",
+    "output": "minecraft:coal:1"
+  }
+}

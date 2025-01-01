@@ -1,0 +1,24 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.cookedFood",
+        "category": "equipment"
+      },
+      "identifier": "vc:egg_fried"
+    },
+    "components": {
+      "minecraft:use_animation": "eat",
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": {
+        "texture": "egg_fried"
+      },
+      "minecraft:use_duration": 1.61,
+      "minecraft:food": {
+        "nutrition": 3,
+        "saturation_modifier": 3
+      }
+    }
+  }
+}

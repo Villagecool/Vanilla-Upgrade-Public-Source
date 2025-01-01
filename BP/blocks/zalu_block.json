@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:zalu_block",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.nature"
+			}
+		},
+		"components": {
+			"tag:stone": {},
+			"tag:grass": {},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 9
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 5
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "zalu_block"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "vc:flowering_cactus_feature"
+    },
+    "places_block": {
+      "name": "vc:flowering_cactus"
+    },
+    "enforce_survivability_rules": true,
+    "enforce_placement_rules": true,
+    "may_replace": [
+      "minecraft:cactus"
+    ]
+  }
+}

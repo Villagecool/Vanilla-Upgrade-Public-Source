@@ -1,0 +1,15 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "minecraft:brew_splash_levitation_IIalt"
+    },
+
+    "tags": [ "brewing_stand" ],
+
+    "input": "vc:splash_potion_of_levitation",
+    "reagent": "minecraft:redstone",
+    "output": "vc:splash_potion_of_levitation_II"
+  }
+
+}

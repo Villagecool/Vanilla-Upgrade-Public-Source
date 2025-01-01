@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:campfire_from_charcoal_stripped_palm_log"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " | ",
+      "|C|",
+      "###"
+    ],
+    "key": {
+      "|": {
+        "item": "minecraft:stick"
+      },
+      "#": {
+        "item": "vc:stripped_palm_log"
+      },
+      "C": {
+        "item": "minecraft:charcoal"
+      }
+    },
+    "result": {
+      "item": "minecraft:campfire"
+    }
+  }
+}

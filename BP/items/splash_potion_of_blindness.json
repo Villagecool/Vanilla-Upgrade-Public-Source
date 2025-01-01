@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.splashPotion",
+        "category": "equipment"
+      },
+      "identifier": "vc:splash_potion_of_blindness"
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:display_name": {
+        "value": "Splash Potion of Blindness\n§cBlindness (1:30)"
+      },
+      "minecraft:throwable": {
+        "do_swing_animation": true,
+        "min_draw_duration": 0,
+        "max_draw_duration": 1,
+        "launch_power_scale": 1,
+        "max_launch_power": 2,
+        "scale_power_by_draw_duration": false
+      },
+      "minecraft:projectile": {
+        "minimum_critical_power": 1.25,
+        "projectile_entity": "vc:custom_splash_potion<blindness>"
+      },
+      "minecraft:icon": "splash_potion_of_blindness"
+    }
+  }
+}

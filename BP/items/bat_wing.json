@@ -1,0 +1,27 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vc:bat_wing",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.rawFood"
+      }
+    },
+    "components": {
+      "minecraft:use_modifiers": {
+        "use_duration": 1.61,
+        "movement_modifier": 0.4
+      },
+      "minecraft:use_animation": "eat",
+      "tag:minecraft:is_food": {},
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": "bat_wing",
+      "minecraft:food": {
+        "nutrition": 4,
+        "saturation_modifier": 3,
+        "can_always_eat": true
+      }
+    }
+  }
+}

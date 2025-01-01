@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:weighted_random_feature": {
+	  "description": {
+		"identifier": "vc:lumerison_fungus_feature"
+	  },
+	  "features": [
+		[ "vc:lumerison_fungus1_feature", 10 ],
+		[ "vc:lumerison_fungus2_feature", 10 ],
+		[ "vc:lumerison_fungus3_feature", 10 ],
+		[ "vc:lumerison_roots_feature", 20 ],
+		[ "vc:lumerison_fungus_small_feature", 20 ]
+	
+	  ]
+	}
+  }
+  

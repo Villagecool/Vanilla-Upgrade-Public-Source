@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.construction"
+			},
+			"identifier": "vc:bricks_carved"
+		},
+		"components": {
+			"tag:stone": {},
+			"tag:sandstone": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1.1
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "bricks_bottom"
+				}
+			}
+		}
+	}
+}

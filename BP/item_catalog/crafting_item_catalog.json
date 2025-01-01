@@ -1,0 +1,25 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:crafting_items_catalog": {
+       "categories": [
+          {
+             // Valid values are construction, equipment, nature, and items
+             "category_name": "construction",
+             "groups": [
+                {
+                   // This will create a new group
+                   "gloricallium": {
+                      "icon": "vc:gloricallium_block",
+                      // This is the name of your group which doubles as
+                      // the localization string. The namespace is required
+                      "name": "vc:itemGroup.name.gloricallium"
+                   },
+                   "items": [
+                      "vc:gloricallium_block"
+                   ]
+                }
+             ]
+          }
+       ]
+    }
+ }

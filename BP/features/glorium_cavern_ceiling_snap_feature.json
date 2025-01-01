@@ -1,0 +1,11 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:snap_to_surface_feature": {
+		"description": {
+			"identifier": "vc:glorium_cavern_ceiling_snap_feature"
+		},
+		"feature_to_snap": "vc:glorium_stuff_roof",
+		"vertical_search_range": 12,
+		"surface": "ceiling"
+	}
+}

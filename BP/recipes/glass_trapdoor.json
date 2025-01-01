@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:glass_trapdoor"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "##",
+      "##"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:glass"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:glass"
+      }
+    ],
+    "result": {
+      "item": "vc:glass_trapdoor",
+      "count": 16
+    }
+  }
+}

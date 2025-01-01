@@ -1,0 +1,34 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "vc:nether_springs_feature"
+		},
+		"features": [
+			[
+				"vc:nether_springs1",
+				1
+			],
+			[
+				"vc:nether_springs2",
+				1
+			],
+			[
+				"vc:nether_springs3",
+				1
+			],
+			[
+				"vc:nether_springs4",
+				1
+			],
+			[
+				"vc:nether_springs5",
+				1
+			],
+			[
+				"vc:nether_springs6",
+				1
+			]
+		]
+	}
+}

@@ -1,0 +1,39 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "vc:blazer"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "BGB",
+            "RIR",
+            "NDN"
+        ],
+        "key": {
+            "G": {
+                "item": "vc:gloricalium_grate"
+            },
+            "B": {
+                "item": "minecraft:blaze_powder"
+            },
+            "R": {
+                "item": "minecraft:blaze_rod"
+            },
+            "I": {
+                "item": "minecraft:iron_ingot"
+            },
+            "N": {
+                "item": "minecraft:netherbrick"
+            },
+            "D": {
+                "item": "minecraft:redstone"
+            }
+        },
+        "result": {
+            "item": "vc:blazer"
+        }
+    }
+}

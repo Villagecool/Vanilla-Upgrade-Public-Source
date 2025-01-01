@@ -1,0 +1,24 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.rawFood"
+      },
+      "identifier": "vc:duck_raw"
+    },
+    "components": {
+      "minecraft:use_duration": 1.61,
+      "minecraft:use_animation": "eat",
+      "minecraft:icon": {
+        "texture": "duck_raw"
+      },
+      "minecraft:food": {
+        "nutrition": 2,
+        "saturation_modifier": 4,
+        "can_always_eat": true
+      }
+    }
+  }
+}

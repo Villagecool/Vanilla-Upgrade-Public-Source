@@ -1,0 +1,26 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "vc:xp_bottle"
+		},
+		"tags": [
+			"knowlage_harvester"
+		],
+		"key": {
+			"P": {
+				"item": "minecraft:glass_bottle"
+			},
+			"X": {
+				"item": "vc:crystalized_experience"
+			}
+		},
+		"pattern": [
+			"_PX"
+			],
+		"result": {
+			"item": "minecraft:experience_bottle",
+			"count": 1
+		}
+	}
+}

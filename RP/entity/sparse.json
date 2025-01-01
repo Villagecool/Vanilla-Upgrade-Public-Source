@@ -1,0 +1,42 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "vc:sparse",
+			"materials": {
+				"default": "villager_v2"
+			},
+			"textures": {
+				"default": "textures/entity/sparse"
+			},
+			"geometry": {
+				"default": "geometry.sparse"
+			},
+			"animations": {
+				"setup": "animation.sparse.setup",
+				"walk": "animation.quadruped.walk",
+				"look_at_target": "animation.common.look_at_target",
+				"baby_transform": "animation.sparse.baby_transform"
+			},
+			"scripts": {
+				"animate": [
+					"setup",
+					{
+						"walk": "query.modified_move_speed"
+					},
+					"look_at_target",
+					{
+						"baby_transform": "query.is_baby"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.zombie"
+			],
+			"spawn_egg": {
+				"base_color": "#0F342A",
+				"overlay_color": "#298860"
+			}
+		}
+	}
+}

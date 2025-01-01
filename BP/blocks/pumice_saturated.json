@@ -1,0 +1,26 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.nature"
+			},
+			"identifier": "vc:saturated_pumice"
+		},
+		"components": {
+			"tag:stone": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "saturated_pumice"
+				}
+			},
+			"minecraft:custom_components": [
+				"vc:saturated_pumice"
+			],
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 15
+			}
+		}
+	}
+}

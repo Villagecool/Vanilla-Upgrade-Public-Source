@@ -1,0 +1,26 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "vc:enchanted_moss"
+		},
+		"tags": [
+			"knowlage_harvester"
+		],
+		"key": {
+			"P": {
+				"item": "minecraft:moss_block"
+			},
+			"X": {
+				"item": "vc:crystalized_experience"
+			}
+		},
+		"pattern": [
+			"_PX"
+			],
+		"result": {
+			"item": "vc:enchanted_moss",
+			"count": 1
+		}
+	}
+}

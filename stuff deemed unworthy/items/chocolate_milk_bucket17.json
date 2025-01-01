@@ -1,0 +1,41 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "minecraft:bucket:17",
+      "category":"items"
+    },
+    "components": {
+      "menu_category":{
+        "group":"itemGroup.name.bucket"
+      },
+      "minecraft:display_name":{
+        "value":"Chocolate Milk Bucket"
+      },
+      "minecraft:icon":{
+        "texture":"chocolate_milk_bucket"
+      },
+      "minecraft:use_animation": "drink",
+      "minecraft:use_duration": 1.61,
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+        "nutrition": 6,
+        "saturation_modifier": 1,
+        "can_always_eat": true,
+        "using_converts_to": "bucket",
+				"on_consume": {
+					"event": "on_consume",
+					"target": "self"
+				}
+      }
+    },
+    "events": {
+	  "on_consume": {
+        "run_command": {
+          "command": ["effect @s clear"],
+          "target": "holder"
+        }
+	  }
+    }
+  }
+}

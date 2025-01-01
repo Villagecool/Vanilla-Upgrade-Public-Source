@@ -1,0 +1,72 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vc:raycast",
+      "runtime_identifier": "minecraft:snowball",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+        "minecraft:timer": {
+          "time": 0,
+          "time_down_event": {
+            "event": "particle",
+            "target": "self"
+          }
+        },
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:explode": {
+          "fuse_length": 10,
+          "fuse_lit": true,
+          "power": 0,
+          "causes_fire": false,
+          "destroy_affected_by_griefing": true
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": [ 10, 20 ],
+            "knockback": true,
+            "semi_random_diff_damage": false,
+            "destroy_on_hit": true
+          },
+          "remove_on_hit": { }
+        },
+        "anchor": 1,
+        "power": 3.3,
+        "gravity": 0,
+        "angle_offset": 0.0,
+        "offset": [ 0, -0.1, 0 ]
+      },
+	    "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 100.0,
+          "max_dropped_ticks": 5,
+          "use_motion_prediction_hints": true
+        }
+      }
+    },
+    "events": {
+      "particle": {
+        "run_command": {
+          "command": [
+            "particle witchspell ~~~",
+            "particle minecraft:shulker_bullet ~~~",
+            "playsound place.amethyst_cluster @a ~~~ 1"
+          ]
+        }
+      }
+    }
+  }
+}

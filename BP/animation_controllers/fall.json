@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.fall": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "walking": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/execute @a ~~~ detect ~~-10 ~ air 0 /execute @s ~~~ detect ~~-9 ~ air 0 /execute @s ~~~ detect ~~-8 ~ air 0 /execute @s ~~~ detect ~~-7 ~ air 0 /execute @s ~~~ detect ~~-6 ~ air 0 /execute @s ~~~ detect ~~-5 ~ air 0 /execute @s ~~~ detect ~~-4 ~ air 0 /execute @s ~~~ detect ~~-3 ~ air 0 /execute @s ~~~ detect ~~-2 ~ air 0 /execute @s ~~~ detect ~~-1 ~ air 0 /event entity @s minecraft:fall"
+          ]
+        },
+        "walking": {
+          "transitions": [
+            {
+              "default": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/execute @a ~~~ detect ~~-10 ~ air 0 /execute @s ~~~ detect ~~-9 ~ air 0 /execute @s ~~~ detect ~~-8 ~ air 0 /execute @s ~~~ detect ~~-7 ~ air 0 /execute @s ~~~ detect ~~-6 ~ air 0 /execute @s ~~~ detect ~~-5 ~ air 0 /execute @s ~~~ detect ~~-4 ~ air 0 /execute @s ~~~ detect ~~-3 ~ air 0 /execute @s ~~~ detect ~~-2 ~ air 0 /execute @s ~~~ detect ~~-1 ~ air 0 /event entity @s minecraft:fall"
+          ]
+        }
+      }
+    }
+  }
+}

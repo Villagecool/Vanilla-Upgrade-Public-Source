@@ -1,0 +1,107 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vc:clone_arrow",
+      "runtime_identifier": "minecraft:arrow",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": [
+              0,
+              0
+            ],
+            "knockback": true,
+            "semi_random_diff_damage": false,
+            "destroy_on_hit": true
+          },
+          "stick_in_ground": {
+            "shake_time": 0.35
+          },
+          "definition_event": {
+            "event_trigger": {
+              "event": "vc:sounds"
+            }
+          },
+          "arrow_effect": {}
+        },
+        "hit_sound": "mob.illusioner.bow.hit",
+        "power": 1.6,
+        "gravity": 0.05,
+        "uncertainty_base": 16,
+        "uncertainty_multiplier": 4,
+        "anchor": 1,
+        "should_bounce": true,
+        "offset": [
+          0,
+          -0.1,
+          0
+        ]
+      },
+      "minecraft:timer": {
+        "looping": true,
+        "random_interval": true,
+        "randomInterval": true,
+        "time_down_event": {
+          "event": "vc:dies"
+        }
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 80.0,
+          "max_dropped_ticks": 7,
+          "use_motion_prediction_hints": true
+        }
+      }
+    },
+    "component_groups": {
+      "vc:dies": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "events": {
+      "vc:dies": {
+        "add": {
+          "component_groups": [
+            "vc:dies"
+          ]
+        }
+      },
+      "vc:sounds": {
+        "queue_command": {
+          "command": [
+            "playsound random.clonebowhit @a[r=15] ~~~ 0.4"
+          ]
+        }
+      }
+    }
+  }
+}

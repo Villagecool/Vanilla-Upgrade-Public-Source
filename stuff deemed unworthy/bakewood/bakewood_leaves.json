@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.leaves"
+			},
+			"identifier": "vc:bakewood_leaves"
+		},
+		"components": {
+			"tag:leaves": {},
+			"tag:plant": {},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 20
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1.1
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "bakewood_leaves",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

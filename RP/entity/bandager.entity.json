@@ -1,0 +1,57 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:bandager",
+      "materials": {
+        "default": "evoker"
+      },
+      "textures": {
+        "default": "textures/entity/bandager"
+      },
+      "geometry": {
+        "default": "geometry.bandager"
+      },
+      "spawn_egg": {
+        "base_color": "#3b1e00",
+        "overlay_color": "#ffec4f"
+      },
+      "animations": {
+        "general": "animation.evoker.general",
+        "casting": "animation.evoker.casting",
+        "bow_and_arrow": "animation.evoker.bow_and_arrow",
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.villager.move",
+        "look_at_target_default": "animation.humanoid.look_at_target.default.v1.0",
+        "look_at_target_gliding": "animation.humanoid.look_at_target.gliding.v1.0",
+        "look_at_target_swimming": "animation.humanoid.look_at_target.swimming.v1.0",
+        "riding.arms": "animation.vindicator.riding.arms",
+        "riding.legs": "animation.vindicator.riding.legs",
+        "celebrating": "animation.bandager.celebrate",
+        "celebrating2": "animation.bandager.celebrate2",
+        "attack": "animation.vindicator.attack"
+      },
+      "animation_controllers": [
+        {
+          "general": "controller.animation.bandager.general"
+        },
+        {
+          "celebrate": "controller.animation.illager.celebrate"
+        },
+        {
+          "move": "controller.animation.villager.move"
+        },
+        {
+          "ride": "controller.animation.humanoid.riding"
+        }
+      ],
+      "particle_effects": {
+        "spell": "minecraft:evoker_spell"
+      },
+      "render_controllers": [
+        "controller.render.zombie"
+      ],
+      "enable_attachables": true
+    }
+  }
+}

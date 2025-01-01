@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:palm_door_sawmill"
+    },
+
+    
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "ddd",
+      "dAd",
+      "ddd"
+    ],
+    "key": {
+      "A": {
+        "item": "vc:palm_planks",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "vc:palm_door_item",
+      "count": 3,
+      "data": 0
+    }
+  }
+}

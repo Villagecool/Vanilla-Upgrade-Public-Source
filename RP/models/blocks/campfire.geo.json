@@ -1,0 +1,645 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.campfire_big",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -3],
+							"size": [16, 1, 6],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -90, 0],
+							"uv": {
+								"north": {"uv": [0, 14], "uv_size": [16, 1], "material_instance": "logs"},
+								"east": {"uv": [0, 14], "uv_size": [6, 1], "material_instance": "logs"},
+								"south": {"uv": [0, 14], "uv_size": [16, 1], "material_instance": "logs"},
+								"west": {"uv": [0, 14], "uv_size": [6, 1], "material_instance": "logs"},
+								"up": {"uv": [16, 14], "uv_size": [-16, -6], "material_instance": "logs_lit"},
+								"down": {"uv": [16, 14], "uv_size": [-16, -6], "material_instance": "logs_lit"}
+							}
+						}
+					]
+				},
+				{
+					"name": "ew",
+					"parent": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 3, 3],
+							"size": [16, 4, 4],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 4], "material_instance": "logs_lit"},
+								"east": {"uv": [0, 4], "uv_size": [4, 4], "material_instance": "logs"},
+								"south": {"uv": [0, 0], "uv_size": [16, 4], "material_instance": "logs_lit"},
+								"west": {"uv": [0, 4], "uv_size": [4, 4], "material_instance": "logs"},
+								"up": {"uv": [16, 4], "uv_size": [-16, -4], "material_instance": "logs"},
+								"down": {"uv": [16, 4], "uv_size": [-16, -4], "material_instance": "logs"}
+							}
+						},
+						{
+							"origin": [-8, 3, -7],
+							"size": [16, 4, 4],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 4], "material_instance": "logs_lit"},
+								"east": {"uv": [0, 4], "uv_size": [4, 4], "material_instance": "logs"},
+								"south": {"uv": [0, 0], "uv_size": [16, 4], "material_instance": "logs_lit"},
+								"west": {"uv": [0, 4], "uv_size": [4, 4], "material_instance": "logs"},
+								"up": {"uv": [16, 4], "uv_size": [-16, -4], "material_instance": "logs"},
+								"down": {"uv": [16, 4], "uv_size": [-16, -4], "material_instance": "logs"}
+							}
+						}
+					]
+				},
+				{
+					"name": "fire",
+					"parent": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-9, 0, 0],
+							"size": [18, 30, 0],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "fire"},
+								"east": {"uv": [0, 0], "uv_size": [0, 16], "material_instance": "fire"},
+								"west": {"uv": [0, 0], "uv_size": [0, 16], "material_instance": "fire"},
+								"up": {"uv": [16, 0], "uv_size": [-16, 0], "material_instance": "fire"},
+								"down": {"uv": [16, 0], "uv_size": [-16, 0], "material_instance": "fire"}
+							}
+						},
+						{
+							"origin": [-9, 0, 0],
+							"size": [18, 30, 0],
+							"pivot": [0, 0, 0],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "fire"},
+								"east": {"uv": [0, 0], "uv_size": [0, 16], "material_instance": "fire"},
+								"west": {"uv": [0, 0], "uv_size": [0, 16], "material_instance": "fire"},
+								"up": {"uv": [16, 0], "uv_size": [-16, 0], "material_instance": "fire"},
+								"down": {"uv": [16, 0], "uv_size": [-16, 0], "material_instance": "fire"}
+							}
+						}
+					]
+				},
+				{
+					"name": "ns",
+					"parent": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, 3],
+							"size": [16, 4, 4],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -90, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 4], "material_instance": "logs"},
+								"east": {"uv": [0, 4], "uv_size": [4, 4], "material_instance": "logs"},
+								"south": {"uv": [0, 0], "uv_size": [16, 4], "material_instance": "logs"},
+								"west": {"uv": [0, 4], "uv_size": [4, 4], "material_instance": "logs"},
+								"up": {"uv": [16, 4], "uv_size": [-16, -4], "material_instance": "logs"},
+								"down": {"uv": [16, 4], "uv_size": [-16, -4], "material_instance": "logs"}
+							}
+						},
+						{
+							"origin": [-8, 0, -7],
+							"size": [16, 4, 4],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -90, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 4], "material_instance": "logs"},
+								"east": {"uv": [0, 4], "uv_size": [4, 4], "material_instance": "logs"},
+								"south": {"uv": [0, 0], "uv_size": [16, 4], "material_instance": "logs"},
+								"west": {"uv": [0, 4], "uv_size": [4, 4], "material_instance": "logs"},
+								"up": {"uv": [16, 4], "uv_size": [-16, -4], "material_instance": "logs"},
+								"down": {"uv": [16, 4], "uv_size": [-16, -4], "material_instance": "logs"}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": {
+				"identifier": "geometry.campfire",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -3],
+							"size": [16, 1, 6],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -90, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 14],
+									"uv_size": [16, 1],
+									"material_instance": "logs"
+								},
+								"east": {
+									"uv": [0, 14],
+									"uv_size": [6, 1],
+									"material_instance": "logs"
+								},
+								"south": {
+									"uv": [0, 14],
+									"uv_size": [16, 1],
+									"material_instance": "logs"
+								},
+								"west": {
+									"uv": [0, 14],
+									"uv_size": [6, 1],
+									"material_instance": "logs"
+								},
+								"up": {
+									"uv": [16, 14],
+									"uv_size": [-16, -6],
+									"material_instance": "logs_lit"
+								},
+								"down": {
+									"uv": [16, 14],
+									"uv_size": [-16, -6],
+									"material_instance": "logs_lit"
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "ew",
+					"parent": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 3, 3],
+							"size": [16, 4, 4],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs_lit"
+								},
+								"east": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs_lit"
+								},
+								"west": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"up": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								},
+								"down": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								}
+							}
+						},
+						{
+							"origin": [-8, 3, -7],
+							"size": [16, 4, 4],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs_lit"
+								},
+								"east": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs_lit"
+								},
+								"west": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"up": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								},
+								"down": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "fire",
+					"parent": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-9, 0, 0],
+							"size": [18, 16, 0],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 16],
+									"material_instance": "fire"
+								},
+								"east": {
+									"uv": [0, 0],
+									"uv_size": [0, 16],
+									"material_instance": "fire"
+								},
+								"west": {
+									"uv": [0, 0],
+									"uv_size": [0, 16],
+									"material_instance": "fire"
+								},
+								"up": {
+									"uv": [16, 0],
+									"uv_size": [-16, 0],
+									"material_instance": "fire"
+								},
+								"down": {
+									"uv": [16, 0],
+									"uv_size": [-16, 0],
+									"material_instance": "fire"
+								}
+							}
+						},
+						{
+							"origin": [-9, 0, 0],
+							"size": [18, 16, 0],
+							"pivot": [0, 0, 0],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 16],
+									"material_instance": "fire"
+								},
+								"east": {
+									"uv": [0, 0],
+									"uv_size": [0, 16],
+									"material_instance": "fire"
+								},
+								"west": {
+									"uv": [0, 0],
+									"uv_size": [0, 16],
+									"material_instance": "fire"
+								},
+								"up": {
+									"uv": [16, 0],
+									"uv_size": [-16, 0],
+									"material_instance": "fire"
+								},
+								"down": {
+									"uv": [16, 0],
+									"uv_size": [-16, 0],
+									"material_instance": "fire"
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "ns",
+					"parent": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, 3],
+							"size": [16, 4, 4],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -90, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs"
+								},
+								"east": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs"
+								},
+								"west": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"up": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								},
+								"down": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								}
+							}
+						},
+						{
+							"origin": [-8, 0, -7],
+							"size": [16, 4, 4],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -90, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs"
+								},
+								"east": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs"
+								},
+								"west": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"up": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								},
+								"down": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": {
+				"identifier": "geometry.campfire_unlit",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -3],
+							"size": [16, 1, 6],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -90, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 14],
+									"uv_size": [16, 1],
+									"material_instance": "logs"
+								},
+								"east": {
+									"uv": [0, 14],
+									"uv_size": [6, 1],
+									"material_instance": "logs"
+								},
+								"south": {
+									"uv": [0, 14],
+									"uv_size": [16, 1],
+									"material_instance": "logs"
+								},
+								"west": {
+									"uv": [0, 14],
+									"uv_size": [6, 1],
+									"material_instance": "logs"
+								},
+								"up": {
+									"uv": [16, 14],
+									"uv_size": [-16, -6],
+									"material_instance": "logs"
+								},
+								"down": {
+									"uv": [16, 14],
+									"uv_size": [-16, -6],
+									"material_instance": "logs"
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "ew",
+					"parent": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 3, 3],
+							"size": [16, 4, 4],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs"
+								},
+								"east": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs"
+								},
+								"west": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"up": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								},
+								"down": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								}
+							}
+						},
+						{
+							"origin": [-8, 3, -7],
+							"size": [16, 4, 4],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs"
+								},
+								"east": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs"
+								},
+								"west": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"up": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								},
+								"down": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "ns",
+					"parent": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, 3],
+							"size": [16, 4, 4],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -90, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs"
+								},
+								"east": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs"
+								},
+								"west": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"up": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								},
+								"down": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								}
+							}
+						},
+						{
+							"origin": [-8, 0, -7],
+							"size": [16, 4, 4],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -90, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs"
+								},
+								"east": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [16, 4],
+									"material_instance": "logs"
+								},
+								"west": {
+									"uv": [0, 4],
+									"uv_size": [4, 4],
+									"material_instance": "logs"
+								},
+								"up": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								},
+								"down": {
+									"uv": [16, 4],
+									"uv_size": [-16, -4],
+									"material_instance": "logs"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:spruce_trapdoor_sawmill"
+    },
+
+    
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "mmm",
+      "mmA",
+      "mmm"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:planks",
+        "data": 1
+      }
+    },
+    "result": {
+      "item": "minecraft:spruce_trapdoor",
+      "count": 5,
+      "data": 0
+    }
+  }
+}

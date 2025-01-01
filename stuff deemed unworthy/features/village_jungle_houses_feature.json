@@ -1,0 +1,17 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "minecraft:village_jungle_houses_feature"
+    },
+    "features": [
+      [ "vc:giant_tree_house", 2 ],
+      [ "vc:jungle_farm", 1 ],
+      [ "vc:jungle_house_1", 3 ],
+      [ "vc:jungle_house_2", 3 ],
+      [ "vc:jungle_house_3", 3 ],
+      [ "vc:jungle_mason", 1 ],
+      [ "vc:jungle_stable", 1 ]
+    ]
+  }
+}

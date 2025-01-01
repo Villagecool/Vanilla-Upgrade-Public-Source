@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:template_pool": {
+      "description": {
+        "identifier": "vc:jungle_temple"
+      },
+      "elements": [
+        {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "junglevillage/temple",
+              "processors": "mike:stone_brick_replacement"
+            },
+            "weight": 4
+          }
+      ]
+    }
+  }

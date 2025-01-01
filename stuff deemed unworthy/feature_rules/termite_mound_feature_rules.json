@@ -1,0 +1,36 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "vc:termite_mound_feature_rules",
+            "places_feature": "minecraft:termite_mound_feature"
+        },
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": [
+                {
+                    "any_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "desert"
+                        },
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "mesa"
+                        }
+                    ]
+                }
+            ]
+        },
+        "distribution": {
+            "iterations": 5,
+            "scatter_chance": "5.0",
+            "x": 0,
+            "y": "query.heightmap(variable.worldx, variable.worldz) + 0",
+            "z": 0
+        }
+    }
+}
+// Exported from software by MACHINE_BUILDER on YouTube. Check out this video for more information : https://www.youtube.com/watch?v=vcLibdIq7To <- download link in description

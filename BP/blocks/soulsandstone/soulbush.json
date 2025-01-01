@@ -1,0 +1,70 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:soulbush",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.grass"
+			},
+			"states": {
+				"vc:v": [
+					0,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.1
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:selection_box": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					16,
+					10
+				]
+			},
+			"minecraft:collision_box": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "soulbush",
+					"render_method": "alpha_test",
+					"face_dimming": true,
+					"ambient_occlusion": false
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:v') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "soulbush_buding",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						}
+					}
+				}
+			}
+		]
+	}
+}

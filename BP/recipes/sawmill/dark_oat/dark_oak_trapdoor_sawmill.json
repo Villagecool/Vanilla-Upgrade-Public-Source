@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:dark_oak_trapdoor_sawmill"
+    },
+
+    
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "mmm",
+      "mmA",
+      "mmm"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:planks",
+        "data": 5
+      }
+    },
+    "result": {
+      "item": "minecraft:dark_oak_trapdoor",
+      "count": 5,
+      "data": 0
+    }
+  }
+}

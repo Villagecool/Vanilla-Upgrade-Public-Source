@@ -1,0 +1,15 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "vc:carved_mellon_speckled",
+          "weight": 1,
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "vc:chorus_plant_burst",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/blocks/chorus_carnavorus_plant_folliage"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": "math.random(5,20)"
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_box": {
+				"half_dimensions": [
+					0.5,
+					1,
+					0.5
+				],
+				"direction": [
+					"math.random(-20,20)",
+					-1,
+					"math.random(-20,20)"
+				]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "variable.particle_random_4*3"
+			},
+			"minecraft:particle_initial_speed": 5,
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [
+					"math.sin(v.particle_age * 90)",
+					-10,
+					"math.cos(v.particle_age * 40)"
+				],
+				"linear_drag_coefficient": 5
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					0.1,
+					0.1
+				],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [
+						"(v.particle_random_2 > 0.5 ? 2 : 7)",
+						"(v.particle_random_2 > 0.5 ? 12 : 9)"
+					],
+					"uv_size": [
+						4,
+						4
+					]
+				}
+			},
+			"minecraft:particle_motion_collision": {
+				"collision_drag": 10,
+				"collision_radius": 0.2
+			}
+		}
+	}
+}

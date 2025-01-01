@@ -1,0 +1,21 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:vegetation_patch_feature": {
+		"description": {
+			"identifier": "vc:glorium_cavern_deepslate_ceiling"
+		},
+		"replaceable_blocks": [
+			"minecraft:cobbled_deepslate",
+			"minecraft:deepslate",
+			"minecraft:tuff"
+		],
+		"ground_block": "deepslate",
+		"vegetation_feature": "vc:glorium_cavern_ceiling_snap_feature",
+		"surface": "ceiling",
+		"vertical_range": 20,
+		"vegetation_chance": 0.01,
+		"depth": 1,
+		"horizontal_radius": 75,
+		"extra_edge_column_chance": 0.5
+	}
+}

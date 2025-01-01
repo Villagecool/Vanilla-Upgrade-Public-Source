@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "vc:silver_birch_tree_feature"
+		},
+		"features": [
+			[
+				"vc:silver_birch_tree1",
+				10
+			],
+			[
+				"vc:silver_birch_tree2",
+				10
+			],
+			[
+				"vc:silver_birch_tree3",
+				10
+			]
+		]
+	}
+}

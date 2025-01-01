@@ -1,0 +1,127 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pineapple",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-5, 0, -5],
+							"size": [10, 12, 10],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [10, 12], "material_instance": "pineapple"},
+								"east": {"uv": [0, 0], "uv_size": [10, 12], "material_instance": "pineapple"},
+								"south": {"uv": [0, 0], "uv_size": [10, 12], "material_instance": "pineapple"},
+								"west": {"uv": [0, 0], "uv_size": [10, 12], "material_instance": "pineapple"},
+								"up": {"uv": [10, 10], "uv_size": [-10, -10], "material_instance": "pineapple"},
+								"down": {"uv": [10, 10], "uv_size": [-10, -10], "material_instance": "pineapple"}
+							}
+						},
+						{
+							"origin": [-2, 12, -2],
+							"size": [4, 1, 4],
+							"uv": {
+								"north": {"uv": [3, 8], "uv_size": [4, 1], "material_instance": "pineapple_leaves"},
+								"east": {"uv": [3, 8], "uv_size": [4, 1], "material_instance": "pineapple_leaves"},
+								"south": {"uv": [3, 8], "uv_size": [4, 1], "material_instance": "pineapple_leaves"},
+								"west": {"uv": [3, 8], "uv_size": [4, 1], "material_instance": "pineapple_leaves"},
+								"up": {"uv": [7, 12], "uv_size": [-4, -4], "material_instance": "pineapple_leaves"},
+								"down": {"uv": [7, 12], "uv_size": [-4, -4], "material_instance": "pineapple_leaves"}
+							}
+						}
+					]
+				},
+				{
+					"name": "bone",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "bone2",
+					"parent": "bone",
+					"pivot": [0, 12, 0],
+					"rotation": [20, 0, 0],
+					"cubes": [
+						{
+							"origin": [-5, 12, 0],
+							"size": [10, 12, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [10, 12], "material_instance": "pineapple_leaves"},
+								"east": {"uv": [0, 0], "uv_size": [0, 12], "material_instance": "pineapple_leaves"},
+								"west": {"uv": [0, 0], "uv_size": [0, 12], "material_instance": "pineapple_leaves"},
+								"up": {"uv": [10, 0], "uv_size": [-10, 0], "material_instance": "pineapple_leaves"},
+								"down": {"uv": [10, 0], "uv_size": [-10, 0], "material_instance": "pineapple_leaves"}
+							}
+						}
+					]
+				},
+				{
+					"name": "bone3",
+					"parent": "bone",
+					"pivot": [0, 12, 0],
+					"rotation": [-20, 0, 0],
+					"cubes": [
+						{
+							"origin": [-5, 12, 0],
+							"size": [10, 12, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [10, 12], "material_instance": "pineapple_leaves"},
+								"east": {"uv": [0, 0], "uv_size": [0, 12], "material_instance": "pineapple_leaves"},
+								"west": {"uv": [0, 0], "uv_size": [0, 12], "material_instance": "pineapple_leaves"},
+								"up": {"uv": [10, 0], "uv_size": [-10, 0], "material_instance": "pineapple_leaves"},
+								"down": {"uv": [10, 0], "uv_size": [-10, 0], "material_instance": "pineapple_leaves"}
+							}
+						}
+					]
+				},
+				{
+					"name": "bone5",
+					"parent": "bone",
+					"pivot": [0, 12, 0],
+					"rotation": [20, -90, 0],
+					"cubes": [
+						{
+							"origin": [-5, 12, 0],
+							"size": [10, 12, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [10, 12], "material_instance": "pineapple_leaves"},
+								"east": {"uv": [0, 0], "uv_size": [0, 12], "material_instance": "pineapple_leaves"},
+								"west": {"uv": [0, 0], "uv_size": [0, 12], "material_instance": "pineapple_leaves"},
+								"up": {"uv": [10, 0], "uv_size": [-10, 0], "material_instance": "pineapple_leaves"},
+								"down": {"uv": [10, 0], "uv_size": [-10, 0], "material_instance": "pineapple_leaves"}
+							}
+						}
+					]
+				},
+				{
+					"name": "bone4",
+					"parent": "bone",
+					"pivot": [0, 12, 0],
+					"rotation": [-20, -90, 0],
+					"cubes": [
+						{
+							"origin": [-5, 12, 0],
+							"size": [10, 12, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [10, 12], "material_instance": "pineapple_leaves"},
+								"east": {"uv": [0, 0], "uv_size": [0, 12], "material_instance": "pineapple_leaves"},
+								"west": {"uv": [0, 0], "uv_size": [0, 12], "material_instance": "pineapple_leaves"},
+								"up": {"uv": [10, 0], "uv_size": [-10, 0], "material_instance": "pineapple_leaves"},
+								"down": {"uv": [10, 0], "uv_size": [-10, 0], "material_instance": "pineapple_leaves"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

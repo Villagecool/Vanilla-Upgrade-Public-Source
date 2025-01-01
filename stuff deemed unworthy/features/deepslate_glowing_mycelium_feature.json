@@ -1,0 +1,17 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "vc:deepslate_glowing_mycelium_feature"
+    },
+    "places_block": {
+      "name": "vc:deepslate_glowing_mycelium"
+    },
+    "enforce_placement_rules": false,
+    "enforce_survivability_rules": false,
+    "may_replace": [
+      "minecraft:tuff",
+      "minecraft:deepslate"
+    ]
+  }
+}

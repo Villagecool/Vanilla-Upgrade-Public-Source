@@ -1,0 +1,18 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:weighted_random_feature": {
+	  "description": {
+		"identifier": "vc:elax_tree_feature"
+	  },
+	  "features": [
+		[ "vc:elax_tree1_feature", 10 ],
+		[ "vc:elax_tree2_feature", 10 ],
+		[ "vc:elax_tree3_feature", 10 ],
+		[ "vc:elax_tree4_feature", 10 ],
+		[ "vc:zalu_roots_feature", 20 ],
+		[ "vc:zalu_plant_feature", 20 ]
+	
+	  ]
+	}
+  }
+  

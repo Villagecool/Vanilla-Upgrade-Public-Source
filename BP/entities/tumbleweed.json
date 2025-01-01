@@ -1,0 +1,180 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vc:tumbleweed",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "die": {
+        "minecraft:spawn_entity": {
+          "entities": {
+            "min_wait_time": 0,
+            "max_wait_time": 0,
+            "spawn_item": "minecraft:stick",
+            "single_use": true,
+            "num_to_spawn": 4,
+            "should_leash": false
+          }
+        },
+        "minecraft:instant_despawn": {}
+      },
+      "drop": {
+        "minecraft:spawn_entity": {
+          "entities": {
+            "min_wait_time": 0,
+            "max_wait_time": 0,
+            "spawn_item": "vc:tumbleweed",
+            "single_use": true,
+            "num_to_spawn": 1,
+            "should_leash": false
+          }
+        },
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:attack_damage": {
+        "value": 4
+      },
+      "minecraft:area_attack": {
+        "damage_range": 0.5,
+        "damage_per_tick": 1,
+        "cause": "contact",
+        "entity_filter": {
+          "any_of": [
+            {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            {
+              "test": "is_family",
+              "subject": "other",
+              "value": "mob"
+            }
+          ]
+        }
+      },
+      "minecraft:nameable": {},
+      "minecraft:type_family": {
+        "family": [
+          "tumbleweed",
+          "mob"
+        ]
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:collision_box": {
+        "width": 0.8,
+        "height": 0.8
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:movement": {
+        "value": 0.5
+      },
+      "minecraft:health": {
+        "value": 50,
+        "max": 50
+      },
+      "minecraft:navigation.walk": {
+        "can_float": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": {
+                "test": "has_equipment",
+                "subject": "other",
+                "operator": "!=",
+                "domain": "hand",
+                "value": "shears"
+              },
+              "event": "die"
+            },
+            "deals_damage": false
+          },
+          {
+            "on_damage": {
+              "filters": {
+                "test": "has_equipment",
+                "subject": "other",
+                "domain": "hand",
+                "value": "shears"
+              },
+              "event": "drop"
+            },
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:timer": {
+        "looping": true,
+        "time": 0,
+        "time_down_event": {
+          "event": "move"
+        }
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "die": {
+        "add": {
+          "component_groups": [
+            "die"
+          ]
+        }
+      },
+      "drop": {
+        "add": {
+          "component_groups": [
+            "drop"
+          ]
+        }
+      },
+      "move": {
+        "queue_command": {
+          "command": [
+            "tp @s ^^^0.15 ~",
+            "execute if block ~~-0.2~ air run tp @s ~~-0.2~",
+            "execute if block ~~-0.2~ water run tp @s ~~-0.2~",
+            "execute if block ~~-0.2~ flowing_water run event entity @s drop"
+          ]
+        }
+      }
+    }
+  }
+}

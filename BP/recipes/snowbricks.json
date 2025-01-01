@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:snowbricks"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "##",
+      "##"
+    ],
+    "key": {
+      "#": {
+        "item": "snow"
+      }
+    },
+    "unlock": [
+      {
+        "item": "snow"
+      }
+    ],
+    "result": {
+      "item": "vc:snowbricks",
+      "count": 4
+    }
+  }
+}

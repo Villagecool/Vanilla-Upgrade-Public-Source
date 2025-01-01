@@ -1,0 +1,57 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.rows_warts",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "cop",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -4],
+							"size": [16, 15, 0],
+							"uv": {
+								"north": {"uv": [16, 0], "uv_size": [-16, 15]}
+							}
+						},
+						{
+							"origin": [-10, 0, 8],
+							"size": [16, 15, 0],
+							"pivot": [-1, 8, 6],
+							"rotation": [0, 180, 0],
+							"uv": {
+								"north": {"uv": [16, 0], "uv_size": [-16, 15]}
+							}
+						},
+						{
+							"origin": [-2, 0, 2],
+							"size": [16, 15, 0],
+							"pivot": [6, 8, 0],
+							"rotation": [0, -90, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 15]}
+							}
+						},
+						{
+							"origin": [-14, 0, 2],
+							"size": [16, 15, 0],
+							"pivot": [-6, 8, 0],
+							"rotation": [0, 90, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 15]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

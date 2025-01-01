@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.cookedFood",
+        "category": "equipment"
+      },
+      "identifier": "vc:crab_claw_cooked"
+    },
+    "components": {
+      "minecraft:use_duration": 2.61,
+      "minecraft:use_animation": "eat",
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": {
+        "texture": "crab_claw_cooked"
+      },
+      "minecraft:food": {
+        "nutrition": 8,
+        "saturation_modifier": 8,
+        "can_always_eat": true
+      }
+    }
+  }
+}

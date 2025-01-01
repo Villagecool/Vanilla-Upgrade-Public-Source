@@ -1,0 +1,14 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:weighted_random_feature": {
+	  "description": {
+		"identifier": "vc:glowing_mycelium_vegitation"
+	  },
+	  "features": [
+		[ "vc:glowing_roots_feature", 5 ],
+		[ "vc:glowing_mushroom_feature", 1 ],
+		[ "vc:small_glowing_mushroom_feature", 5 ]
+	  ]
+	}
+  }
+  

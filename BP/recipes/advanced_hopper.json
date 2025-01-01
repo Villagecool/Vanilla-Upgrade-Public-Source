@@ -1,0 +1,39 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:advanced_hopper"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " F ",
+      "CHC",
+      " R "
+    ],
+    "key": {
+      "F": {
+        "item": "vc:advanced_filter"
+      },
+      "C": {
+        "item": "vc:compressed_copper"
+      },
+      "H": {
+        "item": "minecraft:hopper"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "unlock": [
+        {
+            "item": "vc:advanced_filter"
+        },
+        {
+            "item": "vc:compressed_copper"
+        }
+    ],
+    "result": {
+      "item": "vc:advanced_hopper"
+    }
+  }
+}

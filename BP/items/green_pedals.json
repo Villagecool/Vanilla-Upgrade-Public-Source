@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.grass",
+        "category": "nature"
+      },
+      "identifier": "vc:green_pedals"
+    },
+    "components": {
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": "green_pedals",
+      "minecraft:display_name": {
+        "value": "tile.vc:green_pedals.name"
+      },
+      "minecraft:block_placer": {
+        "block": "vc:green_pedals",
+        "replace_block_item": true
+      }
+    }
+  }
+}

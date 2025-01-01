@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vc:charhood",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.crop"
+      }
+    },
+    "components": {
+      "minecraft:use_modifiers": {
+        "movement_modifier": 0.4,
+        "use_duration": 1.61
+      },
+      "tag:minecraft:is_food": {},
+      "minecraft:food": {
+        "nutrition": 4,
+        "saturation_modifier": 3
+      },
+      "minecraft:icon": "charhood",
+      "minecraft:use_animation": "eat"
+    }
+  }
+}

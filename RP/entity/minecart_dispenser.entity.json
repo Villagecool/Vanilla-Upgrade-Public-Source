@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:dispenser_minecart",
+      "materials": {
+        "default": "villager_v2"
+      },
+      "textures": {
+        "default": "textures/entity/minecart",
+        "front": "textures/blocks/furnace_top",
+        "side": "textures/blocks/furnace_top",
+        "top": "textures/blocks/dispenser_front_vertical"
+      },
+      "geometry": {
+        "default": "geometry.minecart.v1.8",
+        "front": "geometry.dispenser_minecart_front",
+        "side": "geometry.dispenser_minecart_sides",
+        "top": "geometry.dispenser_minecart_top"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.hurt = query.hurt_time - query.frame_alpha;",
+          "variable.rail_rotation.x = q.body_x_rotation;",
+          "variable.rail_rotation.y = q.body_y_rotation;",
+          "variable.rail_rotation.z = 0;",
+          "variable.rail_offset.x = 0; variable.rail_offset.y = 0; variable.rail_offset.z = 0;"
+        ]
+        //"should_update_bones_and_effects_offscreen": "1.0"
+      },
+      "animations": {
+        "move": "animation.custom_minecart.rotate",
+        "lat": "animation.common.look_at_target"
+      },
+      "render_controllers": [
+        "controller.render.minecart",
+        "controller.render.melonheadfront",
+        "controller.render.melonheadside",
+        "controller.render.melonheadtop"
+      ]
+    }
+  }
+}

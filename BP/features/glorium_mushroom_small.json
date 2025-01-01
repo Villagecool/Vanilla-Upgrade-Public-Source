@@ -1,0 +1,16 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "vc:glorium_mushroom_small"
+		},
+		"places_block": "vc:glowing_mushroom",
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": true,
+		"may_replace": [
+			"air",
+			"water",
+			"flowing_water"
+		]
+	}
+}

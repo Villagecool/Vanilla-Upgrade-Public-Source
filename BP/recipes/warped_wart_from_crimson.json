@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vc:warped_wart_from_crimson"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "#W#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "warped_wart_block"
+      },
+      "W": {
+        "item": "nether_wart"
+      }
+    },
+    "unlock": [
+      {
+        "item": "nether_wart"
+      }
+    ],
+    "result": {
+      "item": "vc:warped_Wart",
+      "count": 4
+    }
+  }
+}

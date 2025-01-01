@@ -1,0 +1,26 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "vc:elax_tree_feature"
+		},
+		"features": [
+			[
+				"vc:elax_tree1",
+				1
+			],
+			[
+				"vc:elax_tree2",
+				1
+			],
+			[
+				"vc:elax_tree3",
+				1
+			],
+			[
+				"vc:elax_tree4",
+				1
+			]
+		]
+	}
+}

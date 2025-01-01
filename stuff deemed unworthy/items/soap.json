@@ -1,0 +1,104 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.items",
+        "category": "items"
+      },
+      "identifier": "vc:soap"
+    },
+    "components": {
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability",
+            "items": [
+              "vc:soap",
+              "minecraft:honeycomb"
+            ]
+          }
+        ]
+      },
+      "minecraft:enchantable": {
+        "slot": "flintsteel",
+        "value": 10
+      },
+      "minecraft:durability": {
+        "max_durability": 100,
+        "damage_chance": {
+          "min": 5,
+          "max": 10
+        }
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:on_use_on": {
+        "on_use_on": {
+          "event": "vc:clean",
+          "target": "self"
+        }
+      },
+      "minecraft:icon": {
+        "texture": "soap"
+      }
+    },
+    "events": {
+      "vc:clean": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "weight": 10
+              },
+              {
+                "weight": 1,
+                "run_command": {
+                  "command": "/execute if block ~~1~ air run setblock ~~1~ no:soap_residue"
+                }
+              }
+            ]
+          },
+          {
+            "condition": "(1.0)",
+            "run_command": {
+              "command": [
+                "/execute if block ~~~ mossy_cobblestone run setblock ~~~ cobblestone",
+                "/execute if block ~~~ stonebrick[\"stone_brick_type\"=\"mossy\"] run setblock ~~~ stonebrick",
+                "/execute if block ~~~ monster_egg[\"monster_egg_stone_type\"=\"mossy_stone_brick\"] run summon silverfish",
+                "/execute if block ~~~ monster_egg[\"monster_egg_stone_type\"=\"mossy_stone_brick\"] run setblock ~~~ stonebrick",
+                "/execute if block ~~~ mossy_stone_brick_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=3] run setblock ~~~ stone_brick_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=3]",
+                "/execute if block ~~~ mossy_stone_brick_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=2] run setblock ~~~ stone_brick_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=2]",
+                "/execute if block ~~~ mossy_stone_brick_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=1] run setblock ~~~ stone_brick_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=1]",
+                "/execute if block ~~~ mossy_stone_brick_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=0] run setblock ~~~ stone_brick_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=0]",
+                "/execute if block ~~~ mossy_stone_brick_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=3] run setblock ~~~ stone_brick_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=3]",
+                "/execute if block ~~~ mossy_stone_brick_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=2] run setblock ~~~ stone_brick_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=2]",
+                "/execute if block ~~~ mossy_stone_brick_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=1] run setblock ~~~ stone_brick_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=1]",
+                "/execute if block ~~~ mossy_stone_brick_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=0] run setblock ~~~ stone_brick_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=0]",
+                "/execute if block ~~~ mossy_cobblestone_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=3] run setblock ~~~ stone_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=3]",
+                "/execute if block ~~~ mossy_cobblestone_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=2] run setblock ~~~ stone_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=2]",
+                "/execute if block ~~~ mossy_cobblestone_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=1] run setblock ~~~ stone_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=1]",
+                "/execute if block ~~~ mossy_cobblestone_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=0] run setblock ~~~ stone_stairs[\"upside_down_bit\"=false,\"weirdo_direction\"=0]",
+                "/execute if block ~~~ mossy_cobblestone_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=3] run setblock ~~~ stone_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=3]",
+                "/execute if block ~~~ mossy_cobblestone_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=2] run setblock ~~~ stone_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=2]",
+                "/execute if block ~~~ mossy_cobblestone_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=1] run setblock ~~~ stone_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=1]",
+                "/execute if block ~~~ mossy_cobblestone_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=0] run setblock ~~~ stone_stairs[\"upside_down_bit\"=true,\"weirdo_direction\"=0]",
+                "/execute if block ~~~ stone_block_slab2[\"stone_slab_type_2\"=\"mossy_cobblestone\",\"minecraft:vertical_half\"=\"bottom\"] run setblock ~~~ stone_block_slab[\"stone_slab_type\"=\"cobblestone\",\"minecraft:vertical_half\"=\"bottom\"]",
+                "/execute if block ~~~ stone_block_slab2[\"stone_slab_type_2\"=\"mossy_cobblestone\",\"minecraft:vertical_half\"=\"top\"] run setblock ~~~ stone_block_slab[\"stone_slab_type\"=\"cobblestone\",\"minecraft:vertical_half\"=\"top\"]",
+                "/execute if block ~~~ stone_block_slab4[\"stone_slab_type_4\"=\"mossy_stone_brick\",\"minecraft:vertical_half\"=\"bottom\"] run setblock ~~~ stone_block_slab[\"stone_slab_type\"=\"stone_brick\",\"minecraft:vertical_half\"=\"bottom\"]",
+                "/execute if block ~~~ stone_block_slab4[\"stone_slab_type_4\"=\"mossy_stone_brick\",\"minecraft:vertical_half\"=\"top\"] run setblock ~~~ stone_block_slab[\"stone_slab_type\"=\"stone_brick\",\"minecraft:vertical_half\"=\"top\"]",
+                "/execute if block ~~~ double_stone_block_slab2[\"stone_slab_type_2\"=\"mossy_cobblestone\",\"minecraft:vertical_half\"=\"bottom\"] run setblock ~~~ double_stone_block_slab[\"stone_slab_type\"=\"cobblestone\",\"minecraft:vertical_half\"=\"bottom\"]",
+                "/execute if block ~~~ double_stone_block_slab2[\"stone_slab_type_2\"=\"mossy_cobblestone\",\"minecraft:vertical_half\"=\"top\"] run setblock ~~~ double_stone_block_slab[\"stone_slab_type\"=\"cobblestone\",\"minecraft:vertical_half\"=\"top\"]",
+                "/execute if block ~~~ double_stone_block_slab4[\"stone_slab_type_4\"=\"mossy_stone_brick\",\"minecraft:vertical_half\"=\"bottom\"] run setblock ~~~ double_stone_block_slab[\"stone_slab_type\"=\"stone_brick\",\"minecraft:vertical_half\"=\"bottom\"]",
+                "/execute if block ~~~ double_stone_block_slab4[\"stone_slab_type_4\"=\"mossy_stone_brick\",\"minecraft:vertical_half\"=\"top\"] run setblock ~~~ double_stone_block_slab[\"stone_slab_type\"=\"stone_brick\",\"minecraft:vertical_half\"=\"top\"]",
+                "/execute if block ~~~ muddy_mangrove_roots run setblock ~~~ mangrove_roots",
+                "/particle vc:soap_particle ~~~",
+                "/playsound copper.wax.on @a ~~~"
+              ],
+              "target": "block"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

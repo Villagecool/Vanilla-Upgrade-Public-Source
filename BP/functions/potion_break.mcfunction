@@ -1,0 +1,9 @@
+particle vc:potion_break ~~~
+particle vc:potion_break ~~~
+particle vc:potion_break ~~~
+particle vc:potion_break ~~~
+particle vc:potion_break ~~~
+particle vc:potion_break ~~~
+particle vc:potion_break ~~~
+particle vc:potion_break ~~~
+particle vc:potion_break ~~~

@@ -1,0 +1,48 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "vc:volcano_feature_rules",
+            "places_feature": "vc:volcano_island"
+        },
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": [
+                {
+                    "any_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "nether"
+                        }
+                    ]
+                }
+            ]
+        },
+        "distribution": {
+            "iterations": 1,
+            "x": {
+                "extent": [
+                    0,
+                    100
+                ],
+                "distribution": "uniform"
+            },
+            "y": {
+                "extent": [
+                    26,
+                    30 //lava level lol
+                ],
+                "distribution": "uniform"
+            },
+            "z": {
+                "distribution": "uniform",
+                "extent": [
+                    0,
+                    100
+                ]
+            }
+        }
+    }
+}
+// Exported from software by MACHINE_BUILDER on YouTube. Check out this video for more information : https://www.youtube.com/watch?v=vcLibdIq7To <- download link in description

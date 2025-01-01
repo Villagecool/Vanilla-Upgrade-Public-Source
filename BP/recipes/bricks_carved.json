@@ -1,0 +1,23 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "vc:bricks_carved"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#",
+            "#"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:brick_slab"
+            }
+        },
+        "result": {
+            "item": "vc:bricks_carved"
+        }
+    }
+}

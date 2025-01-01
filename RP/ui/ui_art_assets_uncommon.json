@@ -1,0 +1,69 @@
+{
+  "namespace": "uncommon_art",
+
+  "title_image_anm": {
+    "type": "image",
+    "layer": 1,
+    "texture": "textures/ui/title",
+    "anims": [
+      "@VU_title.titleMove"
+    ]
+  },
+  "title_panel_win10_anm": {
+    "type": "panel",
+    "size": [ "55%", "18.85%x" ],
+    "offset": [ 0, "10%" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "title_image@common_art.title_image_anm": {} },
+      {
+        "splash_text@splash_text": {
+          "offset": [ -8, 10 ]
+        }
+      }
+    ]
+  },
+
+  "title_panel_content": {
+    "type": "panel",
+    "variables": [
+      {
+        "requires": "$win10_edition",
+        "$title_panel": "title_panel_win10_anm"
+      },
+      {
+        "requires": "$osx_edition",
+        "$title_panel": "title_panel_osx"
+      },
+      {
+        "requires": "($education_edition and not $education_edition_china)",
+        "$title_panel": "title_panel_edu",
+        "$start_screen": false
+      },
+      {
+        "requires": "$education_edition_china",
+        "$title_panel": "title_panel_edu_china",
+        "$start_screen": false
+      },
+      {
+        "requires": "($pocket_edition or $console_edition)",
+        "$title_panel": "title_panel_pocket"
+      },
+      {
+        "requires": "$fire_tv",
+        "$title_panel": "title_panel_firetv"
+      },
+      {
+        "requires": "$gear_vr",
+        "$title_panel": "title_panel_vr"
+      }
+    ],
+    "controls": [
+      {
+        "$title_panel@$title_panel": {}
+      }
+    ]
+  }
+
+}

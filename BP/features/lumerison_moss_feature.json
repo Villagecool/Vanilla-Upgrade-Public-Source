@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "vc:lumerison_moss_feature"
+    },
+    "places_block": "vc:lumerison_moss",
+    "enforce_placement_rules": false,
+    "enforce_survivability_rules": false,
+    "may_replace": [
+      "end_stone"
+    ]
+  }
+}

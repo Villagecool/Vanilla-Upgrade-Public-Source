@@ -1,0 +1,43 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "vc:carnavorus_chorus_growth_feature_rules",
+			"places_feature": "vc:carnavorus_chorus_growth_feature"
+		},
+		"conditions": {
+			"placement_pass": "final_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "the_end"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 2,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					15
+				]
+			},
+			"y": "math.round(math.random(0,5)) == 0 && (math.abs(v.worldx) > 200 || math.abs(v.worldz) > 200)) ? query.heightmap(v.worldx, v.worldz) : -65",
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					15
+				]
+			}
+		}
+	}
+}

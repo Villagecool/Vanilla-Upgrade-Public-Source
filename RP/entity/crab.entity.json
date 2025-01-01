@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:crab",
+      "materials": { "default": "villager_v2" },
+      "textures": {
+        "default": "textures/entity/crab"
+      },
+      "geometry": {
+        "default": "geometry.crab"
+      },
+      "animations": {
+        "dancing": "animation.crab.dancing",
+        "look_at_target": "animation.common.look_at_target",
+        "baby_transform": "animation.sheep.baby_transform",
+        "attack": "animation.crab.attack",
+        "move": "animation.crab.walk"
+      },
+      "scripts": {
+        "animate": [
+          { "dancing": "query.is_dancing" },
+          { "baby_transform": "query.is_baby" },
+          { "attack": "query.has_target" },
+          "look_at_target",
+          "move"
+        ]
+      },
+      "sound_effects": {
+        "step": "mob.crab.step"
+      },
+      "render_controllers": [ "controller.render.zombie" ],
+      "spawn_egg": {
+        "base_color": "#F02926",
+        "overlay_color": "#E48D7B"
+      }
+    }
+  }
+}

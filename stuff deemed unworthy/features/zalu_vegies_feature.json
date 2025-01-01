@@ -1,0 +1,14 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:weighted_random_feature": {
+	  "description": {
+		"identifier": "vc:zalu_vegies_feature"
+	  },
+	  "features": [
+		[ "vc:zalu_roots_feature", 50 ],
+		[ "vc:zalu_plant_feature", 50 ]
+	
+	  ]
+	}
+  }
+  

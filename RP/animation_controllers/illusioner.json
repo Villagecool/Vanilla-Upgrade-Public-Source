@@ -1,0 +1,90 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.polarbear.eating": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_targe"
+					],
+					"transitions": [
+						{
+							"sitting": "query.sit_amount > 0"
+						}
+					]
+				},
+				"sitting": {
+					"animations": [
+						"sitting"
+					],
+					"transitions": [
+						{
+							"default": "query.sit_amount <= 0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.illusioner.general": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target",
+						"general"
+					],
+					"transitions": [
+						{
+							"bow_and_arrow": "query.has_target && !query.is_casting"
+						},
+						{
+							"casting": "query.is_casting"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"bow_and_arrow": {
+					"animations": [
+						"look_at_target",
+						"bow_and_arrow"
+					],
+					"transitions": [
+						{
+							"casting": "query.is_casting"
+						},
+						{
+							"default": "!query.has_target"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"casting": {
+					"animations": [
+						"look_at_target",
+						"casting"
+					],
+					"particle_effects": [
+						{
+							"effect": "spell",
+							"locator": "left_hand"
+						},
+						{
+							"effect": "spell",
+							"locator": "right_hand"
+						}
+					],
+					"transitions": [
+						{
+							"bow_and_arrow": "query.has_target && !query.is_casting"
+						},
+						{
+							"default": "!query.is_casting"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

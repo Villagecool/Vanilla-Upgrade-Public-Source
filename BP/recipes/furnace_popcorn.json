@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "minecraft:furnace_popcorn"
+    },
+
+    
+    "tags": ["furnace"],
+    "input": "vc:corn_kernels",
+    "output": "vc:popcorn"
+  }
+  
+}

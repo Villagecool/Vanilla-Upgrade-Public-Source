@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vc:crimson_button_sawmill"
+    },
+    "tags": [
+      "sawmill"
+    ],
+    "pattern": [
+      "mmm",
+      "mmm",
+      "Amm"
+    ],
+    "key": {
+      "A": {
+        "item": "crimson_planks",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "minecraft:crimson_button",
+      "count": 54,
+      "data": 0
+    }
+  }
+}

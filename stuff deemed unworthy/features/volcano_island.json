@@ -1,0 +1,31 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "vc:volcano_island"
+		},
+		"places_feature": "vc:volcano_types_feature",
+		"iterations": 10,
+		"x": {
+			"distribution": "uniform",
+			"extent": [
+				0,
+				15
+			]
+		},
+		"y": {
+			"distribution": "uniform",
+			"extent": [
+				-2,
+				2
+			]
+		},
+		"z": {
+			"distribution": "uniform",
+			"extent": [
+				0,
+				15
+			]
+		}
+	}
+}

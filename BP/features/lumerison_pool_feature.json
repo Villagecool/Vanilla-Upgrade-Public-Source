@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "vc:lumerison_pool_feature"
+		},
+		"features": [
+			[
+				"vc:lumerison_pool1",
+				1
+			],
+			[
+				"vc:lumerison_pool2",
+				1
+			]
+		]
+	}
+}

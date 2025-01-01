@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:jungle_stairs_sawmill"
+    },
+
+    
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "mAm",
+      "mmm",
+      "mmm"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:planks",
+        "data": 3
+      }
+    },
+    "result": {
+      "item": "minecraft:jungle_stairs",
+      "count": 1,
+      "data": 0
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "format_version": "1.16",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "minecraft:bowl_from_azalea_planks"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "A A",
+            " A "
+        ],
+        "key": {
+            "A": {
+                "item": "vc:azalea_planks"
+            }
+        },
+        "result": {
+            "item": "bowl",
+            "count": 4
+        },
+        "priority": 2
+    }
+}

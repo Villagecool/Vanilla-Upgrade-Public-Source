@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "minecraft:stick_from_azalea_planks"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "B",
+            "B"
+        ],
+        "key": {
+            "B": {
+                "item": "vc:azalea_planks"
+            }
+        },
+        "result": {
+            "item": "stick",
+            "count": 4
+        },
+        "priority": 2
+    }
+}

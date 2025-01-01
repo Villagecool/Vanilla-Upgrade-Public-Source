@@ -1,0 +1,27 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vc:glorium_block"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+        "AA", 
+        "AA"
+    ],
+    "key": {
+      "A": {
+        "item": "vc:glorium_shard"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:glorium_shard"
+      }
+    ],
+    "result": {
+      "item": "vc:glorium_block",
+      "count": 1
+    }
+  }
+}

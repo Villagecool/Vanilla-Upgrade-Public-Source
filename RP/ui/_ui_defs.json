@@ -1,0 +1,18 @@
+{
+  // Alphabetical order please :) (it was not in alphabetical order :trol:)
+  "ui_defs": [
+    "ui/VU_title.json",
+    "ui/VU_title_out.json",
+    "ui/VU_start_title.json",
+    "ui/maging_table.json",
+    "ui/fletching_table.json",
+    "ui/sawmill.json",
+    "ui/kiln.json",
+    "ui/maging_table_pocket.json",
+    "ui/fletching_table_pocket.json",
+    "ui/sawmill_pocket.json",
+    "us/ui_art_assets_uncommon.json",
+    "ui/knowlage_harvester.json",
+    "ui/name_tag_screen.json"
+  ]
+}

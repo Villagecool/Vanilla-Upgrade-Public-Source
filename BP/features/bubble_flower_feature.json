@@ -1,0 +1,15 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "vc:bubble_flower_feature"
+		},
+		"places_block": "vc:bubble_flower",
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": true,
+		"may_replace": [
+			"air",
+			"deadbush"
+		]
+	}
+}

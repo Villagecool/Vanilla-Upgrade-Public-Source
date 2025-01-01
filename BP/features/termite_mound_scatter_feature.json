@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "vc:termite_mound_scatter_feature"
+		},
+		"project_input_to_floor": true,
+		"places_feature": "vc:termite_mound_feature",
+		"distribution": {
+			"iterations": 50,
+			"scatter_chance": 100,
+			"x": {
+				"distribution": "triangle",
+				"extent": [
+					-10,
+					10
+				]
+			},
+			"z": {
+				"distribution": "triangle",
+				"extent": [
+					-10,
+					10
+				]
+			},
+			"y": {
+				"distribution": "gaussian",
+				"extent": [
+					-5,
+					5
+				]
+			}
+		}
+	}
+}

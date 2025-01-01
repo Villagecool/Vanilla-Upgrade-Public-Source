@@ -1,0 +1,23 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:item": {
+		"description": {
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.flower"
+			},
+			"identifier": "vc:lumerison_roots"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "vc:lumerison_roots",
+				"replace_block_item": true
+			},
+			"minecraft:display_name": {
+				"value": "item.vc:lumerison_roots_item"
+			},
+			"minecraft:icon": "lumerison_roots"
+		}
+	}
+}

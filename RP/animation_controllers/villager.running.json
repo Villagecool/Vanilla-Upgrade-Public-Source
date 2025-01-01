@@ -1,0 +1,57 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.villager_v2.running": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"running": "query.modified_move_speed > 0.96"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"running": {
+					"animations": [
+						"look_at_target",
+						"running",
+						"move"
+					],
+					"transitions": [
+						{
+							"default": "query.modified_move_speed < 0.96"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.villager_v2.running.alt": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"running": "query.modified_move_speed && query.is_avoiding_mobs && query.is_moving || query.is_in_water_or_rain && query.is_moving"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"running": {
+					"animations": [
+						"look_at_target",
+						"running",
+						"move"
+					],
+					"transitions": [
+						{
+							"default": "query.modified_move_speed && !query.is_avoiding_mobs && !query.is_moving && !query.is_in_water_or_rain && !query.is_moving"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}
