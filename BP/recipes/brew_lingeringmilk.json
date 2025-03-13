@@ -1,0 +1,15 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "vc:brew_lingeringmilk"
+    },
+
+    "tags": [ "brewing_stand" ],
+
+    "input": "vc:milk_bottle",
+    "reagent": "minecraft:dragon_breath",
+    "output": "vc:lingering_milk_bottle"
+  }
+
+}

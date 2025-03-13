@@ -5,7 +5,7 @@
 			"identifier": "vc:dispenser_minecart",
 			"menu_category": {
 				"category": "items",
-				"group": "itemGroup.name.minecarts"
+				"group": "itemGroup.name.minecart"
 			}
 		},
 		"components": {

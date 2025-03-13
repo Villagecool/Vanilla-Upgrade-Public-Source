@@ -43,7 +43,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
 		},
 		onTick: e => {
 			let block = e.block; //the hopper
-			if (block.permutation.getState("vc:toggle_bit")) return;
+			if (block.permutation.getState("vc:powered")) return;
 			let entity = block.dimension.getEntitiesAtBlockLocation(block.location)[0];; //the hopper entity
 			if (!entity) return;
 			let filter = entity.nameTag;

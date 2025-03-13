@@ -45,6 +45,7 @@
 			}
 		},
 		"components": {
+			"tag:minecraft:is_axe_item_destructible": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 1.2
 			},
@@ -58,12 +59,15 @@
 					1
 				]
 			},
+			"minecraft:redstone_conductivity": {
+				"allows_wire_to_step_down": true,
+				"redstone_conductor": true
+			},
 			"minecraft:custom_components": [
 				"vc:noteblock",
 				"vc:redstone"
 			],
 			"minecraft:flammable": true,
-			"minecraft:geometry": "minecraft:geometry.full_block",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "noteblock",

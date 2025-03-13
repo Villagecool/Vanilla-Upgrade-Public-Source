@@ -20,9 +20,9 @@ export function playNote(block, add) {
     let note = block.permutation.getState("vc:note") + block.permutation.getState("vc:note2");
     if (add) {
         if (note >= 12)
-            setPermutation(block, "vc:note2", (note % 12) + 1)
+            setPermutation(block, "vc:note2", Number((note % 12) + 1))
         else
-            setPermutation(block, "vc:note", (note % 12) + 1)
+            setPermutation(block, "vc:note", Number((note % 12) + 1))
         if (note >= 24) {
             setPermutation(block, "vc:note", 0)
             setPermutation(block, "vc:note2", 0)

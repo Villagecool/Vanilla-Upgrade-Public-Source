@@ -39,6 +39,7 @@
 		},
 		"components": {
 			"tag:wood": {},
+            "tag:minecraft:is_axe_item_destructible": {},
 			"tag:elax_door": {},
 			"tag:non_solid": {},
 			"tag:door": {},
@@ -48,13 +49,6 @@
 			"minecraft:flammable": {
 				"catch_chance_modifier": 5,
 				"destroy_chance_modifier": 20
-			},
-			"minecraft:tick": {
-				"interval_range": [
-					1,
-					1
-				],
-				"looping": true
 			},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 2.5

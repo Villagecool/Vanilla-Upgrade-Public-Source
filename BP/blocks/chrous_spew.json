@@ -26,10 +26,8 @@
 			}
 		},
 		"components": {
-			"tag:diamond_pick_diggable": {},
-			"tag:gold_pick_diggable": {},
-			"tag:iron_pick_diggable": {},
-			"tag:stone": {},
+			"tag:plant": {},
+			"tag:minecraft:is_axe_item_destructible": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 2
 			},

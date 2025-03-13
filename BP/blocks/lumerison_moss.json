@@ -10,6 +10,8 @@
 		},
 		"components": {
 			"tag:stone": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"tag:grass": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 15
 			},

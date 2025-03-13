@@ -24,12 +24,12 @@
         "value": 10
       },
       "minecraft:damage": {
-        "value": 6
+        "value": 4
       },
       "minecraft:custom_components": [
         "vc:copper_wrench"
       ],
-      "minecraft:can_destroy_in_creative": false
+      "minecraft:can_destroy_in_creative": false,
       "minecraft:hand_equipped": true,
       "minecraft:durability": {
         "max_durability": 100,

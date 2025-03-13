@@ -22,7 +22,8 @@
 				"slide": {
 					"animations": [
 						"look_at_target",
-						"slide"
+						"slide",
+						"waddle"
 					],
 					"transitions": [
 						{

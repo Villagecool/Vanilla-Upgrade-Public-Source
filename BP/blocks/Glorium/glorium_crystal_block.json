@@ -9,9 +9,9 @@
 			"identifier": "vc:glorium_crystal_block"
 		},
 		"components": {
-			"tag:diamond_pick_diggable": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
 			"tag:gold_pick_diggable": {},
-			"tag:iron_pick_diggable": {},
+			"tag:minecraft:iron_tier_destructible": {},
 			"tag:stone": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 5

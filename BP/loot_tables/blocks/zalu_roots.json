@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "vc:zalu_roots_item",
+          "name": "vc:zalu_roots",
           "weight": 1,
           "functions": [
             {

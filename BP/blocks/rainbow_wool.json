@@ -9,6 +9,7 @@
 			"identifier": "vc:rainbow_wool"
 		},
 		"components": {
+			"tag:minecraft:is_shears_item_destructible": {},
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 0
 			},

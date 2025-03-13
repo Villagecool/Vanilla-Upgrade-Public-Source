@@ -1,0 +1,42 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.leaves"
+			},
+			"identifier": "vc:elax_floor_leaves"
+		},
+		"components": {
+			"tag:leaves": {},
+			"tag:plant": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.3
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0
+			},
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					2,
+					16
+				]
+			},
+			"minecraft:geometry": "geometry.rail",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "elax_floor_leaves",
+					"render_method": "blend"
+				}
+			}
+		}
+	}
+}

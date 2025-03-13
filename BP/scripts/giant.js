@@ -1,5 +1,6 @@
 import * as SERVER from '@minecraft/server';
 import * as UI from '@minecraft/server-ui';
+import { getRandomInt } from "./utils.js";
 
 SERVER.world.beforeEvents.playerBreakBlock.subscribe((data) => {
     let player = data.player;
@@ -10,7 +11,7 @@ SERVER.world.beforeEvents.playerBreakBlock.subscribe((data) => {
         SERVER.system.run(() => {
             //player.addEffect('giantOmen', 900, { amplifier: 1 });
             player.runCommand('effect @s bad_omen 0 0');
-            player.runCommand('scriptevent vc:addtimer giant_omen 5');
+            player.runCommand(`scriptevent vc:addtimer giant_omen ${getRandomInt(600, 2400)}`);
             player.runCommand(`particle vc:giant_omen_particle ${block.location.x} ${block.location.y} ${block.location.z}`)
             player.runCommand(`playsound effects.giant_omen @s ${block.location.x} ${block.location.y}.5 ${block.location.z}`)
         })

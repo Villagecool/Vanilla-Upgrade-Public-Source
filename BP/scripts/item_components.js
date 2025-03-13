@@ -19,12 +19,17 @@ const effectsList = [
     */
 ]
 function soYeahTheSplashPotionsHitAndEverythingVeryCoolIndeed(e) {
-    if (e.projectile.typeId != 'vc:custom_splash_potion') return;
+    if (e.projectile.typeId != 'vc:custom_splash_potion' && e.projectile.typeId != 'vc:custom_lingering_potion') return;
     const variant = e.projectile.getComponent('minecraft:variant').value 
     const markvariant = e.projectile.getComponent('minecraft:mark_variant').value 
     e.projectile.runCommand(`function potion_break`)
     e.projectile.runCommand(`particle vc:splash_particle_${variant == 0 ? 'blindness' : 'levitation'} ~~0.3~`)
     e.projectile.runCommand(`effect @e[r=2.5] ${markvariant == 2 ? 'clear' : markvariant == 0 || markvariant == 1 ? 'blindness' : 'levitation'} ${markvariant == 0 || markvariant == 3 ? '60' : markvariant == 1 || markvariant == 4 ? '240' : ''}`)
+    if (e.projectile.typeId == 'vc:custom_lingering_potion') {
+        //https://wiki.bedrock.dev/entities/introduction-to-aec
+        e.projectile.runCommand(`structure load ${markvariant == 2 ? 'milk' : markvariant == 0 || markvariant == 1 ? 'blineness' : 'levi'}${markvariant == 1 || markvariant == 4 ? 'II' : ''}aoe ~~0.3~`)
+        //console.log(`structure load ${markvariant == 2 ? 'clear' : markvariant == 0 || markvariant == 1 ? 'blineness' : 'levi'}${markvariant == 1 || markvariant == 4 ? 'II' : ''}aoe ~~0.3~`)
+    }
     e.projectile.remove()
     
 }
@@ -224,6 +229,11 @@ SERVER.world.afterEvents.itemStopUse.subscribe(e => {
     if (e.itemStack.typeId == 'vc:goat_horn_roll') {
         e.source.runCommand(`stopsound @a horn.call.roll`)
     }
+})
+SERVER.world.afterEvents.itemUseOn.subscribe(e => {
+    if (e.block.typeId != 'minecraft:jukebox') return
+    if (e.itemStack.typeId == 'vc:music_disc_subhour') e.source.runCommand("title @a[r=15] actionbar §dNow Playing: Clorate 21 - Subhour")
+    if (e.itemStack.typeId == 'vc:music_disc_mist') e.source.runCommand("title @a[r=15] actionbar §dNow Playing: For_Builds - Mist")
 })
 SERVER.world.afterEvents.entityHurt.subscribe(e => {
     if (e.hurtEntity.typeId == 'minecraft:player' && e.damageSource.damagingEntity != undefined) {

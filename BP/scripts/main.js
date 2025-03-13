@@ -10,7 +10,7 @@ import "./chorus_carnavorus_plant.js";
 import "./block_components.js";
 import "./item_components.js";
 import "./name_tag.js";
-//import "./giant.js";
+import "./giant.js";
 import "./rotator.js";
 import "./advanced_hopper.js";
 import "./advanced_observer.js";

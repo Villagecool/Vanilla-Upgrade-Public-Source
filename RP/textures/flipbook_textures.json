@@ -170,7 +170,7 @@
     "ticks_per_frame": 0
   },
   {
-    "flipbook_texture": "textures/blocks/omfg!_ather_portal",
+    "flipbook_texture": "textures/blocks/ather_portal",
     "atlas_tile": "ather_portal",
     "ticks_per_frame": 0
   }

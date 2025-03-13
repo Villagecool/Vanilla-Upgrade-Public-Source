@@ -1,25 +1,89 @@
 {
-    "format_version": "1.21.60",
-    "minecraft:crafting_items_catalog": {
-       "categories": [
-          {
-             // Valid values are construction, equipment, nature, and items
-             "category_name": "construction",
-             "groups": [
-                {
-                   // This will create a new group
-                   "gloricallium": {
-                      "icon": "vc:gloricallium_block",
-                      // This is the name of your group which doubles as
-                      // the localization string. The namespace is required
-                      "name": "vc:itemGroup.name.gloricallium"
-                   },
-                   "items": [
-                      "vc:gloricallium_block"
-                   ]
-                }
-             ]
-          }
-       ]
-    }
- }
+   "format_version": "1.21.60",
+   "minecraft:crafting_items_catalog": {
+      "categories": [
+         {
+            // Valid values are construction, equipment, nature, and items
+            "category_name": "construction",
+            "groups": [
+               {
+                  // This will create a new group
+                  "group_identifier": {
+                     "icon": "vc:gloricalium_block",
+                     // This is the name of your group which doubles as
+                     // the localization string. The namespace is required
+                     "name": "vc:itemGroup.name.gloricallium"
+                  },
+                  "items": [
+                     "vc:gloricalium_block",
+                     "vc:cut_gloricalium_block",
+                     "vc:gloricalium_grate",
+                     "vc:discharged_gloricalium_block",
+                     "vc:cut_discharged_gloricalium_block",
+                     "vc:discharged_gloricalium_grate"
+                  ]
+               },
+               {
+                  // This will create a new group
+                  "group_identifier": {
+                     "icon": "vc:compressed_copper_block",
+                     // This is the name of your group which doubles as
+                     // the localization string. The namespace is required
+                     "name": "vc:itemGroup.name.compressed_copper"
+                  },
+                  "items": [
+                     "vc:compressed_copper_block",
+                     "vc:compressed_copper_tiles",
+                     "vc:compressed_copper_bars"
+                  ]
+               }
+            ]
+         },
+         {
+            "category_name": "nature",
+            "groups": [
+               {
+                  "group_identifier" : {
+                     "icon" : "minecraft:chicken_spawn_egg",
+                     "name" : "minecraft:itemGroup.name.mobEgg"
+                  },
+                  "items": [
+                     "vc:bandager_spawn_egg",
+                     "vc:copper_golem_spawn_egg",
+                     "vc:penguin_spawn_egg",
+                     "vc:sparse_spawn_egg",
+                     "vc:illusioner_spawn_egg",
+                     "vc:giant_spawn_egg",
+                     "vc:termite_spawn_egg"
+                  ]
+               },
+               {
+                  // This will create a new group
+                  "group_identifier": {
+                     "icon": "vc:glorium_crystal_block",
+                     // This is the name of your group which doubles as
+                     // the localization string. The namespace is required
+                     "name": "vc:itemGroup.name.glorium"
+                  },
+                  "items": [
+                     "vc:glowing_mycelium",
+                     "vc:deepslate_glowing_mycelium",
+                     "vc:glowing_mushroom_block",
+                     "vc:glowing_mushroom",
+                     "vc:glowing_roots",
+                     "vc:glorium_crystal_block",
+                     "vc:glorium_crystal_block_budding",
+                     "vc:glorium_crystals_tiny",
+                     "vc:glorium_crystals_small",
+                     "vc:glorium_crystals_medium",
+                     "vc:glorium_crystals",
+                     "vc:glorium_shard",
+                     "vc:glorium_vines",
+                     "vc:glorium_blossom"
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

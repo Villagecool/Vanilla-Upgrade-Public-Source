@@ -10,6 +10,7 @@
 		},
 		"components": {
 			"tag:non_solid": {},
+			"tag:minecraft:is_shears_item_destructible": {},
 			"minecraft:geometry": "geometry.rope",
 			"minecraft:collision_box": false,
 			"minecraft:selection_box": {

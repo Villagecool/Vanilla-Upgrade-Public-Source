@@ -1,6 +1,6 @@
 import * as SERVER from '@minecraft/server';
 import * as UI from '@minecraft/server-ui';
-import { getRandomInt, getRandomFloat } from './utils';
+import { getRandomInt, getRandomFloat, setPermutation } from './utils';
 
 SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
     if (!data.sourceEntity) return;
@@ -26,6 +26,15 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
     if (data.id === "vc:setOnFire") {
         entity.setOnFire(5);
     };
+    if (data.id === "vc:nomnom") {
+        entity.runCommand('playsound chorus.bite @a ~~~ 0.5')
+        entity.runCommand('playsound dig.gravel @a ~~~')
+        SERVER.system.runTimeout(() => {
+            for (const owie of entity.dimension.getEntitiesAtBlockLocation(entity.location)) {
+                damageWithCustomMessage(owie, 3, '%s became one with nature')
+            }
+        }, 0.33 * 20)
+    };
     if (data.id === "vc:get_light") {
         const coolGuy = entity.dimension.spawnEntity("vc:get_light_level", entity.location);
         coolGuy.triggerEvent('minecraft:entity_spawned')
@@ -41,16 +50,16 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
         player.startItemCooldown('glareizer', strength * 20)
     };
     if (data.id === "vc:random_block_test") {
-        const letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","_"]
+        const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "_"]
         var result = 'minecraft:'
         var runs = 0
         tryBlock()
         function tryBlock() {
-            runs ++
-            if (runs >= 90) {SERVER.system.runTimeout(_=> {entity.runCommand(`scriptevent vc:random_block_test`)},1); return};
+            runs++
+            if (runs >= 90) { SERVER.system.runTimeout(_ => { entity.runCommand(`scriptevent vc:random_block_test`) }, 1); return };
             result = 'minecraft:'
-            for (let i = 0; i < getRandomInt(5,10); i++) {
-                result += letters[getRandomInt(0,letters.length - 1)]
+            for (let i = 0; i < getRandomInt(5, 10); i++) {
+                result += letters[getRandomInt(0, letters.length - 1)]
             }
             const block = data.sourceEntity.dimension.getBlock(data.sourceEntity.location)
             try { block.setType(result) } catch { tryBlock() }
@@ -61,6 +70,16 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
             entity.runCommand(`camera @s clear`)
         else
             entity.runCommand(`camera @s set minecraft:free pos ${entity.getHeadLocation().x} ${entity.getHeadLocation().y} ${entity.getHeadLocation().z} rot ${entity.getRotation().x} ${entity.getRotation().y}`)
+    }
+    if (data.id === "vc:curse_this_campfire") {
+        const block = data.sourceEntity.dimension.getBlock(data.sourceEntity.location)
+        if (!block.typeId.includes('campfire')) return;
+        entity.runCommand('playsound block.campfire.magic @a[r=15]')
+        entity.runCommand('particle vc:magic_boom')
+        const dir = block.permutation.getState('minecraft:cardinal_direction')
+        block.setType('vc:cursed_campfire')
+        setPermutation(block, 'minecraft:cardinal_direction', dir)
+        entity.remove()
     }
     if (data.id === "vc:cocojuice") {
         let item = entity.getComponent("equippable").getEquipment("Mainhand");
@@ -182,6 +201,9 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
             }
         });
     }
+    if (data.id == 'vc:charge_block') {
+        entity.dimension.spawnEntity('vc:charge_block', entity.getBlockFromViewDirection().block.bottomCenter())
+    }
     if (data.id === "vc:drop_item") {
         let entityContainer = entity.getComponent("inventory").container;
         if (!entityContainer) return;
@@ -240,7 +262,8 @@ function dispenseItem(item, entity, slot) {
         if (item.typeId == 'minecraft:lingering_potion') itemName = 'minecraft:splash_potion'
         if (item.typeId == 'minecraft:fire_charge') itemName = 'minecraft:fireball'
         if (item.typeId == 'minecraft:slime_ball') itemName = 'vc:slime_ball'
-        if (item.typeId == 'minecraft:wind_charge') itemName = 'minecraft:breeze_wind_charge_projectile'
+        if (item.typeId == 'minecraft:wind_charge') itemName = 'minecraft:wind_charge_projectile'
+        if (item.typeId == 'minecraft:trident') itemName = 'minecraft:thrown_trident'
         const spawnEntity = entity.dimension.spawnEntity(itemName, {
             x: entity.location.x,
             y: entity.location.y + 2,
@@ -296,7 +319,7 @@ function dispenseItem(item, entity, slot) {
     }
 }
 export function damageWithCustomMessage(entity, amount, message) {
-    if(entity.getComponent('health').currentValue <= 0) return;
+    if (entity.getComponent('health').currentValue <= 0) return;
     entity.applyDamage(amount)
     const died = entity.getComponent('health').currentValue <= 0;
     if (died && entity.typeId == 'minecraft:player') {
@@ -315,17 +338,18 @@ SERVER.world.afterEvents.projectileHitBlock.subscribe(e => {
         const molang = new SERVER.MolangVariableMap();
         molang.setFloat('variable.dir', (
             blockHit.face == 'North' ? 2 :
-            blockHit.face == 'East' ? 1 :
-            blockHit.face == 'South' ? 0 :
-            blockHit.face == 'West' ? 3 :
-            blockHit.face == 'Down' ? 5 : 4
+                blockHit.face == 'East' ? 1 :
+                    blockHit.face == 'South' ? 0 :
+                        blockHit.face == 'West' ? 3 :
+                            blockHit.face == 'Down' ? 5 : 4
         ))
         e.dimension.spawnParticle('vc:tomatosplat', particleLoc, molang)
         e.dimension.spawnParticle('vc:tomatosplash', particleLoc)
-        e.dimension.playSound('random.splat', particleLoc, {pitch: getRandomFloat(0.7, 1.3)})
+        e.dimension.playSound('random.splat', particleLoc, { pitch: getRandomFloat(0.7, 1.3) })
     } else if (e.projectile.typeId == 'vc:tomato_golden') {
         e.dimension.spawnParticle('vc:goldtomatosplat', particleLoc)
-        e.dimension.playSound('random.splat_gold', particleLoc, {pitch: getRandomFloat(0.7, 1.3)})
+        e.dimension.playSound('random.splat_gold', particleLoc, { pitch: getRandomFloat(0.7, 1.3) })
+        e.dimension.spawnItem(new SERVER.ItemStack("minecraft:gold_nugget", getRandomInt(2, 8)), particleLoc)
     }
 })
 SERVER.system.runInterval(() => {

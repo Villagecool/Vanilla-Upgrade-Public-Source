@@ -1,0 +1,40 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vc:coconut_from_husk"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ABA"
+    ],
+    "key": {
+      "A": {
+        "item": "vc:coconut_husk"
+      },
+      "B": {
+        "item": "minecraft:milk_bucket"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:coconut"
+      },
+      {
+        "item": "minecraft:coconut_husk"
+      }
+    ],
+    "result": [
+      {
+        "item": "vc:coconut"
+      },
+      {
+        "item": "minecraft:bucket",
+        "count": 1,
+        "data": 0
+      }
+    ]
+  }
+}

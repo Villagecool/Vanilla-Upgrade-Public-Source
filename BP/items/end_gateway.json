@@ -10,6 +10,7 @@
     },
     "components": {
       "minecraft:icon": "end_gateway",
+      "minecraft:rarity": "epic",
       "minecraft:block_placer": {
         "block": "minecraft:end_gateway"
       },

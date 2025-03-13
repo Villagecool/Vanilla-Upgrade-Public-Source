@@ -12,25 +12,20 @@
 			"minecraft:icon": "goat_horn",
 			"minecraft:use_animation": "bow",
 			"minecraft:display_name": {
-				"value": "Goat Horn\n§7Roll"
+				"value": "%item.goat_horn.name\n§7%item.vc.goat_horn.sound.roll"
 			},
 			"minecraft:custom_components": [
 				"vc:goat_horn"
 			],
 			"minecraft:use_modifiers": {
-				"movement_modifier": 0.8,
+				"movement_modifier": 0,
 				"use_duration": 204
 			},
-			"minecraft:shooter": {
-				"max_draw_duration": 204,
-				"charge_on_draw": false,
-				"scale_power_by_draw_duration": true
-			},
 			"minecraft:hover_text_color": "yellow",
-			"minecraft:cooldown": {
-				"category": "goat_horn",
-				"duration": 7
-			},
+			//"minecraft:cooldown": {
+			//	"category": "goat_horn",
+			//	"duration": 7
+			//},
 			"minecraft:max_stack_size": 1
 		}
 	}

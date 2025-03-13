@@ -10,6 +10,7 @@
 		},
 		"components": {
 			"tag:stone": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "saturated_pumice"

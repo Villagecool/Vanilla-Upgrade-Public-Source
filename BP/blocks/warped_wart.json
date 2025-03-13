@@ -15,7 +15,7 @@
 		"components": {
 			"tag:plant": {},
 			"tag:nether_wart": {},
-			"tag:crop": {},
+			"tag:minecraft:crop": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.5
 			},

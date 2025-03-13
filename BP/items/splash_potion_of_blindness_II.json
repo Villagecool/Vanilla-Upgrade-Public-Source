@@ -11,15 +11,10 @@
     "components": {
       "minecraft:max_stack_size": 1,
       "minecraft:display_name": {
-        "value": "Splash Potion of Blindness\n§cBlindness (4:00)"
+        "value": "%item.vc.splash_potion_of_blindness.name\n§c%item.effect_blindness_II.desc"
       },
       "minecraft:throwable": {
-        "do_swing_animation": true,
-        "min_draw_duration": 0,
-        "max_draw_duration": 1,
-        "launch_power_scale": 1,
-        "max_launch_power": 2,
-        "scale_power_by_draw_duration": false
+        "do_swing_animation": true
       },
       "minecraft:projectile": {
         "minimum_critical_power": 1.25,

@@ -11,6 +11,16 @@
 				"sounds/blocks/chorus_carnavorus_plant/grow"
 			]
 		},
+		"chorus.puff": {
+			"sounds": [
+				"sounds/blocks/chorus_carnavorus_plant/puff"
+			]
+		},
+		"chorus.bite": {
+			"sounds": [
+				"sounds/blocks/chorus_carnavorus_plant/bite"
+			]
+		},
 		"chorus.shrink": {
 			"sounds": [
 				"sounds/blocks/chorus_carnavorus_plant/shrink"
@@ -32,14 +42,6 @@
 				"sounds/random/crusher_chomp"
 			]
 		},
-		"mob.illusioner.idle": {
-			"sounds": [
-				"sounds/mob/illusioner/idle1",
-				"sounds/mob/illusioner/idle2",
-				"sounds/mob/illusioner/idle3",
-				"sounds/mob/illusioner/idle4"
-			]
-		},
 		"horn.call.roll": {
 			"category": "record",
 			"max_distance": null,
@@ -58,6 +60,14 @@
 			"category": "neutral",
 			"sounds": [
 				"sounds/mob/zombie_horse/disban"
+			]
+		},
+		"mob.illusioner.idle": {
+			"sounds": [
+				"sounds/mob/illusioner/idle1",
+				"sounds/mob/illusioner/idle2",
+				"sounds/mob/illusioner/idle3",
+				"sounds/mob/illusioner/idle4"
 			]
 		},
 		"mob.illusioner.death": {
@@ -294,7 +304,10 @@
 		},
 		"mob.penguin.bleat": {
 			"sounds": [
-				"sounds/mob/penguin/bleat"
+				"sounds/mob/penguin/bleat",
+				"sounds/mob/penguin/S3_sfx_pet_RoyalPenguin_vocal_01",
+				"sounds/mob/penguin/S3_sfx_pet_RoyalPenguin_vocal_02",
+				"sounds/mob/penguin/S3_sfx_pet_RoyalPenguin_vocal_03"
 			]
 		},
 		"mob.endermite.hit": {

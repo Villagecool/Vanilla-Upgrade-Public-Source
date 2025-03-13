@@ -9,6 +9,8 @@
 			}
 		},
 		"components": {
+			"tag:minecraft:is_shovel_item_destructible": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "termite_mound"

@@ -9,8 +9,7 @@
 			"identifier": "vc:snowbrick"
 		},
 		"components": {
-			"tag:diamond_pick_diggable": {},
-			"tag:iron_pick_diggable": {},
+			"tag:minecraft:is_shovel_item_destructible": {},
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "snowbrick"

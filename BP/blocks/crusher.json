@@ -30,6 +30,7 @@
 			//		"event": "vc:redstone"
 			//	}
 			//},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
 			"minecraft:queued_ticking": {
 				"interval_range": [
 					1,

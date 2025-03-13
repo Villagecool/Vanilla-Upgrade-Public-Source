@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:pale_oak_stairs_sawmill"
+    },
+
+    
+    "tags": [ "sawmill" ],
+    "pattern": [
+      "0A0",
+      "000",
+      "000"
+    ],
+    "key": {
+      "A": {
+        "item": "pale_oak_planks",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "pale_oak_stairs",
+      "count": 1
+    }
+  }
+}

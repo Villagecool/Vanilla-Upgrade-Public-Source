@@ -16,7 +16,9 @@
 			}
 		},
 		"components": {
-			"tag:crop": {},
+			"tag:minecraft:is_shears_item_destructible": {},
+			"tag:minecraft:is_hoe_item_destructible": {},
+			"tag:minecraft:crop": {},
 			"tag:plant": {},
 			"tag:non_solid": {},
 			"minecraft:destructible_by_mining": {

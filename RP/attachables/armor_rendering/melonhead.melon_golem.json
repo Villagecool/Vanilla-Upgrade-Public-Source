@@ -10,6 +10,7 @@
       },
       "textures": {
         "front": "textures/blocks/carved_mellon",
+        "front_angry": "textures/blocks/carved_mellon_angry",
         "side": "textures/blocks/melon_side",
         "top": "textures/blocks/melon_top"
       },
@@ -21,7 +22,7 @@
       "scripts": {
         "parent_setup": "variable.helmet_layer_visible = 0.0;"
       },
-      "render_controllers": [ "controller.render.melonheadfront", "controller.render.melonheadside", "controller.render.melonheadtop" ]
+      "render_controllers": [ "controller.render.melonheadfront_ag", "controller.render.melonheadside", "controller.render.melonheadtop" ]
     }
   }
 }

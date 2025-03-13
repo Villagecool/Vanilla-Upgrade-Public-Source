@@ -197,6 +197,10 @@
 	"dirt_slab": {
 		"sound": "gravel"
 	},
+	"dirt_doubleslab": {
+		"sound": "gravel",
+		"textures": "dirt"
+	},
 	"dirt_stairs": {
 		"sound": "gravel"
 	},
@@ -219,8 +223,12 @@
 		"sound": "wood",
 		"textures": "elax_planks"
 	},
-	"elax_fungus": {
+	"elax_leaves": {
 		"sound": "grass",
+		"textures": "elax_leaves"
+	},
+	"elax_fungus": {
+		"sound": "fungus",
 		"textures": "elax_fungus"
 	},
 	"elax_fungus_crystalized": {
@@ -271,9 +279,29 @@
 		"sound": "deepslate",
 		"textures": "endslate_bricks"
 	},
+	"endslate_brick_doubleslab": {
+		"sound": "deepslate",
+		"textures": "endslate_bricks"
+	},
+	"endslate_brick_stairs": {
+		"sound": "deepslate",
+		"textures": "endslate_bricks"
+	},
+	"endslate_brick_slab": {
+		"sound": "deepslate",
+		"textures": "endslate_bricks"
+	},
 	"endslate_bricks_cracked": {
 		"sound": "deepslate",
 		"textures": "endslate_bricks_cracked"
+	},
+	"rooted_end_stone": {
+		"sound": "end_stone",
+		"textures": {
+			"down": "end_stone",
+			"side": "end_stone",
+			"up": "end_stone_rooted"
+		}
 	},
 	"falling_elax_block": {
 		"sound": "wood",
@@ -292,6 +320,9 @@
 	},
 	"flowering_cactus": {
 		"sound": "cloth"
+	},
+	"orchid_cactus_flower": {
+		"sound": "big_dripleaf"
 	},
 	"glass_door": {
 		"sound": "glass"
@@ -422,7 +453,7 @@
 		"textures": "lumerison_fungus"
 	},
 	"lumerison_fungus_block": {
-		"sound": "wood",
+		"sound": "moss_block",
 		"textures": "lumerison_fungus_block"
 	},
 	"lumerison_fungus_stem": {
@@ -702,8 +733,8 @@
 		"textures": "azalea_leaves_flowered"
 	},
 	"vc:custom_note_block": {
-		"sound": "stone",
-		"textures": "vc_custom_note_block"
+		"sound": "wood",
+		"textures": "noteblock"
 	},
 	"vc:rail_buffer": {
 		"sound": "stone"

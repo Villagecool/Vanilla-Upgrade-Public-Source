@@ -13,6 +13,7 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.2
 			},
+			"tag:minecraft:is_shears_item_destructible": {},
 			"minecraft:light_dampening": 0,
 			"minecraft:selection_box": {
 				"origin": [

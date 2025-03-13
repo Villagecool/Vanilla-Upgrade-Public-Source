@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "item",
-					"name": "vc:rope_item",
+					"name": "vc:rope",
 					"functions": [
 						{
 							"function": "set_count",

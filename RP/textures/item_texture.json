@@ -90,7 +90,10 @@
 			"textures": "textures/items/burger"
 		},
 		"cattail": {
-			"textures": "textures/blocks/cattail"
+			"textures": "textures/items/cattails"
+		},
+		"cactus_flower_orchid": {
+			"textures": "textures/items/orchid_cactus_flower"
 		},
 		"charhood": {
 			"textures": "textures/items/charhood"
@@ -243,6 +246,15 @@
 		},
 		"levitation_potion": {
 			"textures": "textures/items/potion_bottle_levitation"
+		},
+		"lingering_potion_of_blindness": {
+			"textures": "textures/items/potion_bottle_lingering_blindness"
+		},
+		"lingering_potion_of_levitation": {
+			"textures": "textures/items/potion_bottle_lingering_levitation"
+		},
+		"lingering_potion_of_milk": {
+			"textures": "textures/items/potion_bottle_lingering_milk"
 		},
 		"lotus": {
 			"textures": "textures/items/lotus"

@@ -184,6 +184,9 @@
           }
         ]
       },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/copper_golem.json"
+      },
       "minecraft:behavior.follow_parent": {
         "priority": 5,
         "speed_multiplier": 1.1

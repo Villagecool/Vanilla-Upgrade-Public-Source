@@ -84,7 +84,7 @@
     "anim_type": "flip_book",
     "frame_count": 11,
     "frame_step": 0, // Unused
-    "fps": 1.0,
+    "fps": 1,
     "easing": "linear" // Unused
   },
   "layout_template_toggle@common_toggles.light_template_toggle": {
@@ -127,7 +127,7 @@
   "xp_flow_animation": {
     "anim_type": "flip_book",
     "frame_count": 4,
-    "fps": 5.0
+    "fps": 5
   },
   "book_open@horse.overlay_image": {
     "texture": "textures/ui/book_open.png",
@@ -187,14 +187,15 @@
             0,
             0
           ],
-          "ignored": true,
+          "ignored": false,
           "controls": [
             {
-              "left_top@crafting.crafting_input_grid_item": {
+              "top_left@crafting.crafting_input_grid_item": {
+                "layer": 8,
                 "offset": [
-                  0,
-                  0
-                ] //change this if u want to move this grid
+                  -6,
+                  35
+                ]
               }
             }
           ]
@@ -206,13 +207,26 @@
             1,
             0
           ],
-          "ignored": true, //set to true if you want to show this grid
+          "ignored": false,
           "controls": [
+            {
+              "e@crystalized_experince_image": {
+                "layer": 3,
+                "size": [
+                  "88%",
+                  "88%"
+                ],
+                "offset": [
+                  -6,
+                  35
+                ]
+              }
+            },
             {
               "top_middle@crafting.crafting_input_grid_item": {
                 "offset": [
-                  0,
-                  0
+                  -6,
+                  35
                 ]
               }
             }
@@ -265,7 +279,7 @@
             1,
             1
           ],
-          "ignored": false,
+          "ignored": true,
           "controls": [
             {
               "middle@crafting.crafting_input_grid_item": {
@@ -285,23 +299,11 @@
             2,
             1
           ],
-          "ignored": false,
+          "ignored": true,
           "controls": [
             {
-              "@crystalized_experince_image": {
-                "layer": 3,
-                "size": [
-                  "88%",
-                  "88%"
-                ],
-                "offset": [
-                  20,
-                  20
-                ]
-              }
-            },
-            {
               "right_middle@crafting.crafting_input_grid_item": {
+                "layer": 8,
                 "offset": [
                   20,
                   20

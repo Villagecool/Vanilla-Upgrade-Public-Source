@@ -26,10 +26,10 @@
 			}
 		},
 		"components": {
-			"tag:diamond_pick_diggable": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
 			"tag:gold_pick_diggable": {},
-			"tag:iron_pick_diggable": {},
-			"tag:rail": {},
+			"tag:minecraft:iron_tier_destructible": {},
+			//"tag:rail": {},
 			"tag:metal": {},
 			"minecraft:light_dampening": 0,
 			"minecraft:geometry": "geometry.rail",
@@ -48,6 +48,9 @@
 					}
 				]
 			},
+			"minecraft:custom_components": [
+				"vc:rail_conjunction"
+			],
 			"minecraft:tick": {
 				"interval_range": [
 					1,
@@ -73,7 +76,7 @@
 			{
 				"condition": "query.block_state('minecraft:cardinal_direction') == 'north' || query.block_state('minecraft:cardinal_direction') == 'south'",
 				"components": {
-					"tag:rail": {}
+					//"tag:rail": {}
 					//"minecraft:on_interact": {
 					//	"event": "vc:r1"
 					//}
@@ -82,7 +85,7 @@
 			{
 				"condition": "query.block_state('minecraft:cardinal_direction') == 'east' || query.block_state('minecraft:cardinal_direction') == 'west'",
 				"components": {
-					"tag:rail": {}
+					//"tag:rail": {}
 					//"minecraft:on_interact": {
 					//	"event": "vc:r2"
 					//}

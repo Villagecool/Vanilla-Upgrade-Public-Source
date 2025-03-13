@@ -21,6 +21,11 @@
 									"test": "has_biome_tag",
 									"operator": "==",
 									"value": "shore"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "river"
 								}
 							]
 						}

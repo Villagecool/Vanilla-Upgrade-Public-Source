@@ -1,0 +1,34 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.leaves"
+			},
+			"identifier": "vc:elax_leaves"
+		},
+		"components": {
+			"tag:leaves": {},
+			"tag:plant": {},
+			"tag:minecraft:is_shears_item_destructible": {},
+			"tag:minecraft:is_hoe_item_destructible": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1.1
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0
+			},
+			"minecraft:custom_components": [
+				"vc:falling_leaves"
+			],
+			"minecraft:geometry": "geometry.no_see_block",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "elax_leaves",
+					"render_method": "blend"
+				}
+			}
+		}
+	}
+}

@@ -17,6 +17,8 @@
 			}
 		},
 		"components": {
+			"tag:minecraft:is_hoe_item_destructible": {},
+			"tag:minecraft:is_shears_item_destructible": {},
 			"tag:plant": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.5

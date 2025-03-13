@@ -22,6 +22,7 @@
 		},
 		"components": {
 			"tag:wood": {},
+            "tag:minecraft:is_axe_item_destructible": {},
 			"tag:azalea_door": {},
 			"minecraft:flammable": {
 				"flame_odds": 5,

@@ -1,0 +1,70 @@
+{
+	"format_version": "1.18.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "vc:chorus_chomper",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"vc:die": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:timer": {
+				"time": 0.75,
+				"looping": true,
+				"time_down_event": {
+					"event": "vc:die",
+					"target": "self"
+				}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "any",
+					"deals_damage": false
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0,
+				"width": 0
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 0,
+						"height": 0,
+						"pivot": [
+							0,
+							0,
+							0
+						]
+					}
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"execute as @s run scriptevent vc:nomnom"
+					],
+					"target": "self"
+				}
+			},
+			"vc:die": {
+				"add": {
+					"component_groups": [
+						"vc:die"
+					]
+				}
+			}
+		}
+	}
+}

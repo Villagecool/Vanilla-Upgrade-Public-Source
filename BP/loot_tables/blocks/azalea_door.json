@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "vc:azalea_door_item",
+          "name": "vc:azalea_door",
           "weight": 1,
           "functions": [
             {

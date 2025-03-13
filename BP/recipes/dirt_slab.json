@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:dirt_slab"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+        "#",
+        "##",
+        "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:dirt"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:dirt"
+      },
+      {
+        "item": "minecraft:grass_block"
+      }
+    ],
+    "result": {
+      "item": "vc:dirt_slab",
+      "data": 0
+    }
+  }
+}

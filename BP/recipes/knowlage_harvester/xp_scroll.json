@@ -16,8 +16,8 @@
 			}
 		},
 		"pattern": [
-			"_PX"
-			],
+			"PX"
+		],
 		"result": {
 			"item": "vc:unwritten_scroll",
 			"count": 1

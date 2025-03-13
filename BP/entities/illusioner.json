@@ -336,7 +336,7 @@
             "max_dist": 20
           }
         ],
-        "must_see": true
+        "must_see": false
       },
       "minecraft:behavior.look_at_player": {
         "priority": 9,

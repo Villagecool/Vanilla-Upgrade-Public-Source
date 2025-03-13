@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "vc:zalu_plant_item",
+          "name": "vc:zalu_plant",
           "weight": 1,
           "functions": [
             {

@@ -10,6 +10,7 @@
 		},
 		"components": {
 			"tag:leaves": {},
+			"tag:minecraft:is_hoe_item_destructible": {},
 			"tag:plant": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 1.1

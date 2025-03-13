@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "vc:elax_syrup_item",
+          "name": "vc:elax_syrup",
           "weight": 1,
           "functions": [
             {

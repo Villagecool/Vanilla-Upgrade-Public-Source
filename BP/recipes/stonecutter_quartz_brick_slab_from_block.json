@@ -1,0 +1,17 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "minecraft:stonecutter_quartz_brick_slab_from_block"
+    },
+    "tags": [
+      "stonecutter"
+    ],
+    "priority": 1,
+    "ingredients" : ["quartz_block"],
+    "result": {
+      "item": "vc:quartz_brick_slab",
+      "count": 1
+    }
+  }
+}

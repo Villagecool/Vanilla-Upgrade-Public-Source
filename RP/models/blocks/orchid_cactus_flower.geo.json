@@ -1,0 +1,166 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.orchid_cactus_flower",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "cactus",
+					"pivot": [0, -16, 0]
+				},
+				{
+					"name": "side_flowers",
+					"parent": "cactus",
+					"pivot": [-6.5, -3.5, 7],
+					"cubes": [
+						{
+							"origin": [5, -10, -7],
+							"size": [5, 5, 0],
+							"pivot": [7.5, -10.5, -7],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [5, 5], "material_instance": "flowers"},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [0, 0], "uv_size": [0, 0]},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						},
+						{
+							"origin": [-10, -14, -7],
+							"size": [5, 5, 0],
+							"pivot": [-7.5, -8.5, -7],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [0, 0]},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [10, 10], "uv_size": [5, 5], "material_instance": "flowers"},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						},
+						{
+							"origin": [5, -12, 7],
+							"size": [5, 5, 0],
+							"pivot": [7.5, -9.5, 7.5],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [0, 0]},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [10, 10], "uv_size": [5, 5], "material_instance": "flowers"},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						},
+						{
+							"origin": [-9, -6, 7.5],
+							"size": [5, 5, 0],
+							"pivot": [-6.5, -3.5, 7],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [0, 0]},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [0, 0], "uv_size": [5, 5], "material_instance": "flowers"},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "top_flower",
+					"parent": "cactus",
+					"pivot": [-2, 0.3, 2],
+					"cubes": [
+						{
+							"origin": [-13, 0.1, -11],
+							"size": [24, 0, 24],
+							"uv": {
+								"up": {"uv": [13.25, 6], "uv_size": [-6, -6], "material_instance": "big_flower"}
+							}
+						},
+						{
+							"origin": [-11, 1, -12],
+							"size": [24, 0, 24],
+							"uv": {
+								"up": {"uv": [6, 6], "uv_size": [-6, -6], "material_instance": "big_flower"}
+							}
+						},
+						{
+							"origin": [-3, 0, -2],
+							"size": [5, 1, 5],
+							"uv": {
+								"north": {"uv": [4, 2.5], "uv_size": [-1.25, 0.25], "material_instance": "big_flower"},
+								"east": {"uv": [2.75, 3], "uv_size": [1.25, 0.25], "material_instance": "big_flower"},
+								"south": {"uv": [2.75, 3], "uv_size": [1.25, 0.25], "material_instance": "big_flower"},
+								"west": {"uv": [2.75, 2.5], "uv_size": [1.25, 0.25], "material_instance": "big_flower"},
+								"up": {"uv": [4, 3.75], "uv_size": [-1.25, -1.25], "material_instance": "big_flower"},
+								"down": {"uv": [4, 3.75], "uv_size": [-1.25, -1.25], "material_instance": "big_flower"}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": {
+				"identifier": "geometry.orchid_cactus_flower_bottomless",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "cactus",
+					"pivot": [0, -16, 0]
+				},
+				{
+					"name": "top_flower",
+					"parent": "cactus",
+					"pivot": [-2, 0.3, 2],
+					"cubes": [
+						{
+							"origin": [-13, 0.1, -11],
+							"size": [24, 0, 24],
+							"uv": {
+								"up": {"uv": [13.25, 6], "uv_size": [-6, -6], "material_instance": "big_flower"}
+							}
+						},
+						{
+							"origin": [-11, 1, -12],
+							"size": [24, 0, 24],
+							"uv": {
+								"up": {"uv": [6, 6], "uv_size": [-6, -6], "material_instance": "big_flower"}
+							}
+						},
+						{
+							"origin": [-3, 0, -2],
+							"size": [5, 1, 5],
+							"uv": {
+								"north": {"uv": [4, 2.5], "uv_size": [-1.25, 0.25], "material_instance": "big_flower"},
+								"east": {"uv": [2.75, 3], "uv_size": [1.25, 0.25], "material_instance": "big_flower"},
+								"south": {"uv": [2.75, 3], "uv_size": [1.25, 0.25], "material_instance": "big_flower"},
+								"west": {"uv": [2.75, 2.5], "uv_size": [1.25, 0.25], "material_instance": "big_flower"},
+								"up": {"uv": [4, 3.75], "uv_size": [-1.25, -1.25], "material_instance": "big_flower"},
+								"down": {"uv": [4, 3.75], "uv_size": [-1.25, -1.25], "material_instance": "big_flower"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

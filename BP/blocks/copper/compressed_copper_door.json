@@ -39,6 +39,7 @@
 		},
 		"components": {
 			"tag:metal": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
 			"tag:compressed_copper_door": {},
 			"tag:non_solid": {},
 			"tag:door": {},

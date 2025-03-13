@@ -4,12 +4,12 @@
 		"description": {
 			"identifier": "vc:gloricalium_block",
 			"menu_category": {
-				"category": "construction",
-				"group": "itemGroup.name.metals"
+				"category": "construction"
 			}
 		},
 		"components": {
 			"minecraft:light_emission": 1,
+			"tag:minecraft:is_pickaxe_item_destructible": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 14
 			},

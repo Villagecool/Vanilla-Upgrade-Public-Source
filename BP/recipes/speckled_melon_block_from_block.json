@@ -2,11 +2,11 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "minecraft:speckled_melon_block_from_block"
+      "identifier": "minecraft:speckled_melon_block_from_block"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       "###",
       "#X#",
@@ -14,7 +14,7 @@
     ],
     "key": {
       "#": {
-        "item": "minecraft:gold_nugget"
+        "item": "minecraft:gold_ingot"
       },
       "X": {
         "item": "minecraft:melon_block"

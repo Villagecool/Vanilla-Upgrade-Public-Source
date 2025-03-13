@@ -8,6 +8,16 @@
         "Texture.front"
       ]
     },
+    "controller.render.melonheadfront_ag": {
+      "geometry": "Geometry.front",
+      "materials": [ { "*": "Material.default" } ],
+      "arrays": {
+        "textures": {
+          "Array.texturess": [ "Texture.front", "Texture.front_angry"]
+        }
+      },
+      "textures": [ "Array.texturess[query.has_target]" ]
+    },
     "controller.render.melonheadside": {
       "geometry": "Geometry.side",
       "materials": [ { "*": "Material.default" } ],

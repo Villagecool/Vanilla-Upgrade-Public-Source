@@ -49,7 +49,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
 		},
 		onTick: e => {
 			let block = e.block; //the hopper
-			if (block.permutation.getState("vc:toggle_bit")) return;
+			if (block.permutation.getState("vc:powered")) return;
 			let entity = block.dimension.getEntitiesAtBlockLocation(block.location)[0];; //the hopper entity
 			if (!entity) return;
 			let filter = entity.nameTag;
@@ -70,9 +70,9 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
 			}
 			if (e.block.above(1).isAir || e.block.above(1).typeId == 'vc:advanced_hopper') {
 				let entityAbove = entity.dimension.getEntities({ location: { x: block.location.x, y: block.location.y + 1, z: block.location.z }, maxDistance: 1.5, minDistance: 0, })[0]
-				let itemEntity = entity.dimension.getEntities({ type: "minecraft:item", location: { x: block.location.x, y: block.location.y + 1, z: block.location.z }, maxDistance: 1.5, minDistance: 0, })[0];
-				let entityWithContainer = entityAbove.getComponent("inventory");
-				if (entityWithContainer && entityAbove.typeId != 'minecraft:player') {
+				const itemEntity = entity.dimension.getEntities({ type: "minecraft:item", location: { x: block.location.x, y: block.location.y + 1, z: block.location.z }, maxDistance: 1.5, minDistance: 0, })[0];
+				const entityWithContainer = entityAbove.getComponent("inventory");
+				if (entityWithContainer && entityWithContainer.canBeSiphonedFrom) {
 					if (entityAbove.id != entity.id) pullItemFromContainer(entityWithContainer.container, filter, entity)
 				}
 				if (itemEntity) {

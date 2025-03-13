@@ -26,6 +26,7 @@
 			}
 		},
 		"components": {
+			"tag:minecraft:is_pickaxe_item_destructible": {},
 			"minecraft:geometry": "minecraft:geometry.full_block",
 			"minecraft:light_dampening": 5,
 			"minecraft:map_color": "#27272b",
@@ -67,6 +68,31 @@
 				"down": {
 					"texture": "observer_bottom",
 					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:item_visual": {
+				"geometry": "minecraft:geometry.full_block",
+				"material_instances": {
+					"*": {
+						"texture": "advanced_observer_side",
+						"render_method": "alpha_test"
+					},
+					"south": {
+						"texture": "advanced_observer_front",
+						"render_method": "alpha_test"
+					},
+					"north": {
+						"texture": "advanced_observer_back",
+						"render_method": "alpha_test"
+					},
+					"up": {
+						"texture": "advanced_observer_top",
+						"render_method": "alpha_test"
+					},
+					"down": {
+						"texture": "observer_bottom",
+						"render_method": "alpha_test"
+					}
 				}
 			}
 		},

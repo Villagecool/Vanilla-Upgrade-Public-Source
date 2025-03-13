@@ -16,6 +16,7 @@
 		},
 		"components": {
 			"tag:plant": {},
+			"tag:minecraft:is_shears_item_destructible": {},
 			"tag:non_solid": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.1

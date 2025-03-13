@@ -58,6 +58,9 @@
 		"aloe_plant_golden": {
 			"textures": "textures/blocks/aloe_plant_golden"
 		},
+		"ather_portal": {
+			"textures": "textures/blocks/ather_portal"
+		},
 		"azalea_door": {
 			"textures": "textures/blocks/azalea_door"
 		},
@@ -353,6 +356,12 @@
 				]
 			}
 		},
+		"elax_leaves": {
+			"textures": "textures/blocks/elax_leaves"
+		},
+		"elax_floor_leaves": {
+			"textures": "textures/blocks/elax_floor_leaves"
+		},
 		"elax_log_top": {
 			"textures": "textures/blocks/elax_log_top"
 		},
@@ -400,6 +409,23 @@
 		},
 		"end_lotus": {
 			"textures": "textures/blocks/end_lotus"
+		},
+		"end_stone": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/end_stone",
+						"weight": 10
+					},
+					{
+						"path": "textures/blocks/lighter_end_stone",
+						"weight": 6
+					}
+				]
+			}
+		},
+		"end_stone_rooted": {
+			"textures": "textures/blocks/rooted_end_stone"
 		},
 		"ender_vaso_lid": {
 			"textures": "textures/blocks/ender_vaso_lid"

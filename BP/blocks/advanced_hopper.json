@@ -15,7 +15,7 @@
 				}
 			},
 			"states": {
-				"vc:toggle_bit": [
+				"vc:powered": [
 					false,
 					true
 				],
@@ -26,6 +26,7 @@
 			}
 		},
 		"components": {
+			"tag:minecraft:is_pickaxe_item_destructible": {},
 			"minecraft:geometry": "geometry.advanced_hopper",
 			"minecraft:light_dampening": 5,
 			"minecraft:map_color": "#27272b",
@@ -89,7 +90,7 @@
 		},
 		"permutations": [
 			{
-				"condition": "query.block_state('vc:toggle_bit') == true",
+				"condition": "query.block_state('vc:powered') == true",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {

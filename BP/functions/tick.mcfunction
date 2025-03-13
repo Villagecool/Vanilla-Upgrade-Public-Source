@@ -1,11 +1,11 @@
-#execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 vc:fletching_table_custom replace fletching_table
+execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 vc:fletching_table_custom replace fletching_table
 #execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:entity_spawn["vc:entity"="vc:bandager","vc:actually_spawn"=true] replace no:entity_spawn["vc:entity"="vc:bandager","vc:actually_spawn"=false]
 #execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:entity_spawn["vc:entity"="vc:termite","vc:actually_spawn"=true] replace no:entity_spawn["vc:entity"="vc:termite","vc:actually_spawn"=false]
 #execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:entity_spawn["vc:entity"="vc:termite_mound","vc:actually_spawn"=true] replace no:entity_spawn["vc:entity"="vc:termite_mound","vc:actually_spawn"=false]
 #execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:entity_spawn["vc:entity"="vc:penguin","vc:actually_spawn"=true] replace no:entity_spawn["vc:entity"="vc:penguin","vc:actually_spawn"=false]
 #execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:entity_spawn["vc:entity"="vc:illusioner","vc:actually_spawn"=true] replace no:entity_spawn["vc:entity"="vc:illusioner","vc:actually_spawn"=false]
-#execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 azalea_leaves["persistent_bit"=true] replace vc:azalea_leaves
-#execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 azalea_leaves_flowered["persistent_bit"=true] replace vc:azalea_leaves_flowered
+execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 azalea_leaves["persistent_bit"=true] replace vc:azalea_leaves
+execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 azalea_leaves_flowered["persistent_bit"=true] replace vc:azalea_leaves_flowered
 ##execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 vc:mellon 0 replace melon_block
 ##execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:generate_villager 0 replace no:block_villager
 ##execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:generate_termite 0 replace no:block_termite
@@ -22,8 +22,8 @@ execute as @a[hasitem={item=vc:unwritten_scroll}] at @a[hasitem={item=vc:unwritt
 execute as @a[hasitem={item=vc:unwritten_scroll}] at @a[hasitem={item=vc:unwritten_scroll}] unless entity @s[lm=1] run playsound note.bass @s
 execute as @a[hasitem={item=vc:unwritten_scroll}] at @a[hasitem={item=vc:unwritten_scroll}] run clear @s vc:unwritten_scroll 0 1
 #
-#execute as @a at @a if block ~ 253 ~ biome_indicate:elax run particle vc:elax_ambiant ~~~
-#execute as @a at @a if block ~ 253 ~ biome_indicate:lumerison run particle vc:acid_rain ~~~
+execute as @a at @a if block ~ 253 ~ biome_indicate:elax run particle vc:elax_ambiant ~~~
+execute as @a at @a if block ~ 253 ~ biome_indicate:lumerison run particle vc:acid_rain ~~~
 #execute as @a at @a run function slimeball
 
 #execute as @e[type=xp_orb] at @e[type=xp_orb] if block ~~~ flowing_water run structure load mystructure:spawn_crystal ~~~
@@ -46,10 +46,5 @@ execute as @e at @e run execute if block ~~~ stonecutter_block run damage @s[r=0
 execute as @a[hasitem={location=slot.weapon.mainhand,item=vc:glareizer}] run scriptevent vc:get_light
 execute as @a[hasitem={location=slot.weapon.mainhand,item=vc:cursed_campfire}] run scriptevent vc:trackCampfire
 #
-execute as @e[name=delete:curse_campfire,type=item] at @e[name=delete:curse_campfire,type=item] run execute if block ~~~ campfire run particle vc:magic_boom ~~~
-execute as @e[name=delete:curse_campfire,type=item] at @e[name=delete:curse_campfire,type=item] run execute if block ~~~ campfire run playsound block.campfire.magic @a[r=15] ~~~
-execute as @e[name=delete:curse_campfire,type=item] at @e[name=delete:curse_campfire,type=item] run execute if block ~~~ soul_campfire run particle vc:magic_boom ~~~
-execute as @e[name=delete:curse_campfire,type=item] at @e[name=delete:curse_campfire,type=item] run execute if block ~~~ soul_campfire run playsound block.campfire.magic @a[r=15] ~~~
-execute as @e[name=delete:curse_campfire,type=item] at @e[name=delete:curse_campfire,type=item] run execute if block ~~~ campfire run setblock ~~~ vc:cursed_campfire
-execute as @e[name=delete:curse_campfire,type=item] at @e[name=delete:curse_campfire,type=item] run execute if block ~~~ soul_campfire run setblock ~~~ vc:cursed_campfire
-kill @e[name=delete:curse_campfire,type=item]
+execute as @e[name=delete:curse_campfire,type=item] at @e[name=delete:curse_campfire,type=item] run execute as @s positioned ~~~ if block ~~~ campfire run scriptevent vc:curse_this_campfire
+execute as @e[name=delete:curse_campfire,type=item] at @e[name=delete:curse_campfire,type=item] run execute as @s positioned ~~~ if block ~~~ soul_campfire run scriptevent vc:curse_this_campfire

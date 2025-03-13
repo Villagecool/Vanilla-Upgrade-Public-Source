@@ -43,15 +43,14 @@
             "tag:non_solid": {},
             "tag:door": {},
             "minecraft:custom_components": [
-                "vc:door",
-                "vc:redstone"
+                "vc:door"
             ],
             "minecraft:flammable": {
                 "catch_chance_modifier": 5,
                 "destroy_chance_modifier": 20
             },
             "minecraft:destructible_by_mining": {
-                "seconds_to_destroy": 2.5
+                "seconds_to_destroy": 0.45
             },
             "minecraft:light_dampening": 0,
             "minecraft:geometry": "geometry.door",

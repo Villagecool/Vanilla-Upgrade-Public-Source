@@ -50,14 +50,14 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
                 setPermutation(upperBlock, "vc:flipped", connect)
             }, 1)
         },
-        //onPlayerDestroy: e => {
-        //    if (e.block.permutation.getState("vc:upper_bit") == true) {
-        //        e.block.below(-1).setType('minecraft:air')
-        //    }
-        //    else {
-        //        e.block.below(1).setType('minecraft:air')
-        //    }
-        //},
+        onPlayerDestroy: e => {
+            if (e.destroyedBlockPermutation.getState("vc:upper_bit") == true) {
+                e.block.dimension.runCommand(`setblock ${vec3toString(e.block.below(1).location)} air destroy`)
+            }
+            else {
+                e.block.dimension.runCommand(`setblock ${vec3toString(e.block.above(1).location)} air destroy`)
+            }
+        },
         onPlayerInteract: e => {
             if (e.block.typeId == 'vc:compressed_copper_door' && !(e.block.permutation.getState("vc:upper_bit") ?
                 (e.block.permutation.getState("vc:powered") || e.block.below(1).permutation.getState("vc:powered")) :
@@ -121,7 +121,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
                     setPermutation(block, "vc:west", west) 
                     setPermutation(block, "vc:placed", true)
                 } catch {}
-                if (block.above(1).isAir && !block.typeId.includes('bars')) block.above(1).setType('vc:fence_collision')
+                if (block.above(1).isAir && block.typeId.includes('fence')) block.above(1).setType('vc:fence_collision')
                 if (block.above(1).typeId == 'vc:fence_collision') {
                     setPermutation(block.above(1), "vc:east", east)
                     setPermutation(block.above(1), "vc:west", west)
@@ -148,17 +148,23 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
         onPlayerInteract: e => {
             if (e.player.getComponent("equippable").getEquipment("Mainhand").typeId != e.block.typeId) return;
             const dir = e.block.permutation.getState("minecraft:vertical_half")
-            if ((dir == 'top' && e.face == 'Down') || (dir == 'bottom' && e.face == 'Up')) return;
-            e.block.setType(e.block.typeId.replace('slab', 'doubleslab'))
-            e.block.dimension.runCommand(`playsound use.wood @a ${vec3toString(e.block.location)} 1`)
+            if ((dir == 'top' && e.face == 'Down') || (dir == 'bottom' && e.face == 'Up')) {
+                e.block.setType(e.block.typeId.replace('slab', 'doubleslab'))
+                e.block.dimension.runCommand(`playsound use.wood @a ${vec3toString(e.block.location)} 1`)
+            }
         }
     });
     initEvent.blockComponentRegistry.registerCustomComponent('vc:stairs', {
         onStepOn: e => {
-            if (!e.block.above(1).isAir) return;
+            if (!(e.block.above(1).isAir || e.block.above(1).typeId == 'vc:stairs_collision')) return;
             if (e.block.permutation.getState("minecraft:vertical_half") == 'top') return;
             e.block.above(1).setType('vc:stairs_collision')
             setPermutation(e.block.above(1), "minecraft:cardinal_direction", e.block.permutation.getState("minecraft:cardinal_direction"))
+        }
+    });
+    initEvent.blockComponentRegistry.registerCustomComponent('vc:stairs_collision', {
+        onStepOn: e => {
+            setPermutation(e.block, "minecraft:cardinal_direction", e.block.below(1).permutation.getState("minecraft:cardinal_direction"))
         }
     });
     initEvent.blockComponentRegistry.registerCustomComponent('vc:sapling', {
@@ -176,7 +182,10 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
         }
     });
     initEvent.blockComponentRegistry.registerCustomComponent('vc:lumerison_mushroom', {
-        onRandomTick: e => {
+        onPlayerInteract: e => {
+            if (e.player.getComponent("equippable").getEquipment("Mainhand").typeId != 'minecraft:bone_meal') return;
+            decripateStack(e.player);
+            e.block.dimension.runCommand(`playsound item.bone_meal.use @a ${vec3toString(e.block.location)} 1`)
             e.block.dimension.runCommand(`particle minecraft:crop_growth_emitter ${vec3toString(e.block.location)}`)
             if (getRandomInt(0, 5) == 0) e.block.dimension.runCommand(`structure load lumerison_fungus1 ${e.block.location.x - 1} ${e.block.location.y} ${e.block.location.z - 1}`)
         },
@@ -198,7 +207,10 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
         },
     });
     initEvent.blockComponentRegistry.registerCustomComponent('vc:glowing_mushroom', {
-        onRandomTick: e => {
+        onPlayerInteract: e => {
+            if (e.player.getComponent("equippable").getEquipment("Mainhand").typeId != 'minecraft:bone_meal') return;
+            decripateStack(e.player);
+            e.block.dimension.runCommand(`playsound item.bone_meal.use @a ${vec3toString(e.block.location)} 1`)
             e.block.dimension.runCommand(`particle minecraft:crop_growth_emitter ${vec3toString(e.block.location)}`)
             if (getRandomInt(0, 5) == 0) e.block.dimension.runCommand(`structure load glorium_mushroom1 ${e.block.location.x - 2} ${e.block.location.y} ${e.block.location.z - 2}`)
         },
@@ -394,28 +406,19 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
             
             var placement = (block.permutation.getState("minecraft:vertical_half") == "bottom" ? 1 : -1)
             SERVER.system.runTimeout(() => {
-                if (block.below(placement).typeId == 'vc:glorium_vines') setPermutation(block.below(placement), 'vc:blockshape', 'default')
-                setPermutation(block, 'vc:blockshape', (block.above(placement).typeId == 'vc:glorium_vines' ? 'default' : 'tip'))
+                if (block.below(placement).typeId == block.typeId && block.below(placement).permutation.getState("minecraft:vertical_half") == block.permutation.getState("minecraft:vertical_half")) 
+                    setPermutation(block.below(placement), 'vc:blockshape', 'default')
+                setPermutation(block, 'vc:blockshape', (block.above(placement).typeId == block.typeId ? 'default' : 'tip'))
             }, 1)
         }
     })
-    initEvent.blockComponentRegistry.registerCustomComponent('vc:glorium_vines', {
+    initEvent.blockComponentRegistry.registerCustomComponent('vc:vines', {
         beforeOnPlayerPlace: e => {
             var placement = (e.permutationToPlace.getState("minecraft:vertical_half") == "bottom" ? 1 : -1)
-            if (e.block.below(placement).typeId == 'vc:glorium_vines') setPermutation(e.block.below(placement), 'vc:blockshape', 'default')
+            if (e.block.below(placement).typeId == e.block.typeId) setPermutation(e.block.below(placement), 'vc:blockshape', 'default')
             SERVER.system.runTimeout(() => {
-                setPermutation(e.block, 'vc:blockshape', (e.block.above(placement).typeId == 'vc:glorium_vines' ? 'default' : 'tip'))
+                setPermutation(e.block, 'vc:blockshape', (e.block.above(placement).typeId == e.block.typeId ? 'default' : 'tip'))
             }, 1)
-        },
-        onPlayerDestroy: e => {
-            var placement = (e.destroyedBlockPermutation.getState("minecraft:vertical_half") == "bottom" ? 1 : -1)
-            if (e.block.below(placement).typeId == 'vc:glorium_vines') setPermutation(e.block.below(placement), 'vc:blockshape', 'tip')
-            breakChain(e.block.above(placement));
-            function breakChain(block) {
-                if (block.typeId == 'vc:glorium_vines') block.dimension.runCommand(`setblock ${vec3toString(block.location)} air destroy`)
-                else return;
-                breakChain(block.above(placement))
-            }
         },
         onPlayerInteract: e => {
             if (e.player.getComponent('minecraft:inventory').container.getItem(e.player.selectedSlotIndex)?.typeId != 'minecraft:bone_meal') return;
@@ -426,9 +429,9 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
                 decripateStack(e.player)
             }
             function passItOn(block) {
-                if (block.above(placement).typeId == 'vc:glorium_vines') return passItOn(block.above(placement))
+                if (block.above(placement).typeId == e.block.typeId) return passItOn(block.above(placement))
                 else if (block.above(placement).isAir) {
-                    block.above(placement).setType('vc:glorium_vines')
+                    block.above(placement).setType(e.block.typeId)
                     setPermutation(block.above(placement), "minecraft:vertical_half", e.block.permutation.getState("minecraft:vertical_half"))
                     setPermutation(block.above(placement), 'vc:blockshape', 'tip')
                     setPermutation(block, 'vc:blockshape', 'default')
@@ -438,6 +441,23 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
             }
         }
     });
+    function vineBreak(flavor, e) {
+        var placement = (e.destroyedBlockPermutation.getState("minecraft:vertical_half") == "bottom" ? 1 : -1)
+        if (e.block.below(placement).typeId == flavor) setPermutation(e.block.below(placement), 'vc:blockshape', 'tip')
+        breakChain(e.block.above(placement));
+        function breakChain(block) {
+            if (block.typeId != flavor) return;
+            block.dimension.runCommand(`setblock ${vec3toString(block.location)} air destroy`)
+            if (e.block.below(placement).typeId == flavor) setPermutation(e.block.below(placement), 'vc:blockshape', 'tip')
+            breakChain(block.above(placement))
+        }
+    }
+    initEvent.blockComponentRegistry.registerCustomComponent('vc:glorium_vines', {
+        onPlayerDestroy: e => {vineBreak('vc:glorium_vines', e)}
+    })
+    initEvent.blockComponentRegistry.registerCustomComponent('vc:elax_syrup', {
+        onPlayerDestroy: e => {vineBreak('vc:elax_syrup', e)}
+    })
     initEvent.blockComponentRegistry.registerCustomComponent('vc:chorus_spew', {
         onTick: e => {
             let offset = { x: 0, y: 0, z: 0 }
@@ -528,6 +548,16 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
             e.block.dimension.runCommand(`playsound random.fizz @a ${vec3toString(e.block.center())}`)
         }
     });
+    initEvent.itemComponentRegistry.registerCustomComponent('vc:cattail', {
+        onUseOn: e => {
+            const block = e.blockFace == 'North' ? e.block.north(1) : e.blockFace == 'East' ? e.block.east(1) : e.blockFace == 'South' ? e.block.south(1) : e.blockFace == 'West' ? e.block.west(1) : e.blockFace == 'Up' ? e.block.above(1) : e.block.below(1)
+            
+            SERVER.system.runTimeout(() => {
+                if (block.below(1).typeId == 'vc:cattail') setPermutation(block.below(1), 'vc:state', (block.below(2).typeId == 'vc:cattail' ? 1 : 2))
+                setPermutation(block, 'vc:state', (block.above(1).typeId == 'vc:cattail' ? (block.below(1).typeId == 'vc:cattail' ? 1 : 2) : 0))
+            }, 1)
+        }
+    })
     initEvent.blockComponentRegistry.registerCustomComponent('vc:cattail', {
 
         beforeOnPlayerPlace: e => {
@@ -610,6 +640,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
     });
     initEvent.blockComponentRegistry.registerCustomComponent('vc:coconut', {
         onPlayerDestroy: e => {
+            if (e.player.getComponent("equippable").getEquipment("Mainhand")?.getComponent('minecraft:enchantable')?.hasEnchantment('silk_touch')) return;
             e.dimension.playSound('fall.nether_wart', e.block.location)
             e.block.setType('minecraft:air')
             e.block.dimension.spawnEntity('vc:coconut', e.block.center())
@@ -638,26 +669,26 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
             }
         }
     });
-    initEvent.blockComponentRegistry.registerCustomComponent('vc:flower_cactus', {
-        onTick: e => {
-            e.block.dimension.getEntities({ type: 'minecraft:player', location: e.block.center(), maxDistance: 1 }).forEach(mf => {
-                damageWithCustomMessage(mf, 1, `%s was pricked to death, but pretty`)
-            })
-        },
-        onPlace: e => {
-            if (e.block.below(1).typeId == 'vc:flowering_cactus') {
-                setPermutation(e.block.below(1), 'vc:has_flower', false)
-            }
-            if (e.block.below(-1).typeId == 'vc:flowering_cactus') {
-                setPermutation(e.block, 'vc:has_flower', false)
-            }
-        },
-        onPlayerDestroy: e => {
-            if (e.block.below(1).typeId == 'vc:flowering_cactus') {
-                setPermutation(e.block.below(1), 'vc:has_flower', true)
-            }
-        }
-    });
+    //initEvent.blockComponentRegistry.registerCustomComponent('vc:flower_cactus', {
+    //    onTick: e => {
+    //        e.block.dimension.getEntitiesAtBlockLocation(e.block.center()).forEach(mf => {
+    //            damageWithCustomMessage(mf, 1, `%s was pricked to death, but pretty`)
+    //        })
+    //    },
+    //    onPlace: e => {
+    //        if (e.block.below(1).typeId == 'vc:flowering_cactus') {
+    //            setPermutation(e.block.below(1), 'vc:has_flower', false)
+    //        }
+    //        if (e.block.below(-1).typeId == 'vc:flowering_cactus') {
+    //            setPermutation(e.block, 'vc:has_flower', false)
+    //        }
+    //    },
+    //    onPlayerDestroy: e => {
+    //        if (e.block.below(1).typeId == 'vc:flowering_cactus') {
+    //            setPermutation(e.block.below(1), 'vc:has_flower', true)
+    //        }
+    //    }
+    //});
     initEvent.blockComponentRegistry.registerCustomComponent('vc:gyser_sand', {
         onRandomTick: e => {
             if (e.block.permutation.getState('vc:active_bit')) return;
@@ -849,9 +880,32 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
         onPlace: spawnentities,
         onTick: spawnentities
     })
+    initEvent.blockComponentRegistry.registerCustomComponent('vc:rail_conjunction', {
+        onTick: e => {
+            //console.log('test')
+            for (const cart of e.dimension.getEntitiesAtBlockLocation(e.block.center())) {
+                if (cart.typeId.includes('minecart')) {
+                const veloc = cart.getVelocity()
+                //cart.teleport({x: cart.location.x + veloc.x*4, y: cart.location.y + veloc.y*3, z: cart.location.z + veloc.z*4})
+                cart.applyImpulse(veloc)
+            }};
+        }
+    });
+    initEvent.blockComponentRegistry.registerCustomComponent('vc:rooted_end_stone', {
+        onStepOn: e => {
+            e.dimension.spawnEntity('vc:chorus_chomper', e.entity.location)
+        }
+    });
     /*
     initEvent.blockComponentRegistry.registerCustomComponent('vc:', {});
     */
+})
+SERVER.world.afterEvents.playerPlaceBlock.subscribe(e=>{
+    if (e.block.typeId == 'minecraft:lightning_rod' && e.block.below(1).typeId == 'vc:compressed_copper_block') {
+        e.block.setType('air')
+        e.block.below(1).setType('air')
+        e.dimension.spawnEntity('vc:copper_golem', e.block.below(1).bottomCenter())
+    }
 })
 
 export function getRedstonePowered(block) {

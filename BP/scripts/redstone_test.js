@@ -6,6 +6,29 @@ import { getRedstonePowered, gyserShoot, gyserRetract } from "./block_components
 SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
 	initEvent.blockComponentRegistry.registerCustomComponent('vc:redstone', {
 		onTick: e => {
+			const wasSucessful = e.block.getRedstonePower() > 0 ? true : checkRedstone(e.block);
+
+			if (e.block.typeId == 'vc:custom_note_block') { // i split it up cus i think it optimizes the script a bit
+				if (wasSucessful && e.block.permutation.getState("vc:powered") == false) {
+					playNote(e.block, false);
+					//if (e.block.dimension.getEntitiesAtBlockLocation(e.block.center())[0]?.typeId == 'vc:charge_block') e.block.dimension.getEntitiesAtBlockLocation(e.block.center())[0].remove();
+					//else e.block.dimension.spawnEntity('vc:charge_block', e.block.bottomCenter())
+				}
+			} else if (e.block.typeId == 'vc:gyser_sand') {
+				if (wasSucessful && e.block.permutation.getState("vc:active_bit") == false) {
+					gyserShoot(e);
+					setPermutation(e.block, 'vc:active_bit', true)
+				}
+			}
+			else if (e.block.typeId == 'vc:gyser_sand') {
+				if (!wasSucessful && e.block.permutation.getState("vc:active_bit") == true) gyserRetract(e)
+			}
+
+			try {
+				setPermutation(e.block, 'vc:powered', wasSucessful)
+			} catch (e) { }
+
+			/*
 			const block = e.block;
 			const wasSucessful = getRedstonePowered(e.block)
 			if (block.typeId == 'vc:custom_note_block' && wasSucessful && block.permutation.getState("vc:powered") == false) playNote(block, false)
@@ -53,11 +76,23 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
 			//}
 			try {
 				setPermutation(e.block, 'vc:powered', wasSucessful)
-				setPermutation(e.block, 'vc:toggle_bit', wasSucessful)
+				setPermutation(e.block, 'vc:powered', wasSucessful)
 			} catch (e) { }
-		}
+		*/}
 	});
 });
+
+/**
+ * 
+ * @param {SERVER.Block} block 
+ * @returns {Boolean}
+ */
+function checkRedstone(block) {
+    if (block.getRedstonePower() > 0) return true; //thanks chatgpt for optimising this ig? (it did not help in the slightest)
+    const directions = [ block.north(1), block.north(-1), block.east(1), block.east(-1), block.above(1), block.above(-1) ];
+    return directions.some(adjBlock => adjBlock?.getRedstonePower() > 0);
+}
+
 function setPermutation(block, stateAdd, stateValue) { //stole this function from Ramcor14_Player thanks to him
 	try {
 		const result = block.permutation.getAllStates();

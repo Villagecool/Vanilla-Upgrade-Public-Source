@@ -9,6 +9,9 @@
 			"identifier": "vc:saturated_pumice"
 		},
 		"components": {
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"tag:gold_pick_diggable": {},
+			"tag:minecraft:iron_tier_destructible": {},
 			"tag:stone": {},
 			"minecraft:material_instances": {
 				"*": {

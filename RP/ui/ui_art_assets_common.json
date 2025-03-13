@@ -5,23 +5,43 @@
 {
   "namespace": "common_art",
   "title_image": {
-    "layer": 19
-  },
-  "title_panel_content": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": [
-          {
-            "vanilla@VU_title.vu_title_combo": {}
-          }
-        ]
-      }
-    ],
-    "layer": 19,
+    "type": "panel",
     "anims": [
       "@VU_title.titleMove"
+    ],
+    "controls": [
+      {
+        "actual_title": {
+          "type": "image",
+          "layer": 21,
+          "texture": "textures/ui/title"
+        }
+      },
+      {
+        "real_splash_text": {
+          "type": "custom",
+          "renderer": "splash_text_renderer",
+          "size": [
+            0.1,
+            0.1
+          ],
+          "offset": [
+            0,
+            15
+          ],
+          "layer": 25,
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "$splash_text_visible|default": true,
+          "visible": true
+        }
+      },
+      {
+        "vanilla@VU_title.vu_title_combo": {}
+      }
     ]
+  },
+  "splash_text": {
+    "type": "panel"
   }
 }

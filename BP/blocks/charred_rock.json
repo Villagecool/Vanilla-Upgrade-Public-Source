@@ -9,8 +9,8 @@
 			"identifier": "vc:charred_rock"
 		},
 		"components": {
-			"tag:diamond_pick_diggable": {},
-			"tag:iron_pick_diggable": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"tag:minecraft:iron_tier_destructible": {},
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "charred_rock"

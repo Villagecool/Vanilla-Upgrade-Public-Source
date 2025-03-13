@@ -32,6 +32,9 @@
 		},
 		"components": {
 			"tag:plant": {},
+			"tag:minecraft:is_hoe_item_destructible": {},
+			"tag:minecraft:is_shears_item_destructible": {},
+			"tag:minecraft:is_sword_item_destructible": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.1
 			},
@@ -39,7 +42,8 @@
 				"explosion_resistance": 0
 			},
 			"minecraft:custom_components": [
-				"vc:glorium_vines"
+				"vc:glorium_vines",
+				"vc:vines"
 			],
 			"minecraft:light_dampening": 0,
 			"minecraft:light_emission": 10,

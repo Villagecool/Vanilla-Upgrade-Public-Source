@@ -14,10 +14,16 @@
 					1
 				],
 				"vc:blockshape": [
-					2,
-					0,
-					1
+					"default",
+					"tip"
 				]
+			},
+			"traits": {
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:vertical_half"
+					]
+				}
 			}
 		},
 		"components": {
@@ -31,6 +37,10 @@
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 0
 			},
+			"minecraft:custom_components": [
+				"vc:elax_syrup",
+				"vc:vines"
+			],
 			"minecraft:geometry": "geometry.plant",
 			"minecraft:loot": "loot_tables/blocks/elax_syrup.json",
 			"minecraft:placement_filter": {
@@ -54,7 +64,7 @@
 		},
 		"permutations": [
 			{
-				"condition": "query.block_state('vc:blockshape') == 0",
+				"condition": "query.block_state('vc:blockshape') == 'default'",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -67,7 +77,7 @@
 				}
 			},
 			{
-				"condition": "query.block_state('vc:blockshape') == 1",
+				"condition": "query.block_state('vc:blockshape') == 'tip'",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -80,73 +90,75 @@
 				}
 			},
 			{
-				"condition": "query.block_state('vc:face') == 0",
+				"condition": "query.block_state('minecraft:vertical_half') == 'top'",
 				"components": {
 					"minecraft:geometry": "geometry.plant",
-					"minecraft:placement_filter": {
-						"conditions": [
-							{
-								"allowed_faces": [
-									"down"
-								]
-							}
-						]
-					},
+					//"minecraft:queued_ticking": {
+					//	"looping": true,
+					//	"interval_range": [
+					//		1,
+					//		1
+					//	],
+					//	"on_tick": {
+					//		"event": "vc:blockshape"
+					//	}
+					//},
 					"minecraft:collision_box": false
 				}
 			},
 			{
-				"condition": "query.block_state('vc:face') == 1",
+				"condition": "query.block_state('minecraft:vertical_half') == 'bottom'",
 				"components": {
 					"minecraft:geometry": "geometry.plant_up",
-					"minecraft:placement_filter": {
-						"conditions": [
-							{
-								"allowed_faces": [
-									"up"
-								]
-							}
-						]
-					},
+					//"minecraft:queued_ticking": {
+					//	"looping": true,
+					//	"interval_range": [
+					//		1,
+					//		1
+					//	],
+					//	"on_tick": {
+					//		"event": "vc:blockshapeup"
+					//	}
+					//},
 					"minecraft:collision_box": false
 				}
 			},
 			{
-				"condition": "query.block_state('vc:face') == 1 && query.block_state('vc:blockshape') == 1",
+				"condition": "query.block_state('minecraft:vertical_half') == 'bottom' && query.block_state('vc:blockshape') == 'tip'",
 				"components": {
 					"minecraft:selection_box": {
 						"origin": [
-							-6,
+							-4,
 							0,
-							-6
+							-4
 						],
 						"size": [
-							12,
-							10,
-							12
+							8,
+							8,
+							8
 						]
 					}
 				}
 			},
 			{
-				"condition": "query.block_state('vc:face') == 0 && query.block_state('vc:blockshape') == 1",
+				"condition": "query.block_state('minecraft:vertical_half') == 'top' && query.block_state('vc:blockshape') == 'tip'",
 				"components": {
 					"minecraft:selection_box": {
 						"origin": [
-							-6,
-							6,
-							-6
+							-4,
+							8,
+							-4
 						],
 						"size": [
-							12,
-							10,
-							12
+							8,
+							8,
+							8
 						]
 					}
 				}
 			},
 			{
-				"condition": "query.block_state('vc:face') == 1 && query.block_state('vc:blockshape') == 0",
+				"condition": "query.block_state('minecraft:vertical_half') == 'bottom' && query.block_state('vc:blockshape') == 'default'",
 				"components": {
 					"minecraft:selection_box": {
 						"origin": [
@@ -163,7 +175,7 @@
 				}
 			},
 			{
-				"condition": "query.block_state('vc:face') == 0 && query.block_state('vc:blockshape') == 0",
+				"condition": "query.block_state('minecraft:vertical_half') == 'top' && query.block_state('vc:blockshape') == 'default'",
 				"components": {
 					"minecraft:selection_box": {
 						"origin": [

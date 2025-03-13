@@ -10,6 +10,7 @@
 		},
 		"components": {
 			"tag:wood": {},
+            "tag:minecraft:is_axe_item_destructible": {},
 			"tag:fletching_table": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 2.5

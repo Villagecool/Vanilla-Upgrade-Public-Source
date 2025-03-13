@@ -9,12 +9,15 @@
 			"identifier": "vc:blue_nether_bricks"
 		},
 		"components": {
-			"tag:diamond_pick_diggable": {},
-			"tag:iron_pick_diggable": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"tag:minecraft:iron_tier_destructible": {},
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "blue_nether_bricks"
 				}
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 6
 			},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 5

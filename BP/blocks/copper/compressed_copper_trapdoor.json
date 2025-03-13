@@ -32,7 +32,8 @@
 			}
 		},
 		"components": {
-			"tag:wood": {},
+			"tag:metal": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
 			"tag:non_solid": {},
 			"minecraft:flammable": {
 				"catch_chance_modifier": 5,

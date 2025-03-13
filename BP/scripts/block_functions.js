@@ -1,13 +1,11 @@
 import * as SERVER from '@minecraft/server';
 import * as UI from '@minecraft/server-ui';
 
-SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
-    let block
-    if (data.sourceEntity != undefined) block = data.sourceEntity.dimension.getBlock(data.sourceEntity.location);
-    else block = data.sourceBlock;
+SERVER.system.afterEvents.scriptEventReceive.subscribe((e) => {
+    const block = (e.sourceEntity != undefined ? e.sourceEntity.dimension.getBlock(e.sourceEntity.location) : e.sourceBlock)
     if (!block) return;
 
-    if (data.id === "vc:fenceConnect") {
+    if (e.id === "vc:fenceConnect") {
         let loc = block.location;
 
         try {
@@ -23,7 +21,7 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
             setPermutation(block.above(1), "vc:west", west)
         } catch (error) { }
     };
-    if (data.id === "vc:doorConnect") {
+    if (e.id === "vc:doorConnect") {
         let connect = false;
         let loc = block.location;
 
@@ -34,7 +32,7 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
         //console.log(`${block.west(1).hasTag("door")}, ${block.east(1).hasTag("door")}, ${block.north(1).hasTag("door")}, ${block.south(1).hasTag("door")}`)
         setPermutation(block, "vc:flipped", connect)
     };
-    if (data.id === "vc:doorUpper") {
+    if (e.id === "vc:doorUpper") {
         let blockabove = block.above(1);
         let loc = block.location;
         if (blockabove.isAir) {
@@ -53,12 +51,12 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
         if (blockabove.permutation.getState("vc:upper_open") == true) {
             setPermutation(block, "vc:open", !open);
             setPermutation(blockabove, "vc:upper_open", false);
-            if (data.message === "random_door") block.dimension.runCommand(`execute positioned ${loc.x} ${loc.y} ${loc.z} run playsound random.door_${(open == true ? 'open' : 'close')} @a[r=5] ~~~ 0.4`)
-            else block.dimension.runCommand(`execute positioned ${loc.x} ${loc.y} ${loc.z} run playsound ${(open == true ? 'open' : 'close')}.${data.message} @a[r=5] ~~~ 0.4`)
+            if (e.message === "random_door") block.dimension.runCommand(`execute positioned ${loc.x} ${loc.y} ${loc.z} run playsound random.door_${(open == true ? 'open' : 'close')} @a[r=5] ~~~ 0.4`)
+            else block.dimension.runCommand(`execute positioned ${loc.x} ${loc.y} ${loc.z} run playsound ${(open == true ? 'open' : 'close')}.${e.message} @a[r=5] ~~~ 0.4`)
         }
 
     };
-    if (data.id === "vc:breakBlock") {
+    if (e.id === "vc:breakBlock") {
         let blockToBreak = block
         if (block.permutation.getState("minecraft:facing_direction") == "north") blockToBreak = block.north(-1)
         if (block.permutation.getState("minecraft:facing_direction") == "east") blockToBreak = block.east(-1)
@@ -70,12 +68,12 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
         blockToBreak.dimension.runCommand(`setblock ${blockToBreak.location.x} ${blockToBreak.location.y} ${blockToBreak.location.z} air destroy`)
         //console.log(`broke block at ${blockToBreak.location.x}, ${blockToBreak.location.y}, ${blockToBreak.location.z}`)
     }
-    if (data.id === "vc:spawn_entity") {
+    if (e.id === "vc:spawn_entity") {
         let spawnee = block.dimension.spawnEntity(block.permutation.getState("vc:entity"), block.location);
         if (block.permutation.getState("vc:entity") == "vc:termite_mound") block.setType('vc:termite_mound')
         else block.setType('minecraft:air')
     }
-    if (data.id === "vc:asorb_lava") {
+    if (e.id === "vc:asorb_lava") {
         let sucess = 0;
         for (let i = -3; i < 3; i++) {
 
@@ -95,7 +93,7 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
         //console.log(`broke block at ${blockToBreak.location.x}, ${blockToBreak.location.y}, ${blockToBreak.location.z}`)
     }
     try {
-        if (data.id === "vc:breezer") {
+        if (e.id === "vc:breezer") {
             let rstrength = getrstrength(block);
             let strength = rstrength / 30;
             for (let i = 1; i < 5 + (Math.round(rstrength / 3)); i++) {
@@ -112,7 +110,7 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
                 if (block.permutation.getState("minecraft:facing_direction") == "down") { if (!block.below(-i).isAir) break; block.dimension.getEntities({ location: offsetLocation(block.below(-i).location, offset), maxDistance: 0.8 }).forEach(bro => { bro.runCommand(`scriptevent vc:knockback 0 0 0 ${strength}`) }); block.dimension.spawnParticle("vc:breezer_blow_particle", offsetLocation(block.location, offset), setVectorFloats(molang, "variable.sped", 0, 1, 0)); }
             }
         }
-        if (data.id === "vc:blazer") {
+        if (e.id === "vc:blazer") {
             let rstrength = getrstrength(block);
             let strength = rstrength / 30;
             for (let i = 1; i < 5 + (Math.round(rstrength / 3)); i++) {
@@ -130,17 +128,17 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
             }
         }
     } catch (error) { } //i dont give a shit, block is basically out of bounds
-    if (data.id === "vc:trigger_button") {
-        let state = data.message;
+    if (e.id === "vc:trigger_button") {
+        let state = e.message;
         let curState = block.permutation.getState(state);
         console.log(`alright we triggerd the ${block.typeId} press from ${curState} to ${!curState}`)
         if (curState == false || curState == true) setPermutation(block, state, !curState);
         //console.log(`broke block at ${blockToBreak.location.x}, ${blockToBreak.location.y}, ${blockToBreak.location.z}`)
     }
 });
-SERVER.world.beforeEvents.playerBreakBlock.subscribe((data) => {
-    let player = data.player;
-    let block = data.player.dimension.getBlock(data.block);
+SERVER.world.beforeEvents.playerBreakBlock.subscribe((e) => {
+    let player = e.player;
+    let block = e.player.dimension.getBlock(e.block);
     SERVER.system.run(() => {
         if (block.below(1).permutation.getState("vc:upper_bit") == false && block.below(1).typeId != "vc:chorus_carnavorus_plant") {
             let blockToBreak = block.below(1);
@@ -153,10 +151,10 @@ SERVER.world.beforeEvents.playerBreakBlock.subscribe((data) => {
         }
     })
 });
-SERVER.world.beforeEvents.playerPlaceBlock.subscribe((data) => {
-    data.cancel = blockAboveCheck(data);
+SERVER.world.beforeEvents.playerPlaceBlock.subscribe((e) => {
+    e.cancel = blockAboveCheck(e);
     SERVER.system.run(() => {
-        const block = data.player.dimension.getBlock(data.block)
+        const block = e.player.dimension.getBlock(e.block)
         if (block.typeId == "vc:glorium_vines") {
             updateGlorium(block)
             updateGlorium(block.above(1))
@@ -172,9 +170,9 @@ function updateGlorium(block) {
         setPermutation(block, 'vc:blockshape', (block.above(1).typeId != "vc:glorium_vines" ? 1 : 0))
     }
 }
-function blockAboveCheck(data) {
-    if (!data.player.getComponent("equippable").getEquipment("Mainhand").typeId.endsWith('_door_item')) return false;
-    return !data.player.dimension.getBlock(data.block).above(1).isAir;
+function blockAboveCheck(e) {
+    if (!e.player.getComponent("equippable").getEquipment("Mainhand").typeId.endsWith('_door_item')) return false;
+    return !e.player.dimension.getBlock(e.block).above(1).isAir;
 }
 function setPermutation(block, stateAdd, stateValue) { //stole this from someone :evil:
     const result = block.permutation.getAllStates();

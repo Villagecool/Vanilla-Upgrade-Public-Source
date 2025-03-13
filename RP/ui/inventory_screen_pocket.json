@@ -1,69 +1,69 @@
 {
 	"namespace": "crafting_pocket",
-	"recipe_inventory_screen_content_pocket/root_panel": {
+	"crafting_screen_pocket": {
 		"modifications": [
 			{
 				"array_name": "controls",
-				"operation": "insert_front",
-				"value": [
-					{
-						//you custom crafting ui
-						"@maging_table.final_panel": {} //in custom craft file (namespace.final_panel)
-					}
-				]
-			},
-			{
-				"array_name": "controls",
-				"operation": "insert_front",
-				"value": [
-					{
-						//you custom crafting ui
-						"@fletching_table.final_panel": {} //in custom craft file (namespace.final_panel)
-					}
-				]
-			},
-			{
-				"array_name": "controls",
-				"operation": "insert_front",
-				"value": [
-					{
-						//you custom crafting ui
-						"@sawmill.final_panel": {} //in custom craft file (namespace.final_panel)
-					}
-				]
-			},
-			{
-				"array_name": "controls",
-				"operation": "insert_front",
-				"value": [
-					{
-						//you custom crafting ui
-						"@kiln.final_panel": {} //in custom craft file (namespace.final_panel)
-					}
-				]
-			}
-		]
-	},
-	"recipe_inventory_screen_content_pocket/root_panel/hotbar_and_panels": {
-		"modifications": [
-			{
-				"array_name": "bindings",
-				"operation": "insert_front",
-				"value": [
-					{
-						"binding_name": "#crafting_label_text"
-					}
-				]
-			},
-			//vanilla crafting table and your 2nd custom crafting table that doesn't use custom UI
-			{
-				"array_name": "bindings",
 				"operation": "insert_back",
 				"value": [
 					{
-						"binding_type": "view",
-						"source_property_name": "((#crafting_label_text = container.crafting) or not (#crafting_label_text = 'Maging table')) and not (#crafting_label_text = 'Sawmill')) and not (#crafting_label_text = 'Fletching Table')) and not (#crafting_label_text = 'Kiln'))",
-						"target_property_name": "#visible"
+						"Black@crafting.Black": {}
+					}
+				]
+			},
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": [
+					{
+						"knowlage_harvester_p@knowlage_harvester.final_panel": {}
+					}
+				]
+			},
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": [
+					{
+						"fletching_panel_p@fletching_table.final_panel": {}
+					}
+				]
+			},
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": [
+					{
+						"sawmill_panel_p@sawmill.final_panel": {}
+					}
+				]
+			},
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": [
+					{
+						"kiln_panel_p@kiln.final_panel": {}
+					}
+				]
+			},
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": [
+					{
+						"crafting_sc@crafting.recipe_inventory_screen_content_pocket": {
+							"bindings": [
+								{
+									"binding_name": "#crafting_label_text"
+								},
+								{
+									"binding_type": "view",
+									"source_property_name": "(#crafting_label_text = container.crafting) and not (#crafting_label_text = 'Knowledge Harvester') and not (#crafting_label_text = 'Sawmill')) and not (#crafting_label_text = 'Fletching Table')) and not (#crafting_label_text = 'Kiln'))",
+									"target_property_name": "#visible"
+								}
+							]
+						}
 					}
 				]
 			}

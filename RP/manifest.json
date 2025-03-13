@@ -1,13 +1,14 @@
 {
 	"format_version": 2,
 	"metadata": {
+		"product_type": "addon",
 		"authors": [
 			"Vlliage"
 		]
 	},
 	"header": {
 		"name": "Vanilla Upgrade V3",
-		"description": "An Expansive addon created By Villagecool and Team Verious.",
+		"description": "An Expansive addon created By §eVlliage§r and §bTeam Verious§r.",
 		"min_engine_version": [
 			1,
 			20,

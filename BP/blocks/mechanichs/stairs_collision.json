@@ -33,6 +33,7 @@
 					8
 				]
 			},
+			"minecraft:custom_components": ["vc:stairs_collision"],
 			"minecraft:selection_box": false,
 			"minecraft:placement_filter": {
 				"conditions": [

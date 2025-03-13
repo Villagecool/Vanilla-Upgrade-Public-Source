@@ -26,6 +26,7 @@
 		},
 		"components": {
 			"tag:sand": {},
+			"tag:minecraft:is_shovel_item_destructible": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.75
 			},

@@ -1,0 +1,15 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "minecraft:brew_lingering_blindness_IIalt"
+    },
+
+    "tags": [ "brewing_stand" ],
+
+    "input": "vc:lingering_potion_of_blindness",
+    "reagent": "minecraft:redstone",
+    "output": "vc:lingering_potion_of_blindness_II"
+  }
+
+}

@@ -4,6 +4,7 @@
 		"description": {
 			"identifier": "delete:curse_campfire",
 			"menu_category": {
+				"category": "none",
 				"is_hidden_in_commands": true
 			}
 		},

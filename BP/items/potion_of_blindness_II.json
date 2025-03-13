@@ -10,7 +10,7 @@
     },
     "components": {
       "minecraft:display_name": {
-        "value": "Potion of Blindness\n§cBlindness (4:00)"
+        "value": "%item.vc.potion_of_blindness.name\n§c%item.effect_blindness_II.desc"
       },
       "minecraft:icon": "blindness_potion",
       "minecraft:use_animation": "drink",

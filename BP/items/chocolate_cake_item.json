@@ -14,7 +14,7 @@
 				"value": "item.vc:chocolate_cake_item"
 			},
 			"minecraft:block_placer": {
-				"block": "vc:cake_chocolate",
+				"block": "vc:chocolate_cake",
 				"replace_block_item": true
 			},
 			"minecraft:icon": "chocolate_cake_item"

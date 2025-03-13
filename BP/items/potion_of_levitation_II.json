@@ -10,7 +10,7 @@
     },
     "components": {
       "minecraft:display_name": {
-        "value": "Potion of Levitation\n§cLevitation (4:00)"
+        "value": "%item.vc.potion_of_levitation.name\n§c%item.effect_levitation_II.desc"
       },
       "minecraft:icon": "levitation_potion",
       "minecraft:use_animation": "drink",

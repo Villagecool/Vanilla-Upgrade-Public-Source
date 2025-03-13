@@ -10,6 +10,7 @@
 		},
 		"components": {
 			"tag:leaves": {},
+			"tag:minecraft:is_hoe_item_destructible": {},
 			"tag:plant": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 1.1
@@ -17,10 +18,7 @@
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 0
 			},
-			"minecraft:custom_components": [
-				"vc:falling_leaves"
-			],
-			"minecraft:geometry": "geometry.no_see_block",
+			"minecraft:geometry": "minecraft:geometry.full_block",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "elax_fungus",

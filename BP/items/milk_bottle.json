@@ -10,7 +10,7 @@
     },
     "components": {
       "minecraft:display_name": {
-        "value": "Milk Bottle\n§7Removes Effects"
+        "value": "%item.vc.milk_bottle.name\n§7%item.effect_remove.desc"
       },
       "minecraft:icon": "milk_potion",
       "minecraft:use_animation": "drink",

@@ -10,16 +10,16 @@
     ],
     "key": {
       "#": {
-        "item": "vc:snowbricks"
+        "item": "vc:snowbrick"
       }
     },
     "unlock": [
       {
-        "item": "vc:snowbricks"
+        "item": "vc:snowbrick"
       }
     ],
     "result": {
-      "item": "vc:snowbrick_slab",
+      "item": "vc:snow_brick_slab",
       "count": 6
     }
   }

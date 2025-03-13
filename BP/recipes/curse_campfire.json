@@ -1,0 +1,14 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "vc:curse_campfire"
+		},
+		"tags": [
+			"campfire",
+			"soul_campfire"
+		],
+		"input": "vc:crystalized_experience",
+		"output": "delete:curse_campfire"
+	}
+}

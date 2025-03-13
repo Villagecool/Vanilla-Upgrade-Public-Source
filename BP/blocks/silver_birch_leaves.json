@@ -17,6 +17,8 @@
 		"components": {
 			"tag:leaves": {},
 			"tag:plant": {},
+			"tag:minecraft:is_shears_item_destructible": {},
+			"tag:minecraft:is_hoe_item_destructible": {},
 			"minecraft:flammable": {
 				"catch_chance_modifier": 5,
 				"destroy_chance_modifier": 5
@@ -24,14 +26,17 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 1.1
 			},
+			"minecraft:light_dampening": 15,
 			"minecraft:custom_components": [
 				"vc:opaques"
 			],
-			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:geometry": "geometry.no_see_block",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "silver_birch_leaves",
-					"render_method": "blend"
+					"render_method": "blend",
+					"ambient_occlusion": true,
+					"face_dimming": true
 				}
 			}
 		},
@@ -39,10 +44,11 @@
 			{
 				"condition": "query.block_state('vc:opaque') == true",
 				"components": {
+					"minecraft:geometry": "minecraft:geometry.full_block",
 					"minecraft:material_instances": {
 						"*": {
 							"texture": "silver_birch_leaves_opaque",
-							"render_method": "blend"
+							"render_method": "opaque"
 						}
 					}
 				}

@@ -36,7 +36,7 @@
       }
     ],
     "result": [
-      { "item": "vc:chocolate_cake_item" },
+      { "item": "vc:chocolate_cake" },
       { "item": "minecraft:bucket", "count": 3, "data": 0 }
     ]
   }

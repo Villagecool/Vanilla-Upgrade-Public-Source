@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vc:endslate_bricks"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "##",
+      "##"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:endslate"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:endslate"
+      }
+    ],
+    "result": {
+      "item": "vc:endslate_bricks",
+      "data": 0
+    }
+  }
+}
