@@ -33,6 +33,9 @@
           "controll_move"
         ]
       },
+      "spawn_egg": {
+        "texture": "spawn_egg_melon_golem"
+      },
       "render_controllers": [ 
         {"controller.render.stray_clothes": "query.is_sheared"}, 
         {"controller.render.snowgolem": "!query.is_sheared"},

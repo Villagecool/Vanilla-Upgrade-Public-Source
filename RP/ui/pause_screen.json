@@ -16,6 +16,7 @@
     "offset": ["0px", "-30px"], //["0px", "-21px"]
     "size": ["100%c + 4px", "100%c + 4px"],
     "alpha": 0.4,
+    "layer": 10,
     "bindings": [
       {
         "binding_type": "view",
@@ -28,6 +29,7 @@
       {
         "putext": {
           "type": "label",
+          "layer": 11,
           "text": "https://villagecool.github.io/Vanilla-Upgrade-Wiki/"
         }
       }
@@ -41,6 +43,7 @@
     "offset": ["0px", "-45px"], //["0px", "-21px"]
     "size": ["100%c + 4px", "100%c + 4px"],
     "alpha": 0.4,
+    "layer": 10,
     "bindings": [
       {
         "binding_type": "view",
@@ -53,6 +56,7 @@
       {
         "putext": {
           "type": "label",
+          "layer": 11,
           "text": "pause.needmoreinfo.text"
         }
       }

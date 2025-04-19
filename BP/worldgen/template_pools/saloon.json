@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "vc:saloon"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "saloon",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      }
+    ]
+  }
+}

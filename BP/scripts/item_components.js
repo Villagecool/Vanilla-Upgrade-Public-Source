@@ -82,6 +82,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const entity = e.source;
             let lore = item.getLore()[0];
             if (!lore || lore.length < 1) return;
+            e.source.runCommand('playsound drink.cocojuice @a ~~~')
             switch (Number(lore.replace('§9Spiked', '').replace('§', ''))) {
                 case 0: //apple
                     console.warn('apple')
@@ -130,6 +131,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
                     });
                     const projectileComp = melonSeed.getComponent('minecraft:projectile');
                     projectileComp?.shoot(entity.getViewDirection());
+                    e.source.runCommand('playsound random.bow @a ~~~')
                     break;
                 case 5: //spaticus
                     console.warn('spaticus')

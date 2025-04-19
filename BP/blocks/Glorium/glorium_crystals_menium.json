@@ -22,7 +22,7 @@
 			},
 			"minecraft:destructible_by_explosion": true,
 			"minecraft:light_dampening": 1,
-			"minecraft:light_emission": 10,
+			"minecraft:light_emission": 3,
 			"minecraft:geometry": "geometry.plant",
 			"minecraft:loot": "loot_tables/blocks/glorium_crystals.json",
 			"minecraft:liquid_detection": {

@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vc:faux_leather"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "###",
+      "#H#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:cotton_ball"
+      },
+      "H": {
+        "item": "minecraft:honeycomb"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:honeycomb"
+      },
+      {
+        "item": "vc:cotton"
+      }
+    ],
+    "result": {
+      "item": "minecraft:leather",
+      "count": 2
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "vc:chocolate_milk"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "cocoa_beans"
+			},
+			{
+				"item": "milk_bucket"
+			}
+		],
+		"result": {
+			"item": "vc:chocolate_milk_bucket"
+		}
+	}
+}

@@ -6,7 +6,7 @@
 			"places_feature": "vc:illusioner_hut"
 		},
 		"conditions": {
-			"placement_pass": "before_surface_pass",
+			"placement_pass": "after_surface_pass",
 			"minecraft:biome_filter": [
 				{
 					"all_of": [

@@ -15,7 +15,7 @@
       "tag:minecraft:is_food": {},
       "minecraft:food": {
         "nutrition": 2,
-        "saturation_modifier": 2.8,
+        "saturation_modifier": 3.1, //normally 2.8, changed for chocolate
         "can_always_eat": false
       },
       "minecraft:max_stack_size": 1,

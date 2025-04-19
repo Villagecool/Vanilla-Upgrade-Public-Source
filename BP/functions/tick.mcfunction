@@ -36,8 +36,8 @@ execute as @a at @a if block ~ 253 ~ biome_indicate:lumerison run particle vc:ac
 #execute as @a at @a run fill ~13 40 ~13 ~-13 80 ~-13 no:generate_chorus_spew replace no:generate_chorus_spew_inactive
 #execute as @a at @a run execute unless entity @e[type=vc:particle_emitter,r=1] run summon vc:particle_emitter
 #execute as @a at @a run execute unless entity @e[type=vc:particle_emitter,r=1] run tp @e[type=vc:particle_emitter,r=1] ~~~
-execute as @a at @a run scriptevent vc:effect_countdown
-execute as @a at @a run scriptevent vc:item_fix
+#execute as @a at @a run scriptevent vc:effect_countdown
+#execute as @a at @a run scriptevent vc:item_fix
 execute at @e[tag=timerFor-giant_omen] run particle vc:giant_omen_effect_particle ~~0.5~
 #
 #

@@ -2,7 +2,7 @@
 	"format_version": "1.20.30",
 	"minecraft:block": {
 		"description": {
-			"identifier": "vc:aloe_plant",
+			"identifier": "vc:aloe_vera",
 			"menu_category": {
 				"category": "commands",
 				"group": "itemGroup.name.commands"
@@ -49,7 +49,7 @@
 					}
 				]
 			},
-			"minecraft:loot": "loot_tables/blocks/aloe_plant0.json",
+			"minecraft:loot": "loot_tables/blocks/aloe_vera0.json",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "aloe_plant_1",
@@ -63,7 +63,7 @@
 			{
 				"condition": "query.block_state('vc:growth') == 0",
 				"components": {
-					"minecraft:loot": "loot_tables/aloe_vera0.json",
+					"minecraft:loot": "loot_tables/blocks/aloe_vera0.json",
 					"minecraft:selection_box": {
 						"origin": [
 							-4,
@@ -88,7 +88,7 @@
 			{
 				"condition": "query.block_state('vc:growth') == 1",
 				"components": {
-					"minecraft:loot": "loot_tables/aloe_vera1.json",
+					"minecraft:loot": "loot_tables/blocks/aloe_vera1.json",
 					"minecraft:selection_box": {
 						"origin": [
 							-7,
@@ -113,7 +113,7 @@
 			{
 				"condition": "query.block_state('vc:growth') == 2",
 				"components": {
-					"minecraft:loot": "loot_tables/aloe_vera2.json",
+					"minecraft:loot": "loot_tables/blocks/aloe_vera2.json",
 					"minecraft:selection_box": {
 						"origin": [
 							-7,

@@ -4,7 +4,26 @@
     "description": {
       "identifier": "vc:blue_berry_bush_feature"
     },
-    "places_block": "vc:blue_berries",
+    "places_block": [
+      {
+        "block": {
+          "name": "vc:blue_berries",
+          "states": {
+            "vc:growth": 3
+          }
+        },
+        "weight": 1.5
+      },
+      {
+        "block": {
+          "name": "vc:blue_berries",
+          "states": {
+            "vc:growth": 2
+          }
+        },
+        "weight": 5
+      }
+    ],
     "enforce_survivability_rules": false,
     "enforce_placement_rules": true,
     "may_attach_to": {

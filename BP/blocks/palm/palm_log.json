@@ -17,12 +17,17 @@
 		},
 		"components": {
 			"tag:wood": {},
-            "tag:minecraft:is_axe_item_destructible": {},
+			"tag:minecraft:is_axe_item_destructible": {},
 			"tag:log": {},
 			"tag:oak": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 1.1
 			},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 20
+			},
+			"tag:vc:stripper": {},
 			"minecraft:custom_components": [
 				"vc:stripper"
 			],

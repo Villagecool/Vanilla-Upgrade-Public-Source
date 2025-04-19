@@ -6,7 +6,7 @@
 			"places_feature": "vc:carnavorus_chorus_growth_feature"
 		},
 		"conditions": {
-			"placement_pass": "final_pass",
+			"placement_pass": "surface_pass",
 			"minecraft:biome_filter": {
 				"all_of": [
 					{
@@ -26,16 +26,16 @@
 			"x": {
 				"distribution": "uniform",
 				"extent": [
-					0,
-					15
+					20,
+					50
 				]
 			},
-			"y": "math.round(math.random(0,5)) == 0 && (math.abs(v.worldx) > 200 || math.abs(v.worldz) > 200)) ? query.heightmap(v.worldx, v.worldz) : -65",
+			"y": "math.round(math.random(0,3)) == 0 && (math.abs(v.worldx) > 200 || math.abs(v.worldz) > 200) ? (query.heightmap(v.worldx, v.worldz) - 1) : -5",
 			"z": {
 				"distribution": "uniform",
 				"extent": [
-					0,
-					15
+					20,
+					50
 				]
 			}
 		}

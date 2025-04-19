@@ -66,6 +66,8 @@
 						"block_filter": [
 							"grass_block",
 							"dirt",
+							"gravel",
+							"stone",
 							"sand",
 							"vc:cattail"
 						],
@@ -100,6 +102,11 @@
 						"conditions": [
 							{
 								"block_filter": [
+									"grass_block",
+									"dirt",
+									"gravel",
+									"stone",
+									"sand",
 									"vc:cattail"
 								],
 								"allowed_faces": [
@@ -127,6 +134,8 @@
 								"block_filter": [
 									"grass_block",
 									"dirt",
+									"gravel",
+									"stone",
 									"sand",
 									"vc:cattail"
 								],
@@ -153,10 +162,16 @@
 						"conditions": [
 							{
 								"block_filter": [
+									"grass_block",
+									"dirt",
+									"gravel",
+									"stone",
+									"sand",
 									"vc:cattail"
 								],
 								"allowed_faces": [
-									"down"
+									"down",
+									"up"
 								]
 							}
 						]

@@ -11,10 +11,10 @@
 					],
 					"transitions": [
 						{
-							"slide": "query.is_moving && query.variant == 1"
+							"slide": "query.is_moving && query.modified_move_speed >= 0.6"
 						},
 						{
-							"waddle": "query.is_moving && !query.variant == 1"
+							"waddle": "query.is_moving && query.modified_move_speed < 0.6"
 						}
 					],
 					"blend_transition": 0.1
@@ -27,7 +27,7 @@
 					],
 					"transitions": [
 						{
-							"waddle": "query.is_moving && !query.variant == 1"
+							"waddle": "query.is_moving && query.modified_move_speed < 0.6"
 						},
 						{
 							"default": "!query.is_moving"
@@ -42,7 +42,7 @@
 					],
 					"transitions": [
 						{
-							"slide": "query.is_moving && query.variant == 1"
+							"slide": "query.is_moving && query.modified_move_speed >= 0.6"
 						},
 						{
 							"default": "!query.is_moving"
@@ -57,10 +57,10 @@
 					],
 					"transitions": [
 						{
-							"slide": "!query.is_sitting && query.is_moving && query.variant == 1"
+							"slide": "!query.is_sitting && query.is_moving && query.modified_move_speed >= 0.6"
 						},
 						{
-							"waddle": "!query.is_sitting && query.is_moving && !query.variant == 1"
+							"waddle": "!query.is_sitting && query.is_moving && query.modified_move_speed < 0.6"
 						},
 						{
 							"default": "!query.is_sitting && !query.is_moving"

@@ -39,8 +39,7 @@
         { "controller.render.stray_clothes": "query.is_baby" }
       ],
       "spawn_egg": {
-        "base_color": "#23252b",
-        "overlay_color": "#adb4ca"
+        "texture": "spawn_egg_penguin"
       }
     }
   }

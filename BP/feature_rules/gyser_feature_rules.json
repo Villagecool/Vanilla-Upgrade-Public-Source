@@ -11,6 +11,21 @@
 				{
 					"all_of": [
 						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "cold"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "frozen"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "stone"
+						},
+						{
 							"any_of": [
 								{
 									"test": "has_biome_tag",
@@ -29,7 +44,7 @@
 			]
 		},
 		"distribution": {
-			"iterations": 1,
+			"iterations": 0.1,
 			"x": {
 				"distribution": "uniform",
 				"extent": [

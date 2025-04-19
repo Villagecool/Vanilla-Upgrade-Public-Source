@@ -1,0 +1,32 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "vc:cotton_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "vc:cotton_ball"
+			}
+		},
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"unlock": [
+			{
+				"item": "vc:cotton_ball"
+			},
+			{
+				"item": "vc:cotton_block"
+			}
+		],
+		"result": {
+			"item": "vc:cotton_block"
+		}
+	}
+}

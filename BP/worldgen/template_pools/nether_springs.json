@@ -1,0 +1,58 @@
+	{
+  "format_version": "1.21.20",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "vc:nether_springs"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "nether_springs6",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 5
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "nether_springs5",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 3
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "nether_springs4",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 3
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "nether_springs3",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 3
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "nether_springs2",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 5
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "nether_springs1",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 5
+      }
+    ]
+  }
+}

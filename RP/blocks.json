@@ -11,6 +11,9 @@
 	"aloe_gel_block": {
 		"sound": "slime"
 	},
+	"aloe_vera": {
+		"sound": "cave_vines"
+	},
 	"azalea_door": {
 		"sound": "wood"
 	},
@@ -74,6 +77,9 @@
 	"blue_berry_bush": {
 		"sound": "grass"
 	},
+	"blue_berries": {
+		"sound": "grass"
+	},
 	"blue_nether_brick_slab": {
 		"sound": "nether_brick"
 	},
@@ -103,6 +109,9 @@
 		"sound": "cloth"
 	},
 	"cake_chocolate": {
+		"sound": "cloth"
+	},
+	"cake_chocolate_lava": {
 		"sound": "cloth"
 	},
 	"cake_glow_berry": {
@@ -322,7 +331,7 @@
 		"sound": "cloth"
 	},
 	"orchid_cactus_flower": {
-		"sound": "big_dripleaf"
+		"sound": "cactus_flower"
 	},
 	"glass_door": {
 		"sound": "glass"
@@ -697,7 +706,7 @@
 		"sound": "wood"
 	},
 	"termite_mound": {
-		"sound": "gravel",
+		"sound": "packed_mud",
 		"textures": "termite_mound"
 	},
 	"tinted_air": {

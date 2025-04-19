@@ -13,8 +13,7 @@
         "default": "geometry.illusioner"
       },
       "spawn_egg": {
-        "base_color": "#135893",
-        "overlay_color": "#959b9b"
+        "texture": "spawn_egg_illusioner"
       },
       "animations": {
         "general": "animation.evoker.general",

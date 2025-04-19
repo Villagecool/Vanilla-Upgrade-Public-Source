@@ -6,7 +6,7 @@
 				"category": "commands",
 				"group": "itemGroup.name.commands"
 			},
-			"identifier": "no:glowing_mushroom"
+			"identifier": "vc:glowing_mushroom"
 		},
 		"components": {
 			"minecraft:destructible_by_mining": {

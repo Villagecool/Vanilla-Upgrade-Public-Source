@@ -27,9 +27,9 @@
         "distribution": {
             "iterations": 2,
             "scatter_chance": "5.0",
-            "x": 3,
+            "x": 100,
             "y": "query.heightmap(variable.worldx, variable.worldz) - 1",
-            "z": 3
+            "z": 100
         }
     }
 }

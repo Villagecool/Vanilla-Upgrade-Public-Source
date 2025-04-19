@@ -1,10 +1,10 @@
 {
-  "format_version": "1.21.30",
+  "format_version": "1.21.40",
   "minecraft:entity": {
     "description": {
       "identifier": "vc:melon_golem",
       "runtime_identifier": "minecraft:snow_golem",
-      "is_spawnable": false,
+      "is_spawnable": true,
       "is_summonable": true,
       "is_experimental": false
     },
@@ -146,6 +146,53 @@
                     "value": "shears"
                   },
                   {
+                    "test": "has_equipment",
+                    "subject": "self",
+                    "operator": "!=",
+                    "domain": "head",
+                    "value": "vc:carved_mellon_speckled"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  },
+                  {
+                    "test": "has_component",
+                    "operator": "!=",
+                    "value": "minecraft:is_sheared"
+                  }
+                ]
+              },
+              "event": "minecraft:on_sheared",
+              "target": "self"
+            }
+          },
+          {
+            "cooldown": 2.5,
+            "use_item": false,
+            "hurt_item": 1,
+            "spawn_items": {
+              "table": "loot_tables/entities/melon_golem_speckled_shear.json"
+            },
+            "play_sounds": "shear",
+            "interact_text": "action.interact.shear",
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "shears"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "self",
+                    "domain": "head",
+                    "value": "vc:carved_mellon_speckled"
+                  },
+                  {
                     "test": "is_family",
                     "subject": "other",
                     "value": "player"
@@ -220,71 +267,70 @@
     },
     "events": {
       "minecraft:entity_spawned": {
-        "sequence": [
+        "queue_command": {
+          "command": [
+            "replaceitem entity @s slot.armor.head 0 vc:carved_mellon",
+            "event entity @s vc:dothething"
+          ]
+        }
+      },
+      "vc:dothething": {
+        "randomize": [
           {
-            "queue_command": {
-              "command": [
-                "replaceitem entity @s slot.armor.head 0 vc:carved_mellon"
+            "weight": 25,
+            "add": {
+              "component_groups": [
+                "minecraft:variant0"
               ]
-            },
-            "randomize": [
-              {
-                "weight": 25,
-                "add": {
-                  "component_groups": [
-                    "minecraft:variant0"
-                  ]
-                }
-              },
-              {
-                "weight": 25,
-                "add": {
-                  "component_groups": [
-                    "minecraft:variant1"
-                  ]
-                }
-              },
-              {
-                "weight": 25,
-                "add": {
-                  "component_groups": [
-                    "minecraft:variant2"
-                  ]
-                }
-              },
-              {
-                "weight": 25,
-                "add": {
-                  "component_groups": [
-                    "minecraft:variant3"
-                  ]
-                }
-              },
-              {
-                "weight": 25,
-                "add": {
-                  "component_groups": [
-                    "minecraft:variant4"
-                  ]
-                }
-              },
-              {
-                "weight": 25,
-                "add": {
-                  "component_groups": [
-                    "minecraft:variant5"
-                  ]
-                }
-              },
-              {
-                "weight": 25,
-                "add": {
-                  "component_groups": [
-                    "minecraft:variant6"
-                  ]
-                }
-              }
-            ]
+            }
+          },
+          {
+            "weight": 25,
+            "add": {
+              "component_groups": [
+                "minecraft:variant1"
+              ]
+            }
+          },
+          {
+            "weight": 25,
+            "add": {
+              "component_groups": [
+                "minecraft:variant2"
+              ]
+            }
+          },
+          {
+            "weight": 25,
+            "add": {
+              "component_groups": [
+                "minecraft:variant3"
+              ]
+            }
+          },
+          {
+            "weight": 25,
+            "add": {
+              "component_groups": [
+                "minecraft:variant4"
+              ]
+            }
+          },
+          {
+            "weight": 25,
+            "add": {
+              "component_groups": [
+                "minecraft:variant5"
+              ]
+            }
+          },
+          {
+            "weight": 25,
+            "add": {
+              "component_groups": [
+                "minecraft:variant6"
+              ]
+            }
           }
         ]
       },
@@ -299,6 +345,8 @@
         "remove": {},
         "queue_command": {
           "command": [
+            "playsound mob.slime.attack @a ~~~",
+            "particle vc:tomatosplash ~~~",
             "replaceitem entity @s slot.armor.head 0 air"
           ]
         },

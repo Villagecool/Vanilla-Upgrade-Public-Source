@@ -12,7 +12,7 @@
 					"name": "vc:glorium_vines",
 					"states": {
 						"minecraft:vertical_half": "bottom",
-						"vc:blockshape": 0
+						"vc:blockshape": "default"
 					}
 				},
 				100
@@ -24,7 +24,7 @@
 					"name": "vc:glorium_vines",
 					"states": {
 						"minecraft:vertical_half": "bottom",
-						"vc:blockshape": 1
+						"vc:blockshape": "tip"
 					}
 				},
 				100

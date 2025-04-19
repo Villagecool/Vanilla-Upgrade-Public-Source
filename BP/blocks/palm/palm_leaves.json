@@ -15,6 +15,10 @@
 					"render_method": "alpha_test"
 				}
 			},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 20,
+				"destroy_chance_modifier": 20
+			},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 3
 			}

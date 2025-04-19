@@ -180,6 +180,9 @@
 		"cake_chocolate": {
 			"textures": "textures/blocks/cake_chocolate"
 		},
+		"cake_chocolate_lava": {
+			"textures": "textures/blocks/cake_chocolate_lava"
+		},
 		"cake_glow_berry": {
 			"textures": "textures/blocks/cake_glow_berry"
 		},
@@ -526,6 +529,10 @@
 					},
 					{
 						"path": "textures/blocks/glowing_mushroom_block_alt",
+						"weight": 20
+					},
+					{
+						"path": "textures/blocks/glowing_mushroom_block_alt_2",
 						"weight": 20
 					}
 				]

@@ -21,6 +21,21 @@
 							"value": "river"
 						},
 						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "cold"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "stone"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "frozen"
+						},
+						{
 							"any_of": [
 								{
 									"test": "has_biome_tag",

@@ -18,7 +18,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
                 else links = JSON.parse(dynamicProp)
 
                 const otherCampfire = JSON.parse(e.source.getDynamicProperty('is_linking_campfires'))
-                if (distanceVector(otherCampfire, block.location) > 10 && e.source.getGameMode() != 'creative') {
+                if (distanceVector(otherCampfire, block.location) > 20 && e.source.getGameMode() != 'creative') {
                     block.setType('minecraft:air'); e.source.getComponent("equippable").setEquipment("Mainhand", e.itemStack);
                     e.source.runCommand(`title @s actionbar §cToo far from the other campfire!`)
                     return;

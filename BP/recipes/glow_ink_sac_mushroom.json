@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "vc:glow_ink_sac_mushroom"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "vc:glowing_mushroom"
+			},
+			"I": {
+				"item": "ink_sac"
+			}
+		},
+		"pattern": [
+			" # ",
+			"#I#",
+			" # "
+		],
+		"result": {
+			"item": "glow_ink_sac"
+		}
+	}
+}

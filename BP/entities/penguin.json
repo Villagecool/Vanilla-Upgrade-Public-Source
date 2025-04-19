@@ -120,11 +120,6 @@
       "minecraft:penguin_tame": {
         "minecraft:is_tamed": {},
         "minecraft:sittable": {},
-        "minecraft:leashable": {
-          "soft_distance": 4.0,
-          "hard_distance": 6.0,
-          "max_distance": 10.0
-        },
         "minecraft:behavior.follow_owner": {
           "priority": 6,
           "speed_multiplier": 1.0,

@@ -50,6 +50,12 @@
 				"sounds/item/horn/roll"
 			]
 		},
+		"drink.cocojuice": {
+			"category": "player",
+			"sounds": [
+				"sounds/item/drink_cocojuice"
+			]
+		},
 		"mob.horse.zombie.summon": {
 			"category": "neutral",
 			"sounds": [

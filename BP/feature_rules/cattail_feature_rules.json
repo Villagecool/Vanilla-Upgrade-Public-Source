@@ -15,27 +15,31 @@
 								{
 									"test": "has_biome_tag",
 									"operator": "==",
-									"value": "beach"
+									"value": "river"
 								},
 								{
 									"test": "has_biome_tag",
 									"operator": "==",
 									"value": "shore"
-								},
-								{
-									"test": "has_biome_tag",
-									"operator": "==",
-									"value": "river"
 								}
 							]
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "frozen"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "cold"
 						}
 					]
 				}
 			]
 		},
 		"distribution": {
-			"iterations": 10,
-			"scatter_chance": 100.0,
+			"iterations": 2,
 			"x": {
 				"distribution": "uniform",
 				"extent": [
@@ -46,8 +50,8 @@
 			"y": {
 				"distribution": "uniform",
 				"extent": [
-					"query.heightmap(v.worldx, v.worldz) - 2",
-					"query.heightmap(v.worldx, v.worldz)"
+					61,
+					63
 				]
 			},
 			"z": {

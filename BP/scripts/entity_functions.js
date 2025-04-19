@@ -3,6 +3,7 @@ import * as UI from '@minecraft/server-ui';
 import { getRandomInt, getRandomFloat, setPermutation } from './utils';
 
 SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
+    //console.log(data.id)
     if (!data.sourceEntity) return;
     const entity = data.sourceEntity;
     if (data.id === "vc:knockback") {
@@ -350,6 +351,14 @@ SERVER.world.afterEvents.projectileHitBlock.subscribe(e => {
         e.dimension.spawnParticle('vc:goldtomatosplat', particleLoc)
         e.dimension.playSound('random.splat_gold', particleLoc, { pitch: getRandomFloat(0.7, 1.3) })
         e.dimension.spawnItem(new SERVER.ItemStack("minecraft:gold_nugget", getRandomInt(2, 8)), particleLoc)
+    }
+})
+SERVER.world.afterEvents.projectileHitEntity.subscribe(e=>{
+    const blockHit = e.getEntityHit();
+    if (e.projectile.typeId == 'vc:tomato_golden') {
+        e.dimension.spawnParticle('vc:goldtomatosplat', e.location)
+        e.dimension.playSound('random.splat_gold', e.location, { pitch: getRandomFloat(0.7, 1.3) })
+        e.dimension.spawnItem(new SERVER.ItemStack("minecraft:gold_nugget", getRandomInt(2, 8)), e.location)
     }
 })
 SERVER.system.runInterval(() => {

@@ -24,7 +24,8 @@
 			]
 		},
 		"distribution": {
-			"iterations": 10,
+			"iterations": 256,
+			"scatter_chance": 100.0,
 			"x": {
 				"distribution": "uniform",
 				"extent": [
@@ -32,7 +33,7 @@
 					15
 				]
 			},
-			"y": "query.heightmap(v.worldx, v.worldz)",
+			"y": "math.round(math.random(0,2000)) == 0 ? query.heightmap(v.worldx, v.worldz) : - 65",
 			"z": {
 				"distribution": "uniform",
 				"extent": [

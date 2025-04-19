@@ -12,7 +12,8 @@
             "unburied": {},
 			"block_intersection": {
 				"block_allowlist": [
-                    "air"
+                    "air",
+					"end_stone"
 				]
 			}
 		}

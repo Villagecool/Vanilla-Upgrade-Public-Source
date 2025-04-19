@@ -6,6 +6,7 @@
 		},
 		"feature_to_snap": "vc:glorium_stuff_roof",
 		"vertical_search_range": 12,
+		"allow_underwater_placement": true,
 		"surface": "ceiling"
 	}
 }

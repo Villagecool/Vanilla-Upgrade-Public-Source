@@ -13,8 +13,7 @@
         "default": "geometry.bandager"
       },
       "spawn_egg": {
-        "base_color": "#3b1e00",
-        "overlay_color": "#ffec4f"
+        "texture": "spawn_egg_bandager"
       },
       "animations": {
         "general": "animation.evoker.general",

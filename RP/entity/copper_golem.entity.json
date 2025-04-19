@@ -36,8 +36,7 @@
         "controller.render.copper_golem"
       ],
       "spawn_egg": {
-        "base_color": "#E48872",
-        "overlay_color": "#882E2E"
+        "texture": "spawn_egg_copper_golem"
       }
     }
   }

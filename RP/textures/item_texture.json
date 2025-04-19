@@ -104,6 +104,9 @@
 		"chocolate_cake_item": {
 			"textures": "textures/items/cake_chocolate"
 		},
+		"chocolate_lava_cake_item": {
+			"textures": "textures/items/cake_chocolate_lava"
+		},
 		"chocolate_milk_bucket": {
 			"textures": "textures/items/bucket_milk_chocolate"
 		},
@@ -354,6 +357,30 @@
 		},
 		"spaticius": {
 			"textures": "textures/items/spaticius"
+		},
+		"spawn_egg_bandager": {
+			"textures": "textures/items/spawn_eggs/spawn_egg_bandager"
+		},
+		"spawn_egg_copper_golem": {
+			"textures": "textures/items/spawn_eggs/spawn_egg_copper_golem"
+		},
+		"spawn_egg_giant": {
+			"textures": "textures/items/spawn_eggs/spawn_egg_giant"
+		},
+		"spawn_egg_illusioner": {
+			"textures": "textures/items/spawn_eggs/spawn_egg_illusioner"
+		},
+		"spawn_egg_melon_golem": {
+			"textures": "textures/items/spawn_eggs/spawn_egg_melon_golem"
+		},
+		"spawn_egg_penguin": {
+			"textures": "textures/items/spawn_eggs/spawn_egg_penguin"
+		},
+		"spawn_egg_sparse": {
+			"textures": "textures/items/spawn_eggs/spawn_egg_sparse"
+		},
+		"spawn_egg_termite": {
+			"textures": "textures/items/spawn_eggs/spawn_egg_termite"
 		},
 		"splash_potion_of_blindness": {
 			"textures": "textures/items/potion_bottle_splash_blindness"

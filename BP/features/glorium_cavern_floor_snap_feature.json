@@ -5,6 +5,7 @@
 			"identifier": "vc:glorium_cavern_floor_snap_feature"
 		},
 		"feature_to_snap": "vc:glorium_stuff_floor",
+		"allow_underwater_placement": true,
 		"vertical_search_range": 12,
 		"surface": "floor"
 	}

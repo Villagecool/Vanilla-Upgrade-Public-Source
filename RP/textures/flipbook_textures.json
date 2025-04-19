@@ -2,24 +2,7 @@
   {
     "flipbook_texture": "textures/blocks/wool_colored_rainbow",
     "atlas_tile": "rainbow_wool",
-    "frames": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14
-    ],
-    "ticks_per_frame": 20
+    "ticks_per_frame": 25
   },
   {
     "flipbook_texture": "textures/blocks/furnace_front_on",

@@ -60,8 +60,8 @@
 			"minecraft:timer": {
 				"looping": true,
 				"time": [
-					20,
-					40
+					5,
+					20
 				],
 				"time_down_event": {
 					"event": "vc:evict_rider"

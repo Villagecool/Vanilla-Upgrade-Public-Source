@@ -1,5 +1,5 @@
 {
-  "format_version": "1.20.80",
+  "format_version": "1.21.40",
   "minecraft:item": {
     "description": {
       "menu_category": {
@@ -19,6 +19,14 @@
         "tags": [
           "vc:gives_effect"
         ]
+      },
+      "minecraft:block_placer": {
+        "block": "vc:aloe_vera",
+        "use_on": [
+          "vc:pumice",
+          "vc:saturated_pumice"
+        ],
+        "replace_block_item": true
       },
       "minecraft:max_stack_size": 64,
       "tag:minecraft:is_food": {},

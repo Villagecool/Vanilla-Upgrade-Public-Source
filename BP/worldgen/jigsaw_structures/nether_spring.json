@@ -1,0 +1,30 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:jigsaw": {
+    "description": {
+      "identifier": "vc:nether_springs"
+    },
+    "step": "surface_structures",
+    "terrain_adaptation": "beard_box",
+    "start_pool": "vc:nether_springs",
+    "max_depth": 5,
+    "start_height": -2,
+    "biome_filters": [
+      {
+        "all_of": [
+          {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "nether"
+          },
+          {
+            "test": "is_altitude",
+            "operator": "<=",
+            "value": 32
+          }
+        ]
+      }
+    ],
+    "heightmap_projection": "ocean_floor"
+  }
+}

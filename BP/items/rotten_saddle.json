@@ -24,14 +24,5 @@
 			"minecraft:glint": true,
 			"minecraft:interact_button": true
 		}
-		//"events": {
-		//	"vc:summon": {
-		//		"swing": {},
-		//		"run_command": {
-		//			"command": "/ride @s summon_ride zombie_horse reassign_rides vc:summon",
-		//			"target": "player"
-		//		}
-		//	}
-		//}
 	}
 }

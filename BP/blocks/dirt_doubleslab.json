@@ -12,7 +12,7 @@
 			"tag:minecraft:is_shovel_item_destructible": {},
 			"tag:dirt": {},
 			"minecraft:destructible_by_mining": {
-				"seconds_to_destroy": 3
+				"seconds_to_destroy": 0.75
 			},
 			"minecraft:loot": "loot_tables/blocks/dirt_doubleslab.json",
 			"minecraft:material_instances": {

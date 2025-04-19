@@ -1,11 +1,36 @@
 {
 	"format_version": "1.20.30",
-	"minecraft:snap_to_surface_feature": {
+	"minecraft:scatter_feature": {
 		"description": {
 			"identifier": "vc:cattail_floor_snap_feature"
 		},
-		"feature_to_snap": "vc:cattail_feature",
-		"vertical_search_range": 5,
-		"surface": "floor"
+		"project_input_to_floor": true,
+		"places_feature": "vc:cattail_real_snap_to_surface",
+		"iterations": 20,
+		"scatter_chance": {
+			"denominator": 1,
+			"numerator": 3
+		},
+		"x": {
+			"distribution": "gaussian",
+			"extent": [
+				-5,
+				5
+			]
+		},
+		"z": {
+			"distribution": "gaussian",
+			"extent": [
+				-5,
+				5
+			]
+		},
+		"y": {
+			"distribution": "gaussian",
+			"extent": [
+				-3,
+				4
+			]
+		}
 	}
 }

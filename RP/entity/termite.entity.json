@@ -36,8 +36,7 @@
         "controller.render.zombie"
       ],
       "spawn_egg": {
-        "base_color": "#6e4d28",
-        "overlay_color": "#d1ab7c"
+        "texture": "spawn_egg_termite"
       }
     }
   }

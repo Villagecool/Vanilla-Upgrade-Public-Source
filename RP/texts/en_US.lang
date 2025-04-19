@@ -1,15 +1,15 @@
 item.spawn_egg.entity.vc:frog.name=Spawn Frog
 item.spawn_egg.entity.vc:crab.name=Spawn Crab
-item.spawn_egg.entity.vc:termite.name=Spawn Termite
+item.spawn_egg.entity.vc:termite.name=Termite Spawn Egg
 item.spawn_egg.entity.vc:grizly_bear.name=Spawn Grizly Bear
-item.spawn_egg.entity.vc:illusioner.name=Spawn Illusioner
+item.spawn_egg.entity.vc:illusioner.name=Illusioner Spawn Egg
 item.spawn_egg.entity.vc:nautilus.name=Spawn Nautilus
-item.spawn_egg.entity.vc:penguin.name=Spawn Penguin
+item.spawn_egg.entity.vc:penguin.name=Penguin Spawn Egg
 item.spawn_egg.entity.vc:duck.name=Spawn Duck
-item.spawn_egg.entity.vc:bandager.name=Spawn Bandager
+item.spawn_egg.entity.vc:bandager.name=Bandager Spawn Egg
 item.spawn_egg.entity.vc:squirle.name=Spawn Squirrel
 item.spawn_egg.entity.vc:ministrosity.name=Spawn Ministrosity
-item.spawn_egg.entity.vc:giant.name=Spawn Giant
+item.spawn_egg.entity.vc:giant.name=Giant Zombie Spawn Egg
 item.axolotlColorGreen.name=Green
 action.hint.exit.vc:sled=Tap jump to exit the sled
 Playfab environment mismatch - Discovery=prod/20CA2,Playfab=Production/= Your Offline, Connect to internent to use the Marketplace
@@ -120,7 +120,7 @@ tile.vc:sawmill.name=Sawmill
 tile.vc:rainbow_wool.name=jeb_ Wool
 tile.vc:rainbow_carpet.name=jeb_ Carpet
 tile.vc:cotton_carpet.name=Cotton Carpet
-tile.vc:cotton_block.name=Cotton Block
+tile.vc:cotton_block.name=Cotton §lCube§r
 tile.vc:waterlily_lotus.name=Lotus
 tile.vc:blue_nether_bricks.name=Blue Nether Bricks
 tile.vc:blue_nether_brick_slab.name=Blue Nether Brick Slab
@@ -194,7 +194,7 @@ item.vc:cursed_campfire=Cursed Campfire
 item.vc:book_maged=Maged Book
 item.vc:bat_wing_cooked=Cooked Bat Wing
 item.vc:blue_berries=Blue Berries
-item.vc:bone_meal_meal=Bone Meal
+item.vc:bone_meal_meal=Bone §oMeal
 item.vc:coconut_slice=Coconut Slice
 item.vc:corn=Corn
 item.vc:corn_kernels=Corn Kernels
@@ -202,7 +202,7 @@ item.vc:illusion_pearl=Mirror Pearl
 item.vc:illusion_pearl_alt=Illusion Pearl
 item.vc:music_disc_mist=§bMusic Disc\n§7For_builds - Mist
 item.vc:popcorn=Popcorn
-item.vc:cotton_ball=Wad of Cotton
+item.vc:cotton_ball=Cotton Ball
 item.vc:cotton_seeds=Cotton Seed
 
 item.vc.potion_of_blindness.name=Potion of Blindness
@@ -230,6 +230,7 @@ item.vc:blt=BLT
 item.vc:burger=Burger
 item.vc:cheese_cake_item=Cheese Cake
 item.vc:chocolate_cake_item=Chocolate Cake
+tile.vc:chocolate_lava_cake.name=Chocolate Lava Cake
 item.vc:chocolate_milk_bucket=Chocolate Milk
 item.vc:hot_chocolate_bucket=Hot Chocolate
 item.vc:cheese_wheel=Wheel of Cheese
@@ -319,7 +320,7 @@ tile.vc:falling_elax_block.name=Falling Block
 item.vc:xp_scroll=Xp Scroll
 item.vc:unwritten_scroll=Unwritten Xp Scroll
 entity.vc:copper_golem.name=Copper Golem
-item.spawn_egg.entity.vc:copper_golem.name=Spawn Copper Golem
+item.spawn_egg.entity.vc:copper_golem.name=Copper Golem Spawn Egg
 tile.vc:palm_trailings.name=Palm Trailings
 tile.vc:silver_birch_trailings.name=Silver Birch Trailings
 tile.vc:palmh_trailings.name=Palm Trailings
@@ -340,12 +341,12 @@ item.vc:zalu_plant_item=Zalu Plant
 item.vc:zalu_roots_item=Zalu Roots
 
 
-item.spawn_egg.entity.vc:sparse.name=Spawn Sparse
+item.spawn_egg.entity.vc:sparse.name=Sparse Spawn Egg
 entity.vc:sparse.name=Sparse
 item.vc:sparse_egg=Sparse Egg
 tile.no:sparse_egg.name=Sparse Egg
 item.vc:bundle=Bundle
-item.spawn_egg.entity.vc:particle_emitter.name=Spawn Unknown
+item.spawn_egg.entity.vc:particle_emitter.name=Unknown Spawn Egg
 entity.vc:particle_emitter.name=Unknown
 tile.vc:rope.name=Rope
 item.vc:rope_item=Rope
@@ -391,3 +392,9 @@ vc:itemGroup.name.glorium=Glorium
 vc:itemGroup.name.compressed_copper=Compressed Copper
 pause.needmoreinfo.text=Need More Info?
 action.hint.exit.vc:climb_rope=Interact with each rope section to climb.
+tile.vc:rooted_end_stone.name=Rooted End Stone
+item.spawn_egg.entity.vc:melon_golem.name=Melon Golem Spawn Egg
+
+##These tips had a weird ... so i fixed em
+tips.creative.18=Mobs won't notice you in creative mode, but they'll still notice each other...	###Mobs(animals & monsters) won’t notice you in creative mode, but they’ll still notice each other... meaning that they can still kill each other.{MaxLength="200"}
+tips.creative.19=A warden a day keeps the... well, everything away.	###The Warden is a scary monster that live in underground cities.{MaxLength="200"}

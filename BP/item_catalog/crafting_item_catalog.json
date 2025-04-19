@@ -50,6 +50,7 @@
                   "items": [
                      "vc:bandager_spawn_egg",
                      "vc:copper_golem_spawn_egg",
+                     "vc:melon_golem_spawn_egg",
                      "vc:penguin_spawn_egg",
                      "vc:sparse_spawn_egg",
                      "vc:illusioner_spawn_egg",
