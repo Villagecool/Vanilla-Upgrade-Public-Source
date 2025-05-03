@@ -1,17 +1,17 @@
 
 
-# By Sunrise Studio Addon Translator
-item.spawn_egg.entity.vc:frog.name=产卵蛙
-item.spawn_egg.entity.vc:crab.name=产卵蟹
+# By Sunrise Studio Addon Translator && TanakaLun
+item.spawn_egg.entity.vc:frog.name=生成蛙
+item.spawn_egg.entity.vc:crab.name=生成蟹
 item.spawn_egg.entity.vc:termite.name=白蚁卵
-item.spawn_egg.entity.vc:grizly_bear.name=催生灰熊
-item.spawn_egg.entity.vc:illusioner.name=幻影再生蛋
+item.spawn_egg.entity.vc:grizly_bear.name=生成灰熊
+item.spawn_egg.entity.vc:illusioner.name=生成幻影
 item.spawn_egg.entity.vc:nautilus.name=生成鹦鹉螺
-item.spawn_egg.entity.vc:penguin.name=企鹅产卵蛋
-item.spawn_egg.entity.vc:duck.name=产卵鸭
-item.spawn_egg.entity.vc:bandager.name=匪徒产卵蛋
-item.spawn_egg.entity.vc:squirle.name=产卵松鼠
-item.spawn_egg.entity.vc:ministrosity.name=催生迷你世界
+item.spawn_egg.entity.vc:penguin.name=生成企鹅
+item.spawn_egg.entity.vc:duck.name=生成鸭
+item.spawn_egg.entity.vc:bandager.name=生成匪徒
+item.spawn_egg.entity.vc:squirle.name=生成松鼠
+item.spawn_egg.entity.vc:ministrosity.name=生成迷你世界
 item.spawn_egg.entity.vc:giant.name=巨型僵尸卵
 item.axolotlColorGreen.name=绿色
 action.hint.exit.vc:sled=轻点跳跃退出雪橇
@@ -50,7 +50,7 @@ item.vc:rail_conjunction=接轨
 item.vc:tumbleweed=风滚草
 item.vc:warped_wart=疣
 item.vc:soap=肥皂条
-item.spawn_egg.entity.vc:otter.name=产卵水獭
+item.spawn_egg.entity.vc:otter.name=生成水獭
 entity.vc:otter.name=水獭
 
 item.vc:compressed_copper=压缩铜
@@ -323,7 +323,7 @@ tile.vc:falling_elax_block.name=坠落的木块
 item.vc:xp_scroll=Xp 滚动
 item.vc:unwritten_scroll=不成文的 Xp 卷轴
 entity.vc:copper_golem.name=铜像
-item.spawn_egg.entity.vc:copper_golem.name=铜甲怪产卵蛋
+item.spawn_egg.entity.vc:copper_golem.name=生成铜甲怪
 tile.vc:palm_trailings.name=棕榈步道
 tile.vc:silver_birch_trailings.name=银桦小径
 tile.vc:palmh_trailings.name=棕榈步道
@@ -344,12 +344,12 @@ item.vc:zalu_plant_item=扎鲁工厂
 item.vc:zalu_roots_item=扎鲁根
 
 
-item.spawn_egg.entity.vc:sparse.name=稀疏产卵
+item.spawn_egg.entity.vc:sparse.name=生成稀疏
 entity.vc:sparse.name=稀疏
 item.vc:sparse_egg=稀蛋
 tile.no:sparse_egg.name=稀蛋
 item.vc:bundle=捆绑
-item.spawn_egg.entity.vc:particle_emitter.name=未知产卵蛋
+item.spawn_egg.entity.vc:particle_emitter.name=未知生物蛋
 entity.vc:particle_emitter.name=未知
 tile.vc:rope.name=绳索
 item.vc:rope_item=绳索
@@ -396,4 +396,4 @@ vc:itemGroup.name.compressed_copper=压缩铜
 pause.needmoreinfo.text=需要更多信息？
 action.hint.exit.vc:climb_rope=与每段绳索互动，进行攀爬。
 tile.vc:rooted_end_stone.name=根端石
-item.spawn_egg.entity.vc:melon_golem.name=瓜果魔产卵蛋
+item.spawn_egg.entity.vc:melon_golem.name=生成瓜果魔
