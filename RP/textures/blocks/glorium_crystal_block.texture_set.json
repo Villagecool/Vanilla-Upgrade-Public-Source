@@ -2,7 +2,7 @@
     "format_version":"1.16.100",
     "minecraft:texture_set":{
         "color":"glorium_crystal_block",
-        "metalness_emissive_roughness":"rtx_support/glorium_crystal_block_mer",
+        //"metalness_emissive_roughness":"rtx_support/glorium_crystal_block_mer",
         "heightmap":"rtx_support/glorium_crystal_block_heightmap"
     }
 }

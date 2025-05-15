@@ -6,17 +6,17 @@
 				"identifier": "geometry.pig_crown",
 				"texture_width": 64,
 				"texture_height": 32,
-				"visible_bounds_width": 2,
-				"visible_bounds_height": 2.5,
-				"visible_bounds_offset": [0, 0.75, 0]
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
 			},
 			"bones": [
 				{
 					"name": "head",
-					"pivot": [0, 12, -6],
+					"pivot": [0, 12, -7],
 					"cubes": [
 						{
-							"origin": [-4, 14, -14],
+							"origin": [-4, 14, -15],
 							"size": [8, 3, 8],
 							"inflate": 0.5,
 							"uv": {
