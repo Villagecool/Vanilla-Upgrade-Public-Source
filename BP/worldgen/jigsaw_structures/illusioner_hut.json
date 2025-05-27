@@ -2,11 +2,11 @@
   "format_version": "1.21.20",
   "minecraft:jigsaw": {
     "description": {
-      "identifier": "vc:saloon"
+      "identifier": "vc:illusioner_hut"
     },
     "step": "surface_structures",
     "terrain_adaptation": "beard_thin",
-    "start_pool": "vc:saloon",
+    "start_pool": "vc:illusioner_hut",
     "max_depth": 7,
     "start_height": {
         "type": "constant",
@@ -14,13 +14,11 @@
             "absolute": 0
         }
     },
-    "dimensional_padding": 1, 
-    "max_distance_from_center": 128,
     "biome_filters": [
       {
         "test": "has_biome_tag",
         "operator": "==",
-        "value": "mesa"
+        "value": "frozen"
       }
     ],
     "heightmap_projection": "world_surface"

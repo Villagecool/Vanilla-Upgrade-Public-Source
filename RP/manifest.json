@@ -16,9 +16,9 @@
 		],
 		"uuid": "d56c3ba4-1b46-4fdf-a1e3-5dbbdee0c403",
 		"version": [
-			2,
+			3,
 			0,
-			0
+			3
 		]
 	},
 	"modules": [
@@ -26,9 +26,9 @@
 			"type": "resources",
 			"uuid": "99a21013-e7ea-4534-8578-3ad273347427",
 			"version": [
-				1,
+				3,
 				0,
-				0
+				3
 			]
 		}
 	],

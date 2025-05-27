@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "vc:illusioner_hut"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "illusioner_hut",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      }
+    ]
+  }
+}

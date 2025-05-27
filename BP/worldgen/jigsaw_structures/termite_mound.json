@@ -8,7 +8,12 @@
     "terrain_adaptation": "beard_thin",
     "start_pool": "vc:termite_mounds",
     "max_depth": 7,
-    "start_height": 0,
+    "start_height": {
+      "type": "constant",
+      "value": {
+        "absolute": 0
+      }
+    },
     "biome_filters": [
       {
         "any_of": [

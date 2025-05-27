@@ -16,9 +16,9 @@
 		],
 		"uuid": "017f476f-0615-44d5-ba6f-d2c927c7b0ba",
 		"version": [
-			1,
+			3,
 			0,
-			0
+			3
 		]
 	},
 	"modules": [
@@ -26,9 +26,9 @@
 			"type": "data",
 			"uuid": "2a0587e3-6df4-43ca-a40e-e29de6539a13",
 			"version": [
-				1,
+				3,
 				0,
-				0
+				3
 			]
 		},
 		{

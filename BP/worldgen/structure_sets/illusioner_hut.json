@@ -2,18 +2,18 @@
   "format_version": "1.21.20",
   "minecraft:structure_set": {
     "description": {
-      "identifier": "vc:termite_mound"
+      "identifier": "vc:illusioner_hut"
     },
     "placement": {
       "type": "minecraft:random_spread",
       "salt": 39281139,
-      "separation": 2,
-      "spacing": 4,
+      "separation": 12,
+      "spacing": 40,
       "spread_type": "linear"
     },
     "structures": [
       {
-        "structure": "vc:termite_mound",
+        "structure": "vc:illusioner_hut",
         "weight": 1
       }
     ]

@@ -20,10 +20,10 @@
     },
     "unlock": [
       {
-        "item": "minecraft:coconut"
+        "item": "vc:coconut"
       },
       {
-        "item": "minecraft:coconut_husk"
+        "item": "vc:coconut_husk"
       }
     ],
     "result": [
