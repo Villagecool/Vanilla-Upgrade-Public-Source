@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.40",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:palm_leaves",
@@ -12,7 +12,7 @@
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "palm_leaves",
-					"render_method": "alpha_test"
+					"render_method": "alpha_test_to_opaque"
 				}
 			},
 			"minecraft:flammable": {

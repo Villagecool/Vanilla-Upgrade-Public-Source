@@ -1,7 +1,7 @@
 import * as SERVER from '@minecraft/server';
 //import { system } from '@minecraft/server';
 import * as UI from '@minecraft/server-ui';
-import { setPermutation, getRandomInt, offsetLocation, setVectorFloats, decripateStack, vec3toString, lerp, getRandomBool, isBlockSolid } from './utils.js'
+import { setPermutation, getRandomInt, offsetLocation, setVectorFloats, decripateStack, vec3toString, lerp, getRandomBool, isBlockSolid, getRandomFloat } from './utils.js'
 import { damageWithCustomMessage } from './entity_functions.js'
 console.warn("Are those §6§lCreator Settings§r i smell? This add-on might come up with a few errors but most likley they shouldn't be breaking the mod so dont worry about them :3 - vlliage")
 const harmList = []
@@ -73,9 +73,9 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
             }
             var sound = (
                 e.block.typeId == 'vc:compressed_copper_door' ? `${(!open == true ? 'open' : 'close')}_door.copper` :
-                    e.block.typeId == 'vc:glass_door' ? `random.${(!open == true ? 'open' : 'close')}_door` :
+                    e.block.typeId == 'vc:glass_door' ? `random.door_${(!open == true ? 'open' : 'close')}` :
                         `${(!open == true ? 'open' : 'close')}.wooden_door`)
-            e.block.dimension.runCommand(`execute positioned ${vec3toString(e.block.location)} run playsound ${sound} @a[r=5] ~~~ 1`)
+            e.dimension.playSound(sound, e.block.center(), {pitch: getRandomFloat(0.9,1)})
         }
     });
 

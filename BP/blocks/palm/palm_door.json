@@ -71,8 +71,8 @@
 				"*": {
 					"texture": "palm_door",
 					"render_method": "blend",
-					"face_dimming": false,
-					"ambient_occlusion": true
+					"face_dimming": true,
+					"ambient_occlusion": false
 				},
 				"up": {
 					"texture": "air",
