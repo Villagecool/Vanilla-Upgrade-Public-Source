@@ -4,7 +4,7 @@
     "description": {
       "identifier": "vc:nether_springs"
     },
-    "step": "surface_structures",
+    "step": "underground_structures",
     "terrain_adaptation": "beard_box",
     "start_pool": "vc:nether_springs",
     "max_depth": 5,
