@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "crystalized_experience_block",
+		"metalness_emissive_roughness": "rtx_support/crystalized_experience_block_mer"
+	}
+}

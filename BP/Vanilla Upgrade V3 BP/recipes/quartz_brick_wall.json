@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:quartz_brick_wall"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "quartz_bricks"
+      }
+    },
+    "unlock": [
+      {
+        "item": "quartz_bricks"
+      }
+    ],
+    "result": {
+      "item": "vc:quartz_brick_wall",
+      "count": 6
+    }
+  }
+}

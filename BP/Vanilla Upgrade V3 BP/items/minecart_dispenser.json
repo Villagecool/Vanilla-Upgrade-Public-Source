@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "vc:dispenser_minecart",
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.minecart"
+			}
+		},
+		"components": {
+			"minecraft:icon": "vc_minecart_dispenser",
+			"minecraft:entity_placer": {
+				"dispense_on": [
+					"rail",
+					"golden_rail",
+					"detector_rail",
+					"activator_rail",
+					"no:rail_conjunction"
+				],
+				"entity": "vc:dispenser_minecart",
+				"use_on": [
+					"rail",
+					"golden_rail",
+					"detector_rail",
+					"activator_rail",
+					"no:rail_conjunction"
+				]
+			},
+			"minecraft:max_stack_size": 1
+		}
+	}
+}

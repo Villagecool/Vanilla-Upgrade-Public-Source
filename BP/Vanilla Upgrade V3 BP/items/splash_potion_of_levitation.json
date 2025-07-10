@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.splashPotion",
+        "category": "equipment"
+      },
+      "identifier": "vc:splash_potion_of_levitation"
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:display_name": {
+        "value": "%item.vc.splash_potion_of_levitation.name\n§c%item.effect_levitation.desc"
+      },
+      "minecraft:throwable": {
+        "do_swing_animation": true
+      },
+      "minecraft:projectile": {
+        "minimum_critical_power": 1.25,
+        "projectile_entity": "vc:custom_splash_potion<levitation>"
+      },
+      "minecraft:icon": "vc_splash_potion_of_levitation"
+    }
+  }
+}

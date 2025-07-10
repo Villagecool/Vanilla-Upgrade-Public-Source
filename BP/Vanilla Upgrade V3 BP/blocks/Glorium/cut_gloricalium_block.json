@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:cut_gloricalium_block",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.metals"
+			}
+		},
+		"components": {
+			"minecraft:light_emission": 1,
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 14
+			},
+			"minecraft:map_color": "#82E4DC",
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"texture": "vc_cut_gloricalium_block"
+				}
+			},
+			"minecraft:redstone_conductivity": {
+				"redstone_conductor": true
+			},
+			"minecraft:custom_components": [
+				"vc:gloricalium_block"
+			]
+		}
+	}
+}

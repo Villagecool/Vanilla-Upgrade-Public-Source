@@ -1,0 +1,98 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:glorium_blossom",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.nature"
+			}
+		},
+		"components": {
+			"tag:plant": {},
+			"tag:minecraft:is_shears_item_destructible": {},
+			"tag:minecraft:is_hoe_item_destructible": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:light_emission": 5,
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0
+			},
+			"minecraft:loot": "loot_tables/blocks/glorium_blossom.json",
+			"minecraft:geometry": "geometry.blossom",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"down"
+						]
+					}
+				]
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water"
+					}
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-5,
+					12,
+					-5
+				],
+				"size": [
+					10,
+					4,
+					10
+				]
+			},
+			//"minecraft:queued_ticking": {
+			//	"looping": true,
+			//	"interval_range": [
+			//		10,
+			//		10
+			//	],
+			//	"on_tick": {
+			//		"event": "vc:particle"
+			//	}
+			//},
+			"minecraft:collision_box": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_glorium_blossom",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			}
+		} //,
+		///"events": {
+		///	"vc:particle": {
+		///		"randomize": [
+		///			{
+		///				"weight": 200,
+		///				"run_command": {
+		///					"command": [
+		///						"particle vc:glorium_blossom_shower_particle ~-0.5~~-0.5"
+		///					]
+		///				}
+		///			},
+		///			{
+		///				"weight": 1,
+		///				"run_command": {
+		///					"command": [
+		///						"particle vc:glorium_blossom_ambient_particle ~~~",
+		///						"particle vc:glorium_blossom_shower_particle ~-0.5~~-0.5"
+		///					]
+		///				}
+		///			}
+		///		]
+		///	}
+		///}
+	}
+}

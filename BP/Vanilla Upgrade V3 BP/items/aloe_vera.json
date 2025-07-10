@@ -1,0 +1,40 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.crop",
+        "category": "nature"
+      },
+      "identifier": "vc:aloe_vera"
+    },
+    "components": {
+      "minecraft:icon": "vc_aloe_vera",
+      "minecraft:use_animation": "eat",
+      "minecraft:use_modifiers": {
+        "use_duration": 0.3,
+        "movement_modifier": 0.4
+      },
+      "minecraft:tags": {
+        "tags": [
+          "vc:gives_effect"
+        ]
+      },
+      "minecraft:block_placer": {
+        "block": "vc:aloe_vera",
+        "use_on": [
+          "vc:pumice",
+          "vc:saturated_pumice"
+        ],
+        "replace_block_item": true
+      },
+      "minecraft:max_stack_size": 64,
+      "tag:minecraft:is_food": {},
+      "minecraft:food": {
+        "nutrition": 1,
+        "saturation_modifier": 3,
+        "can_always_eat": true
+      }
+    }
+  }
+}

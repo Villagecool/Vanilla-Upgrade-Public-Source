@@ -16,7 +16,7 @@
 			}
 		},
 		"components": {
-			"tag:crop": {},
+			"tag:minecraft:crop": {},
 			"tag:plant": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.1

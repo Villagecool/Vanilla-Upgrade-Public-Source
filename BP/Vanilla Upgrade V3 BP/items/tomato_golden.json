@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vc:tomato_golden",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.crop"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 64,
+      "minecraft:throwable": {
+        "do_swing_animation": true
+      },
+      "minecraft:projectile": {
+        "projectile_entity": "vc:tomato_golden"
+      },
+      "minecraft:icon": "vc_tomato_golden"
+    }
+  }
+}

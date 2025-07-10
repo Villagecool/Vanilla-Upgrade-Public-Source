@@ -1,0 +1,104 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:rope",
+			"menu_category": {
+				"category": "commands",
+				"group": "itemGroup.name.commands"
+			}
+		},
+		"components": {
+			"tag:non_solid": {},
+			"tag:minecraft:is_shears_item_destructible": {},
+			"minecraft:geometry": "geometry.rope",
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin": [
+					-3,
+					0,
+					-3
+				],
+				"size": [
+					6,
+					16,
+					6
+				]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.2
+			},
+			"minecraft:custom_components": [
+				"vc:rope"
+			],
+			"minecraft:light_dampening": 0,
+			"minecraft:loot": "loot_tables/blocks/rope.json",
+			"minecraft:flammable": {
+				"catch_chance_modifier": 10,
+				"destroy_chance_modifier": 10
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"down"
+						]
+					}
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_lead_knot",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+		//"events": {
+		//	"vc:rope_interact": {
+		//		"sequence": [
+		//			{
+		//				"condition": "(1.0)",
+		//				"run_command": {
+		//					"command": "/tag @s add interacter",
+		//					"target": "player"
+		//				}
+		//			},
+		//			{
+		//				"condition": "query.get_equipped_item_name('main_hand') == 'rope' || query.get_equipped_item_name('main_hand') == 'rope_item'",
+		//				"set_block_state": {
+		//					"vc:placedown": true
+		//				}
+		//			},
+		//			{
+		//				"condition": "query.get_equipped_item_name('main_hand') != 'rope' && query.get_equipped_item_name('main_hand') != 'rope_item'",
+		//				"run_command": {
+		//					"command": [
+		//						"/effect @a[tag=interacter,dx=0.3,dz=0.3] levitation 1 2 true",
+		//						"/effect @a[tag=interacter,dx=0.3,dz=0.3] slow_falling 2 255 true",
+		//						"/effect @a[tag=interacter,dx=-0.3,dz=-0.3] levitation 1 2 true",
+		//						"/effect @a[tag=interacter,dx=-0.3,dz=-0.3] slow_falling 2 255 true",
+		//						"/execute if entity @a[tag=interacter,dx=-0.3,dz=-0.3] run playsound dig.cloth @a ~~~",
+		//						"/tag @a[tag=interacter] remove interacter"
+		//					]
+		//				}
+		//			}
+		//		]
+		//	},
+		//	"vc:place": {
+		//		"run_command": {
+		//			"command": [
+		//				"/execute if block ~~-1~ vc:rope run setblock ~~-1~ vc:rope[\"vc:placedown\"=true]",
+		//				"/execute if block ~~-1~ air run clear @p[tag=interacter,hasitem={item=vc:rope_item,quantity=0},m=!c] vc:rope -1 1",
+		//				"/execute if block ~~-1~ air run clear @p[tag=interacter,m=!c] vc:rope_item -1 1",
+		//				"/execute if block ~~-1~ air run tag @p[tag=interacter] remove interacter",
+		//				"/execute if block ~~-1~ air run playsound dig.cloth @a ~~~",
+		//				"/execute if block ~~-1~ air run setblock ~~-1~ vc:rope"
+		//			]
+		//		},
+		//		"set_block_state": {
+		//			"vc:placedown": false
+		//		}
+		//	}
+		//}
+	}
+}

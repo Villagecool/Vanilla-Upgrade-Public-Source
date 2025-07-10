@@ -1,0 +1,37 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "vc:sea_pineapple_scatter_feature"
+		},
+		"project_input_to_floor": true,
+		"places_feature": "vc:sea_pineapple_real_snap_to_surface",
+			"iterations": 20,
+			"scatter_chance": {
+				"denominator": 1,
+				"numerator": 3
+			},
+			"x": {
+				"distribution": "gaussian",
+				"extent": [
+					-5,
+					5
+				]
+			},
+			"z": {
+				"distribution": "gaussian",
+				"extent": [
+					-5,
+					5
+				]
+			},
+			"y": {
+				"distribution": "gaussian",
+				"extent": [
+					-3,
+					4
+				]
+			}
+		
+	}
+}

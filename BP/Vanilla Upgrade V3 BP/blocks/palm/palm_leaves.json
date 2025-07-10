@@ -1,0 +1,27 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:palm_leaves",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.leaves"
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_palm_leaves",
+					"render_method": "alpha_test_to_opaque"
+				}
+			},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 20,
+				"destroy_chance_modifier": 20
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3
+			}
+		}
+	}
+}

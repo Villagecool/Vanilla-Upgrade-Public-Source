@@ -1,0 +1,20 @@
+	{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.seed",
+        "category": "nature"
+      },
+      "identifier": "vc:corn_kernels"
+    },
+    "components": {
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": "vc_corn_kernels",
+      "minecraft:block_placer": {
+        "block": "vc:corn_kernels",
+        "replace_block_item": true
+      }
+    }
+  }
+}

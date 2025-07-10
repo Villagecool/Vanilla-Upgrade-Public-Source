@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "knowlage_harvester_side",
+		"metalness_emissive_roughness": "rtx_support/knowlage_harvester_side_mer"
+	}
+}

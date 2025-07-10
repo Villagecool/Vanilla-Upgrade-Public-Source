@@ -1,0 +1,39 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vc:knowlage_harvester"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " B ",
+      "A#A",
+      "#C#"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:obsidian"
+      },
+      "B": {
+        "item": "minecraft:book"
+      },
+      "A": {
+        "item": "minecraft:amethyst_shard"
+      },
+      "C": {
+        "item": "vc:crystalized_experience_block"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:gloricalium_sheet"
+      }
+    ],
+    "result": {
+      "item": "vc:knowlage_harvester",
+      "count": 1
+    }
+  }
+}

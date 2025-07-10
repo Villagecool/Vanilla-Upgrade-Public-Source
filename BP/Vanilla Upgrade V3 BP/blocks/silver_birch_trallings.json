@@ -1,0 +1,62 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:silver_birch_trailings",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.plant"
+			}
+		},
+		"components": {
+			"tag:leaves": {},
+			"tag:plant": {},
+			"tag:minecraft:is_shears_item_destructible": {},
+			"tag:minecraft:is_hoe_item_destructible": {},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 5
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"minecraft:leaves",
+							"minecraft:leaves2",
+							"minecraft:azalea_leaves",
+							"minecraft:azalea_leaves_flowered",
+							"vc:silver_birch_leaves"
+						],
+						"allowed_faces": [
+							"down"
+						]
+					}
+				]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1.1
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-6,
+					4,
+					-6
+				],
+				"size": [
+					12,
+					12,
+					12
+				]
+			},
+			"minecraft:collision_box": false,
+			"minecraft:light_dampening": 0,
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_silver_birch_trailings",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

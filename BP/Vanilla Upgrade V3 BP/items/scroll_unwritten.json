@@ -1,0 +1,14 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"category": "commands",
+			"identifier": "vc:unwritten_scroll"
+		},
+		"components": {
+			"minecraft:hover_text_color": "aqua",
+			"minecraft:max_stack_size": 64,
+			"minecraft:icon": "vc_scroll_unwritten"
+		}
+	}
+}

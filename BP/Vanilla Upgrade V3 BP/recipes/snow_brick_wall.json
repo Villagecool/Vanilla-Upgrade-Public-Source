@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:snow_brick_wall"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:snowbrick"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:snowbrick"
+      }
+    ],
+    "result": {
+      "item": "vc:snow_brick_wall",
+      "count": 6
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.nature"
+      },
+      "identifier": "vc:glorium_crystals_tiny"
+    },
+    "components": {
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": "vc_glorium_crystals_tiny",
+      "minecraft:display_name": {
+        "value": "tile.vc:glorium_crystals_tiny.name"
+      },
+      "minecraft:block_placer": {
+        "block": "vc:glorium_crystals_tiny",
+        "replace_block_item": true
+      }
+    }
+  }
+}

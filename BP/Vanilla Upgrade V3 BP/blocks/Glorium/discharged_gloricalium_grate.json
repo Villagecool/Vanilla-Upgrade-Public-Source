@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:discharged_gloricalium_grate",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.metals"
+			}
+		},
+		"components": {
+			"minecraft:map_color": "#357C8A",
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 14
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water"
+					}
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "vc_discharged_gloricalium_grate"
+				}
+			}
+		}
+	}
+}

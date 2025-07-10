@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:blue_nether_brick_wall"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:blue_nether_bricks"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:blue_nether_bricks"
+      }
+    ],
+    "result": {
+      "item": "vc:blue_nether_brick_wall",
+      "count": 6
+    }
+  }
+}

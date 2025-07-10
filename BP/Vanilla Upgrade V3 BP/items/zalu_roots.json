@@ -1,0 +1,23 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:item": {
+		"description": {
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.flower"
+			},
+			"identifier": "vc:zalu_roots"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "item.vc:zalu_roots_item"
+			},
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "vc:zalu_roots",
+				"replace_block_item": true
+			},
+			"minecraft:icon": "vc_zalu_roots"
+		}
+	}
+}

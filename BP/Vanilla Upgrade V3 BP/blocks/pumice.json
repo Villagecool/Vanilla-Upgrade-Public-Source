@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.nature"
+			},
+			"identifier": "vc:pumice"
+		},
+		"components": {
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"tag:gold_pick_diggable": {},
+			"tag:minecraft:iron_tier_destructible": {},
+			"tag:stone": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_pumice"
+				}
+			},
+			"minecraft:custom_components": [
+				"vc:pumice"
+			],
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 12
+			}
+		}
+	}
+}

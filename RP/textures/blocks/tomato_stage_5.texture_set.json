@@ -1,7 +1,0 @@
-{
-    "format_version":"1.16.100",
-    "minecraft:texture_set":{
-        "color":"tomato_stage_5",
-        "heightmap":"rtx_support/tomato_stage_5_heightmap"
-    }
-}

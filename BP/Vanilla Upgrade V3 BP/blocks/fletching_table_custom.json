@@ -1,0 +1,56 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:fletching_table_custom",
+			"menu_category": {
+				"category": "commands",
+				"group": "itemGroup.name.commands"
+			}
+		},
+		"components": {
+			"tag:wood": {},
+      "tag:minecraft:is_axe_item_destructible": {},
+			"tag:fletching_table": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2.5
+			},
+			"minecraft:crafting_table": {
+				"table_name": "Fletching Table",
+				//"grid_size": 3,
+				"crafting_tags": [
+					"fletching_table"
+				]
+			},
+			"minecraft:light_dampening": 15,
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 2.5
+			},
+			"minecraft:map_color": "#8F7748",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "fletching_table_top",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			}
+		} //,
+		//events": {
+		//	"vc:make_fletchers": {
+		//		"run_command": {
+		//			"command": [
+		//				"event entity @e[family=unskilled,r=5] minecraft:become_fletcher"
+		//			]
+		//		}
+		//	},
+		//	"vc:remove_fletchers": {
+		//		"run_command": {
+		//			"command": [
+		//				"event entity @e[family=fletcher,r=20] minecraft:become_unskilled"
+		//			]
+		//		}
+		//	}
+		//
+	}
+}

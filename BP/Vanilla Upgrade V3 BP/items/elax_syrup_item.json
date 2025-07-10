@@ -1,0 +1,24 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:item": {
+		"description": {
+			"identifier": "vc:elax_syrup",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": "vc_vc_elax_syrup_item",
+			"minecraft:block_placer": {
+				"block": "vc:elax_syrup",
+				"replace_block_item": true
+			},
+			"minecraft:custom_components": [
+				"vc:glorium_vines"
+			],
+			"minecraft:fuel": {
+				"duration": 60
+			}
+		}
+	}
+}

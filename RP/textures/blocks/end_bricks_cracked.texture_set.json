@@ -1,8 +1,0 @@
-{
-    "format_version":"1.16.100",
-    "minecraft:texture_set":{
-        "color":"end_bricks_cracked",
-        "metalness_emissive_roughness":"rtx_support/end_bricks_cracked_mer",
-        "heightmap":"rtx_support/end_bricks_cracked_heightmap"
-    }
-}

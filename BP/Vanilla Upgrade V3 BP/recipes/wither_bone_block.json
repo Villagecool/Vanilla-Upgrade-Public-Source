@@ -1,0 +1,35 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vc:wither_bone_block"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "###",
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:wither_bone_meal"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:wither_bone_block"
+      },
+      {
+        "item": "vc:wither_bone_meal"
+      },
+      {
+        "item": "vc:wither_bone"
+      }
+    ],
+    "result": {
+      "item": "vc:wither_bone_block"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"product_type": "addon",
+		"authors": [
+			"Vlliage"
+		]
+	},
+	"header": {
+		"name": "Vanilla Upgrade V3",
+		"description": "An Expansive addon created By §eVlliage§r and §bTeam Verious§r.",
+		"min_engine_version": [
+			1,
+			21,
+			40
+		],
+		"uuid": "017f476f-0615-44d5-ba6f-d2c927c7b0ba",
+		"version": [
+			3,
+			1,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "2a0587e3-6df4-43ca-a40e-e29de6539a13",
+			"version": [
+				3,
+				0,
+				3
+			]
+		},
+		{
+			"type": "script",
+			"uuid": "47382aa8-d741-4fd7-be24-ca6a2e4b00e3",
+			"version": [
+				1,
+				0,
+				0
+			],
+			"entry": "scripts/main.js"
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.18.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.2.0"
+		},
+		{
+			"uuid": "d56c3ba4-1b46-4fdf-a1e3-5dbbdee0c403",
+			"version": [
+				3,
+				1,
+				0
+			]
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "minecraft:furnace_flowering_cactus"
+    },
+
+    
+    "tags": ["furnace"],
+    "input": "vc:orchid_cactus_flower",
+    "output": "minecraft:dye:2"
+  }
+  
+}

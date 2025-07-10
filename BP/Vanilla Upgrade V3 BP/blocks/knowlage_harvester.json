@@ -1,0 +1,138 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:knowlage_harvester",
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.tables"
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					],
+					"y_rotation_offset": 180
+				}
+			}
+		},
+		"components": {
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"tag:gold_pick_diggable": {},
+			"tag:minecraft:iron_tier_destructible": {},
+			"tag:stone": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 5
+			},
+			"minecraft:light_emission": 10,
+			"minecraft:geometry": "geometry.knowlage_harvester",
+			"minecraft:crafting_table": {
+				"table_name": "Knowledge Harvester",
+				"grid_size": 3,
+				"crafting_tags": [
+					"knowlage_harvester"
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					12,
+					16
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					12,
+					16
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_knowlage_harvester_side",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				},
+				"top": {
+					"texture": "vc_knowlage_harvester_top",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				},
+				"down": {
+					"texture": "obsidian",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				},
+				"crystal1": {
+					"texture": "vc_knowlage_harvester_crystals",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				},
+				"crystal2": {
+					"texture": "calibrated_sculk_sensor_amethyst",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				},
+				"book": {
+					"texture": "vc_knowlage_harvester_book",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			}
+		]
+	}
+}

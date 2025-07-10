@@ -1,8 +1,8 @@
 Desktop.ini    
 .DS_Store 
-!.bridgeno/
-.bridgeno/*
-!.bridgeno/compiler/
-!.bridgeno/extensions
+!.bridge/
+.bridge/*
+!.bridge/compiler/
+!.bridge/extensions
 builds
-*(1)
+desktop.ini

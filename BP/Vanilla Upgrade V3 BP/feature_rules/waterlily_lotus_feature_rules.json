@@ -1,0 +1,56 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "vc:waterlily_lotus_feature_rules",
+			"places_feature": "vc:waterlily_lotus_feature"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"all_of": [
+						{
+							"any_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "swamp"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "mangrove_swamp"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 1,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					-16,
+					16
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					63,
+					63
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					-16,
+					16
+				]
+			}
+		}
+	}
+}

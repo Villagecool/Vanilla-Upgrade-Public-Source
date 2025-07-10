@@ -1,0 +1,64 @@
+{
+	"format_version": "1.21.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "no:entity_spawn",
+			"states": {
+				"vc:entity": [
+					"vc:bandager",
+					"vc:termite",
+					"vc:penguin",
+					"vc:illusioner",
+					"vc:termite_mound"
+				],
+				"vc:actually_spawn": [
+					false,
+					true
+				]
+			},
+			"menu_category": {
+				"category": "none",
+				"group": "itemGroup.name.commands"
+			}
+		},
+		"components": {
+			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:custom_components": [
+				"vc:spawner"
+			],
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_air",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:light_dampening": 0
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:entity') == 'vc:termite_mound'",
+				"components": {
+					"minecraft:light_dampening": 15,
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "vc_termite_mound",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:actually_spawn') == true",
+				"components": {
+					"minecraft:tick": {
+						"interval_range": [
+							1,
+							1
+						],
+						"looping": true
+					}
+				}
+			}
+		]
+	}
+}

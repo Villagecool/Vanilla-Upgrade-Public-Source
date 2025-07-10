@@ -1,0 +1,7 @@
+{
+    "format_version":"1.16.100",
+    "minecraft:texture_set":{
+        "color":"warped_wart_stage_0"
+       //"heightmap":"rtx_support/warped_wart_stage_0_heightmap"
+    }
+}

@@ -1,0 +1,48 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "vc:goodlands_feature_rules",
+			"places_feature": "vc:goodlands_scatter_feature"
+		},
+		"conditions": {
+			"placement_pass": "final_pass",
+			"minecraft:biome_filter": {
+				"any_of": [
+					{
+						"test": "has_biome_tag",
+						"value": "mesa"
+					},
+					{
+						"test": "has_biome_tag",
+						"value": "plateau"
+					}
+				]
+			}
+		},
+		"distribution": {
+      "iterations": "math.random_integer(-120, 2)",
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					50
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					50,
+					200
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					50
+				]
+			}
+		}
+	}
+}

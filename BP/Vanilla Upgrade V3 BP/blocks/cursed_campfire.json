@@ -1,0 +1,223 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:cursed_campfire",
+			"menu_category": {
+				"category": "commands",
+				"group": "itemGroup.name.commands"
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
+			},
+			"states": {
+				"vc:active_bit": [
+					false,
+					true
+				],
+				"vc:lit": [
+					true,
+					false
+				]
+			}
+		},
+		"components": {
+			"tag:wood": {},
+            "tag:minecraft:is_axe_item_destructible": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3
+			},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 0
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:custom_components": [
+				"vc:cursed_campfire",
+				"vc:campfire"
+			],
+			"minecraft:geometry": "geometry.campfire",
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					7,
+					16
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					7,
+					16
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'east' || query.block_state('minecraft:cardinal_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:lit') == true && query.block_state('vc:active_bit') == true",
+				"components": {
+					"minecraft:tick": {
+						"looping": true,
+						"interval_range": [
+							10,
+							16
+						]
+					},
+					"minecraft:geometry": "geometry.campfire_big"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:lit') == true && query.block_state('vc:active_bit') == false",
+				"components": {
+					"minecraft:tick": {
+						"looping": true,
+						"interval_range": [
+							10,
+							16
+						]
+					},
+					"minecraft:geometry": "geometry.campfire"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:lit') == true",
+				"components": {
+					"minecraft:material_instances": {
+						"fire": {
+							"texture": "vc_cursed_campfire",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"logs_lit": {
+							"texture": "vc_cursed_campfire_log_lit",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"*": {
+							"texture": "campfire_log",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						}
+					},
+					"minecraft:light_emission": 15
+				}
+			},
+			{
+				"condition": "query.block_state('vc:lit') == false",
+				"components": {
+					"minecraft:light_dampening": 15,
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "campfire_log",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						}
+					},
+					"minecraft:geometry": "geometry.campfire_unlit"
+				}
+			}
+		]
+		//"events": {
+		//	"vc:place": {
+		//		"set_block_state": {
+		//			"vc:face": "query.cardinal_facing_2d/2",
+		//			"vc:lit": true
+		//		}
+		//	},
+		//	"vc:out": {
+		//		"set_block_state": {
+		//			"vc:lit": false
+		//		},
+		//		"run_command": {
+		//			"command": [
+		//				"playsound random.fizz @a ~~~"
+		//			]
+		//		}
+		//	},
+		//	"vc:in": {
+		//		"set_block_state": {
+		//			"vc:lit": true
+		//		},
+		//		"run_command": {
+		//			"command": [
+		//				"playsound fire.ignite @a ~~~"
+		//			]
+		//		}
+		//	},
+		//	"vc:smoke": {
+		//		"run_command": {
+		//			"command": [
+		//				"/particle minecraft:campfire_smoke_particle ~~~",
+		//				"/playsound block.campfire.crackle @a ~~~",
+		//				"/execute at @e[tag=tp] run playsound block.campfire.magic @a[r=15] ~~~",
+		//				"/execute at @e[tag=tp] run particle vc:magic_boom ~~~",
+		//				"/execute at @e[tag=tp] run particle vc:clone_spawn ~~~",
+		//				"/execute at @e[tag=tp] run particle vc:clone_spawn_box ~~~",
+		//				"/execute at @e[tag=tp] run particle vc:clone_spawn_pyramid ~~~",
+		//				"/tp @r[tag=tp] ~~~",
+		//				"/execute at @e[tag=tp] run playsound block.campfire.magic @a[r=15] ~~~",
+		//				//"/execute at @e[tag=tp] run particle vc:magic_boom ~~~",
+		//				"/execute at @e[tag=tp] run particle vc:clone_spawn ~~~",
+		//				"/execute at @e[tag=tp] run particle vc:clone_spawn_box ~~~",
+		//				"/execute at @e[tag=tp] run particle vc:clone_spawn_pyramid ~~~",
+		//				"/tag @e remove tp"
+		//			]
+		//		}
+		//	},
+		//	"vc:smoke_big": {
+		//		"run_command": {
+		//			"command": [
+		//				"/particle minecraft:campfire_tall_smoke_particle ~~~",
+		//				"/playsound block.campfire.crackle @a ~~~"
+		//			]
+		//		}
+		//	},
+		//	"vc:big": {
+		//		"set_block_state": {
+		//			"vc:active_bit": true
+		//		},
+		//		"run_command": {
+		//			"command": [
+		//				"/tag @e[r=0.8,c=1] add tp"
+		//			],
+		//			"target": "player"
+		//		}
+		//	},
+		//	"vc:smol": {
+		//		"set_block_state": {
+		//			"vc:active_bit": false
+		//		}
+		//	}
+		//}
+	}
+}

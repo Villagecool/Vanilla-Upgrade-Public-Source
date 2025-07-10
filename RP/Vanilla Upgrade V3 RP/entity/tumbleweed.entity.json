@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:tumbleweed",
+      "materials": { "default": "villager_v2" },
+      "textures": {
+        "default": "textures/blocks/tumbleweed"
+      },
+      "geometry": {
+        "default": "geometry.tumbleweed"
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.tumbleweed.move"
+      },
+      "scripts": {
+        "animate": [
+          "look_at_target",
+          "move"
+        ]
+      },
+      "render_controllers": [ "controller.render.zombie" ]
+    }
+  }
+}

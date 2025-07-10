@@ -42,6 +42,7 @@
 		},
 		"components": {
 			"tag:wood": {},
+            "tag:minecraft:is_axe_item_destructible": {},
 			"tag:non_solid": {},
 			"tag:bakewood_door": {},
 			"tag:door": {},

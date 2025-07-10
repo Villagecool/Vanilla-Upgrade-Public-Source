@@ -1,0 +1,191 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:cattail",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.nature"
+			},
+			"states": {
+				"vc:state": [
+					0,
+					1,
+					2
+				],
+				"vc:growing": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"tag:plant": {},
+			"tag:cattail": {},
+			"tag:minecraft:is_shears_item_destructible": {},
+			"tag:minecraft:is_hoe_item_destructible": {},
+			"tag:minecraft:is_sword_item_destructible": {},
+			"tag:non_solid": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.1
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:flammable": {
+				"catch_chance_modifier": 30,
+				"destroy_chance_modifier": 100
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water",
+						"on_liquid_touches": "popped"
+					}
+				]
+			},
+			"minecraft:custom_components": [
+				"vc:cattail"
+			],
+			"minecraft:selection_box": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					16,
+					12
+				]
+			},
+			"minecraft:collision_box": false,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"grass_block",
+							"dirt",
+							"gravel",
+							"stone",
+							"sand",
+							"vc:cattail"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_cattail",
+					"render_method": "alpha_test"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:growing') == true",
+				"components": {
+					"tag:growing": {}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:growing') == false",
+				"components": {}
+			},
+			{
+				"condition": "query.block_state('vc:state') == 1",
+				"components": {
+					"minecraft:placement_filter": {
+						"conditions": [
+							{
+								"block_filter": [
+									"grass_block",
+									"dirt",
+									"gravel",
+									"stone",
+									"sand",
+									"vc:cattail"
+								],
+								"allowed_faces": [
+									"up"
+								]
+							}
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "vc_cattail_mid",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:state') == 0",
+				"components": {
+					"minecraft:placement_filter": {
+						"conditions": [
+							{
+								"block_filter": [
+									"grass_block",
+									"dirt",
+									"gravel",
+									"stone",
+									"sand",
+									"vc:cattail"
+								],
+								"allowed_faces": [
+									"up"
+								]
+							}
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "vc_cattail",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:state') == 2",
+				"components": {
+					"minecraft:placement_filter": {
+						"conditions": [
+							{
+								"block_filter": [
+									"grass_block",
+									"dirt",
+									"gravel",
+									"stone",
+									"sand",
+									"vc:cattail"
+								],
+								"allowed_faces": [
+									"down",
+									"up"
+								]
+							}
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "vc_cattail_bottom",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						}
+					}
+				}
+			}
+		]
+	}
+}

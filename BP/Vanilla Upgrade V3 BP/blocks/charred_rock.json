@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.stone"
+			},
+			"identifier": "vc:charred_rock"
+		},
+		"components": {
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"tag:minecraft:iron_tier_destructible": {},
+			"tag:minecraft:diamond_tier_destructible": {},
+			"tag:minecraft:netherite_tier_destructible": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_charred_rock"
+				}
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 9
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 7
+			}
+		}
+	}
+}

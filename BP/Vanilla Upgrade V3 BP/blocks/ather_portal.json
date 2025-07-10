@@ -1,0 +1,90 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:ather_portal",
+			"menu_category": {
+				"category": "commands",
+				"group": "itemGroup.name.commands"
+			},
+			"states": {
+				"vc:portal_axis": [
+					"unknown",
+					"x",
+					"z"
+				]
+			}
+		},
+		"components": {
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2.5
+			},
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:light_dampening": 0,
+			"minecraft:light_emission": 1,
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-2
+				],
+				"size": [
+					16,
+					16,
+					4
+				]
+			},
+			"minecraft:collision_box": false,
+			"minecraft:tick": {
+				"interval_range": [
+					1,
+					1
+				],
+				"looping": true
+			},
+			"minecraft:geometry": {
+				"identifier": "geometry.vanilla_portal"
+			},
+			"minecraft:item_visual": {
+				"geometry": "minecraft:geometry.full_block",
+				"material_instances": {
+					"*": {
+						"texture": "vc_ather_portal",
+						"render_method": "blend",
+						"face_dimming": false,
+						"ambient_occlusion": false
+					}
+				}
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_ather_portal",
+					"render_method": "blend",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			}
+		},
+		"permutations": [
+			//{
+			//	"condition": "query.block_state('vc:placed') == false",
+			//	"components": {
+			//		"minecraft:geometry": "minecraft:geometry.full_block"
+			//	}
+			//},
+			//{
+			//	"condition": "query.block_state('vc:placed') == true",
+			//	"components": {
+			//	}
+			//},
+			{
+				"condition": "query.block_state('vc:portal_axis') != 'x'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0,90,0]
+					}
+				}
+			}
+		]
+	}
+}

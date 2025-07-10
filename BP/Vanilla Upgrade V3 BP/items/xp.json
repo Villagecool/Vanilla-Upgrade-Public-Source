@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "vc:xp",
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.commands"
+			}
+		},
+		"components": {
+			"minecraft:hover_text_color": "green",
+			"minecraft:glint": true,
+			"minecraft:max_stack_size": 64,
+			"minecraft:icon": "vc_xp"
+		}
+	}
+}

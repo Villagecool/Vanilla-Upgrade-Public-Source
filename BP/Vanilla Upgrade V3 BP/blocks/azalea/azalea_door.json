@@ -1,0 +1,314 @@
+{
+	"format_version": "1.21.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:azalea_door",
+			"menu_category": {
+				"group": "itemGroup.name.door",
+				"category": "construction"
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
+			},
+			"states": {
+				"vc:open": [
+					false,
+					true
+				],
+				"vc:placed": [
+					false,
+					true
+				],
+				"vc:upper_bit": [
+					false,
+					true
+				],
+				"vc:flipped": [
+					false,
+					true
+				],
+				"vc:powered": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"tag:wood": {},
+			"tag:one_way_collidable": {},
+      "tag:minecraft:is_axe_item_destructible": {},
+			"tag:azalea_door": {},
+			"tag:non_solid": {},
+			"tag:door": {},
+			"minecraft:custom_components": [
+				"vc:door"
+			],
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 20
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2.5
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:geometry": "geometry.door",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:redstone_conductivity": {
+				"redstone_conductor": true
+			},
+			"minecraft:tick": {
+				"interval_range": [2,2],
+				"looping": true
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_azalea_door",
+					"render_method": "blend",
+					"face_dimming": true,
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					5
+				],
+				"size": [
+					16,
+					16,
+					3
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					5
+				],
+				"size": [
+					16,
+					16,
+					3
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:open') == false",
+				"components": {
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							5
+						],
+						"size": [
+							16,
+							16,
+							3
+						]
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							5
+						],
+						"size": [
+							16,
+							16,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:open') == true",
+				"components": {
+					"minecraft:selection_box": {
+						"origin": [
+							5,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							5,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:open') == true && query.block_state('vc:flipped') == true",
+				"components": {
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:open') == true && query.block_state('vc:upper_bit') == false",
+				"components": {
+					"tag:open_door": {},
+					"minecraft:geometry": "geometry.door_open"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:open') == false && query.block_state('vc:upper_bit') == false",
+				"components": {
+					"tag:closed_door": {},
+					"minecraft:geometry": "geometry.door"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:open') == true && query.block_state('vc:upper_bit') == true && query.block_state('vc:flipped') == false",
+				"components": {
+					"tag:open_door_upper": {},
+					"minecraft:geometry": "geometry.door_upper_open"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:open') == false && query.block_state('vc:upper_bit') == true && query.block_state('vc:flipped') == false",
+				"components": {
+					"tag:closed_door_upper": {},
+					"minecraft:geometry": "geometry.door_upper"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:open') == true && query.block_state('vc:upper_bit') == true && query.block_state('vc:flipped') == true",
+				"components": {
+					"tag:open_door_upper": {},
+					"minecraft:geometry": "geometry.inv_door_upper_open"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:open') == false && query.block_state('vc:upper_bit') == true && query.block_state('vc:flipped') == true",
+				"components": {
+					"tag:closed_door_upper": {},
+					"minecraft:geometry": "geometry.inv_door_upper"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:open') == true && query.block_state('vc:upper_bit') == false && query.block_state('vc:flipped') == true",
+				"components": {
+					"tag:open_door_upper": {},
+					"minecraft:geometry": "geometry.inv_door_open"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:open') == false && query.block_state('vc:upper_bit') == false && query.block_state('vc:flipped') == true",
+				"components": {
+					"tag:closed_door_upper": {},
+					"minecraft:geometry": "geometry.inv_door"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:upper_bit') == true",
+				"components": {
+					"minecraft:loot": "loot_tables/blocks/azalea_door.json",
+					"minecraft:placement_filter": {
+						"conditions": [
+							{
+								"block_filter": [
+									"vc:azalea_door"
+								],
+								"allowed_faces": [
+									"up"
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:upper_bit') == false",
+				"components": {
+					"minecraft:loot": "loot_tables/empty.json"
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			}
+		]
+	}
+}

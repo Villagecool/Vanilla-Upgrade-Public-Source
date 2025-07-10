@@ -1,0 +1,8 @@
+{
+    "format_version":"1.21.30",
+    "minecraft:texture_set":{
+        "color":"glorium_crystals",
+        "metalness_emissive_roughness":"rtx_support/glorium_crystals_mer"
+        //"heightmap":"rtx_support/glorium_crystal_block_cracked_heightmap"
+    }
+}

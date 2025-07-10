@@ -1,0 +1,21 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:item": {
+		"description": {
+			"menu_category": {
+				"category": "items"
+			},
+			"identifier": "vc:cursed_campfire"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "vc:cursed_campfire",
+				"replace_block_item": true
+			},
+			"minecraft:custom_components": ["vc:cursed_campfire"],
+			"minecraft:hover_text_color": "light_purple",
+			"minecraft:icon": "vc_cursed_campfire"
+		}
+	}
+}

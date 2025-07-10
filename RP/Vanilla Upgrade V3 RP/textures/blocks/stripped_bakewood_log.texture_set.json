@@ -1,0 +1,7 @@
+{
+    "format_version":"1.16.100",
+    "minecraft:texture_set":{
+        "color":"stripped_bakewood_log"
+       //"heightmap":"rtx_support/stripped_bakewood_log_heightmap"
+    }
+}

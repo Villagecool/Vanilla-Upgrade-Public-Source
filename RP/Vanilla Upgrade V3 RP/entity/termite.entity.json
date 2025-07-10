@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:termite",
+      "materials": {
+        "default": "villager_v2"
+      },
+      "textures": {
+        "default": "textures/entity/termite"
+      },
+      "geometry": {
+        "default": "geometry.termite"
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "baby_transform": "animation.sheep.baby_transform",
+        "move": "animation.termite.walk",
+        "eat": "animation.termite.eat",
+        "climb": "animation.termite.climb",
+        "c_climb": "controller.animation.termite.climb",
+        "c_eat": "controller.animation.termite.eat"
+      },
+      "scripts": {
+        "animate": [
+          "look_at_target",
+          "move",
+          "c_climb",
+          "c_eat",
+          {
+            "baby_transform": "query.is_baby"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.zombie"
+      ],
+      "spawn_egg": {
+        "texture": "vc_spawn_egg_termite"
+      }
+    }
+  }
+}

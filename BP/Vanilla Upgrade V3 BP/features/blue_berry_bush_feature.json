@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "vc:blue_berry_bush_feature"
+    },
+    "places_block": {"name": "vc:blue_berries",  "states": { "vc:growth": 2 }},
+    "enforce_survivability_rules": false,
+    "enforce_placement_rules": true,
+    "may_attach_to": {
+      "bottom": [
+        "grass_block",
+        "dirt",
+        "podzol"
+      ]
+    },
+    "may_replace": [
+      "air"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.crop",
+        "category": "nature"
+      },
+      "identifier": "vc:coconut_slice"
+    },
+    "components": {
+      "minecraft:use_modifiers": {
+        "movement_modifier": 0.4,
+        "use_duration": 2.31
+      },
+      "minecraft:use_animation": "eat",
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": "vc_coconut_slice",
+      "tag:minecraft:is_food": {},
+      "minecraft:food": {
+        "nutrition": 3,
+        "saturation_modifier": 3.5,
+        "can_always_eat": true
+      }
+    }
+  }
+}

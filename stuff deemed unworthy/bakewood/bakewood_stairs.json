@@ -25,6 +25,7 @@
 		},
 		"components": {
 			"tag:wood": {},
+            "tag:minecraft:is_axe_item_destructible": {},
 			"tag:stairs": {},
 			"minecraft:flammable": {
 				"catch_chance_modifier": 5,

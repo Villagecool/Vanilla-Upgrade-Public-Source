@@ -1,0 +1,14 @@
+{
+	"format_version": "1.21.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "vc:gloricalium_scrap",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:icon": "vc_gloricalium_scrap"
+		}
+	}
+}

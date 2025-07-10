@@ -1,0 +1,53 @@
+{
+	"format_version": "1.21.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:zalu_plant",
+			"menu_category": {
+				"category": "commands",
+				"group": "commands"
+			}
+		},
+		"components": {
+			"tag:minecraft:is_shears_item_destructible": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.1
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:loot": "loot_tables/blocks/zalu_plant.json",
+			"minecraft:light_emission": 3,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			//"minecraft:random_offset": {},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:selection_box": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:collision_box": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_zalu_plant",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			}
+		}
+	}
+}

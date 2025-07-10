@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "vc:sled",
+      "materials": {
+        "default": "villager_v2"
+      },
+      "textures": {
+        "default": "textures/entity/sled"
+      },
+      "scripts": {
+        "animate": [
+          "pos",
+          "controller"
+        ]
+      },
+      "animations": {
+        "pos": "animation.sled.move",
+        "down": "animation.sled.movement.down",
+        "up": "animation.sled.movement.up",
+        "controller": "controller.animation.sled.general"
+      },
+      "geometry": {
+        "default": "geometry.sled"
+      },
+      "render_controllers": [
+        "controller.render.zombie"
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:melon_speckled",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.crop"
+			}
+		},
+		"components": {
+			"tag:minecraft:is_axe_item_destructible": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1.5
+			},
+			"minecraft:loot": "loot_tables/blocks/melon_speckled.json",
+			"minecraft:material_instances": {
+				"up": {
+					"texture": "vc_melon_speckled_top",
+					"render_method": "alpha_test"
+				},
+				"down": {
+					"texture": "vc_melon_speckled_top",
+					"render_method": "alpha_test"
+				},
+				"*": {
+					"texture": "vc_watermellon_speckled",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

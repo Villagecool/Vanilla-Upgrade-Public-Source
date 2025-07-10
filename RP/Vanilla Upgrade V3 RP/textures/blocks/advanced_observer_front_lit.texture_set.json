@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "advanced_observer_front_lit",
+		"metalness_emissive_roughness": "rtx_support/advanced_observer_front_lit_mer"
+	}
+}

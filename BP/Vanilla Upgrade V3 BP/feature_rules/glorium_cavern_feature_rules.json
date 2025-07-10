@@ -1,0 +1,43 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "minecraft:glorium_cavern_feature_rules",
+      "places_feature": "vc:glorium_cavern"
+    },
+    "conditions": {
+      "placement_pass": "underground_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "ocean"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "lush_caves"
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 2,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ 0, 64 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [ -64, 60 ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ 0, 64 ]
+      }
+    }
+  }
+}

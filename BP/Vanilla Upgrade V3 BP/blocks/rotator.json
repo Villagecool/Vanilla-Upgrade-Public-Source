@@ -1,0 +1,178 @@
+{
+	"format_version": "1.21.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:rotator",
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.items"
+			},
+			"states": {
+				"vc:direction": [
+					"clockwise",
+					"counterclockwise"
+				],
+				"vc:powered": [
+					false,
+					true
+				],
+				"vc:anm": [
+					0,
+					1,
+					2,
+					3,
+					4
+				]
+			}
+		},
+		"components": {
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 25
+			},
+			"minecraft:redstone_conductivity": {
+				"allows_wire_to_step_down": true,
+				"redstone_conductor": true
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:geometry": "geometry.rotator",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_rotator_side_counterclockwise",
+					"render_method": "alpha_test"
+				},
+				"top": {
+					"texture": "vc_rotator_top",
+					"render_method": "alpha_test"
+				},
+				"piston_top": {
+					"texture": "piston_top",
+					"render_method": "alpha_test"
+				},
+				"furnace_top": {
+					"texture": "furnace_top",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:tick": {
+				"looping": true,
+				"interval_range": [
+					1,
+					1
+				]
+			},
+			"minecraft:custom_components": [
+				"vc:rotator",
+				"vc:redstone"
+			],
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:direction') == 'clockwise'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "vc_rotator_side_clockwise",
+							"render_method": "alpha_test"
+						},
+						"top": {
+							"texture": "vc_rotator_top",
+							"render_method": "alpha_test"
+						},
+						"piston_top": {
+							"texture": "piston_top",
+							"render_method": "alpha_test"
+						},
+						"furnace_top": {
+							"texture": "furnace_top",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:direction') == 'counterclockwise'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "vc_rotator_side_counterclockwise",
+							"render_method": "alpha_test"
+						},
+						"top": {
+							"texture": "vc_rotator_top",
+							"render_method": "alpha_test"
+						},
+						"piston_top": {
+							"texture": "piston_top",
+							"render_method": "alpha_test"
+						},
+						"furnace_top": {
+							"texture": "furnace_top",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:anm') == 1 && query.block_state('vc:direction') == 'counterclockwise'",
+				"components": {
+					"minecraft:geometry": "geometry.rotatoranm3"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:anm') == 2 && query.block_state('vc:direction') == 'counterclockwise'",
+				"components": {
+					"minecraft:geometry": "geometry.rotatoranm2"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:anm') == 3 && query.block_state('vc:direction') == 'counterclockwise'",
+				"components": {
+					"minecraft:geometry": "geometry.rotatoranm1"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:anm') == 1 && query.block_state('vc:direction') == 'clockwise'",
+				"components": {
+					"minecraft:geometry": "geometry.rotatoranm1"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:anm') == 2 && query.block_state('vc:direction') == 'clockwise'",
+				"components": {
+					"minecraft:geometry": "geometry.rotatoranm2"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:anm') == 3 && query.block_state('vc:direction') == 'clockwise'",
+				"components": {
+					"minecraft:geometry": "geometry.rotatoranm3"
+				}
+			}
+		]
+	}
+}

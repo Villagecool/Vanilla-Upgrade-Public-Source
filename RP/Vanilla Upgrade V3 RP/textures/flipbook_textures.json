@@ -1,0 +1,160 @@
+[
+  {
+    "flipbook_texture": "textures/blocks/wool_colored_rainbow",
+    "atlas_tile": "vc_rainbow_wool",
+    "ticks_per_frame": 25
+  },
+  {
+    "flipbook_texture": "textures/blocks/furnace_front_on",
+    "atlas_tile": "furnace_front_on",
+    "frames": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "ticks_per_frame": 4
+  },
+  {
+    "flipbook_texture": "textures/blocks/water_blast",
+    "atlas_tile": "vc_water_blast",
+    "ticks_per_frame": 1
+  },
+  {
+    "flipbook_texture": "textures/blocks/crusher_face_on",
+    "atlas_tile": "vc_crusher_front_on",
+    "ticks_per_frame": 1,
+    "blend_frames": false
+  },
+  {
+    "flipbook_texture": "textures/blocks/knowlage_harvester_side",
+    "atlas_tile": "vc_knowlage_harvester_side",
+    "ticks_per_frame": 5
+  },
+  {
+    "flipbook_texture": "textures/blocks/flame",
+    "atlas_tile": "vc_flame",
+    "ticks_per_frame": 2.5
+  },
+  {
+    "flipbook_texture": "textures/items/maged_book_a",
+    "atlas_tile": "vc_maged_book_a",
+    "ticks_per_frame": 4,
+    "blend_frames": false
+  },
+  {
+    "flipbook_texture": "textures/blocks/enchanted_moss",
+    "atlas_tile": "vc_enchanted_moss",
+    "ticks_per_frame": 50
+  },
+  {
+    "flipbook_texture": "textures/blocks/cattail",
+    "atlas_tile": "vc_cattail",
+    "frames": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "ticks_per_frame": 20,
+    "blend_frames": false
+  },
+  {
+    "flipbook_texture": "textures/blocks/kiln_front_on",
+    "atlas_tile": "vc_kiln_front_on",
+    "frames": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "ticks_per_frame": 4
+  },
+  {
+    "flipbook_texture": "textures/blocks/elax_log",
+    "atlas_tile": "vc_elax_log",
+    "ticks_per_frame": 4
+  },
+  {
+    "flipbook_texture": "textures/blocks/elax_log_weak",
+    "atlas_tile": "vc_elax_log_weak",
+    "ticks_per_frame": 4
+  },
+  {
+    "flipbook_texture": "textures/blocks/breezer_blades",
+    "atlas_tile": "vc_breezer_blades",
+    "ticks_per_frame": 2,
+    "frames": [
+      0,
+      1,
+      2
+    ],
+    "blend_frames": false
+  },
+  {
+    "flipbook_texture": "textures/blocks/deactive_breezer_blades",
+    "atlas_tile": "vc_deactive_breezer_blades",
+    "ticks_per_frame": 2,
+    "frames": [
+      0
+    ],
+    "blend_frames": false
+  },
+  {
+    "flipbook_texture": "textures/blocks/soap_residue",
+    "atlas_tile": "vc_soap_residue",
+    "ticks_per_frame": 4
+  },
+  {
+    "flipbook_texture": "textures/blocks/elax_fungus",
+    "atlas_tile": "vc_elax_fungus",
+    "ticks_per_frame": 50
+  },
+  {
+    "flipbook_texture": "textures/blocks/elax_fungus_crystalized",
+    "atlas_tile": "vc_elax_fungus_crystalized",
+    "ticks_per_frame": 20
+  },
+  {
+    "flipbook_texture": "textures/blocks/sapling_elax",
+    "atlas_tile": "vc_sapling_elax",
+    "ticks_per_frame": 20
+  },
+  {
+    "flipbook_texture": "textures/blocks/crystalized_experience_block",
+    "atlas_tile": "vc_crystalized_experience_block",
+    "ticks_per_frame": 20
+  },
+  {
+    "flipbook_texture": "textures/blocks/cursed_campfire_log_lit",
+    "atlas_tile": "vc_cursed_campfire_log_lit",
+    "frames": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "ticks_per_frame": 8
+  },
+  {
+    "flipbook_texture": "textures/blocks/ender_water_still",
+    "atlas_tile": "vc_ender_water_still",
+    "blend_frames": false,
+    "ticks_per_frame": 2
+  },
+  {
+    "flipbook_texture": "textures/blocks/cursed_campfire",
+    "atlas_tile": "vc_cursed_campfire",
+    "ticks_per_frame": 2
+  },
+  {
+    "flipbook_texture": "textures/blocks/sawmill",
+    "atlas_tile": "vc_sawmill",
+    "ticks_per_frame": 0
+  },
+  {
+    "flipbook_texture": "textures/blocks/ather_portal",
+    "atlas_tile": "vc_ather_portal",
+    "ticks_per_frame": 0
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "identifier": "vc:tomato_seeds",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.seed"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": "vc_tomato_seeds",
+      "minecraft:block_placer": {
+        "block": "vc:tomato_seeds",
+        "replace_block_item": true
+      }
+    }
+  }
+}

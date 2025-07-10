@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.leaves"
+			},
+			"identifier": "vc:elax_fungus_crystalized"
+		},
+		"components": {
+			"tag:leaves": {},
+			"tag:minecraft:is_hoe_item_destructible": {},
+			"tag:plant": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1.1
+			},
+			"minecraft:light_emission": 3,
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_elax_fungus_crystalized",
+					"render_method": "blend"
+				}
+			}
+		}
+	}
+}

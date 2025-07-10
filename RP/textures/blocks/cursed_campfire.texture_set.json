@@ -1,8 +1,0 @@
-{
-    "format_version":"1.23.30",
-    "minecraft:texture_set":{
-        "color":"cursed_campfire",
-        "metalness_emissive_roughness_subsurface": "campfire_mers"
-        //"heightmap":"rtx_support/glorium_crystal_block_cracked_heightmap"
-    }
-}

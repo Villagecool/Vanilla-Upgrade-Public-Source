@@ -1,8 +1,0 @@
-{
-    "format_version":"1.16.100",
-    "minecraft:texture_set":{
-        "color":"pumpkin_face_on_soul",
-        "metalness_emissive_roughness":"rtx_support/pumpkin_face_on_soul_mer",
-        "heightmap":"rtx_support/pumpkin_face_on_soul_heightmap"
-    }
-}

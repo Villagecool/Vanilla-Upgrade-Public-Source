@@ -1,0 +1,89 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:blue_nether_brick_wall",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.walls"
+			},
+			"states": {
+				"vc:post": [ true, false ],
+				"vc:north": [ "none", "tall", "short" ],
+				"vc:south": [ "none", "tall", "short" ],
+				"vc:east": [ "none", "tall", "short" ],
+				"vc:west": [ "none", "tall", "short" ]
+			}
+		},
+		"components": {
+			"tag:wood": {},
+      "tag:minecraft:is_pickaxe_item_destructible": {},
+			"tag:fence": {},
+			"minecraft:custom_components": [
+				"vc:wall"
+			],
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 10
+			},
+      "minecraft:item_visual": {
+				"geometry": "geometry.wall_item",
+        "material_instances": {
+				  "*": {
+				  	"texture": "vc_blue_nether_bricks"
+				  }
+        }
+      },
+			"minecraft:tick": {
+				"interval_range": [
+					1,
+					1
+				],
+				"looping": true
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:geometry": {
+				"identifier": "geometry.wall",
+				"bone_visibility": {
+					"north": "query.block_state('vc:north') != 'none'",
+					"east":   "query.block_state('vc:east') != 'none'",
+					"south": "query.block_state('vc:south') != 'none'",
+					"west":   "query.block_state('vc:west') != 'none'",
+					"north_tall": "query.block_state('vc:north') == 'tall'",
+					"east_tall":   "query.block_state('vc:east') == 'tall'",
+					"south_tall": "query.block_state('vc:south') == 'tall'",
+					"west_tall":   "query.block_state('vc:west') == 'tall'",
+					"post":   "query.block_state('vc:post') == true"
+				}
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_blue_nether_bricks"
+				}
+			}
+		}
+	}
+}
