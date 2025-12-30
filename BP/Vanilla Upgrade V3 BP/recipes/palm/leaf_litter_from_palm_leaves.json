@@ -1,0 +1,13 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "vc:leaf_litter_from_palm_leaves"
+    },
+
+    "tags": ["furnace"],
+    "input": "vc:palm_leaves",
+    "output": "minecraft:leaf_litter"
+  }
+  
+}

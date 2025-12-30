@@ -12,7 +12,7 @@
 			"minecraft:loot": "loot_tables/blocks/glowing_mushroom_block.json",
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "vc_glowing_mushroom_stem"
+					"texture": "vc_glowing_mushroom"
 				}
 			}
 		}

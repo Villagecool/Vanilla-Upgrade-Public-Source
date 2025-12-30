@@ -76,7 +76,7 @@ export function decripateStack(player, slot) {
     if (!slot) slot = 'Mainhand'
     let item = player.getComponent("equippable").getEquipment(slot);
     if (!item) return;
-    if (player.getGameMode() == 'creative') return;
+    if (player.getGameMode() == 'Creative') return;
     if (item.amount == 1) item = new SERVER.ItemStack("minecraft:air", 2)
     item.amount -= 1;
     player.getComponent("equippable").setEquipment(slot, item);
@@ -172,7 +172,7 @@ export function damage_item(item) {
         }
     }
     // Apply damage
-    if (durabilityComponent.damage == durabilityComponent.maxDurability) {
+    if (durabilityComponent.damage >= durabilityComponent.maxDurability) {
 
         return
     }
@@ -200,6 +200,39 @@ export function vec3toString(vec) {
 export function isBlockSolid(block) {
     return !block.isAir || fenceConnections.has(block.typeId) || block.hasTag('log') || block.hasTag('stone')
 }
+
+/**
+ * 
+ * @param {String} reference The face of the block
+ * @param {String} facing The rotation direction of the block.
+ * @returns 
+ */
+export function getWorldDirection(reference, facing, up = "up") {
+  const dirs = ["north", "east", "south", "west", "up", "down"];
+  const idx = d => dirs.indexOf(d.toLowerCase());
+  if (idx(reference) === -1 || idx(facing) === -1 || idx(up) === -1)
+    { console.error('Invalid Direction'); return ''; }
+
+  // Define the cube’s orientation mapping when facing north & up is up
+  const base = {
+    north: { north: "north", east: "east", south: "south", west: "west", up: "up", down: "down" },
+    east:  { north: "east",  east: "south", south: "west",  west: "north", up: "up", down: "down" },
+    south: { north: "south", east: "west",  south: "north", west: "east",  up: "up", down: "down" },
+    west:  { north: "west",  east: "north", south: "east",  west: "south", up: "up", down: "down" }
+  };
+
+  // Vertical rotations (looking up or down)
+  if (facing === "up") {
+    return { north: "up", south: "down", east: "east", west: "west", up: "south", down: "north" }[reference];
+  } else if (facing === "down") {
+    return { north: "down", south: "up", east: "east", west: "west", up: "north", down: "south" }[reference];
+  }
+
+  // Otherwise, horizontal facing
+  const result = base[facing.toLowerCase()][reference.toLowerCase()];
+  return result;
+}
+
 const fenceConnections = new Set([
     // Wooden fences (will connect to each other)
     "minecraft:oak_fence",

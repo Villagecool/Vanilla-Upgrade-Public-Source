@@ -39,6 +39,24 @@
           "speed_multiplier": 1.1
         }
       },
+      "pregnant": {
+        "minecraft:behavior.lay_egg": {
+          "priority": 2,
+          "speed_multiplier": 1.0,
+          "search_range": 10,
+          "search_height": 3,
+          "goal_radius": 1.7,
+          "target_blocks": [ "minecraft:grass_block", "minecraft:snow", "minecraft:blue_ice", "minecraft:packed_ice", "minecraft:stone", "minecraft:dirt" ],
+          "target_materials_above_block": [ "Air" ],
+          "use_default_animation": false,
+          "lay_seconds": 2,
+          "egg_type": "vc:penguin_egg",
+          "on_lay": {
+            "event": "laid_egg",
+            "target": "self"
+          }
+        }
+      },
       "minecraft:penguin_adult": {
         "minecraft:experience_reward": {
           "on_bred": "Math.Random(1,7)",
@@ -223,7 +241,7 @@
             "blocks": [
               "water",
               "air",
-              "grass",
+              "grass_block",
               "ice",
               "packed_ice",
               "snow",
@@ -278,7 +296,15 @@
       "minecraft:lay_egg": {
         "queue_command": {
           "command": [
-            "setblock ~~~ vc:penguin_egg replace air"
+            "fill ~~~ ~~~ vc:penguin_egg replace air",
+            "fill ~~~ ~~~ vc:penguin_egg replace snow_layer"
+          ]
+        }
+      },
+      "laid_egg": {
+        "remove": {
+          "component_groups": [
+            "pregnant"
           ]
         }
       },

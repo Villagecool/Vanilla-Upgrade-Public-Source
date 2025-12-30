@@ -1,0 +1,24 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.trapdoor",
+        "category": "construction"
+      },
+      "identifier": "vc:palm_trapdoor"
+    },
+    "components": {
+      "minecraft:block_placer": {
+        "block": "vc:palm_trapdoor",
+        "replace_block_item": true
+      },
+      "minecraft:display_name": {
+        "value": "tile.vc:palm_trapdoor.name"
+      },
+      "minecraft:fuel": {
+        "duration": 15
+      }
+    }
+  }
+}

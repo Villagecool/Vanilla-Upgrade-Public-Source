@@ -79,7 +79,7 @@
 					"render_method": "alpha_test"
 				},
 				"block": {
-					"texture": "vc_compressed_copper",
+					"texture": "vc_electrum",
 					"render_method": "alpha_test"
 				},
 				"grate": {
@@ -114,7 +114,7 @@
 							"render_method": "alpha_test"
 						},
 						"block": {
-							"texture": "vc_compressed_copper",
+							"texture": "vc_electrum",
 							"render_method": "alpha_test"
 						},
 						"grate": {

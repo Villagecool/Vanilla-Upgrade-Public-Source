@@ -26,6 +26,7 @@
         "look_at_target_swimming": "animation.humanoid.look_at_target.swimming.v1.0",
         "riding.arms": "animation.vindicator.riding.arms",
         "riding.legs": "animation.vindicator.riding.legs",
+        "riding.body": "animation.humanoid.riding.body",
         "celebrating": "animation.bandager.celebrate",
         "celebrating2": "animation.bandager.celebrate2",
         "attack": "animation.vindicator.attack"

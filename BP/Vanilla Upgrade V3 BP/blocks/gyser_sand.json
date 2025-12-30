@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.30",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:gyser_sand",
@@ -56,87 +56,5 @@
 				}
 			}
 		}
-		//"events": {
-		//	"vc:turn_on": {
-		//		"set_block_state": {
-		//			"vc:active_bit": true,
-		//			"vc:height": "math.random_integer(1,7)"
-		//		},
-		//		"trigger": {
-		//			"event": "vc:set_water",
-		//			"target": "self"
-		//		}
-		//	},
-		//	"vc:turn_off": {
-		//		"set_block_state": {
-		//			"vc:active_bit": false
-		//		},
-		//		"run_command": {
-		//			"command": [
-		//				"fill ~~1~ ~~7~ air replace vc:water_blast"
-		//			]
-		//		}
-		//	},
-		//	"vc:set_water": {
-		//		"sequence": [
-		//			{
-		//				"condition": "query.block_state('vc:height') == 1",
-		//				"run_command": {
-		//					"command": [
-		//						"fill ~~1~ ~~1~ vc:water_blast replace air"
-		//					]
-		//				}
-		//			},
-		//			{
-		//				"condition": "query.block_state('vc:height') == 2",
-		//				"run_command": {
-		//					"command": [
-		//						"fill ~~1~ ~~2~ vc:water_blast replace air"
-		//					]
-		//				}
-		//			},
-		//			{
-		//				"condition": "query.block_state('vc:height') == 3",
-		//				"run_command": {
-		//					"command": [
-		//						"fill ~~1~ ~~3~ vc:water_blast replace air"
-		//					]
-		//				}
-		//			},
-		//			{
-		//				"condition": "query.block_state('vc:height') == 4",
-		//				"run_command": {
-		//					"command": [
-		//						"fill ~~1~ ~~4~ vc:water_blast replace air"
-		//					]
-		//				}
-		//			},
-		//			{
-		//				"condition": "query.block_state('vc:height') == 5",
-		//				"run_command": {
-		//					"command": [
-		//						"fill ~~1~ ~~5~ vc:water_blast replace air"
-		//					]
-		//				}
-		//			},
-		//			{
-		//				"condition": "query.block_state('vc:height') == 6",
-		//				"run_command": {
-		//					"command": [
-		//						"fill ~~1~ ~~6~ vc:water_blast replace air"
-		//					]
-		//				}
-		//			},
-		//			{
-		//				"condition": "query.block_state('vc:height') == 7",
-		//				"run_command": {
-		//					"command": [
-		//						"fill ~~1~ ~~7~ vc:water_blast replace air"
-		//					]
-		//				}
-		//			}
-		//		]
-		//	}
-		//}
 	}
 }

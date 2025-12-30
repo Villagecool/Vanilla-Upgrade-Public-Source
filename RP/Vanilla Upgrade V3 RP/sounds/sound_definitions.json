@@ -42,6 +42,12 @@
 				"sounds/random/crusher_chomp"
 			]
 		},
+		"die.use": {
+			"category": "block",
+			"sounds": [
+				"sounds/blocks/die"
+			]
+		},
 		"horn.call.roll": {
 			"category": "record",
 			"max_distance": null,
@@ -212,6 +218,16 @@
 				"sounds/mob/giant/loud-explosion"
 			]
 		},
+    	"mob.villager.scream": {
+    	  "category": "neutral",
+    	  "sounds": [
+    	    "sounds/villager/scream1",
+    	    "sounds/villager/scream2",
+    	    "sounds/villager/scream3",
+    	    "sounds/villager/scream4",
+    	    "sounds/villager/scream5"
+    	  ]
+    	},
 		"block.campfire.magic": {
 			"sounds": [
 				{
@@ -429,6 +445,19 @@
 				}
 			]
 		},
+		"record.droopy": {
+			"category": "record",
+			"max_distance": 64.0,
+			"min_distance": null,
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/music/game/records/droopy",
+					"stream": true,
+					"volume": 0.50
+				}
+			]
+		},
 		"record.corn": {
 			"category": "record",
 			"max_distance": 64.0,
@@ -469,6 +498,12 @@
 			"subtitle": "xp crystalizes",
 			"sounds": [
 				"sounds/random/crystalize_xp"
+			]
+		},
+		"random.soul_blast": {
+			"category": "block",
+			"sounds": [
+				"sounds/random/soul_blast"
 			]
 		},
 		"mob.sparse.hurt": {

@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "vc:fletching_table_custom",
 			"menu_category": {
-				"category": "commands",
+				"category": "none",
 				"group": "itemGroup.name.commands"
 			}
 		},

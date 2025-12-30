@@ -9,7 +9,7 @@
 			}
 		},
 		"curves": {
-			"variable.sizey": {
+			"variable.sizeY": {
 				"type": "linear",
 				"input": "v.particle_age",
 				"horizontal_range": "v.particle_lifetime",
@@ -32,7 +32,7 @@
 		},
 		"components": {
 			"minecraft:emitter_initialization": {
-				"creation_expression": "variable.sizeXZ = 0.4;"
+				"creation_expression": "variable.sizeXZ = 0.4;variable.sizeY = 0.0;"
 			},
 			"minecraft:emitter_rate_instant": {
 				"num_particles": 12
@@ -61,8 +61,8 @@
 			},
 			"minecraft:particle_appearance_billboard": {
 				"size": [
-					"v.sizeXZ",
-					"variable.sizey"
+					"variable.sizeXZ",
+					"variable.sizeY"
 				],
 				"facing_camera_mode": "direction_z",
 				"uv": {

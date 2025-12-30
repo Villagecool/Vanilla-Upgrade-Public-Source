@@ -89,6 +89,9 @@
 		"vc_burger": {
 			"textures": "textures/items/burger"
 		},
+		"vc_cast_iron_bars": {
+			"textures": "textures/blocks/cast_iron_bars"
+		},
 		"vc_cattail": {
 			"textures": "textures/items/cattails"
 		},
@@ -166,6 +169,9 @@
 		"vc_cursed_campfire": {
 			"textures": "textures/items/cursed_campfire"
 		},
+		"vc_copper_campfire": {
+			"textures": "textures/items/copper_campfire"
+		},
 		"vc_duck_cooked": {
 			"textures": "textures/items/duck_cooked"
 		},
@@ -183,6 +189,21 @@
 		},
 		"vc_elax_floor_leaves": {
 			"textures": "textures/blocks/elax_floor_leaves"
+		},
+		"vc_electrum_bars": {
+			"textures": "textures/blocks/electrum_bars"
+		},
+		"vc_electrum_chain": {
+			"textures": "textures/items/electrum_chain"
+		},
+		"vc_electrum_door_item": {
+			"textures": "textures/items/door_electrum"
+		},
+		"vc_electrum_ingot": {
+			"textures": "textures/items/electrum_ingot"
+		},
+		"vc_electrum_nugget": {
+			"textures": "textures/items/electrum_nugget"
 		},
 		"vc_end_gateway": {
 			"textures": "textures/blocks/end_gateway"
@@ -310,6 +331,9 @@
 		"vc_record_triangle": {
 			"textures": "textures/items/record_triangle"
 		},
+		"vc_record_droopy": {
+			"textures": "textures/items/record_droopy"
+		},
 		"vc_rope_item": {
 			"textures": "textures/items/rope"
 		},
@@ -430,6 +454,9 @@
 		"vc_zalu_roots": {
 			"textures": "textures/blocks/zalu_roots"
 		},
+    	"vc_fried_dragon_egg": {
+    	  "textures": "textures/items/fried_dragon_egg"
+    	},
 		"vc_frozen_feather": {
 			"textures": "textures/items/frozen_feather"
 		},

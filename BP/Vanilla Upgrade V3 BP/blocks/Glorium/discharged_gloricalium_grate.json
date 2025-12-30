@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:discharged_gloricalium_grate",
@@ -18,7 +18,8 @@
 				"detection_rules": [
 					{
 						"can_contain_liquid": true,
-						"liquid_type": "water"
+						"liquid_type": "water",
+						"on_liquid_touches": "no_reaction"
 					}
 				]
 			},

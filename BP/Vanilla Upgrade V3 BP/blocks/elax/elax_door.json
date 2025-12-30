@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.30",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:elax_door",
@@ -40,20 +40,13 @@
 		"components": {
 			"tag:wood": {},
 			"tag:one_way_collidable": {},
-            "tag:minecraft:is_axe_item_destructible": {},
+      "tag:minecraft:is_axe_item_destructible": {},
 			"tag:elax_door": {},
 			"tag:non_solid": {},
 			"tag:door": {},
 			"minecraft:custom_components": [
 				"vc:door"
 			],
-			"minecraft:redstone_conductivity": {
-				"redstone_conductor": true
-			},
-			"minecraft:tick": {
-				"interval_range": [2,2],
-				"looping": true
-			},
 			"minecraft:flammable": {
 				"catch_chance_modifier": 5,
 				"destroy_chance_modifier": 20
@@ -71,6 +64,20 @@
 						]
 					}
 				]
+			},
+			"minecraft:redstone_conductivity": {
+				"redstone_conductor": true
+			},
+			"minecraft:tick": {
+				"interval_range": [2,2],
+				"looping": true
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "blocking"
+				}]
 			},
 			"minecraft:material_instances": {
 				"*": {

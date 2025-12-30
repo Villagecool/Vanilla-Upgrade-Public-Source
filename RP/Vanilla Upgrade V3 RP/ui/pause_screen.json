@@ -86,7 +86,7 @@
     ]
   },
 
-  "the_icon_panel/stacked_column": {
+  "smaller_buttons_panel/stacked_column": {
     "modifications": [
       {
         "array_name": "controls",
@@ -117,7 +117,7 @@
           {
             "vanilla_upgrade_padding": {
               "type": "panel",
-              "size": ["2%", 0],
+              "size": [5, 0],
               "bindings": [
                 {
                   "binding_name": "#vanilla_upgrade_visible",

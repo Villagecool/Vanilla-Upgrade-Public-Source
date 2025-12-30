@@ -28,6 +28,9 @@
 		"sound": "wood",
 		"textures": "vc_azalea_planks"
 	},
+	"azalea_shelf": {
+		"sound": "shelf"
+	},
 	"azalea_slab": {
 		"sound": "wood"
 	},
@@ -163,6 +166,12 @@
 	"compressed_copper_trapdoor": {
 		"sound": "copper"
 	},
+	"cursed_campfire": {
+		"sound": "wood"
+	},
+	"copper_campfire": {
+		"sound": "wood"
+	},
 	"corn_kernels": {
 		"sound": "grass"
 	},
@@ -198,6 +207,9 @@
 			"side": "vc_deepslate_glowing_mycelium_side",
 			"up": "vc_glowing_mycelium_top"
 		}
+	},
+	"die": {
+		"sound": "lodestone"
 	},
 	"dirt_slab": {
 		"sound": "gravel"
@@ -250,6 +262,9 @@
 		"sound": "wood",
 		"textures": "vc_elax_planks"
 	},
+	"elax_shelf": {
+		"sound": "shelf"
+	},
 	"elax_slab": {
 		"sound": "wood"
 	},
@@ -269,6 +284,50 @@
 	//	"sound": "moss_block",
 	//	"textures": "vc_enchanted_moss"
 	//},
+	"electrum_block": {
+		"sound": "copper",
+		"textures": "vc_electrum"
+	},
+	"electrum_door": {
+		"sound": "copper"
+	},
+	"electrum_doubleslab": {
+		"sound": "copper",
+		"textures": "vc_electrum"
+	},
+	"electrum_slab": {
+		"sound": "copper"
+	},
+	"electrum_stairs": {
+		"sound": "copper"
+	},
+	"electrum_tiles": {
+		"sound": "copper",
+		"textures": "vc_electrum_tiles"
+	},
+	"electrum_bars": {
+		"sound": "iron"
+	},
+	"cast_iron_bars": {
+		"sound": "iron"
+	},
+	"electrum_spleaves": {
+		"sound": "copper",
+		"textures": "vc_electrum_spleaves"
+	},
+	"electrum_chain": {
+		"sound": "chain"
+	},
+	"electrum_nugget": {
+		"sound": "chain"
+	},
+	"electrum_block_cut": {
+		"sound": "copper",
+		"textures": "vc_electrum_block_cut"
+	},
+	"electrum_trapdoor": {
+		"sound": "copper"
+	},
 	"end_bricks_cracked": {
 		"sound": "stone",
 		"textures": "vc_end_bricks_cracked"
@@ -404,6 +463,9 @@
 		"sound": "fungus"
 		//"textures": "vc_glowing_roots"
 	},
+	"gunpowder_line": {
+		"sound": "sand"
+	},
 	"gyser_sand": {
 		"sound": "sand",
 		"textures": {
@@ -521,6 +583,9 @@
 		"sound": "wood",
 		"textures": "vc_palm_planks"
 	},
+	"palm_shelf": {
+		"sound": "shelf"
+	},
 	"palm_slab": {
 		"sound": "wood"
 	},
@@ -562,6 +627,9 @@
 	},
 	"sapling_palm": {
 		"sound": "grass"
+	},
+	"sapling_elax": {
+		"sound": "fungus"
 	},
 	"saturated_pumice": {
 		"sound": "deepslate",
@@ -684,6 +752,9 @@
 	"soulbush": {
 		"sound": "grass"
 	},
+	"soul_bulb": {
+      "sound" : "coral"
+	},
 	"spew": {
 		"sound": "netherrack"
 	},
@@ -723,11 +794,9 @@
 	//		"up": "tinted_air"
 	//	}
 	//},
-	//"tinted_glass_pane": {
-	//	"blockshape": "iron_fence",
-	//	"sound": "glass",
-	//	"textures": "vc_tinted_glass"
-	//},
+	"tinted_glass_pane": {
+		"sound": "glass"
+	},
 	"tomato_seeds": {
 		"sound": "grass"
 	},

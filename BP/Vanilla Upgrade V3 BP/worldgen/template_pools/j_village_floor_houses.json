@@ -72,7 +72,7 @@
       {
         "element": {
           "element_type": "minecraft:single_pool_element",
-          "location": "junglevillage/path1",
+          "location": "junglevillage/paths/fork",
           "processors": "mike:stone_brick_replacement"
         },
         "weight": 1

@@ -1,0 +1,100 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:electrum_nugget",
+			"menu_category": {
+				"category": "construction"
+			},
+			"states": {
+				"vc:stack": [0,1,2,3]
+			}
+		},
+		"components": {
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:custom_components": [
+				"vc:nuggets"
+			],
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "no_reaction"
+				}]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 6
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_electrum_nuggets"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('vc:stack') == 0",
+				"components": {
+          "minecraft:loot": "loot_tables/blocks/electrum_nugget_1.json",
+					"minecraft:geometry": "geometry.electrum_nuggets1",
+					"minecraft:collision_box": {
+						"origin": [-2,0,-2],
+						"size": [4,2,4]
+					},
+					"minecraft:selection_box": {
+						"origin": [-2,0,-2],
+						"size": [4,2,4]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('vc:stack') == 1",
+				"components": {
+          "minecraft:loot": "loot_tables/blocks/electrum_nugget_2.json",
+					"minecraft:geometry": "geometry.electrum_nuggets2",
+					"minecraft:collision_box": {
+						"origin": [-5,0,-3],
+						"size": [9,6,7]
+					},
+					"minecraft:selection_box": {
+						"origin": [-5,0,-3],
+						"size": [9,6,7]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('vc:stack') == 2",
+				"components": {
+          "minecraft:loot": "loot_tables/blocks/electrum_nugget_3.json",
+					"minecraft:geometry": "geometry.electrum_nuggets3",
+					"minecraft:collision_box": {
+						"origin": [-6,0,-5],
+						"size": [10,6,9]
+					},
+					"minecraft:selection_box": {
+						"origin": [-6,0,-5],
+						"size": [10,6,9]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('vc:stack') == 3",
+				"components": {
+          "minecraft:loot": "loot_tables/blocks/electrum_nugget_4.json",
+					"minecraft:geometry": "geometry.electrum_nuggets4",
+					"minecraft:collision_box": {
+						"origin": [-6,0,-5],
+						"size": [12,8,12]
+					},
+					"minecraft:selection_box": {
+						"origin": [-6,0,-5],
+						"size": [12,8,12]
+					}
+				}
+			}
+		]
+	}
+}

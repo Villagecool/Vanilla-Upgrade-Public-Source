@@ -2,18 +2,21 @@ import * as SERVER from '@minecraft/server';
 import * as UI from '@minecraft/server-ui';
 import { playNote } from "./note_block.js";
 import { getRedstonePowered, gyserShoot, gyserRetract } from "./block_components.js";
-import { vec3toString } from './utils.js';
+import { getRandomBool, getRandomInt, vec3toString } from './utils.js';
 
 let stressTest = false
 let fillstress = []
-SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
+SERVER.system.beforeEvents.startup.subscribe(initEvent => {
 	initEvent.blockComponentRegistry.registerCustomComponent('vc:redstone', {
+		//onRedstoneUpdate: e => {
+			//const wasSucessful = (e.powerLevel >= 1)
+		
 		onTick: e => {
 			if (stressTest == true) fillstress.push(`${e.block.typeId} checked ${e.block.getRedstonePower() > 0 ? '§11§r' : '§b6§r'} at ${vec3toString(e.block.location)}`)
 
 			const wasSucessful = e.block.getRedstonePower() > 0 ? true : checkRedstone(e.block);
 			//const wasSucessful = false;
-
+		
 			if (e.block.typeId == 'vc:custom_note_block') { // i split it up cus i think it optimizes the script a bit
 				if (wasSucessful && e.block.permutation.getState("vc:powered") == false) {
 					playNote(e.block, false);
@@ -33,6 +36,17 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
 			else if (e.block.typeId == 'vc:gyser_sand') {
 				if (!wasSucessful && e.block.permutation.getState("vc:active_bit") == true) gyserRetract(e)
 			}
+			/*else if (e.block.typeId == 'vc:die') {
+				if (wasSucessful && e.block.permutation.getState("vc:powered") == false) {
+					e.block.dimension.playSound('die.use', e.block.center())
+					
+				//this goofy ass contraption is the only way to get the block to properly update the redstone functionality
+				//it removes and replaces the block in a single tick get the redstone producer component to turn on
+					var cmd = `setblock ${vec3toString(e.block.location)} ${e.block.typeId}["minecraft:facing_direction"="${e.block.permutation.getState("minecraft:facing_direction")}","vc:lit_bit"=${(getRandomInt(1,5) == 1)},"vc:powered"=${wasSucessful}]`
+					e.block.setType('minecraft:air')
+					SERVER.system.runTimeout(() => { e.block.dimension.runCommand(cmd) },0)
+				}
+			}*/
 
 			try {
 				setPermutation(e.block, 'vc:powered', wasSucessful)
@@ -92,6 +106,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
 	});
 });
 SERVER.system.afterEvents.scriptEventReceive.subscribe(e => {
+	if (stressTest == 'all') fillstress.push(`ran ${e.id} ${e.message} at ${vec3toString(e.sourceBlock.location ?? e.sourceEntity.location ?? {x:0,y:0,z:0})}`)
 	if (e.id == 'vc:stress') {
 		fillstress = ['§l§cREDSTONE STRESS TEST§r']
 		stressTest = true
@@ -107,6 +122,21 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe(e => {
 			SERVER.world.sendMessage(`§eoverall §l${fillstress.length - 1}§r§e test were ran within one tick\nchecking a total of §l${total}§r§e blocks`)
 
 		}, 1)
+	}
+	if (e.id == 'scriptevent:stress') {
+		fillstress = ['§l§6SCRIPTEVENT STRESS TEST§r']
+		stressTest = 'all'
+		SERVER.system.runTimeout(_ => {
+			stressTest = false
+			SERVER.world.sendMessage(fillstress.join('\n'))
+			var total = 0
+			for (const aaa of fillstress) {
+				if (aaa == '§l§6SCRIPTEVENT STRESS TEST§r') total += 0;
+				else total += 1;
+			}
+			SERVER.world.sendMessage(`§eoverall §l${fillstress.length - 1}§r§e test were ran within one tick\nchecking a total of §l${total}§r§e blocks`)
+
+		}, 2)
 	}
 })
 

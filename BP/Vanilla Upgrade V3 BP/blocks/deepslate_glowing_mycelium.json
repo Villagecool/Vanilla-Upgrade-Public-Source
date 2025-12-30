@@ -19,7 +19,7 @@
 			},
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "vc_glowing_mycelium"
+					"texture": "deepslate"
 				}
 			}
 		}

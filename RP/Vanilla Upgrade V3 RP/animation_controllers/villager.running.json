@@ -13,6 +13,9 @@
 					"blend_transition": 0.1
 				},
 				"running": {
+					"sound_effects": [
+						{"effect": "scream"}
+					],
 					"animations": [
 						"look_at_target",
 						"running",
@@ -39,6 +42,9 @@
 					"blend_transition": 0.1
 				},
 				"running": {
+					"sound_effects": [
+						{"effect": "scream"}
+					],
 					"animations": [
 						"look_at_target",
 						"running",

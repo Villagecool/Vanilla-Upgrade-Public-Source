@@ -1,9 +1,11 @@
-{
+{ 
+  //So i had a handful of ideas for achievements in this addon
+  //obviously I cant add achievements to bedrock, so these achievement are reused here
   "splashes": [
     "Don't drink vanilla extract",
     ":3",
     ">:3",
-    "Petah, the horse is here.",
+    "Petah, the horse is here.", //achievement for using a rotten saddle
     "How do you like that obama!",
     "yes vlliage is spelled vlliage",
     "spinny!",
@@ -12,48 +14,57 @@
     "yeah we did it",
     "rip holiday creator features o7",
     "§6advanced!",
-    "also try my random addon!",
-    "also try better on bedrock!",
+    "also try my random addon!", //I think they're cool
+    "also try better on bedrock!", //I also think they're cool
     "now 80% less stolen!",
     "learn.microsoft.com my beloved",
     "blockception my beloved",
-    "rip maging table",
+    "rip maging table", //replaced with the knowlage harvester
     "hopefuly works this time!",
     "honey i compressed the copper",
     "weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
     "chocolate upgrade is better tbh",
-    "toymites!",
-    "\"mellon\"",
-    "the revenge of the glare",
+    "toymites!", //popeye reference
+    "\"mellon\"", //carved mellons are misspelled in their id
+    "the revenge of the glare", //the glarizer i think
     "bone meal",
-    "you spin me right round baby",
-    "who lives in a pineapple under the sea",
-    "grizly bear will forever have a place in my heart",
-    "Anything that ain't nailed down gets taken by bandagers",
-    "The bandagers stole all the nails!",
-    "don't reference models online, worst mistake of my life",
-    "SLED RIDER 3D!!!11!!",
-    "rip \"Villagecool\" you won't be missed",
+    "you spin me right round baby", //achievement for using a wrench
+    "who lives in a pineapple under the sea", //SPONGEBOB SQUARE PANTS
+    "grizly bear will forever have a place in my heart", //scrapped mob
+    "Anything that ain't nailed down gets taken by bandagers", //eddsworld
+    "The bandagers stole all the nails!", //eddsworld
+    "don't reference models online, worst mistake of my life", //penguins in v1
+    "SLED RIDER 3D!!!11!!", //reference to the game of the same name
+    "rip \"Villagecool\" you won't be missed", //im vlliage now
     "I'm glad you're here!",
     "You are welcome here!",
     "Your gender is valid!",
     "Technoblade never dies!",
     "Slain by the Render Dragon!",
     "Nooooooooooooo!",
-    "is the moon big?",
+    "is the moon big?", //hermitcraft
     "now draw her telporting bread.",
     "stealing the chaos emeralds!",
     "ANIMATED FURNACES!",
-    "smth tells me this is a giant_omen",
+    "smth tells me this is a giant_omen", //possible achievement for giant omen: "In media res" (as the other bosses are beginning and end)
     "name tags!",
-    "you eat chorus? chorus eat you >:[",
-    "the coconut nut is a giant nut",
+    "you eat chorus? chorus eat you >:[", //achievement for obtaining carnivorus chorus
+    "the coconut nut is a giant nut", //achievement for obtaining a coconut
     "elaxatives",
     "crystalized!",
     "60% bug free!",
     "please dont be slow this time",
     "now with 60% less lag!",
-    "im not making a seperate mod for one feature",
-    "more like vanilla downgrade "
+    "im not making a seperate mod for one feature", //PLEASE STOP ASKING ME
+    "more like vanilla downgrade ",
+    "THE GLIT§kC§rHES WHY T§kHE§r GLITC§kHES",
+    "wydm spleaves aren't a real word",
+    "Who is droopy and why does he like my face",
+    "out with the copper, in with the gold!",
+    "The Ending Supper", //achievement for obtaining fried dragon egg
+    "FAAAAAAAAAAAAA", //achievement for using a roll goat horn
+    "I can't get enough! it's my favorite stuff!", //achievement for obtaining hot chocolate, polar express reference
+    "cornball." //achievement for obtaining corn
+    //"todays subject" //achievement for planting cotton
   ]
 }

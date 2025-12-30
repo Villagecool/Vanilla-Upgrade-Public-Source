@@ -3,9 +3,9 @@ import * as UI from '@minecraft/server-ui';
 import { decripateStack, setPermutation } from './utils.js'
 
 // Subscribe to events to run code when specific in game actions occur
-SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
+SERVER.system.beforeEvents.startup.subscribe(initEvent => {
 	initEvent.blockComponentRegistry.registerCustomComponent('vc:advanced_hopper', {
-		beforeOnPlayerPlace: e => {
+		onPlace: e => {
 			e.block.dimension.spawnEntity('vc:advanced_hopper', e.block.center())
 		},
 		onPlayerInteract: e => {
@@ -168,6 +168,13 @@ function addItemToContainer(container, newitem, entity) {
 	}
 	console.log("addItemToContainer failed (inventory most likley full)")
 }
+/**
+ * 
+ * @param {SERVER.entityContainer} container 
+ * @param {String} pullitem 
+ * @param {SERVER.Entity} entity 
+ * @returns 
+ */
 function pullItemFromContainer(container, pullitem, entity) {
 	for (let i = 0; i < container.size; i++) {
 		let item = container.getItem(i);
@@ -176,7 +183,7 @@ function pullItemFromContainer(container, pullitem, entity) {
 			let canTake = (pullitem.includes('§r') ? advancedFilterAllowed(container.getItem(i), pullitem.split('\n')) : container.getItem(i).typeId == pullitem)
 			if (pullitem == '') canTake = true;
 			if (canTake) {
-				if (container.isValid()) transferOneItem(container, i, entityContainer);
+				if (container.isValid) transferOneItem(container, i, entityContainer);
 				//console.log(`transfered ${container.getItem(i).typeId} from slot ${i}`)
 				return
 			}

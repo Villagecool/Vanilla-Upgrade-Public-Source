@@ -60,6 +60,18 @@
     "blend_frames": false
   },
   {
+    "flipbook_texture": "textures/blocks/cattail_pot",
+    "atlas_tile": "vc_cattail_pot",
+    "frames": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "ticks_per_frame": 20,
+    "blend_frames": false
+  },
+  {
     "flipbook_texture": "textures/blocks/kiln_front_on",
     "atlas_tile": "vc_kiln_front_on",
     "frames": [
@@ -121,6 +133,11 @@
     "ticks_per_frame": 20
   },
   {
+    "flipbook_texture": "textures/blocks/soul_bulb",
+    "atlas_tile": "vc_soul_bulb",
+    "ticks_per_frame": 10
+  },
+  {
     "flipbook_texture": "textures/blocks/crystalized_experience_block",
     "atlas_tile": "vc_crystalized_experience_block",
     "ticks_per_frame": 20
@@ -128,6 +145,17 @@
   {
     "flipbook_texture": "textures/blocks/cursed_campfire_log_lit",
     "atlas_tile": "vc_cursed_campfire_log_lit",
+    "frames": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "ticks_per_frame": 8
+  },
+  {
+    "flipbook_texture": "textures/blocks/copper_campfire_log_lit",
+    "atlas_tile": "vc_copper_campfire_log_lit",
     "frames": [
       0,
       1,
@@ -145,6 +173,11 @@
   {
     "flipbook_texture": "textures/blocks/cursed_campfire",
     "atlas_tile": "vc_cursed_campfire",
+    "ticks_per_frame": 2
+  },
+  {
+    "flipbook_texture": "textures/blocks/copper_campfire",
+    "atlas_tile": "vc_copper_campfire",
     "ticks_per_frame": 2
   },
   {

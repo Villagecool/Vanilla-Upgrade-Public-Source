@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.30",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:azalea_door",
@@ -71,6 +71,13 @@
 			"minecraft:tick": {
 				"interval_range": [2,2],
 				"looping": true
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "blocking"
+				}]
 			},
 			"minecraft:material_instances": {
 				"*": {

@@ -1,10 +1,10 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:rail_conjunction",
 			"menu_category": {
-				"category": "commands",
+				"category": "none",
 				"group": "itemGroup.name.Commands"
 			},
 			"states": {
@@ -33,6 +33,13 @@
 			"tag:metal": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 1.05
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "popped"
+				}]
 			},
 			"minecraft:light_dampening": 0,
 			"minecraft:geometry": "geometry.rail",

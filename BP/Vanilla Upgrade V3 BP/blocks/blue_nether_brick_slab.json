@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:blue_nether_brick_slab",
@@ -30,10 +30,12 @@
 				"detection_rules": [
 					{
 						"can_contain_liquid": true,
-						"liquid_type": "water"
+						"liquid_type": "water",
+						"on_liquid_touches": "blocking"
 					}
 				]
 			},
+			"minecraft:geometry": "geometry.slab",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_blue_nether_bricks"
@@ -79,6 +81,15 @@
 				"components": {
 					"minecraft:geometry": {
 						"identifier": "geometry.slab_upper"
+					},
+					"minecraft:liquid_detection": {
+						"detection_rules": [
+							{
+								"can_contain_liquid": true,
+								"liquid_type": "water",
+								"on_liquid_touches": "no_reaction"
+							}
+						]
 					},
 					"minecraft:collision_box": {
 						"origin": [

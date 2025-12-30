@@ -1,9 +1,9 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"menu_category": {
-				"category": "Commands",
+				"category": "none",
 				"group": "itemGroup.name.commands"
 			},
 			"identifier": "vc:lumerison_fungus"
@@ -39,6 +39,13 @@
 					9,
 					8
 				]
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "popped"
+				}]
 			},
 			"minecraft:collision_box": false,
 			"minecraft:material_instances": {

@@ -80,6 +80,9 @@
         { "baby": "controller.animation.villager_v2.baby" },
         { "running": "controller.animation.villager_v2.running" }
       ],
+      "sound_effects": {
+        "scream": "mob.villager.scream"
+      },
       "render_controllers": [
         "controller.render.villager_v2_base",
         "controller.render.villager_v2_biome",

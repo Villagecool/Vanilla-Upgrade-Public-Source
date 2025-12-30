@@ -2,7 +2,7 @@ import * as SERVER from '@minecraft/server';
 import * as UI from '@minecraft/server-ui';
 import { setPermutation, getRandomInt } from "./utils.js";
 
-SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
+SERVER.system.beforeEvents.startup.subscribe(initEvent => {
     initEvent.blockComponentRegistry.registerCustomComponent('vc:chorus_check_players', {
         onTick: e => {
             let block = e.block;
@@ -22,7 +22,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
                     setPermutation(e.block, 'vc:upper_bit', true)
             }, 1)
         },
-        onPlayerDestroy: e => {
+        onPlayerBreak: e => {
             shrink(e.block)
         }
     })

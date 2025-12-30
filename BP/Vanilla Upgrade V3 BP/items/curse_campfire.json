@@ -12,6 +12,7 @@
 			"minecraft:display_name": {
 				"value": "delete:curse_campfire"
 			},
+			"minecraft:icon": "stick",
 			"minecraft:should_despawn": true,
 			"minecraft:hover_text_color": "dark_purple"
 		}

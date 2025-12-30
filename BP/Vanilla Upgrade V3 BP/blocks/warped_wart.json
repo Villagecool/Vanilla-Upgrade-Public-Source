@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:warped_wart",
@@ -39,9 +39,9 @@
 					}
 				]
 			},
-			"minecraft:custom_components": [
-				"vc:crop"
-			],
+			"vc:crop": {
+				"max": 3
+			},
 			"minecraft:loot": "loot_tables/blocks/warped_wart.json",
 			"minecraft:selection_box": {
 				"origin": [

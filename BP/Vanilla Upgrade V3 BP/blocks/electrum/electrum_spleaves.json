@@ -1,0 +1,37 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:electrum_spleaves",
+			"menu_category": {
+				"category": "construction"
+				//"group": "itemGroup.name.copper"
+			}
+		},
+		"components": {
+			"tag:metal": {},
+			"tag:copper": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 15
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					//"stops_liquid_flowing_from_direction": ["north", "east", "south", "west", "up", "down"],
+					"on_liquid_touches": "no_reaction"
+				}]
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_electrum_spleaves",
+					"render_method": "alpha_test",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				}
+			}
+		}
+	}
+}

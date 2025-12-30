@@ -50,7 +50,7 @@
 				"collision_radius": 0.2
 			},
 			"minecraft:particle_appearance_tinting": {
-				"color": ["1-variable.perticle_random_1*0.4", 0.5, "1-variable.particle_random_1*0.4", "1-(variable.particle_age/variable.particle_lifetime)"]
+				"color": ["1-variable.particle_random_1*0.4", 0.5, "1-variable.particle_random_1*0.4", "1-(variable.particle_age/variable.particle_lifetime)"]
 			}
 		}
 	}

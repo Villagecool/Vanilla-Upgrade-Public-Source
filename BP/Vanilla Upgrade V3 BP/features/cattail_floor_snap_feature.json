@@ -8,8 +8,8 @@
 		"places_feature": "vc:cattail_real_snap_to_surface",
 		"iterations": 20,
 		"scatter_chance": {
-			"denominator": 1,
-			"numerator": 3
+			"denominator": 3,
+			"numerator": 1
 		},
 		"x": {
 			"distribution": "gaussian",

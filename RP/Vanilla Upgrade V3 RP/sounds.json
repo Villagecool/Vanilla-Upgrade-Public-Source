@@ -1,16 +1,6 @@
 {
   "individual_event_sounds": {
     "events": {
-      "mob.illusioner.bow.hit": {
-        "pitch": 1.0,
-        "sound": "random.clonebowhit",
-        "volume": 1.0
-      },
-      "pearl.hit": {
-        "pitch": 1.0,
-        "sound": "mob.illusioner.mirror_move",
-        "volume": 1.0
-      },
       "lt.reaction.miscexplosion": {
         "pitch": 1.0,
         "sound": "record.subhour",
@@ -24,6 +14,11 @@
       "lt.reaction.miscmystical2": {
         "pitch": 1.0,
         "sound": "record.corn",
+        "volume": 1.0
+      },
+      "lt.reaction.mgsalt": {
+        "pitch": 1.0,
+        "sound": "record.droopy",
         "volume": 1.0
       }
     }
@@ -67,72 +62,6 @@
         "pitch": [0.8, 1.2],
         "volume": 1
       },
-      "vc:copper_golem": {
-        "events": {
-          "death": "mob.copper_golem.death",
-          "hurt": "mob.copper_golem.hurt",
-          "ambient": "mob.copper_golem.idle",
-          "step": {
-            "sound": "step.copper",
-            "volume": 0.35
-          }
-        },
-        "pitch": [0.8, 1.2],
-        "volume": 1
-      },
-      "vc:ministrosity": {
-        "events": {
-          "death": "dig.stone",
-          "hurt": "dig.stone",
-          "ambient": "dig.basalt"
-        },
-        "pitch": [0.8, 1.2],
-        "volume": 1
-      },
-      //"vc:otter": {
-      //	"events": {
-      //		"ambient": "mob.fox.ambient",
-      //		"attack": "mob.fox.bite",
-      //		"death": "mob.fox.death",
-      //		"eat": "mob.fox.eat",
-      //		"hurt": "mob.fox.hurt",
-      //		"mad": "mob.fox.aggro",
-      //		"screech": {
-      //			"sound": "mob.fox.screech",
-      //			"volume": 2
-      //		},
-      //		"sleep": "mob.fox.sleep",
-      //		"sniff": "mob.fox.sniff",
-      //		"spit": "mob.fox.spit"
-      //	},
-      //	"pitch": [
-      //		0.9,
-      //		1.3
-      //	],
-      //	"volume": 1.2
-      //},
-      //"vc:squirle": {
-      //	"events": {
-      //		"ambient": "mob.fox.ambient",
-      //		"attack": "mob.fox.bite",
-      //		"death": "mob.fox.death",
-      //		"eat": "mob.fox.eat",
-      //		"hurt": "mob.fox.hurt",
-      //		"mad": "mob.fox.aggro",
-      //		"screech": {
-      //			"sound": "mob.fox.screech",
-      //			"volume": 2
-      //		},
-      //		"sleep": "mob.fox.sleep",
-      //		"sniff": "mob.fox.sniff",
-      //		"spit": "mob.fox.spit"
-      //	},
-      //	"pitch": [
-      //		0.8,
-      //		1.2
-      //	],
-      //	"volume": 1
-      //},
       "vc:illusioner": {
         "volume": 1,
         "pitch": [0.8, 1.2],
@@ -155,13 +84,6 @@
           "death": "mob.bandager.death"
         }
       },
-      "vc:illusion_pearl": {
-        "events": {
-          "pearl.hit": "mob.illusioner.mirror_move"
-        },
-        "pitch": [0.8, 1.2],
-        "volume": 1
-      },
       "vc:illusioner_clone": {
         "volume": 1,
         "pitch": [0.8, 1.2],
@@ -171,24 +93,6 @@
           "death": "mob.illusioner.clonedeath",
           "prepare.wololo": "mob.evocation_illager.prepare_wololo"
         }
-      },
-      "vc:frog": {
-        "events": {
-          "ambient": "mob.frog.ribbit",
-          "death": "mob.frog.ribbit",
-          "hurt": "mob.frog.ribbit"
-        },
-        "pitch": [0.8, 1.2],
-        "volume": 1
-      },
-      "vc:duck": {
-        "events": {
-          "ambient": "mob.duck.quack",
-          "death": "mob.duck.quack",
-          "hurt": "mob.duck.quack"
-        },
-        "pitch": [0.8, 1.2],
-        "volume": 1
       },
       "vc:penguin": {
         "events": {
@@ -208,38 +112,6 @@
             "pitch": 1,
             "sound": "mob.silverfish.step",
             "volume": 0.35
-          }
-        },
-        "pitch": [0.8, 1.2],
-        "volume": 1
-      },
-      "vc:crab": {
-        "events": {
-          "ambient": "mob.silverfish.say",
-          "death": "mob.silverfish.kill",
-          "hurt": "mob.silverfish.hit",
-          "step": {
-            "pitch": [0.9, 1.1],
-            "sound": "mob.crab.step",
-            "volume": 1
-          }
-        },
-        "pitch": [0.8, 1.2],
-        "volume": 0.2
-      },
-      "vc:nautilus": {
-        "events": {
-          "flop": {
-            "pitch": 1,
-            "sound": "mob.fish.flop",
-            "volume": 1
-          },
-          "hurt": "mob.fish.hurt",
-          "hurt.in.water": "mob.fish.hurt",
-          "step": {
-            "pitch": 1,
-            "sound": "mob.fish.step",
-            "volume": 0.15
           }
         },
         "pitch": [0.8, 1.2],
@@ -266,34 +138,6 @@
         },
         "pitch": [0.8, 1.2],
         "volume": 10
-      },
-      "vc:grizly_bear": {
-        "volume": 1,
-        "pitch": [0.8, 1.2],
-        "events": {
-          "ambient": "mob.polarbear.idle",
-          "ambient.baby": "mob.polarbear_baby.idle",
-          "hurt": {
-            "sound": "mob.polarbear.hurt",
-            "volume": 0.7
-          },
-          "mob.warning": {
-            "pitch": 1,
-            "sound": "mob.polarbear.warning",
-            "volume": 1.2
-          },
-          "retreat": {
-            "pitch": 1,
-            "sound": "mob.polarbear.warning",
-            "volume": 1.2
-          },
-          "step": {
-            "pitch": 1,
-            "sound": "mob.polarbear.step",
-            "volume": 0.7
-          },
-          "death": "mob.polarbear.death"
-        }
       },
       "vc:sparse": {
         "volume": 1,

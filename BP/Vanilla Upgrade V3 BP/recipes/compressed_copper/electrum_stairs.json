@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:electrum_stairs"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "#  ",
+      "## ",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:electrum_block"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:electrum_block"
+      }
+    ],
+    "result": {
+      "item": "vc:electrum_stairs",
+      "count": 4
+    }
+  }
+}

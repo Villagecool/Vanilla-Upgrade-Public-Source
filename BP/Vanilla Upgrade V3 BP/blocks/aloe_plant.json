@@ -1,11 +1,10 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:aloe_vera",
 			"menu_category": {
-				"category": "commands",
-				"group": "itemGroup.name.commands"
+				"category": "none"
 			},
 			"states": {
 				"vc:growth": [
@@ -24,17 +23,18 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.01
 			},
+			"minecraft:flower_pottable": {},
 			"minecraft:light_dampening": 0,
 			"minecraft:geometry": "geometry.plant",
-			"minecraft:custom_components": [
-				"vc:crop"
-			],
+			"vc:crop": {
+				"max": 2
+			},
 			"minecraft:placement_filter": {
 				"conditions": [
 					{
 						"block_filter": [
 							"minecraft:dirt",
-							"minecraft:grass",
+							"minecraft:grass_block",
 							"minecraft:podzol",
 							"minecraft:dirt_with_roots",
 							"minecraft:moss_block",

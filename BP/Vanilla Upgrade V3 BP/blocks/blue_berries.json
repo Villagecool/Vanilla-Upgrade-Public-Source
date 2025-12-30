@@ -1,11 +1,10 @@
 {
-	"format_version": "1.21.30",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:blue_berries",
 			"menu_category": {
-				"category": "commands",
-				"group": "itemGroup.name.commands"
+				"category": "none"
 			},
 			"states": {
 				"vc:growth": [
@@ -25,10 +24,10 @@
 			},
 			"minecraft:light_dampening": 0,
 			"minecraft:geometry": "geometry.plant",
-			"minecraft:custom_components": [
-				"vc:crop",
-				"vc:blue_berry_bush"
-			],
+			"vc:crop": {
+				"max": 3
+			},
+			"vc:blue_berry_bush": {},
 			"minecraft:flammable": true,
 			"minecraft:placement_filter": {
 				"conditions": [

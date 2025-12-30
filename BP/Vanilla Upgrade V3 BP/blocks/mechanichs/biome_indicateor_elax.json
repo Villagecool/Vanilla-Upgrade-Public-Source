@@ -3,7 +3,7 @@
 	"minecraft:block": {
 		"description": {
 			"menu_category": {
-				"category": "commands",
+				"category": "none",
 				"group": "itemGroup.name.commands"
 			},
 			"identifier": "biome_indicate:elax"
@@ -11,7 +11,7 @@
 		"components": {
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "vc_elax_moss"
+					"texture": "vc_air"
 				}
 			},
 			"minecraft:geometry": "geometry.none",

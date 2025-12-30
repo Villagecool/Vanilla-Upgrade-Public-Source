@@ -2,9 +2,9 @@
 	"format_version": "1.20.30",
 	"minecraft:structure_template_feature": {
 		"description": {
-			"identifier": "vc:spewing_chorus2"
+			"identifier": "vc:spewing_chorus1"
 		},
-		"structure_name": "mystructure:spewing_chorus2",
+		"structure_name": "mystructure:spewing_chorus1",
 		"adjustment_radius": 4,
 		"facing_direction": "random",
 		"constraints": {

@@ -28,9 +28,6 @@
 				"inventory_size": 5,
 				"private": true
 			},
-			"minecraft:behavior.equip_item": {
-				"priority": 2
-			},
 			"minecraft:nameable": {},
 			"minecraft:rideable": {
 				"family_types": [
@@ -79,21 +76,9 @@
 					}
 				]
 			},
-			"minecraft:environment_sensor": {
-				"triggers": [
-					{
-						"filters": {
-							"test": "in_lava",
-							"value": false
-						},
-						"event": "vc:tick",
-						"target": "self"
-					}
-				]
-			},
 			"minecraft:damage_sensor": {
 				"triggers": {
-					"cause": "any",
+					"cause": "all",
 					"deals_damage": false
 				}
 			},
@@ -120,7 +105,8 @@
 				"queue_command": {
 					"command": [
 						"execute as @e[type=vc:termite,r=1.5,c=1] run playsound block.beehive.exit @a ~~~",
-						"execute as @e[type=vc:termite,r=1.5,c=1] run ride @s stop_riding"
+						"execute as @e[type=vc:termite,r=1.5,c=1] run ride @s stop_riding",
+						"scriptevent vc:termite_mound"
 					]
 				}
 			},

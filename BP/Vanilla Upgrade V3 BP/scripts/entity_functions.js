@@ -9,19 +9,20 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
     if (data.id === "vc:knockback") {
         const dirX = Number(data.message.split(" ")[0]);
         const dirZ = Number(data.message.split(" ")[1]);
-        let xzSpeed = Number(data.message.split(" ")[2]);
+        let xzSpeed = Number(data.message.split(" ")[2])*10;
         let ySpeed = Number(data.message.split(" ")[3]);
         let loc = entity.location;
         try {
-            if (!entity.isSneaking) entity.applyKnockback(dirX, dirZ, xzSpeed, ySpeed);
-            else entity.applyKnockback(dirX, dirZ, xzSpeed * 0.25, ySpeed * 0.25);
+            if (!entity.isSneaking) entity.applyKnockback({x: dirX * xzSpeed, z: dirZ * xzSpeed}, ySpeed);
+            else entity.applyKnockback({x: dirX * (xzSpeed * 0.25), z: dirZ * (xzSpeed * 0.25)}, ySpeed * 0.25);
             if (entity.typeId == 'minecraft:armor_stand') {
                 xzSpeed *= 3.5;
-                entity.runCommand(`tp @s ${loc.x + xzSpeed * dirX} ${loc.y + ySpeed} ${loc.z + xzSpeed * dirZ} ~~ true`)
+                entity.runCommand(`tp @s ${loc.x + xzSpeed * 0.1 * dirX} ${loc.y + ySpeed} ${loc.z + xzSpeed * 0.1 * dirZ} ~~ true`)
             }
         } catch (error) {
+            //console.error(error)
             xzSpeed *= 3.5;
-            entity.runCommand(`tp @s ${loc.x + xzSpeed * dirX} ${loc.y + ySpeed} ${loc.z + xzSpeed * dirZ} ~~ true`)
+            entity.runCommand(`tp @s ${loc.x + xzSpeed * 0.1 * dirX} ${loc.y + ySpeed} ${loc.z + xzSpeed * 0.1 * dirZ} ~~ true`)
         }
     };
     if (data.id === "vc:setOnFire") {
@@ -180,9 +181,13 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
         else if (block.south(1).hasTag("wood")) blockToBreak = block.south(1);
         else if (block.west(1).hasTag("wood")) blockToBreak = block.west(1);
         else if (block.above(1).hasTag("wood")) blockToBreak = block.above(1);
+        if (!blockToBreak) return;
         let item = blockToBreak.getItemStack(1)
         entity.runCommand(`replaceitem entity @s slot.weapon.mainhand 0 ${item.typeId}`)
-        entity.runCommand(`replaceitem entity @s slot.inventory 0 ${item.typeId}`)
+        if (entity.nameTag.toLocaleLowerCase() == 'toymite') {
+            entity.getComponent("inventory").container.addItem(item)
+        }
+        else entity.runCommand(`replaceitem entity @s slot.inventory 0 ${item.typeId}`)
         if (entity.nameTag.toLowerCase() != 'toymite') entity.runCommand(`event entity @s find_nest`)
         entity.runCommand(`playsound dig.wood @a ~~~`)
         blockToBreak.setType('minecraft:air')
@@ -361,7 +366,7 @@ SERVER.world.afterEvents.projectileHitEntity.subscribe(e=>{
         e.dimension.spawnItem(new SERVER.ItemStack("minecraft:gold_nugget", getRandomInt(2, 8)), e.location)
     }
 })
-SERVER.system.runInterval(() => {
+SERVER.system.runTimeout(() => {
     if (SERVER.world.getTimeOfDay() >= 167 && SERVER.world.getTimeOfDay() <= 12542) return;
     if (SERVER.world.getDay() % 4 != 0) return;
     let players = SERVER.world.getDimension("overworld").getPlayers();

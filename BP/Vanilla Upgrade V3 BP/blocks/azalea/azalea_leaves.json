@@ -4,13 +4,13 @@
 		"description": {
 			"identifier": "vc:azalea_leaves",
 			"menu_category": {
-				"category": "commands"
+				"category": "none"
 			}
 		},
 		"components": {
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "vc_azalea_leaves"
+					"texture": "azalea_leaves"
 				}
 			},
 			"minecraft:custom_components": [

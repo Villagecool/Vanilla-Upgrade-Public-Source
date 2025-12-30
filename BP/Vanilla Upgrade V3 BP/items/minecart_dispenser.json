@@ -16,7 +16,7 @@
 					"golden_rail",
 					"detector_rail",
 					"activator_rail",
-					"no:rail_conjunction"
+					"vc:rail_conjunction"
 				],
 				"entity": "vc:dispenser_minecart",
 				"use_on": [
@@ -24,7 +24,7 @@
 					"golden_rail",
 					"detector_rail",
 					"activator_rail",
-					"no:rail_conjunction"
+					"vc:rail_conjunction"
 				]
 			},
 			"minecraft:max_stack_size": 1

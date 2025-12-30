@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:glass_trapdoor",
@@ -38,6 +38,13 @@
 			"minecraft:custom_components": [
 				"vc:trapdoor"
 			],
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "blocking"
+				}]
+			},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.45
 			},
@@ -53,7 +60,7 @@
 				"rotation": [
 					0,
 					0,
-					180
+					0
 				]
 			},
 			"minecraft:selection_box": {
@@ -82,6 +89,18 @@
 			}
 		},
 		"permutations": [
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('minecraft:vertical_half') == 'bottom'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
 			{
 				"condition": "query.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('minecraft:vertical_half') == 'bottom'",
 				"components": {
@@ -123,9 +142,9 @@
 				"components": {
 					"minecraft:transformation": {
 						"rotation": [
+							0,
 							180,
-							180,
-							0
+							180
 						]
 					}
 				}
@@ -135,9 +154,9 @@
 				"components": {
 					"minecraft:transformation": {
 						"rotation": [
-							180,
 							0,
-							0
+							0,
+							180
 						]
 					}
 				}
@@ -147,9 +166,9 @@
 				"components": {
 					"minecraft:transformation": {
 						"rotation": [
-							180,
-							90,
-							0
+							0,
+							270,
+							180
 						]
 					}
 				}
@@ -159,9 +178,9 @@
 				"components": {
 					"minecraft:transformation": {
 						"rotation": [
-							180,
-							270,
-							0
+							0,
+							90,
+							180
 						]
 					}
 				}

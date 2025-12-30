@@ -3,14 +3,16 @@ import * as UI from '@minecraft/server-ui';
 import { setPermutation, getRandomInt, lerp, hexToRgb, distanceVector, vec3toString } from './utils.js'
 
 // Subscribe to events to run code when specific in game actions occur
-SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
+SERVER.system.beforeEvents.startup.subscribe(initEvent => {
     initEvent.itemComponentRegistry.registerCustomComponent('vc:cursed_campfire', {
         onUseOn: e => {
-            const block = e.blockFace == 'North' ? e.block.north(1) : e.blockFace == 'East' ? e.block.east(1) : e.blockFace == 'South' ? e.block.south(1) : e.blockFace == 'West' ? e.block.west(1) : e.blockFace == 'Up' ? e.block.above(1) : e.block.below(1)
+            /*const block = e.blockFace == 'North' ? e.block.north(1) : e.blockFace == 'East' ? e.block.east(1) : e.blockFace == 'South' ? e.block.south(1) : e.blockFace == 'West' ? e.block.west(1) : e.blockFace == 'Up' ? e.block.above(1) : e.block.below(1)
             
+            e.source.startItemCooldown('cursedcampfire', 5)
             if (!e.source.getDynamicProperty('is_linking_campfires')) {
                 e.source.setDynamicProperty('is_linking_campfires', JSON.stringify(block.location))
                 e.source.runCommand(`title @s actionbar Place down another campfire to link them!`)
+                return;
             } else {
                 let links
                 const dynamicProp = SERVER.world.getDynamicProperty('vc:linked_campfires')
@@ -18,6 +20,8 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
                 else links = JSON.parse(dynamicProp)
 
                 const otherCampfire = JSON.parse(e.source.getDynamicProperty('is_linking_campfires'))
+                if (JSON.stringify(block.location) == JSON.stringify(otherCampfire)) return;
+                if (e.source.dimension.getBlock(otherCampfire).typeId != 'vc:cursed_campfire') return;
                 if (distanceVector(otherCampfire, block.location) > 20 && e.source.getGameMode() != 'creative') {
                     block.setType('minecraft:air'); e.source.getComponent("equippable").setEquipment("Mainhand", e.itemStack);
                     e.source.runCommand(`title @s actionbar §cToo far from the other campfire!`)
@@ -26,10 +30,11 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
                 //SERVER.world.sendMessage(`${distanceVector(otherCampfire, e.block.location)}`)
                 links[0].push(otherCampfire)
                 links[1].push(block.location)
+                console.error('hey there')
                 SERVER.world.setDynamicProperty('vc:linked_campfires', JSON.stringify(links))
                 e.source.setDynamicProperty('is_linking_campfires', null)
                 e.source.runCommand(`title @s actionbar Campfire at §l${block.location.x} ${block.location.y} ${block.location.y} §rlinked to §l${otherCampfire.x} ${otherCampfire.y} ${otherCampfire.z}`)
-            }
+            }*/
         }
     })
     initEvent.blockComponentRegistry.registerCustomComponent('vc:cursed_campfire', {
@@ -46,7 +51,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
                 else links = JSON.parse(dynamicProp)
 
                 const otherCampfire = JSON.parse(e.player.getDynamicProperty('is_linking_campfires'))
-                if (distanceVector(otherCampfire, e.block.location) > 10 && e.player.getGameMode() != 'creative') {
+                if (distanceVector(otherCampfire, e.block.location) > 10 && e.player.getGameMode() != 'Creative') {
                     e.cancel = true;
                     e.player.runCommand(`title @s actionbar §cToo far from the other campfire!`)
                     return;
@@ -93,7 +98,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
             }
 
         },
-        onPlayerDestroy: e => {
+        onPlayerBreak: e => {
             e.player.setDynamicProperty('is_linking_campfires', null)
             let links
             const dynamicProp = SERVER.world.getDynamicProperty('vc:linked_campfires')
@@ -138,7 +143,7 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((e) => {
         }
         const otherCampfire = e.sourceEntity.dimension.getBlock(JSON.parse(e.sourceEntity.getDynamicProperty('is_linking_campfires'))).center()
 
-        var legal = (distanceVector(otherCampfire, playerLocation) < (e.sourceEntity.getGameMode() == 'creative' ? 100 : 10))
+        var legal = (distanceVector(otherCampfire, playerLocation) < (e.sourceEntity.getGameMode() == 'Creative' ? 100 : 10))
         molang.setColorRGB('variable.color', {
             red: (legal ? 85 : 255) / 255,
             green: (legal ? 255 : 85) / 255,

@@ -1,0 +1,22 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:single_block_feature": {
+      "description": {
+        "identifier": "vc:soulbush2_feature"
+      },
+      "places_block": {
+        "name": "vc:soulbush",
+        "states": {
+            "vc:v": 1
+        }
+      },
+      "enforce_placement_rules": true,
+      "enforce_survivability_rules": true,
+      "may_replace": [
+        "air"
+      ],
+      "may_attach_to": {
+        "bottom": [ "soul_sand", "soul_soil" ]
+      }
+    }
+  }

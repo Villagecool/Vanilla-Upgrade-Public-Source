@@ -1,4 +1,4 @@
-execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 vc:fletching_table_custom replace fletching_table
+################execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 vc:fletching_table_custom replace fletching_table
 #execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:entity_spawn["vc:entity"="vc:bandager","vc:actually_spawn"=true] replace no:entity_spawn["vc:entity"="vc:bandager","vc:actually_spawn"=false]
 #execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:entity_spawn["vc:entity"="vc:termite","vc:actually_spawn"=true] replace no:entity_spawn["vc:entity"="vc:termite","vc:actually_spawn"=false]
 #execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:entity_spawn["vc:entity"="vc:termite_mound","vc:actually_spawn"=true] replace no:entity_spawn["vc:entity"="vc:termite_mound","vc:actually_spawn"=false]
@@ -38,7 +38,7 @@ execute as @a at @a if block ~ 253 ~ biome_indicate:lumerison run particle vc:ac
 #execute as @a at @a run execute unless entity @e[type=vc:particle_emitter,r=1] run tp @e[type=vc:particle_emitter,r=1] ~~~
 #execute as @a at @a run scriptevent vc:effect_countdown
 #execute as @a at @a run scriptevent vc:item_fix
-execute at @e[tag=timerFor-giant_omen] run particle vc:giant_omen_effect_particle ~~0.5~
+#execute at @e[tag=timerFor-giant_omen] run particle vc:giant_omen_effect_particle ~~.5~
 #
 #
 execute as @e at @e run execute if block ~~~ stonecutter_block run damage @s[r=0.8] 1 contact

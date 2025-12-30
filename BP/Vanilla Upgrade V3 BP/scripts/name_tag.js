@@ -6,10 +6,11 @@ SERVER.world.afterEvents.itemUse.subscribe(event => {
 
         //console.warn('rightClicked ' + event.itemStack.typeId)
         const item = event.itemStack;
+        const name = item.nameTag ?? ''
 
         let popUp = new UI.ModalFormData();
         popUp.title("vcNameTagUi");
-        popUp.textField("Set Name: ", "Name");
+        popUp.textField("Set Name: ", "Name", {defaultValue: name});
 
         popUp.show(event.source).then((r) => {
             if (r.canceled) return;
@@ -46,14 +47,18 @@ SERVER.world.afterEvents.itemUse.subscribe(event => {
         let offitem = player.getComponent("equippable").getEquipment("Offhand");
         if (!offitem || offitem.typeId != 'vc:frozen_feather') return;
         if (player.getItemCooldown('frozenFeather') > 0) return;
-        player.getComponent("equippable").setEquipment("Offhand", damage_item(offitem));
         player.startItemCooldown('frozenFeather', 200)
         player.playAnimation('animation.player.write')
+        player.runCommand('title @s actionbar Writing')
         player.playSound('block.cartography_table.use')
         for (let i = 0; i < 5; i++) {
             SERVER.system.runTimeout(() => {
                 player.playSound('block.cartography_table.use')
                 if (i == 3) player.playSound('random.crystalize_xp')
+
+                if (i == 0) player.runCommand('title @s actionbar Writing.')
+                else if (i == 2) player.runCommand('title @s actionbar Writing..')
+                else if (i == 4) player.runCommand('title @s actionbar Writing...')
             }, i * 10)
         }
         SERVER.system.runTimeout(() => {
@@ -63,17 +68,20 @@ SERVER.world.afterEvents.itemUse.subscribe(event => {
                 y: player.getHeadLocation().y + player.getViewDirection().y,
                 z: player.getHeadLocation().z + player.getViewDirection().z
             });
+            if (!damage_item(offitem)) player.playSound('random.break')
+            player.getComponent("equippable").setEquipment("Offhand", damage_item(offitem));
         }, 5 * 10)
     }
-})
-
-
-SERVER.world.afterEvents.itemUseOn.subscribe(e => {
-    if (e.itemStack.typeId === "minecraft:gunpowder") {
-        if (e.blockFace == "Up") {
-            if (!e.block.above(1).isAir) return;
-            e.block.above(1).setType('vc:gunpowder_line')
-            decripateStack(e.source)
+    if (event.itemStack?.typeId == "minecraft:gunpowder") {
+        const gamemode = event.source.getGameMode()
+        if (gamemode == 'Adventure') return;
+        const lookat = event.source.getBlockFromViewDirection({maxDistance: (gamemode == 'Creative' ? 10 : 8), includePassableBlocks: true, includeLiquidBlocks: false})
+        if (!lookat) return;
+        const block = lookat.face == 'North' ? lookat.block.north(1) : lookat.face == 'East' ? lookat.block.east(1) : lookat.face == 'South' ? lookat.block.south(1) : lookat.face == 'West' ? lookat.block.west(1) : lookat.face == 'Up' ? lookat.block.above(1) : lookat.block.below(1)
+        if (block.isAir) {
+            block.setType('vc:gunpowder_line')
+            decripateStack(event.source)
+            event.source.dimension.playSound('dig.sand', block.center())
         }
     }
 })

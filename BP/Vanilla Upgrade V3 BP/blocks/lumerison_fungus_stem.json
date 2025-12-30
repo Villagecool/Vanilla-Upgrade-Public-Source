@@ -19,7 +19,7 @@
 			},
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "vc_lumerison_fungus_stem"
+					"texture": "vc_lumerison_fungus"
 				}
 			}
 		}

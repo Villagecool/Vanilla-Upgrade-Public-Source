@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"menu_category": {
@@ -7,12 +7,17 @@
 				"group": "itemGroup.name.leaves"
 			},
 			"identifier": "vc:silver_birch_leaves",
-			"states": {
-				"vc:opaque": [
-					false,
-					true
-				]
+			"traits": {
+        		"minecraft:connection": {
+        		    "enabled_states": ["minecraft:cardinal_connections"]
+        		}
 			}
+			//"states": {
+			//	"vc:opaque": [
+			//		false,
+			//		true
+			//	]
+			//}
 		},
 		"components": {
 			"tag:leaves": {},
@@ -27,9 +32,17 @@
 				"seconds_to_destroy": 1.1
 			},
 			"minecraft:light_dampening": 15,
-			"minecraft:custom_components": [
-				"vc:opaques"
-			],
+			//"minecraft:custom_components": [
+			//	"vc:opaques"
+			//],
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"stops_liquid_flowing_from_direction": ["north","east","south","west","up","down"],
+					"on_liquid_touches": "blocking"
+				}]
+			},
 			"minecraft:geometry": "geometry.no_see_block",
 			"minecraft:material_instances": {
 				"*": {
@@ -42,7 +55,7 @@
 		},
 		"permutations": [
 			{
-				"condition": "query.block_state('vc:opaque') == true",
+				"condition": "query.block_state('minecraft:connection_north') && query.block_state('minecraft:connection_east') && query.block_state('minecraft:connection_south') && query.block_state('minecraft:connection_west')",
 				"components": {
 					"minecraft:geometry": "minecraft:geometry.full_block",
 					"minecraft:material_instances": {

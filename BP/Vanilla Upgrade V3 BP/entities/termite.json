@@ -9,6 +9,9 @@
     },
     "component_groups": {
       "toymite": {
+        "minecraft:movement": {
+          "value": 0.3
+        },
         "minecraft:behavior.move_to_block": {
           "priority": 1,
           "search_range": 16,
@@ -216,11 +219,12 @@
         "value": 8,
         "max": 8
       },
-      "minecraft:shareables": {
+      /*"minecraft:shareables": {
         "all_items": true,
         "all_items_max_amount": 5,
-        "all_items_surplus_amount": 2
-      },
+        "all_items_surplus_amount": 2,
+        "items": []
+      },*/
       "minecraft:equippable": {},
       "minecraft:hurt_on_condition": {
         "damage_conditions": [

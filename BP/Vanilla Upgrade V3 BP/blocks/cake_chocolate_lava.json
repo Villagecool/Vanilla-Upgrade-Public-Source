@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "vc:chocolate_lava_cake",
 			"menu_category": {
-				"category": "commands",
+				"category": "none",
 				"group": "itemGroup.name.commands"
 			},
 			"states": {

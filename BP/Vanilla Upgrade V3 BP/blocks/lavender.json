@@ -1,11 +1,11 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:lavender",
 			"menu_category": {
 				"category": "nature",
-				"group": "itemGroup.name.flower"
+				"group": "minecraft:itemGroup.name.flower"
 			},
 			"states": {
 				"vc:upper_bit": [
@@ -27,9 +27,26 @@
 				"catch_chance_modifier": 30,
 				"destroy_chance_modifier": 100
 			},
-			"minecraft:custom_components": [
-				"vc:lavender"
-			],
+			"minecraft:flower_pottable": {},
+			"minecraft:embedded_visual": {
+				"geometry": "geometry.plant_pot",
+				"material_instances": {
+					"*": {
+						"texture": "vc_lavender_pot",
+						"render_method": "alpha_test",
+						"ambient_occlusion": false,
+						"face_dimming": false
+					}
+				}
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "popped"
+				}]
+			},
+			"vc:lavender" : {},
 			"minecraft:selection_box": {
 				"origin": [
 					-6,

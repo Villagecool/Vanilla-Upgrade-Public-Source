@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "vc:chocolate_cake",
 			"menu_category": {
-				"category": "commands",
+				"category": "none",
 				"group": "itemGroup.name.commands"
 			},
 			"states": {
@@ -52,7 +52,6 @@
 					14
 				]
 			},
-			"minecraft:loot": "loot_tables/blocks/chocolate_cake.json",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_cake_chocolate",

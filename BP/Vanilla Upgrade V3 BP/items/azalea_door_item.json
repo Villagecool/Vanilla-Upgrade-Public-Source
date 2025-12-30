@@ -17,6 +17,9 @@
       "minecraft:custom_components": [
         "vc:door"
       ],
+      "minecraft:fuel": {
+        "duration": 10
+      },
       "minecraft:block_placer": {
         "block": "vc:azalea_door",
         "replace_block_item": true

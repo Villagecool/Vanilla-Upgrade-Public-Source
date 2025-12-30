@@ -18,7 +18,7 @@
 				"seconds_to_destroy": 5
 			},
 			"minecraft:custom_components": ["vc:rooted_end_stone"],
-			"minecraft:loot": "loot_tables/blocks/rooted_end_stone",
+			"minecraft:loot": "loot_tables/blocks/rooted_end_stone.json",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_end_stone_rooted"

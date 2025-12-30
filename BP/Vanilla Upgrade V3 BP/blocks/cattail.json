@@ -1,11 +1,11 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:cattail",
 			"menu_category": {
 				"category": "nature",
-				"group": "itemGroup.name.nature"
+				"group": "minecraft:itemGroup.name.nature"
 			},
 			"states": {
 				"vc:state": [
@@ -44,9 +44,17 @@
 					}
 				]
 			},
-			"minecraft:custom_components": [
-				"vc:cattail"
-			],
+			"vc:cattail" : {},
+			"minecraft:flower_pottable": {},
+			"minecraft:embedded_visual": {
+				"geometry": "geometry.plant_pot",
+				"material_instances": {
+					"*": {
+						"texture": "vc_cattail_pot",
+						"render_method": "alpha_test"
+					}
+				}
+			},
 			"minecraft:selection_box": {
 				"origin": [
 					-6,

@@ -14,7 +14,7 @@
       "minecraft:display_name": {
         "value": "tile.vc:glorium_vines.name"
       },
-      "minecraft:custom_components": ["vc:glorium_vines"],
+      //"minecraft:custom_components": ["vc:glorium_vines"],
       "minecraft:block_placer": {
         "block": "vc:glorium_vines",
         "replace_block_item": true

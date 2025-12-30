@@ -140,7 +140,7 @@
 			},
 			"minecraft:damage_sensor": {
 				"triggers": {
-					"cause": "any",
+					"cause": "all",
 					"deals_damage": false
 				}
 			},

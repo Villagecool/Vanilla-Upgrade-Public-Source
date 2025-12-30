@@ -47,7 +47,7 @@ const cantMove = [
     'minecraft:lava',
     'minecraft:flowing_lava'
 ]
-SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
+SERVER.system.beforeEvents.startup.subscribe(initEvent => {
     initEvent.blockComponentRegistry.registerCustomComponent('vc:rotator', { //fancy block display stuff
         onPlayerInteract: e => { //change directions
             if (e.face == 'Up' || e.face == 'Down') return;

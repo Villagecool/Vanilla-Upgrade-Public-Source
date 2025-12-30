@@ -1,0 +1,32 @@
+{
+    "format_version": "1.16",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "minecraft:copper_campfire2"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " A ",
+            "ABA",
+            "CCC"
+        ],
+        "key": {
+            "A": {
+                "item": "stick"
+            },
+            "B": {
+                "item": "copper_torch"
+            },
+            "C": {
+                "item": "log2"
+            }
+        },
+        "result": {
+            "item": "vc:copper_campfire",
+            "count": 1
+        },
+        "priority": 2
+    }
+}

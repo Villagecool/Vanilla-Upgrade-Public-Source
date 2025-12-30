@@ -1,0 +1,148 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:azalea_shelf",
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.shelf"
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					],
+                    "y_rotation_offset": 180
+				}
+			},
+            "states": {
+                "vc:powered_bit": [false,true],
+                "vc:powered_shelf_type": [0,1,2,3]
+            }
+		},
+		"components": {
+			"tag:wood": {},
+            "tag:minecraft:is_axe_item_destructible": {},
+			"tag:stairs": {},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 20
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"stops_liquid_flowing_from_direction": ["south"],
+					"on_liquid_touches": "blocking"
+				}]
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:geometry": "geometry.shelf",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_azalea_shelf",
+					"render_method": "alpha_test"
+				}
+			},
+            "minecraft:redstone_conductivity": {
+                "redstone_conductor": true
+            },
+			"minecraft:custom_components": [
+				"vc:shelf"
+			],
+            "minecraft:tick": {
+                "interval_range": [1,1],
+                "looping": true
+            },
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					3
+				],
+				"size": [
+					16,
+					16,
+					5
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					3
+				],
+				"size": [
+					16,
+					16,
+					5
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('vc:powered_bit') == true && query.block_state('vc:powered_shelf_type') == 0",
+				"components": {
+                    "minecraft:geometry": "geometry.shelf_powered_0"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:powered_bit') == true && query.block_state('vc:powered_shelf_type') == 1",
+				"components": {
+                    "minecraft:geometry": "geometry.shelf_powered_1"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:powered_bit') == true && query.block_state('vc:powered_shelf_type') == 2",
+				"components": {
+                    "minecraft:geometry": "geometry.shelf_powered_2"
+				}
+			},
+			{
+				"condition": "query.block_state('vc:powered_bit') == true && query.block_state('vc:powered_shelf_type') == 3",
+				"components": {
+                    "minecraft:geometry": "geometry.shelf_powered_3"
+				}
+			}
+		]
+	}
+}

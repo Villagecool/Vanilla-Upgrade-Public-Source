@@ -1,0 +1,25 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:item": {
+		"description": {
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.miscFood"
+			},
+			"identifier": "vc:fried_dragon_egg"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:display_name": {
+				"value": "tile.vc:fried_dragon_egg.name"
+			},
+            "minecraft:fire_resistant": {},
+            "minecraft:rarity": "epic",
+			"minecraft:block_placer": {
+				"block": "vc:fried_dragon_egg",
+				"replace_block_item": true
+			},
+			"minecraft:icon": "vc_fried_dragon_egg"
+		}
+	}
+}

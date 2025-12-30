@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:tomato_seeds",
@@ -25,9 +25,9 @@
 			},
 			"minecraft:light_dampening": 0,
 			"minecraft:geometry": "geometry.doublecrop_other",
-			"minecraft:custom_components": [
-				"vc:crop"
-			],
+			"vc:crop": {
+				"max": 6
+			},
 			"minecraft:placement_filter": {
 				"conditions": [
 					{

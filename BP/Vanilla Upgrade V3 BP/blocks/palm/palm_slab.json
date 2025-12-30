@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:palm_slab",
@@ -24,6 +24,17 @@
 			],
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 6
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "blocking"
+				}]
+			},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 20
 			},
 			"minecraft:material_instances": {
 				"*": {
@@ -70,6 +81,13 @@
 				"components": {
 					"minecraft:geometry": {
 						"identifier": "geometry.slab_upper"
+					},
+					"minecraft:liquid_detection": {
+						"detection_rules": [{
+							"can_contain_liquid": true,
+							"liquid_type": "water",
+							"on_liquid_touches": "no_reaction"
+						}]
 					},
 					"minecraft:collision_box": {
 						"origin": [

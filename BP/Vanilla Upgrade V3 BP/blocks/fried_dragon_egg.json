@@ -1,0 +1,98 @@
+{
+	"format_version": "1.21.130",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:fried_dragon_egg",
+			"menu_category": {
+				"category": "none"
+			},
+			"states": {
+				"vc:eat_ones": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+				"vc:eat_tens": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+			}
+		},
+		"components": {
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 420
+			},
+			"tag:minecraft:is_shovel_item_destructible": {},
+			"minecraft:destructible_by_explosion": {"explosion_resistance": 25},
+			"tag:non_solid": {},
+			"minecraft:geometry": "geometry.fried_dragon_egg",
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					8,
+					16
+				]
+			},
+
+			"vc:fried_dragon_egg" : {}, //yummy yummy food for the tummy
+
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					4,
+					16
+				]
+			},
+            "minecraft:destruction_particles": {
+                "texture": "vc_bowl_plate"
+            },
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_fried_dragon_egg",
+					"render_method": "alpha_test"
+				}
+			}
+		},
+		"permutations": [
+            {
+                "condition": "query.block_state('vc:eat_tens') >= 3 && query.block_state('vc:eat_tens') < 6",
+                "components": {
+                    "minecraft:geometry": "geometry.fried_dragon_egg_2",
+			        "minecraft:collision_box": {
+			        	"origin": [
+			        		-8,
+			        		0,
+			        		-8
+			        	],
+			        	"size": [
+			        		16,
+			        		3,
+			        		16
+			        	]
+			        }
+                }
+            },
+            {
+                "condition": "query.block_state('vc:eat_tens') >= 6",
+                "components": {
+                    "minecraft:geometry": "geometry.fried_dragon_egg_3",
+			        "minecraft:collision_box": {
+			        	"origin": [
+			        		-8,
+			        		0,
+			        		-8
+			        	],
+			        	"size": [
+			        		16,
+			        		2,
+			        		16
+			        	]
+			        }
+                }
+            }
+        ]
+	}
+}

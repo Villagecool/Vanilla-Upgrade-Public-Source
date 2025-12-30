@@ -1,12 +1,13 @@
 import * as SERVER from '@minecraft/server';
 import * as UI from '@minecraft/server-ui';
-import { setPermutation, decripateStack } from './utils.js'
+import { setPermutation, decripateStack, vec3toString } from './utils.js'
 
 // Subscribe to events to run code when specific in game actions occur
-SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
+SERVER.system.beforeEvents.startup.subscribe(initEvent => {
 	initEvent.blockComponentRegistry.registerCustomComponent('vc:advanced_observer', {
-		beforeOnPlayerPlace: e => {
-			e.block.dimension.spawnEntity('vc:advanced_observer', e.block.center())
+		onPlace: e => {
+			SERVER.system.run(() =>{ if (e.dimension.getEntitiesAtBlockLocation(e.block.location).filter(b => {return b.typeId == 'vc:advanced_observer'}).length <= 0)
+				e.block.dimension.spawnEntity('vc:advanced_observer', e.block.center()); })
 		},
 		onPlayerInteract: e => {
 			const player = e.player; //the player
@@ -42,7 +43,7 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
 			}
 		},
 		onTick: e => {
-			let block = e.block; //the hopper
+			const block = e.block; //the hopper
 			if (block.permutation.getState("vc:powered")) return;
 			let entity = block.dimension.getEntitiesAtBlockLocation(block.location)[0];; //the hopper entity
 			if (!entity) return;
@@ -56,13 +57,20 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
 			if (!detection) return;
 
 			let sucess = (entity.nameTag.includes('§r') ? advancedFilterAllowed(detection, entity.nameTag.split('\n')) : detection.typeId == entity.nameTag);
-			setPermutation(block, 'vc:lit_bit', sucess)
-			if (sucess) {
-				if (block.permutation.getState("minecraft:facing_direction") == "north") turnOnRedstone(block.north(-1), "north", block.north(-1).permutation.getState("repeater_delay"))
-				if (block.permutation.getState("minecraft:facing_direction") == "east") turnOnRedstone(block.east(-1), "east", block.east(-1).permutation.getState("repeater_delay"))
-				if (block.permutation.getState("minecraft:facing_direction") == "south") turnOnRedstone(block.south(-1), "south", block.south(-1).permutation.getState("repeater_delay"))
-				if (block.permutation.getState("minecraft:facing_direction") == "west") turnOnRedstone(block.west(-1), "west", block.west(-1).permutation.getState("repeater_delay"))
+			if (block.permutation.getState("vc:lit_bit") != sucess) {
+				//this goofy ass contraption is the only way to get the block to properly update the redstone functionality
+				//it removes and replaces the block in a single tick get the redstone producer component to turn on
+				var cmd = `setblock ${vec3toString(e.block.location)} ${e.block.typeId}["minecraft:facing_direction"="${block.permutation.getState("minecraft:facing_direction")}","vc:lit_bit"=${sucess},"vc:changeable"=${block.permutation.getState("vc:changeable")}]`
+				SERVER.system.runTimeout(() => { block.dimension.runCommand(cmd) },0)
+				block.setType('minecraft:air')
 			}
+			//setPermutation(block, 'vc:lit_bit', sucess)
+			//if (sucess) {
+			//	if (block.permutation.getState("minecraft:facing_direction") == "north") turnOnRedstone(block.north(-1), "north", block.north(-1).permutation.getState("repeater_delay"))
+			//	if (block.permutation.getState("minecraft:facing_direction") == "east") turnOnRedstone(block.east(-1), "east", block.east(-1).permutation.getState("repeater_delay"))
+			//	if (block.permutation.getState("minecraft:facing_direction") == "south") turnOnRedstone(block.south(-1), "south", block.south(-1).permutation.getState("repeater_delay"))
+			//	if (block.permutation.getState("minecraft:facing_direction") == "west") turnOnRedstone(block.west(-1), "west", block.west(-1).permutation.getState("repeater_delay"))
+			//}
 		}
 	})
 });

@@ -44,11 +44,11 @@
 			]
 		},
 		"distribution": {
-			"iterations": 1,
+			"iterations": "math.random_integer(0, 1)",
 			"x": {
 				"distribution": "uniform",
 				"extent": [
-					16,
+					0,
 					16
 				]
 			},
@@ -56,7 +56,7 @@
 			"z": {
 				"distribution": "uniform",
 				"extent": [
-					16,
+					0,
 					16
 				]
 			}

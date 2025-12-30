@@ -2,7 +2,7 @@
 	"format_version": "1.20.30",
 	"minecraft:item": {
 		"description": {
-			"category": "commands",
+			"category": "none",
 			"identifier": "vc:unwritten_scroll"
 		},
 		"components": {

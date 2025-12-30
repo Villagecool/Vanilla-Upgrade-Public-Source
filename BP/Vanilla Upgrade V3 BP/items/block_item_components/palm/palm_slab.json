@@ -1,0 +1,24 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.slab",
+        "category": "construction"
+      },
+      "identifier": "vc:palm_slab"
+    },
+    "components": {
+      "minecraft:block_placer": {
+        "block": "vc:palm_slab",
+        "replace_block_item": true
+      },
+      "minecraft:display_name": {
+        "value": "tile.vc:palm_slab.name"
+      },
+      "minecraft:fuel": {
+        "duration": 7.5
+      }
+    }
+  }
+}

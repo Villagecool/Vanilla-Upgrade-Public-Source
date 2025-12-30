@@ -20,7 +20,7 @@
 			},
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "vc_zalu_block"
+					"texture": "end_stone"
 				}
 			}
 		}

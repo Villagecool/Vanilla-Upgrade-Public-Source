@@ -1,10 +1,10 @@
 {
-	"format_version": "1.21.40",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"menu_category": {
 				"category": "nature",
-				"group": "itemGroup.name.leaves"
+				"group": "minecraft:itemGroup.name.leaves"
 			},
 			"identifier": "vc:elax_floor_leaves"
 		},
@@ -16,6 +16,15 @@
 			},
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 0
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water",
+						"on_liquid_touches": "popped"
+					}
+				]
 			},
 			"minecraft:collision_box": false,
 			"minecraft:selection_box": {

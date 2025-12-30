@@ -1,11 +1,11 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:blue_nether_brick_stairs",
 			"menu_category": {
 				"category": "construction",
-				"group": "itemGroup.name.stairs"
+				"group": "minecraft:itemGroup.name.stairs"
 			},
 			"traits": {
 				"minecraft:placement_position": {
@@ -46,9 +46,7 @@
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 6
 			},
-			"minecraft:custom_components": [
-				"vc:stairs"
-			],
+			"vc:stairs": {},
 			"minecraft:selection_box": {
 				"origin": [
 					-8,

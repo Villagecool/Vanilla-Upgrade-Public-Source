@@ -1,5 +1,5 @@
 {
-    "format_version": "1.21.40",
+    "format_version": "1.21.50",
     "minecraft:block": {
         "description": {
             "identifier": "vc:elax_fence_gate",
@@ -25,9 +25,9 @@
         },
         "components": {
             "tag:wood": {},
+			"tag:one_way_collidable": {},
             "tag:minecraft:is_axe_item_destructible": {},
             "tag:fence": {},
-			"tag:one_way_collidable": {},
             "minecraft:flammable": {
                 "catch_chance_modifier": 5,
                 "destroy_chance_modifier": 20
@@ -38,6 +38,13 @@
             "minecraft:custom_components": [
                 "vc:fence_gate"
             ],
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "blocking"
+				}]
+			},
             "minecraft:light_dampening": 0,
             "minecraft:geometry": "geometry.fence_gate",
             "minecraft:placement_filter": {

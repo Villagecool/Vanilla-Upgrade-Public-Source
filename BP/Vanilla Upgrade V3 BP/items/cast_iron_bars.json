@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "category": "construction",
+        "group": "itemGroup.name.bars"
+      },
+      "identifier": "vc:cast_iron_bars"
+    },
+    "components": {
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": "vc_cast_iron_bars",
+      "minecraft:display_name": {
+        "value": "tile.vc:cast_iron_bars.name"
+      },
+      "minecraft:block_placer": {
+        "block": "vc:cast_iron_bars",
+        "replace_block_item": true
+      }
+    }
+  }
+}

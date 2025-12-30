@@ -49,9 +49,13 @@ SERVER.world.afterEvents.itemCompleteUse.subscribe(e => {
                 return;
             }
         })
+    } else if (e.itemStack.typeId == 'vc:bone_meal_meal') {
+        e.source.runCommand(`particle minecraft:crop_growth_emitter ~~0.5~`)
+        e.source.runCommand(`particle minecraft:crop_growth_emitter ~~1.5~`)
+        e.source.runCommand('playsound item.bone_meal.use @a ~~~')
     }
 })
-SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
+SERVER.system.beforeEvents.startup.subscribe(initEvent => {
     initEvent.itemComponentRegistry.registerCustomComponent('vc:gives_effect', {
         onConsume: e => {
             console.log('its the custom component')
@@ -224,18 +228,20 @@ SERVER.world.beforeEvents.worldInitialize.subscribe(initEvent => {
 SERVER.world.afterEvents.itemStartUse.subscribe(e => {
     if (e.itemStack.typeId == 'vc:goat_horn_roll') {
         e.source.dimension.playSound('horn.call.roll', e.source.location)
-        e.source.runCommandAsync(`playanimation @s animation.weapons.bow_and_arrow root 204 "!query.is_using_item"`)
+        e.source.runCommand(`playanimation @s animation.weapons.bow_and_arrow root 204 "!query.is_using_item"`)
     }
 })
 SERVER.world.afterEvents.itemStopUse.subscribe(e => {
-    if (e.itemStack.typeId == 'vc:goat_horn_roll') {
+    if (e.itemStack?.typeId == 'vc:goat_horn_roll') {
         e.source.runCommand(`stopsound @a horn.call.roll`)
     }
 })
-SERVER.world.afterEvents.itemUseOn.subscribe(e => {
+SERVER.world.afterEvents.itemStartUseOn.subscribe(e => {
     if (e.block.typeId != 'minecraft:jukebox') return
     if (e.itemStack.typeId == 'vc:music_disc_subhour') e.source.runCommand("title @a[r=15] actionbar §dNow Playing: Clorate 21 - Subhour")
     if (e.itemStack.typeId == 'vc:music_disc_mist') e.source.runCommand("title @a[r=15] actionbar §dNow Playing: For_Builds - Mist")
+    if (e.itemStack.typeId == 'vc:corn') e.source.runCommand("title @a[r=15] actionbar §dNow Playing: The Gregory Brothers - It's Corn!")
+    if (e.itemStack.typeId == 'vc:music_disc_droopy') e.source.runCommand("title @a[r=15] actionbar §dNow Playing: C418 - Droopy Likes Your Face")
 })
 SERVER.world.afterEvents.entityHurt.subscribe(e => {
     if (e.hurtEntity.typeId == 'minecraft:player' && e.damageSource.damagingEntity != undefined) {

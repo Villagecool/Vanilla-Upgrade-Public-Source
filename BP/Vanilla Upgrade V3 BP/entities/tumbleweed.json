@@ -114,7 +114,7 @@
               },
               "event": "die"
             },
-            "deals_damage": "no"
+            "deals_damage": false
           },
           {
             "on_damage": {
@@ -126,14 +126,23 @@
               },
               "event": "drop"
             },
-            "deals_damage": "no"
+            "deals_damage": false
           },
           {
             "cause": "suffocation",
-            "deals_damage": "no",
+            "deals_damage": false,
             "on_damage": {
               "event": "die"
             }
+          },
+          {
+            "cause": "fire",
+            "deals_damage": false
+          },
+          {
+            "cause": "fire_tick",
+            "deals_damage": false,
+            "on_damage": {"event": "spread_fire"}
           }
         ]
       },
@@ -171,6 +180,26 @@
             "drop"
           ]
         }
+      },
+      "spread_fire": {
+        "randomize": [
+          {
+            "weight": 2
+          },
+          {
+            "weight": 1,
+            "queue_command": {
+              "command": "fill ~~~ ~~~ fire replace air"
+            }
+          },
+          {
+            "weight": 1,
+            "trigger": "die",
+            "queue_command": {
+              "command": "fill ~~~ ~~~ fire replace air"
+            }
+          }
+        ]
       },
       "move": {
         "queue_command": {

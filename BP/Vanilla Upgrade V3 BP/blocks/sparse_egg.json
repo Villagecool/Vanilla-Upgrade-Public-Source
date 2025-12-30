@@ -3,6 +3,7 @@
 	"minecraft:block": {
 		"description": {
 			"menu_category": {
+				"category": "none",
 				"is_hidden_in_commands": true
 			},
 			"identifier": "vc:sparse_egg",

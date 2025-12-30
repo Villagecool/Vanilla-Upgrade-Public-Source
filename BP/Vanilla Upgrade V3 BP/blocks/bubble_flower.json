@@ -20,6 +20,18 @@
 			"minecraft:custom_components": [
 				"vc:particle"
 			],
+			"minecraft:flower_pottable": {},
+			"minecraft:embedded_visual": {
+				"geometry": "geometry.plant_pot",
+				"material_instances": {
+					"*": {
+						"texture": "vc_bubble_flower",
+						"render_method": "alpha_test",
+						"ambient_occlusion": false,
+						"face_dimming": false
+					}
+				}
+			},
 			"minecraft:selection_box": {
 				"origin": [
 					-4,

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+        "group": "itemGroup.name.stairs",
+        "category": "construction"
+      },
+      "identifier": "vc:elax_stairs"
+    },
+    "components": {
+      "minecraft:block_placer": {
+        "block": "vc:elax_stairs",
+        "replace_block_item": true
+      },
+      "minecraft:display_name": {
+        "value": "tile.vc:elax_stairs.name"
+      },
+      "minecraft:fuel": {
+        "duration": 15
+      }
+    }
+  }
+}

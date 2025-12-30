@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "vc:fried_dragon_egg"
+    },
+    "tags": [ "crafting_table" ],
+    "ingredients": ["minecraft:dragon_egg","vc:lumerison_fungus", "minecraft:chorus_fruit", "vc:elax_syrup", "minecraft:bowl"],
+    "unlock": [
+        {
+            "item": "minecraft:dragon_egg"
+        }
+    ],
+    "result": {
+      "item": "vc:fried_dragon_egg"
+    }
+  }
+}

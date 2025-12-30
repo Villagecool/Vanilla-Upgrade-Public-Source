@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:electrum_doubleslab",
+			"menu_category": {
+				"category": "none",
+				"group": "itemGroup.name.commands"
+			}
+		},
+		"components": {
+			"tag:metal": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"tag:copper": {},
+			"minecraft:loot": "loot_tables/blocks/electrum_doubleslab.json",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 25
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_electrum_tiles"
+				}
+			}
+		}
+	}
+}

@@ -3,7 +3,7 @@
 	"minecraft:block": {
 		"description": {
 			"menu_category": {
-				"category": "commands",
+				"category": "none",
 				"group": "itemGroup.name.commands"
 			},
 			"identifier": "no:generate_chorus_spew"

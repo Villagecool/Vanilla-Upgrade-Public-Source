@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:elax_stairs",
@@ -32,6 +32,14 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 3
 			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"stops_liquid_flowing_from_direction": ["south"],
+					"on_liquid_touches": "blocking"
+				}]
+			},
 			"minecraft:light_dampening": 0,
 			"minecraft:geometry": "geometry.stairs",
 			"minecraft:material_instances": {
@@ -41,8 +49,7 @@
 				}
 			},
 			"minecraft:custom_components": [
-				"vc:stairs",
-				"vc:elax_gravity"
+				"vc:stairs"
 			],
 			"minecraft:selection_box": {
 				"origin": [

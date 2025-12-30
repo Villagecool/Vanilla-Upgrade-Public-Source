@@ -1,0 +1,24 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.log"
+      },
+      "identifier": "vc:azalea_log"
+    },
+    "components": {
+      "minecraft:block_placer": {
+        "block": "vc:azalea_log",
+        "replace_block_item": true
+      },
+      "minecraft:display_name": {
+        "value": "tile.vc:azalea_log.name"
+      },
+      "minecraft:fuel": {
+        "duration": 15
+      }
+    }
+  }
+}

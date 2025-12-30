@@ -93,14 +93,7 @@
 				},
 				"head": {
 					"rotation": {
-						"0.0": {
-							"post": [0, 0, 0],
-							"lerp_mode": "catmullrom"
-						},
-						"0.1667": {
-							"post": [15, 0, 0],
-							"lerp_mode": "catmullrom"
-						},
+						"0.0": [0, 0, 0],
 						"0.2083": [15, 0, 0],
 						"0.375": [15, "math.sin(q.anim_time*200)*30", 0],
 						"5.0": [15, "math.sin(q.anim_time*200)*30", 0],

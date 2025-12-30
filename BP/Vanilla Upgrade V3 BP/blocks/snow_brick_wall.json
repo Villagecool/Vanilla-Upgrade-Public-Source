@@ -7,6 +7,11 @@
 				"category": "construction",
 				"group": "itemGroup.name.walls"
 			},
+			"traits": {
+        		"minecraft:connection": {
+        		    "enabled_states": ["minecraft:cardinal_connections"]
+        		}
+			},
 			"states": {
 				"vc:post": [ true, false ],
 				"vc:north": [ "none", "tall", "short" ],
@@ -25,20 +30,27 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 5
 			},
-      "minecraft:item_visual": {
+      		"minecraft:item_visual": {
 				"geometry": "geometry.wall_item",
-        "material_instances": {
+        		"material_instances": {
 				  "*": {
 				  	"texture": "vc_snowbrick"
 				  }
-        }
-      },
+      		  }
+      		},
 			"minecraft:tick": {
 				"interval_range": [
 					1,
 					1
 				],
 				"looping": true
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "blocking"
+				}]
 			},
 			"minecraft:light_dampening": 0,
 			"minecraft:geometry": {

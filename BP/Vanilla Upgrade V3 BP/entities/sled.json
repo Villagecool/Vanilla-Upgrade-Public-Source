@@ -1,5 +1,5 @@
 {
-  "format_version": "1.12.0",
+  "format_version": "1.21.30",
   "minecraft:entity": {
     "description": {
       "identifier": "vc:sled",
@@ -92,6 +92,10 @@
           },
           {
             "cause": "all",
+            "deals_damage": false
+          },
+          {
+            "cause": "fall",
             "deals_damage": false
           }
         ]

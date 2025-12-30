@@ -4,8 +4,7 @@
 		"description": {
 			"identifier": "vc:quartz_brick_doubleslab",
 			"menu_category": {
-				"category": "commands",
-				"group": "itemGroup.name.commands"
+				"category": "none"
 			}
 		},
 		"components": {

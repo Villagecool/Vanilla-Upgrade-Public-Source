@@ -21,9 +21,6 @@
 				"particle_effect": {
 					"effect": "vc:totem_2_animation_boom",
 					"type": "emitter"
-				},
-				"sound_effect": {
-					"event_name": "random.totem_2.explode"
 				}
 			}
 		},

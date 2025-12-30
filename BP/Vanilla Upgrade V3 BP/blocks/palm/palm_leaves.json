@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.40",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:palm_leaves",
@@ -14,6 +14,14 @@
 					"texture": "vc_palm_leaves",
 					"render_method": "alpha_test_to_opaque"
 				}
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"stops_liquid_flowing_from_direction": ["north", "east", "south", "west", "up", "down"],
+					"on_liquid_touches": "no_reaction"
+				}]
 			},
 			"minecraft:flammable": {
 				"catch_chance_modifier": 20,

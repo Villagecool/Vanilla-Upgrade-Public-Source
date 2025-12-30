@@ -43,15 +43,6 @@
 				"operation": "insert_back",
 				"value": [
 					{
-						"kiln_panel_p@kiln.final_panel": {}
-					}
-				]
-			},
-			{
-				"array_name": "controls",
-				"operation": "insert_back",
-				"value": [
-					{
 						"crafting_sc@crafting.recipe_inventory_screen_content_pocket": {
 							"bindings": [
 								{

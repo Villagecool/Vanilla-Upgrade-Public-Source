@@ -133,7 +133,7 @@ SERVER.world.beforeEvents.itemUse.subscribe((e) => {
         }
     }
 })})
-SERVER.world.beforeEvents.itemUseOn.subscribe(e => {
+SERVER.world.afterEvents.itemStartUseOn.subscribe(e => {
     SERVER.system.run(()=>{
     if (e.source.getDynamicProperty('vc:gatherData')?.split('::')[0] == 'gatherItems'){ e.cancel = true; return};
     if (e.source.getDynamicProperty('vc:gatherData') != 'getBlockState' || e.itemStack.typeId != 'vc:advanced_filter') { return;}

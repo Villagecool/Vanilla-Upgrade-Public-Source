@@ -1,0 +1,15 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:weighted_random_feature": {
+	  "description": {
+		"identifier": "vc:soul_vegies_feature"
+	  },
+	  "features": [
+		[ "vc:soul_bulb_feature", 30 ],
+		[ "vc:soulbush_feature", 70 ],
+		[ "vc:soulbush2_feature", 40 ]
+	
+	  ]
+	}
+  }
+  

@@ -15,7 +15,7 @@
         "item": "vc:advanced_filter"
       },
       "C": {
-        "item": "vc:compressed_copper"
+        "item": "vc:electrum_ingot"
       },
       "H": {
         "item": "minecraft:hopper"
@@ -29,7 +29,7 @@
             "item": "vc:advanced_filter"
         },
         {
-            "item": "vc:compressed_copper"
+            "item": "vc:electrum_ingot"
         }
     ],
     "result": {

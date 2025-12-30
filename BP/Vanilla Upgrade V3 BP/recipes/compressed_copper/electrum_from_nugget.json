@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:electrum_from_nugget"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "###",
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "vc:electrum_nugget"
+      }
+    },
+    "unlock": [
+      {
+        "item": "vc:electrum_ingot"
+      },
+      {
+        "item": "vc:electrum_nugget"
+      }
+    ],
+    "result": {
+      "item": "vc:electrum_ingot",
+      "count": 1
+    }
+  }
+}

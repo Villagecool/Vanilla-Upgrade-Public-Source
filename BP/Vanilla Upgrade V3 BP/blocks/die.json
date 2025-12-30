@@ -1,0 +1,252 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:die",
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.redstone"
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:facing_direction"
+					]
+				}
+			},
+			"states": {
+				"vc:powered": [
+					false,
+					true
+				],
+				"vc:lit_bit": [
+					false, true
+				],
+				"vc:chance": [
+					1,2,3,4,5,6
+				]
+			}
+		},
+		"components": {
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:light_dampening": 5,
+			"minecraft:map_color": "#27272b",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 20
+			},
+			"minecraft:custom_components": [
+				"vc:die"//, "vc:redstone"
+			],
+			/*"minecraft:redstone_conductivity": {
+				"allows_wire_to_step_down": true,
+				"redstone_conductor": true
+			},*/
+			"minecraft:display_name": "tile.vc:die.name",
+			"minecraft:tick": {
+				"interval_range": [
+					1,
+					1
+				],
+				"looping": true
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_die_3",
+					"render_method": "alpha_test"
+				},
+				"east": {
+					"texture": "vc_die_2",
+					"render_method": "alpha_test"
+				},
+				"south": {
+					"texture": "vc_die_6",
+					"render_method": "alpha_test"
+				},
+				"north": {
+					"texture": "vc_die_off",
+					"render_method": "alpha_test"
+				},
+				"up": {
+					"texture": "vc_die_4",
+					"render_method": "alpha_test"
+				},
+				"down": {
+					"texture": "vc_die_5",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:redstone_producer": {
+			  	"power": 0,
+			  	"strongly_powered_face": "north",
+				"connected_faces": ["north"],
+			  	"transform_relative": true
+			},
+			"minecraft:item_visual": {
+				"geometry": "minecraft:geometry.full_block",
+				"material_instances": {
+			  	"*": {
+			  		"texture": "vc_die_3",
+			  		"render_method": "alpha_test"
+			  	},
+			  	"east": {
+			  		"texture": "vc_die_2",
+			  		"render_method": "alpha_test"
+			  	},
+			  	"north": {
+			  		"texture": "vc_die_6",
+			  		"render_method": "alpha_test"
+			  	},
+			  	"south": {
+			  		"texture": "vc_die_off",
+			  		"render_method": "alpha_test"
+			  	},
+			  	"up": {
+			  		"texture": "vc_die_4",
+			  		"render_method": "alpha_test"
+			  	},
+			  	"down": {
+			  		"texture": "vc_die_5",
+			  		"render_method": "alpha_test"
+			  	}
+        }
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vc:powered') == true && query.block_state('vc:lit_bit') == true",
+				"components": {
+					"minecraft:redstone_producer": {
+					  	"power": 15,
+					  	"strongly_powered_face": "north",
+						"connected_faces": ["north"],
+					  	"transform_relative": true
+					},
+					"minecraft:material_instances": {
+				    "*": {
+				    	"texture": "vc_die_3",
+				    	"render_method": "alpha_test"
+				    },
+				    "east": {
+				    	"texture": "vc_die_2",
+				    	"render_method": "alpha_test"
+				    },
+				    "south": {
+				    	"texture": "vc_die_6_powered",
+				    	"render_method": "alpha_test"
+				    },
+				    "up": {
+				    	"texture": "vc_die_4",
+				    	"render_method": "alpha_test"
+				    },
+				    "down": {
+				    	"texture": "vc_die_5",
+				    	"render_method": "alpha_test"
+				    },
+		      	"north": {
+		      		"texture": "vc_die_on",
+		      		"render_method": "alpha_test"
+		      	}
+          }
+				}
+			},
+			{
+				"condition": "query.block_state('vc:powered') == true && query.block_state('vc:lit_bit') == false",
+				"components": {
+					"minecraft:redstone_producer": {
+					  	"power": 0,
+					  	"strongly_powered_face": "north",
+						"connected_faces": ["north"],
+					  	"transform_relative": true
+					},
+					"minecraft:material_instances": {
+				    "*": {
+				    	"texture": "vc_die_3",
+				    	"render_method": "alpha_test"
+				    },
+				    "east": {
+				    	"texture": "vc_die_2",
+				    	"render_method": "alpha_test"
+				    },
+				    "south": {
+				    	"texture": "vc_die_6_powered",
+				    	"render_method": "alpha_test"
+				    },
+				    "up": {
+				    	"texture": "vc_die_4",
+				    	"render_method": "alpha_test"
+				    },
+				    "down": {
+				    	"texture": "vc_die_5",
+				    	"render_method": "alpha_test"
+				    },
+		      	"north": {
+		      		"texture": "vc_die_powered",
+		      		"render_method": "alpha_test"
+		      	}
+          }
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:facing_direction') == 'north'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:facing_direction') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:facing_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:facing_direction') == 'up'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							-90,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:facing_direction') == 'down'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							90,
+							0,
+							0
+						]
+					}
+				}
+			}
+		]
+	}
+}

@@ -75,8 +75,10 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
     if (data.id === "vc:shockwave") {
         if (!data.sourceEntity) return;
         let entity = data.sourceEntity;
-        if (!entity.isSneaking) entity.applyKnockback(Math.random() - 0.5, Math.random() - 0.5, 0, Number(data.message));
-        else entity.applyKnockback(0, 0, 0, Number(data.message) * 0.2);
+        try {
+            if (!entity.isSneaking) entity.applyKnockback({x: Math.random() - 0.5, z: Math.random() - 0.5}, Number(data.message));
+            else entity.applyKnockback(0, 0, 0, Number(data.message) * 0.2);
+        } catch {}
     };
     if (data.id === "vc:xp_bomb") {
         if (!data.sourceEntity) return;
@@ -91,6 +93,14 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
             //xp.applyKnockback(Math.random() - 0.5, Math.random() - 0.5, 0, 0);
         }
     };
+    if (data.id == "giant:accidentaldeathprevention") {
+        const dummy = data.sourceEntity.dimension.spawnEntity('minecraft:armor_stand', data.sourceEntity.location)
+        dummy.addEffect('invisibility', 2000, {showParticles: false})
+        SERVER.system.runTimeout(()=>{
+            dummy.runCommand("scriptevent vc:xp_bomb")
+            SERVER.system.runTimeout(()=>{ dummy.remove() }, 2)
+        },20*7)
+    }
     if (data.id === "vc:addtimer") {
     //    if (!data.sourceEntity) return;
     //    let entity = data.sourceEntity;
@@ -105,6 +115,7 @@ SERVER.system.afterEvents.scriptEventReceive.subscribe((data) => {
         entity.runCommand(`tag @s remove giant_omen`);
         const BIGBOI = entity.dimension.spawnEntity('vc:giant', { x: entity.location.x, y: entity.location.y, z: entity.location.z, });
         BIGBOI.runCommand(`/spreadplayers ~~ 20 100 @s`)
+        BIGBOI.runCommand(`/tp @s ~~~ facing @p`)
     }
     if (data.id === "vc:effect_countdown") {
         if (!data.sourceEntity) return;

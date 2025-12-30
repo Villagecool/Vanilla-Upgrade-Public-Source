@@ -1,0 +1,76 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:electrum_chain",
+			"menu_category": {
+				"category": "construction",
+				"group": "vc:itemGroup.name.electrum"
+			},
+			"traits": {
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:block_face"
+					]
+				}
+			}
+		},
+		"components": {
+      "tag:minecraft:is_pickaxe_item_destructible": {},
+			"tag:log": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 25
+			},
+			"minecraft:collision_box": {
+				"origin": [-3,0,-3],
+				"size": [6,16,6]
+			},
+			"minecraft:selection_box": {
+				"origin": [-3,0,-3],
+				"size": [6,16,6]
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "no_reaction"
+				}]
+			},
+			"minecraft:geometry": "geometry.electrum_chain",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_electrum_chain",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('minecraft:block_face') == 'north' || query.block_state('minecraft:block_face') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							90,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:block_face') == 'east' || query.block_state('minecraft:block_face') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							90
+						]
+					}
+				}
+			}
+		]
+	}
+}

@@ -1,10 +1,10 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:water_blast",
 			"menu_category": {
-				"category": "commands",
+				"category": "none",
 				"group": "itemGroup.name.commands"
 			},
 			"states": {
@@ -38,6 +38,13 @@
 			"minecraft:custom_components": [
 				"vc:water_blast"
 			],
+			"minecraft:liquid_detection": { //haha you can waterlog water
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "no_reaction"
+				}]
+			},
 			"minecraft:selection_box": false,
 			"minecraft:collision_box": false,
 			"minecraft:tick": {

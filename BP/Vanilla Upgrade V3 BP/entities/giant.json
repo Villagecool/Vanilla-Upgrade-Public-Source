@@ -1,5 +1,5 @@
 {
-  "format_version": "1.20.30",
+  "format_version": "1.21.30",
   "minecraft:entity": {
     "description": {
       "identifier": "vc:giant",
@@ -87,7 +87,7 @@
           "triggers": [
             {
               "cause": "all",
-              "deals_damage": "no"
+              "deals_damage": false
             }
           ]
         },
@@ -288,15 +288,15 @@
         "triggers": [
           {
             "cause": "entity_explosion",
-            "deals_damage": "no"
+            "deals_damage": false
           },
           {
             "cause": "block_explosion",
-            "deals_damage": "no"
+            "deals_damage": false
           },
           {
             "cause": "fall",
-            "deals_damage": "no"
+            "deals_damage": false
           },
           {
             "on_damage": {
@@ -322,12 +322,12 @@
               },
               "event": "minecraft:entity_killed"
             },
-            "deals_damage": "no"
+            "deals_damage": false
           }
         ]
       },
       "minecraft:loot": {
-        "table": "loot_tables/entities/giant.json"
+        "table": "loot_tables/none.json"
       },
       "minecraft:shareables": {
         "items": [
@@ -599,7 +599,8 @@
         "queue_command": {
           "command": [
             "playanimation @s animation.giant.shorts",
-            "particle vc:giant_becomes_the_sun_particle ~~6~"
+            "particle vc:giant_becomes_the_sun_particle ~~6~",
+            "scriptevent giant:accidentaldeathprevention"
           ],
           "target": "self"
         },
@@ -638,8 +639,6 @@
       "minecraft:die": {
         "queue_command": {
           "command": [
-            "damage @s 100 fly_into_wall",
-            "scriptevent vc:xp_bomb"
           ],
           "target": "self"
         },

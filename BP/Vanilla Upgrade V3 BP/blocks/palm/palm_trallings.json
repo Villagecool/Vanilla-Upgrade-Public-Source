@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:palm_trailings",
@@ -19,10 +19,17 @@
 				"conditions": [
 					{
 						"block_filter": [
-							"minecraft:leaves",
-							"minecraft:leaves2",
-							"minecraft:azalea_leaves",
-							"minecraft:azalea_leaves_flowered",
+              				"minecraft:oak_leaves",
+              				"minecraft:spruce_leaves",
+              				"minecraft:birch_leaves",
+              				"minecraft:jungle_leaves",
+              				"minecraft:acacia_leaves",
+              				"minecraft:dark_oak_leaves",
+              				"minecraft:mangrove_leaves",
+              				"minecraft:cherry_leaves",
+              				"minecraft:pale_oak_leaves",
+              				"minecraft:azalea_leaves",
+              				"minecraft:azalea_leaves_flowered",
 							"vc:palm_leaves"
 						],
 						"allowed_faces": [
@@ -33,6 +40,13 @@
 			},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 1.1
+			},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "popped"
+				}]
 			},
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 0

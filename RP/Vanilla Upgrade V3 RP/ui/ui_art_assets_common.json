@@ -5,7 +5,9 @@
 {
   "namespace": "common_art",
   "title_image": {
-    "type": "panel",
+    "type": "image",
+    "layer": 21,
+    "texture": "textures/ui/title",
     "anims": [
       "@VU_title.titleMove"
     ],
@@ -40,8 +42,8 @@
         "vanilla@VU_title.vu_title_combo": {}
       }
     ]
-  },
-  "splash_text": {
-    "type": "panel"
   }
+  /*"splash_text": {
+    "type": "panel"
+  }*/
 }

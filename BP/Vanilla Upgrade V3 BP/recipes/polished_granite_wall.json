@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:polished_granite_wall"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "polished_granite"
+      }
+    },
+    "unlock": [
+      {
+        "item": "polished_granite"
+      }
+    ],
+    "result": {
+      "item": "vc:polished_granite_wall",
+      "count": 6
+    }
+  }
+}

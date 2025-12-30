@@ -13,6 +13,10 @@
 				"block": "vc:cursed_campfire",
 				"replace_block_item": true
 			},
+			"minecraft:cooldown": {
+				"category": "cursedcampfire",
+				"duration": 0.2
+			},
 			"minecraft:custom_components": ["vc:cursed_campfire"],
 			"minecraft:hover_text_color": "light_purple",
 			"minecraft:icon": "vc_cursed_campfire"

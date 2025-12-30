@@ -9,8 +9,8 @@
 		"component_groups": {
 			"desp": {
 				"minecraft:instant_despawn": {}
-			},
-			"can_cook": {
+			}
+			/*"can_cook": {
 				"minecraft:is_saddled": {}
 			},
 			"rotator": {
@@ -107,7 +107,7 @@
 						}
 					]
 				}
-			}
+			}*/
 		},
 		"components": {
 			"minecraft:physics": {
@@ -137,7 +137,7 @@
 						"deals_damage": false
 					}
 				]
-			},
+			},/*
 			"minecraft:nameable": {
 				"allow_name_tag_renaming": false,
 				"name_actions": [
@@ -172,7 +172,7 @@
 						}
 					}
 				]
-			},
+			},*/
 			"minecraft:pushable": {
 				"is_pushable": false,
 				"is_pushable_by_piston": true
@@ -181,7 +181,7 @@
 				"value": 0
 			}
 		},
-		"events": {
+		"events": {/*
 			"rotator": {
 				"queue_command": {
 					"command": [
@@ -291,14 +291,14 @@
 						"execute if entity @e[type=red:tets,scores={onof=2},dx=0,dy=0,dz=0] run fill ~ ~ ~ ~ ~ ~ vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=true] replace vc:compressed_copper_trapdoor[\"vc:face\"=5,\"vc:open\"=true,\"vc:placed\"=true,\"vc:up\"=1,\"vc:powered\"=false]"
 					]
 				}
-			},
+			},*/
 			"ded": {
 				"add": {
 					"component_groups": [
 						"desp"
 					]
 				}
-			},
+			}/*
 			"add_rotator": {
 				"add": {
 					"component_groups": [
@@ -372,7 +372,7 @@
 						"trigger": "compressed_copper_trapdoor"
 					}
 				]
-			}
+			}*/
 		}
 	}
 }

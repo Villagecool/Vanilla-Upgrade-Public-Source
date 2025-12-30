@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "vc:die"
+    },
+    "tags": [ "crafting_table" ],
+    "ingredients": ["vc:electrum_ingot","minecraft:calcite", "minecraft:repeater"],
+    "unlock": [
+        {
+            "item": "minecraft:repeater"
+        }
+    ],
+    "result": {
+      "item": "vc:die"
+    }
+  }
+}

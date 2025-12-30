@@ -238,28 +238,7 @@
             8.0,
             10.0
           ],
-          "items": [
-            {
-              "item": "bone",
-              "weight": 1
-            },
-            {
-              "item": "stick",
-              "weight": 1
-            },
-            {
-              "item": "iron_nugget",
-              "weight": 1
-            },
-            {
-              "item": "slime_ball",
-              "weight": 1
-            },
-            {
-              "item": "gold_nugget",
-              "weight": 1
-            }
-          ],
+          "item_table": "loot_tables/entities/wolf_dig.json",
           "spawn_item_after_seconds": 6.0,
           "spawn_item_pos_offset": 0.5
         },

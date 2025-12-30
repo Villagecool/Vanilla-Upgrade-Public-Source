@@ -1,0 +1,117 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vc:electrum_slab",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.slab"
+			},
+			"traits": {
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:vertical_half"
+					]
+				}
+			}
+		},
+		"components": {
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 25
+			},
+			"minecraft:custom_components": [
+				"vc:slab"
+			],
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "blocking"
+				}]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 6
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vc_electrum_tiles"
+				}
+			}
+		},
+		"permutations": [
+			// Bottom Slab
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom'",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.slab"
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top'",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.slab_upper"
+					},
+					"minecraft:liquid_detection": {
+						"detection_rules": [{
+							"can_contain_liquid": true,
+							"liquid_type": "water",
+							"on_liquid_touches": "no_reaction"
+						}]
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					}
+				}
+			}
+		]
+	}
+}

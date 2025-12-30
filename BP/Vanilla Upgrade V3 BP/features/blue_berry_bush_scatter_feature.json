@@ -8,7 +8,7 @@
 		"places_feature": "vc:blue_berry_bush_feature",
 		"iterations": 100,
 		"scatter_chance": {
-			"denominator": 1,
+			"denominator": 2,
 			"numerator": 1
 		},
 		"x": {

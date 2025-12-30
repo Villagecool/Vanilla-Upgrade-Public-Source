@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "vc:endslate_brick_doubleslab",
 			"menu_category": {
-				"category": "commands",
+				"category": "none",
 				"group": "itemGroup.name.commands"
 			}
 		},

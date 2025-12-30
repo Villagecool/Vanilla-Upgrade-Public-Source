@@ -7,6 +7,11 @@
 				"category": "construction",
 				"group": "itemGroup.name.walls"
 			},
+			"traits": {
+        		"minecraft:connection": {
+        		    "enabled_states": ["minecraft:cardinal_connections"]
+        		}
+			},
 			"states": {
 				"vc:post": [ true, false ],
 				"vc:north": [ "none", "tall", "short" ],
@@ -17,7 +22,7 @@
 		},
 		"components": {
 			"tag:wood": {},
-      "tag:minecraft:is_pickaxe_item_destructible": {},
+      		"tag:minecraft:is_pickaxe_item_destructible": {},
 			"tag:fence": {},
 			"minecraft:custom_components": [
 				"vc:wall"
@@ -25,14 +30,22 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 10
 			},
-      "minecraft:item_visual": {
+      		"minecraft:item_visual": {
 				"geometry": "geometry.wall_item",
-        "material_instances": {
+        		"material_instances": {
 				  "*": {
-				  	"texture": "vc_blue_nether_bricks"
+						"texture": "vc_blue_nether_bricks",
+					"render_method": "alpha_test"
 				  }
-        }
-      },
+      		  }
+      		},
+			"minecraft:liquid_detection": {
+				"detection_rules": [{
+					"can_contain_liquid": true,
+					"liquid_type": "water",
+					"on_liquid_touches": "blocking"
+				}]
+			},
 			"minecraft:tick": {
 				"interval_range": [
 					1,
@@ -81,7 +94,8 @@
 			},
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "vc_blue_nether_bricks"
+					"texture": "vc_blue_nether_bricks",
+					"render_method": "alpha_test"
 				}
 			}
 		}

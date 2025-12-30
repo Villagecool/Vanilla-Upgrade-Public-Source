@@ -95,8 +95,8 @@
           "layer": 4,
           "texture": "textures/ui/name_name_tag"
         }
-      },
-      {
+      }
+      /*{
         "close_button@common.close_button": {
           "$pressed_button_name": "button.cancel",
           "anchor_from": "center",
@@ -110,6 +110,7 @@
           "pressed_control": "pressed",
           "locked_control": "locked",
           "$button_state_panel": "common_buttons.new_ui_button_panel",
+          //"$button_type_panel": "common_buttons.button_content_panel",
           "$hover_button_texture": "textures/ui/button_borderless_lighthover",
           "$pressed_button_texture": "textures/ui/button_borderless_lightpressed",
           "$locked_button_texture": "textures/ui/disabledButtonNoBorder",
@@ -193,7 +194,7 @@
             }
           ]
         }
-      }
+      }*/
     ]
   },
   "name_tag_form_scrolling_content": {
@@ -206,7 +207,7 @@
       2,
       -984
     ],
-    "orientation": "vertical",
+    //"orientation": "vertical",
     "anchor_from": "center",
     "anchor_to": "center",
     "controls": [
@@ -223,7 +224,7 @@
             32
           ],
           "offset": [
-            12,
+            -12,
             38.5
           ],
           "$button_text": " ",

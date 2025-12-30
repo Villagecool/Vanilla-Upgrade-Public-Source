@@ -3,7 +3,7 @@
 	"minecraft:block": {
 		"description": {
 			"menu_category": {
-				"category": "commands",
+				"category": "none",
 				"group": "minecraft:itemGroup.name.commands"
 			},
 			"identifier": "vc:fence_collision",
@@ -86,7 +86,7 @@
 							-2
 						],
 						"size": [
-							12,
+							10,
 							8,
 							4
 						]
@@ -98,12 +98,12 @@
 				"components": {
 					"minecraft:collision_box": {
 						"origin": [
-							-10,
+							-8,
 							0,
 							-2
 						],
 						"size": [
-							12,
+							10,
 							8,
 							4
 						]
