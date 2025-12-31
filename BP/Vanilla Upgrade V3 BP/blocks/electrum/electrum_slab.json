@@ -20,9 +20,7 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 25
 			},
-			"minecraft:custom_components": [
-				"vc:slab"
-			],
+			
 			"minecraft:liquid_detection": {
 				"detection_rules": [{
 					"can_contain_liquid": true,

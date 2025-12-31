@@ -1,0 +1,7 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "soul_bulb",
+    "metalness_emissive_roughness": "rtx_support/soul_bulb_mer"
+  }
+}

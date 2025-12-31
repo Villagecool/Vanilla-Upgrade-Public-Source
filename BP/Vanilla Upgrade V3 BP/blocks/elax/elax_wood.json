@@ -24,9 +24,7 @@
 				"seconds_to_destroy": 1.1
 			},
 			"tag:vc:stripper": {},
-			"minecraft:custom_components": [
-				"vc:stripper"
-			],
+			
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 0
 			},

@@ -13,7 +13,6 @@
 				"block": "vc:copper_campfire",
 				"replace_block_item": true
 			},
-			"minecraft:custom_components": ["vc:copper_campfire"],
 			"minecraft:icon": "vc_copper_campfire"
 		}
 	}

@@ -11,8 +11,8 @@
           "location": "junglevillage/paths/fork",
           "processors": "mike:stone_brick_replacement"
         },
-        "weight": 4,
-        "projection": "rigid"
+        "weight": 4
+        //"projection": "rigid"
       },
       {
         "element": {
@@ -20,8 +20,7 @@
           "location": "junglevillage/paths/large_split",
           "processors": "mike:stone_brick_replacement"
         },
-        "weight": 3,
-        "projection": "rigid"
+        "weight": 3
       },
       {
         "element": {
@@ -29,8 +28,7 @@
           "location": "junglevillage/paths/long_curve",
           "processors": "mike:stone_brick_replacement"
         },
-        "weight": 2,
-        "projection": "rigid"
+        "weight": 2
       },
       {
         "element": {
@@ -38,8 +36,7 @@
           "location": "junglevillage/paths/long_path",
           "processors": "mike:stone_brick_replacement"
         },
-        "weight": 2,
-        "projection": "rigid"
+        "weight": 2
       },
       {
         "element": {
@@ -47,8 +44,7 @@
           "location": "junglevillage/paths/small_curve",
           "processors": "mike:stone_brick_replacement"
         },
-        "weight": 3,
-        "projection": "rigid"
+        "weight": 3
       },
       {
         "element": {
@@ -56,8 +52,7 @@
           "location": "junglevillage/paths/small_path",
           "processors": "mike:stone_brick_replacement"
         },
-        "weight": 4,
-        "projection": "rigid"
+        "weight": 4
       },
       {
         "element": {
@@ -65,8 +60,7 @@
           "location": "junglevillage/paths/small_split",
           "processors": "mike:stone_brick_replacement"
         },
-        "weight": 2,
-        "projection": "rigid"
+        "weight": 2
       },
       {
         "element": {
@@ -74,8 +68,7 @@
           "location": "junglevillage/double_house",
           "processors": "mike:stone_brick_replacement"
         },
-        "weight": 3,
-        "projection": "rigid"
+        "weight": 3
       }
     ],
     "fallback": "vc:j_village_floor_houses"

@@ -18,9 +18,7 @@
 		"components": {
 			"tag:minecraft:is_pickaxe_item_destructible": {},
 			"tag:minecraft:iron_tier_destructible": {},
-			"minecraft:custom_components": [
-				"vc:slab"
-			],
+			
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 9
 			},

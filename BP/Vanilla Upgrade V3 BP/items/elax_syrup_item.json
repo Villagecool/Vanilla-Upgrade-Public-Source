@@ -13,9 +13,6 @@
 				"block": "vc:elax_syrup",
 				"replace_block_item": true
 			},
-			"minecraft:custom_components": [
-				"vc:glorium_vines"
-			],
 			"minecraft:fuel": {
 				"duration": 60
 			}

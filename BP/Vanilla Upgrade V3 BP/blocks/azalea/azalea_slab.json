@@ -19,9 +19,7 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 3
 			},
-			"minecraft:custom_components": [
-				"vc:slab"
-			],
+			
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 6
 			},
