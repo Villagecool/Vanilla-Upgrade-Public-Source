@@ -394,18 +394,7 @@
       "textures": "textures/blocks/elax_fungus_crystalized"
     },
     "vc_elax_log": {
-      "textures": {
-        "variations": [
-          {
-            "path": "textures/blocks/elax_log",
-            "weight": 20
-          },
-          {
-            "path": "textures/blocks/elax_log_weak",
-            "weight": 20
-          }
-        ]
-      }
+      "textures": "textures/blocks/elax_log"
     },
     "vc_elax_leaves": {
       "textures": "textures/blocks/elax_leaves"

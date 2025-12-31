@@ -1,0 +1,26 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "vc:xp_scroll"
+		},
+		"tags": [
+			"knowlage_harvester"
+		],
+		"key": {
+			"P": {
+				"item": "paper"
+			},
+			"X": {
+				"item": "vc:crystalized_experience"
+			}
+		},
+		"pattern": [
+			"PX"
+		],
+		"result": {
+			"item": "vc:unwritten_scroll",
+			"count": 1
+		}
+	}
+}

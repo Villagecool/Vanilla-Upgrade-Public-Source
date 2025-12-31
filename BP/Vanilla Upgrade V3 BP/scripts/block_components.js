@@ -4,7 +4,7 @@ import * as UI from '@minecraft/server-ui';
 import { setPermutation, getRandomInt, offsetLocation, setVectorFloats, decripateStack, vec3toString, lerp, getRandomBool, isBlockSolid, getRandomFloat, getWorldDirection, damage_item } from './utils.js'
 import { damageWithCustomMessage } from './entity_functions.js'
 
-console.warn("Are those §6§lCreator Settings§r i smell? This add-on might come up with a few errors but most likley they shouldn't be breaking the mod so dont worry about them :3 - vlliage")
+console.warn("Hey! You have §6§lCreator Settings§r On. This add-on might come up with a few errors still, I cannot remove them :(. So they should be safe to ignore :3 - Vlliage")
 const harmList = []
 SERVER.system.beforeEvents.startup.subscribe(initEvent => {
     initEvent.itemComponentRegistry.registerCustomComponent('vc:door', {}) //already made it, dont want errors
@@ -111,7 +111,8 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
             }
         }
     });
-    initEvent.blockComponentRegistry.registerCustomComponent('vc:fence', {
+    //removed because unused
+    /*initEvent.blockComponentRegistry.registerCustomComponent('vc:fence', { 
         onTick: e => {
             try {
                 const block = e.block
@@ -133,7 +134,7 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
                 }
             } catch (error) { }
         }
-    });
+    });*/
     initEvent.blockComponentRegistry.registerCustomComponent('vc:wall', {
         onTick: e => {
             try {
@@ -244,7 +245,8 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
             if (getRandomInt(0, 5) == 0) e.block.dimension.runCommand(`structure load glorium_mushroom1 ${e.block.location.x - 2} ${e.block.location.y} ${e.block.location.z - 2}`)
         },
     });
-    initEvent.blockComponentRegistry.registerCustomComponent('vc:elax_gravity', {
+    //removed because unused
+    /*initEvent.blockComponentRegistry.registerCustomComponent('vc:elax_gravity', {
         onStepOn: e => {
             if (!e.block.below(1).isAir) return;
             e.entity.runCommand(`playsound block.turtle_egg.crack @a[r=15] ~~~`)
@@ -264,7 +266,7 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
             setPermutation(e.block, 'vc:direction', dir)
             setPermutation(e.block, 'vc:state_bool', bool)
         }
-    });
+    });*/
     initEvent.blockComponentRegistry.registerCustomComponent('vc:falling_elax_block', {
         onTick: e => {
             if (e.block.location.y == (e.block.dimension.id == 'overworld' ? -64 : 0)) {
@@ -864,10 +866,11 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
                 block.above(-1).isSolid)
         }
     }
-    initEvent.blockComponentRegistry.registerCustomComponent('vc:opaques', {
+    //removed because unused
+    /*initEvent.blockComponentRegistry.registerCustomComponent('vc:opaques', {
         //onPlace: checkOpaque
         //onPlayerBreak: checkOpaque,
-    });
+    });*/
     initEvent.blockComponentRegistry.registerCustomComponent('vc:spew', {
         onTick: e => {
             e.dimension.spawnParticle('minecraft:campfire_smoke_particle', e.block.center())
@@ -939,10 +942,11 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
         if (block.permutation.getState("vc:entity") == "vc:termite_mound") e.block.setType('vc:termite_mound')
         else e.block.setType('minecraft:air')
     }
-    initEvent.blockComponentRegistry.registerCustomComponent('vc:spawner', {
+    //removed because unused
+    /*initEvent.blockComponentRegistry.registerCustomComponent('vc:spawner', {
         onPlace: spawnentities,
         onTick: spawnentities
-    })
+    })*/
     initEvent.blockComponentRegistry.registerCustomComponent('vc:rail_conjunction', {
         onTick: e => {
             //console.log('test')

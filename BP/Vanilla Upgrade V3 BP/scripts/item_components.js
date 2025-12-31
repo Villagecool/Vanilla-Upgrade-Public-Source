@@ -56,7 +56,8 @@ SERVER.world.afterEvents.itemCompleteUse.subscribe(e => {
     }
 })
 SERVER.system.beforeEvents.startup.subscribe(initEvent => {
-    initEvent.itemComponentRegistry.registerCustomComponent('vc:gives_effect', {
+    //removed because unused
+    /*initEvent.itemComponentRegistry.registerCustomComponent('vc:gives_effect', {
         onConsume: e => {
             console.log('its the custom component')
             effectsList.forEach((alrightyThen) => {
@@ -79,7 +80,7 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
             decripateStack(player);
             e.source.dimension.playSound('random.bow', e.source.location, {pitch: 0.5})
         }
-    });
+    });*/
     initEvent.itemComponentRegistry.registerCustomComponent('vc:cocojuice', {
         onConsume: e => {
             const item = e.itemStack;

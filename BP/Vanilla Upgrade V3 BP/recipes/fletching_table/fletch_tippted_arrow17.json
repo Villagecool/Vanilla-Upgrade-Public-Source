@@ -1,0 +1,35 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:fletch_tippted_arrow17"
+		},
+		"tags": [
+			"fletching_table"
+		],
+		"pattern": [
+			"000",
+			"A0S",
+			"000"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:arrow"
+			},
+			"S": {
+				"item": "minecraft:potion",
+				"data": 16
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:arrow",
+				"data": 17
+			},
+			{
+				"item": "minecraft:potion",
+				"data": 16
+			}
+		]
+	}
+}

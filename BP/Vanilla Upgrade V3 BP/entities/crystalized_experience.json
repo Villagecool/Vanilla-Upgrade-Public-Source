@@ -34,12 +34,6 @@
             "filter": "player",
             "damage": 1,
             "knockback": true
-          },
-          "particle_on_hit": {
-            "particle_type": "blockbreak",
-            "num_particles": 6,
-            "on_entity_hit": true,
-            "on_other_hit": true
           }
         },
         "hit_sound": "glass",

@@ -1,4 +1,4 @@
-################execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 vc:fletching_table_custom replace fletching_table
+execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 vc:fletching_table_custom replace fletching_table
 #execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:entity_spawn["vc:entity"="vc:bandager","vc:actually_spawn"=true] replace no:entity_spawn["vc:entity"="vc:bandager","vc:actually_spawn"=false]
 #execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:entity_spawn["vc:entity"="vc:termite","vc:actually_spawn"=true] replace no:entity_spawn["vc:entity"="vc:termite","vc:actually_spawn"=false]
 #execute as @a at @a run fill ~10~5~10 ~-10~-3~-10 no:entity_spawn["vc:entity"="vc:termite_mound","vc:actually_spawn"=true] replace no:entity_spawn["vc:entity"="vc:termite_mound","vc:actually_spawn"=false]

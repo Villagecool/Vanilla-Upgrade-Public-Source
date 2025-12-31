@@ -67,7 +67,7 @@
 				},
 				"blaze": {
 					"texture": "vc_blaze",
-					"render_method": "alpha_test_to_opaque",
+					"render_method": "opaque",
 					"ambient_occlusion": false,
 					"face_dimming": false
 				}

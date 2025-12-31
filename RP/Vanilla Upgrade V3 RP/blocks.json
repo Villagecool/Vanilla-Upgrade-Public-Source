@@ -271,6 +271,9 @@
 	"elax_stairs": {
 		"sound": "wood"
 	},
+	"elax_syrup": {
+		"sound": "honey_block"
+	},
 	"elax_wood": {
 		"sound": "wood"
 	},

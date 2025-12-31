@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:fletch_bow"
+		},
+		"tags": [
+			"fletching_table"
+		],
+		"pattern": [
+			"000",
+			"A0S",
+			"000"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:bow"
+			},
+			"S": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": {
+			"item": "minecraft:bow",
+			"count": 1
+		}
+	}
+}
