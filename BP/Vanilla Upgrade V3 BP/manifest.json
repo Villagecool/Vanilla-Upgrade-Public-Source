@@ -11,7 +11,7 @@
 		"description": "An Expansive addon created By §eVlliage§r and §bTeam Verious§r.",
 		"min_engine_version": [ 1, 21, 40 ],
 		"uuid": "017f476f-0615-44d5-ba6f-d2c927c7b0ba",
-		"version": [ 4, 1, 0 ]
+		"version": [ 4, 1, 1 ]
 	},
 	"modules": [
 		{

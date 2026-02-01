@@ -1,5 +1,6 @@
 {
 	"format_version": "1.21.50",
+	"use_beta_features": false,
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:soul_sandstone_wall",
@@ -7,12 +8,11 @@
 				"category": "construction",
 				"group": "itemGroup.name.walls"
 			},
-			"traits": {
-        "minecraft:connection": {
-            "enabled_states": ["minecraft:cardinal_connections"]
-        }
-			},
 			"states": {
+				"vc:connection_north": [false,true],
+				"vc:connection_east": [false,true],
+				"vc:connection_south": [false,true],
+				"vc:connection_west": [false,true],
 				"vc:post": [ true, false ],
 				"vc:north": [ "none", "tall", "short" ],
 				"vc:south": [ "none", "tall", "short" ],
@@ -25,7 +25,7 @@
       "tag:minecraft:is_pickaxe_item_destructible": {},
 			"tag:fence": {},
 			"minecraft:custom_components": [
-				"vc:wall"
+				"vc:wall", "vc:fence"
 			],
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 10

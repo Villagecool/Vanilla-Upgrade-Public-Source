@@ -112,37 +112,32 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
         }
     });
     //removed because unused
-    /*initEvent.blockComponentRegistry.registerCustomComponent('vc:fence', { 
+    //nvm
+    initEvent.blockComponentRegistry.registerCustomComponent('vc:fence', { 
         onTick: e => {
             try {
                 const block = e.block
-                //const north = block.north(1).vcIsSolid()
-                //const south = block.south(1).vcIsSolid()
-                //const east = block.east(1).vcIsSolid()
-                //const west = block.west(1).vcIsSolid()
-                //try {
-                //    setPermutation(block, "vc:north", north)
-                //    setPermutation(block, "vc:south", south)
-                //    setPermutation(block, "vc:east", east)
-                //    setPermutation(block, "vc:west", west)
-                //    setPermutation(block, "vc:placed", true)
-                //} catch { }
-                if (block.above(1).isAir && block.typeId.includes('fence')) block.above(1).setType('vc:fence_collision')
-                if (block.above(1).typeId == 'vc:fence_collision') {
-                    setPermutation(block.above(1), "vc:east", e.block.permutation.getState('minecraft:connection_east'))
-                    setPermutation(block.above(1), "vc:west", e.block.permutation.getState('minecraft:connection_west'))
-                }
+                const north = block.north(1).vcIsSolid()
+                const south = block.south(1).vcIsSolid()
+                const east = block.east(1).vcIsSolid()
+                const west = block.west(1).vcIsSolid()
+                try {
+                    setPermutation(block, "vc:connection_north", north)
+                    setPermutation(block, "vc:connection_south", south)
+                    setPermutation(block, "vc:connection_east", east)
+                    setPermutation(block, "vc:connection_west", west)
+                } catch { }
             } catch (error) { }
         }
-    });*/
+    });
     initEvent.blockComponentRegistry.registerCustomComponent('vc:wall', {
         onTick: e => {
             try {
                 const block = e.block
-                const north = block.permutation.getState('minecraft:connection_north')
-                const south = block.permutation.getState('minecraft:connection_south')
-                const east =  block.permutation.getState('minecraft:connection_east')
-                const west =  block.permutation.getState('minecraft:connection_west')
+                const north = block.permutation.getState('vc:connection_north')
+                const south = block.permutation.getState('vc:connection_south')
+                const east =  block.permutation.getState('vc:connection_east')
+                const west =  block.permutation.getState('vc:connection_west')
                 const aboveperm = block.above(1).permutation;
                 try {
                     setPermutation(block, "vc:north", north ?   (aboveperm.getState('vc:north') != undefined && aboveperm.getState('vc:north') != 'none') || block.above(1).vcIsSolid(e.block.typeId) ? 'tall' : 'short' : 'none')
