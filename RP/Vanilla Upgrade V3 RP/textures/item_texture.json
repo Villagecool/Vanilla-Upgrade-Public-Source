@@ -436,6 +436,9 @@
 		"vc_tumbleweed": {
 			"textures": "textures/blocks/tumbleweed"
 		},
+		"vc_warped_brush": {
+			"textures": "textures/items/warped_brush"
+		},
 		"vc_warped_nether_wart": {
 			"textures": "textures/items/warped_nether_wart"
 		},

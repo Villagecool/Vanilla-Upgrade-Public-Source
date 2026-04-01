@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:rotator",
 			"menu_category": {
 				"category": "items",
-				"group": "itemGroup.name.items"
+				"group": "minecraft:itemGroup.name.items"
 			},
 			"states": {
 				"vc:direction": [
@@ -61,10 +61,12 @@
 					1
 				]
 			},
-			"minecraft:custom_components": [
-				"vc:rotator",
-				"vc:redstone"
-			],
+			"minecraft:redstone_consumer": {
+				"min_power": 0,
+				"propagates_power": false
+			},
+			"vc:rotator": {},
+			"vc:redstone": {},
 			"minecraft:selection_box": {
 				"origin": [
 					-8,

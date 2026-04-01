@@ -29,6 +29,8 @@
             "salmon",
             "cooked_salmon"
           ],
+          "pause_growth_items": [ "golden_dandelion" ],
+          "reset_growth_items": [ "golden_dandelion" ],
           "grow_up": {
             "event": "minecraft:ageable_grow_up",
             "target": "self"
@@ -147,6 +149,12 @@
       }
     },
     "components": {
+      "minecraft:offspring": {
+        "offspring_pairs": {
+          "vc:penguin": "vc:penguin"
+        }
+      },
+      "minecraft:spawn_egg_interaction": {},
       "minecraft:is_hidden_when_invisible": {},
       "minecraft:type_family": {
         "family": [

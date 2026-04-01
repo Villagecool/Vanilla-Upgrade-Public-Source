@@ -430,6 +430,8 @@ tile.vc:azalea_shelf.name=Azalea Shelf
 tile.vc:elax_shelf.name=Elax Shelf
 tile.vc:palm_shelf.name=Palm Shelf
 tile.vc:soul_bulb.name=Soul Bulb
+item.vc:warped_brush=Warped Brushplant
+tile.vc:warped_brush.name=Warped Brushplant
 
 tips.creative.18=Mobs won't notice you in creative mode, but they'll still notice each other...	###Mobs(animals & monsters) won’t notice you in creative mode, but they’ll still notice each other... meaning that they can still kill each other.{MaxLength
 tips.creative.19=A warden a day keeps the... well, everything away.	###The Warden is a scary monster that live in underground cities.{MaxLength

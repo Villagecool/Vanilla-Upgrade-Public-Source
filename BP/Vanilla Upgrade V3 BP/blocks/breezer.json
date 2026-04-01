@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.40",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:breezer",
 			"menu_category": {
 				"category": "items",
-				"group": "itemGroup.name.anchors"
+				"group": "minecraft:itemGroup.name.anchors"
 			},
 			"states": {
 				"vc:powered": [
@@ -45,10 +45,12 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 20
 			},
-			"minecraft:custom_components": [
-				"vc:breezer",
-				"vc:redstone"
-			],
+			"minecraft:redstone_consumer": {
+				"min_power": 0,
+				"propagates_power": false
+			},
+			"vc:breezer": {},
+			"vc:redstone": {},
 			"minecraft:geometry": "geometry.breezer",
 			"minecraft:material_instances": {
 				"*": {

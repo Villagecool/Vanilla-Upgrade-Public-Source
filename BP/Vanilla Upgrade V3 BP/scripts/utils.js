@@ -198,7 +198,7 @@ export function vec3toString(vec) {
  * @returns {Bool} wether the block is solid
  */
 export function isBlockSolid(block) {
-    return !block.isAir || fenceConnections.has(block.typeId) || block.hasTag('log') || block.hasTag('stone')
+    return (!block.isAir && block.typeId != 'minecraft:fire') || fenceConnections.has(block.typeId) || block.hasTag('log') || block.hasTag('stone')
 }
 
 /**

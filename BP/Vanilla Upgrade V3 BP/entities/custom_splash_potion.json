@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.40",
+  "format_version": "1.21.50",
   "minecraft:entity": {
     "description": {
       "identifier": "vc:custom_splash_potion",

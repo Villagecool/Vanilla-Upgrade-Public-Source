@@ -761,6 +761,9 @@
 	"spew": {
 		"sound": "netherrack"
 	},
+	"spewing_chorus": {
+		"sound": "stone"
+	},
 	"stripped_azalea_log": {
 		"sound": "wood"
 	},
@@ -826,6 +829,9 @@
 	//"vc:rail_buffer": {
 	//	"sound": "stone"
 	//},
+	"warped_brush": {
+		"sound": "fungus"
+	},
 	"warped_wart": {
 		"sound": "fungus"
 	},

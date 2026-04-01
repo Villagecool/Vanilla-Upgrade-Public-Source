@@ -12,8 +12,9 @@
         "overlay": "textures/entity/penguin_baby"
       },
       "scripts": {
+        "scale": "query.is_baby ? 2.0 : 1.0",
         "animate": [
-          { "baby_transform": "query.is_baby" },
+          //{ "baby_transform": "query.is_baby" },
           { "flap": "!query.is_on_ground" },
           { "swim": "query.is_swimming" },
           "controller_general"
@@ -32,7 +33,7 @@
       },
       "geometry": {
         "default": "geometry.penguin",
-        "overlay": "geometry.penguin"
+        "overlay": "geometry.penguin_baby"
       },
       "render_controllers": [ 
         { "controller.render.zombie": "!query.is_baby" },

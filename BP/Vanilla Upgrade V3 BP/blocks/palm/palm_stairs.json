@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:palm_stairs",
 			"menu_category": {
 				"category": "construction",
-				"group": "itemGroup.name.stairs"
+				"group": "minecraft:itemGroup.name.stairs"
 			},
 			"traits": {
 				"minecraft:placement_position": {
@@ -15,7 +15,7 @@
 				},
 				"minecraft:placement_direction": {
 					"enabled_states": [
-						"minecraft:cardinal_direction"
+						"minecraft:corner_and_cardinal_direction"
 					],
 					"y_rotation_offset": 180
 				}
@@ -23,7 +23,7 @@
 		},
 		"components": {
 			"tag:wood": {},
-            "tag:minecraft:is_axe_item_destructible": {},
+      "tag:minecraft:is_axe_item_destructible": {},
 			"tag:stairs": {},
 			"minecraft:flammable": {
 				"catch_chance_modifier": 5,
@@ -33,7 +33,16 @@
 				"seconds_to_destroy": 3
 			},
 			"minecraft:light_dampening": 0,
-			"minecraft:geometry": "geometry.stairs",
+			"minecraft:geometry": {
+				"identifier": "geometry.stairs",
+				"bone_visibility": {
+					"inner_left":  "q.block_state('minecraft:corner') != 'inner_left'",
+					"inner_right": "q.block_state('minecraft:corner') != 'inner_right'",
+					"outer_left":  "q.block_state('minecraft:corner') == 'outer_left'",
+					"outer_right": "q.block_state('minecraft:corner') == 'outer_right'"
+					
+				}
+			},
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_palm_planks",
@@ -41,16 +50,14 @@
 				}
 			},
 			"minecraft:liquid_detection": {
-				"detection_rules": [{
-					"can_contain_liquid": true,
-					"liquid_type": "water",
-					"stops_liquid_flowing_from_direction": ["south"],
-					"on_liquid_touches": "blocking"
-				}]
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water",
+						"on_liquid_touches": "blocking"
+					}
+				]
 			},
-			"minecraft:custom_components": [
-				"vc:stairs"
-			],
 			"minecraft:selection_box": {
 				"origin": [
 					-8,
@@ -60,18 +67,6 @@
 				"size": [
 					16,
 					16,
-					16
-				]
-			},
-			"minecraft:collision_box": {
-				"origin": [
-					-8,
-					0,
-					-8
-				],
-				"size": [
-					16,
-					8,
 					16
 				]
 			}
@@ -116,19 +111,70 @@
 			{
 				"condition": "q.block_state('minecraft:vertical_half') == 'top'",
 				"components": {
-					"minecraft:geometry": "geometry.stairs_upper",
-					"minecraft:collision_box": {
-						"origin": [
-							-8,
-							0,
-							-8
-						],
-						"size": [
-							16,
-							16,
-							16
-						]
+					"minecraft:geometry": {
+						"identifier": "geometry.stairs_upper",
+						"bone_visibility": {
+							"inner_left":  "q.block_state('minecraft:corner') != 'inner_left'",
+							"inner_right": "q.block_state('minecraft:corner') != 'inner_right'",
+							"outer_left":  "q.block_state('minecraft:corner') == 'outer_left'",
+							"outer_right": "q.block_state('minecraft:corner') == 'outer_right'"
+
+						}
 					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:corner') == 'inner_right'",
+				"components": {
+					"minecraft:collision_box": [
+						{ "origin": [ -8, 8, -8 ], "size": [ 16, 8, 16] },
+						{ "origin": [ -8, 0, -8 ], "size": [ 8, 8, 8] }
+					]
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:corner') == 'inner_left'",
+				"components": {
+					"minecraft:collision_box": [
+						{ "origin": [ -8, 8, -8 ], "size": [ 16, 8, 16] },
+						{ "origin": [ 0, 0, -8 ], "size": [ 8, 8, 8] }
+					]
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:corner') != 'inner_left' && q.block_state('minecraft:corner') != 'inner_right'",
+				"components": {
+					"minecraft:collision_box": [
+						{ "origin": [ -8, 8, -8 ], "size": [ 16, 8, 16] },
+						{ "origin": [ -8, 0, -8 ], "size": [ 16, 8, 8] }
+					]
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:corner') == 'inner_right'",
+				"components": {
+					"minecraft:collision_box": [
+						{ "origin": [ -8, 0, -8 ], "size": [ 16, 8, 16] },
+						{ "origin": [ -8, 8, -8 ], "size": [ 8, 8, 8] }
+					]
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:corner') == 'inner_left'",
+				"components": {
+					"minecraft:collision_box": [
+						{ "origin": [ -8, 0, -8 ], "size": [ 16, 8, 16] },
+						{ "origin": [ 0, 8, -8 ], "size": [ 8, 8, 8] }
+					]
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:corner') != 'inner_left' && q.block_state('minecraft:corner') != 'inner_right'",
+				"components": {
+					"minecraft:collision_box": [
+						{ "origin": [ -8, 0, -8 ], "size": [ 16, 8, 16] },
+						{ "origin": [ -8, 8, -8 ], "size": [ 16, 8, 8] }
+					]
 				}
 			}
 		]

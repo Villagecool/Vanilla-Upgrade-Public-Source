@@ -1,5 +1,5 @@
 {
-  "format_version": "1.20.30",
+  "format_version": "1.26.10",
   "minecraft:entity": {
     "description": {
       "identifier": "vc:termite",
@@ -152,6 +152,8 @@
         "minecraft:ageable": {
           "duration": 1200,
           "feed_items": "stick",
+          "pause_growth_items": [ "golden_dandelion" ],
+          "reset_growth_items": [ "golden_dandelion" ],
           "grow_up": {
             "event": "minecraft:ageable_grow_up",
             "target": "self"
@@ -192,6 +194,12 @@
           "mob"
         ]
       },
+      "minecraft:offspring": {
+        "offspring_pairs": {
+          "vc:termite": "vc:termite"
+        }
+      },
+      "minecraft:spawn_egg_interaction": {},
       "minecraft:breathable": {
         "total_supply": 15,
         "suffocate_time": 0

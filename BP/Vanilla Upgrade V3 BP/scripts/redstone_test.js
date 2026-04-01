@@ -8,13 +8,13 @@ let stressTest = false
 let fillstress = []
 SERVER.system.beforeEvents.startup.subscribe(initEvent => {
 	initEvent.blockComponentRegistry.registerCustomComponent('vc:redstone', {
-		//onRedstoneUpdate: e => {
-			//const wasSucessful = (e.powerLevel >= 1)
+		onRedstoneUpdate: e => {
+			const wasSucessful = (e.powerLevel >= 1)
 		
-		onTick: e => {
+		//onTick: e => {
 			if (stressTest == true) fillstress.push(`${e.block.typeId} checked ${e.block.getRedstonePower() > 0 ? '§11§r' : '§b6§r'} at ${vec3toString(e.block.location)}`)
 
-			const wasSucessful = e.block.getRedstonePower() > 0 ? true : checkRedstone(e.block);
+			//const wasSucessful = e.block.getRedstonePower() > 0 ? true : checkRedstone(e.block);
 			//const wasSucessful = false;
 		
 			if (e.block.typeId == 'vc:custom_note_block') { // i split it up cus i think it optimizes the script a bit

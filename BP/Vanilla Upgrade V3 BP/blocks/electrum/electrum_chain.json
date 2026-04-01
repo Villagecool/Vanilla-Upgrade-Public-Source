@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.80",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:electrum_chain",
@@ -20,6 +20,9 @@
 			"tag:log": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 25
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 5
 			},
 			"minecraft:collision_box": {
 				"origin": [-3,0,-3],

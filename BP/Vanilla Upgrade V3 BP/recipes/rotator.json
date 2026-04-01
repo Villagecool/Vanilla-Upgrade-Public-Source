@@ -14,7 +14,7 @@
     ],
     "key": {
       "P": {
-        "item": "minecraft:planks"
+        "tag":"minecraft:planks"
       },
       "C": {
         "item": "minecraft:cobblestone"

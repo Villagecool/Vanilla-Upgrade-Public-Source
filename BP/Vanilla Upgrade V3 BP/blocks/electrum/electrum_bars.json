@@ -7,11 +7,10 @@
 			"menu_category": {
 				"category": "construction"
 			},
-			"states": {
-				"vc:connection_north": [false,true],
-				"vc:connection_east": [false,true],
-				"vc:connection_south": [false,true],
-				"vc:connection_west": [false,true]
+			"traits": {
+				"minecraft:connection": {
+					"enabled_states": ["minecraft:cardinal_connections"]
+				}
 			}
 			//"states": {
 			//	"vc:north": [
@@ -39,6 +38,9 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 6.5
 			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 5
+			},
 			"minecraft:liquid_detection": {
 				"detection_rules": [{
 					"can_contain_liquid": true,
@@ -57,10 +59,11 @@
 			"minecraft:light_dampening": 0,
 			"minecraft:geometry": {
 				"bone_visibility": {
-					"north": "query.block_state('vc:connection_north') == true",
-					"east": "query.block_state('vc:connection_east') == true",
-					"south": "query.block_state('vc:connection_south') == true",
-					"west": "query.block_state('vc:connection_west') == true"
+					"north": "query.block_state('minecraft:connection_north') == true",
+					"east": "query.block_state('minecraft:connection_east') == true",
+					"south": "query.block_state('minecraft:connection_south') == true",
+					"west": "query.block_state('minecraft:connection_west') == true",
+					"center": "!query.block_state('minecraft:connection_north') && !query.block_state('minecraft:connection_east') && !query.block_state('minecraft:connection_south') && !query.block_state('minecraft:connection_west')"
 				},
 				"identifier": "geometry.bars"
 			},
@@ -100,7 +103,7 @@
 		"permutations": [
 			//no connection
 			{
-				"condition": "query.block_state('vc:connection_north') == false && query.block_state('vc:connection_south') == false && query.block_state('vc:connection_east') == false && query.block_state('vc:connection_west') == false",
+				"condition": "query.block_state('minecraft:connection_north') == false && query.block_state('minecraft:connection_south') == false && query.block_state('minecraft:connection_east') == false && query.block_state('minecraft:connection_west') == false",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -1, 0, -1 ], "size": [ 2, 16, 2 ] }, 
 					"minecraft:selection_box": { "origin": [ -1, 0, -1 ], "size": [ 2, 16, 2 ] } 
@@ -108,21 +111,21 @@
 			},
 			//north and south 1-2
 			{
-				"condition": "query.block_state('vc:connection_north') == false && query.block_state('vc:connection_south') == true && query.block_state('vc:connection_east') == false && query.block_state('vc:connection_west') == false",
+				"condition": "query.block_state('minecraft:connection_north') == false && query.block_state('minecraft:connection_south') == true && query.block_state('minecraft:connection_east') == false && query.block_state('minecraft:connection_west') == false",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -1, 0, -1 ], "size": [ 2, 16, 9 ] }, 
 					"minecraft:selection_box": { "origin": [ -1, 0, -1 ], "size": [ 2, 16, 9 ] } 
 				}
 			},
 			{
-				"condition": "query.block_state('vc:connection_north') == true && query.block_state('vc:connection_south') == false && query.block_state('vc:connection_east') == false && query.block_state('vc:connection_west') == false",
+				"condition": "query.block_state('minecraft:connection_north') == true && query.block_state('minecraft:connection_south') == false && query.block_state('minecraft:connection_east') == false && query.block_state('minecraft:connection_west') == false",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -1, 0, -8 ], "size": [ 2, 16, 9 ] }, 
 					"minecraft:selection_box": { "origin": [ -1, 0, -8 ], "size": [ 2, 16, 9 ] } 
 			}
 			},
 			{
-				"condition": "query.block_state('vc:connection_north') == true && query.block_state('vc:connection_south') == true && query.block_state('vc:connection_east') == false && query.block_state('vc:connection_west') == false",
+				"condition": "query.block_state('minecraft:connection_north') == true && query.block_state('minecraft:connection_south') == true && query.block_state('minecraft:connection_east') == false && query.block_state('minecraft:connection_west') == false",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -1, 0, -8 ], "size": [ 2, 16, 16 ] }, 
 					"minecraft:selection_box": { "origin": [ -1, 0, -8 ], "size": [ 2, 16, 16 ] } 
@@ -131,7 +134,7 @@
 			
 			//all conenctions
 			{
-				"condition": "query.block_state('vc:connection_north') == true && query.block_state('vc:connection_south') == true && query.block_state('vc:connection_east') == true && query.block_state('vc:connection_west') == true",
+				"condition": "query.block_state('minecraft:connection_north') == true && query.block_state('minecraft:connection_south') == true && query.block_state('minecraft:connection_east') == true && query.block_state('minecraft:connection_west') == true",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -8, 0, -8 ], "size": [ 16, 16, 16 ] }, 
 					"minecraft:selection_box": { "origin": [ -8, 0, -8 ], "size": [ 16, 16, 16 ] } 
@@ -140,21 +143,21 @@
 
 			//east and west connections 1-2
 			{
-				"condition": "query.block_state('vc:connection_north') == false && query.block_state('vc:connection_south') == false && query.block_state('vc:connection_east') == false && query.block_state('vc:connection_west') == true",
+				"condition": "query.block_state('minecraft:connection_north') == false && query.block_state('minecraft:connection_south') == false && query.block_state('minecraft:connection_east') == false && query.block_state('minecraft:connection_west') == true",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -1, 0, -1 ], "size": [ 9, 16, 2 ] }, 
 					"minecraft:selection_box": { "origin": [ -1, 0, -1 ], "size": [ 9, 16, 2 ] } 
 			}
 			},
 			{
-				"condition": "query.block_state('vc:connection_north') == false && query.block_state('vc:connection_south') == false && query.block_state('vc:connection_east') == true && query.block_state('vc:connection_west') == false",
+				"condition": "query.block_state('minecraft:connection_north') == false && query.block_state('minecraft:connection_south') == false && query.block_state('minecraft:connection_east') == true && query.block_state('minecraft:connection_west') == false",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -8, 0, -1 ], "size": [ 9, 16, 2 ] }, 
 					"minecraft:selection_box": { "origin": [ -8, 0, -1 ], "size": [ 9, 16, 2 ] } 
 			}
 			},
 			{
-				"condition": "query.block_state('vc:connection_north') == false && query.block_state('vc:connection_south') == false && query.block_state('vc:connection_east') == true && query.block_state('vc:connection_west') == true",
+				"condition": "query.block_state('minecraft:connection_north') == false && query.block_state('minecraft:connection_south') == false && query.block_state('minecraft:connection_east') == true && query.block_state('minecraft:connection_west') == true",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -8, 0, -1 ], "size": [ 16, 16, 2 ] }, 
 					"minecraft:selection_box": { "origin": [ -8, 0, -1 ], "size": [ 16, 16, 2 ] } 
@@ -163,14 +166,14 @@
 
 			//north sound connected 3
 			{
-				"condition": "query.block_state('vc:connection_north') == true && query.block_state('vc:connection_south') == true && query.block_state('vc:connection_east') == true && query.block_state('vc:connection_west') == false",
+				"condition": "query.block_state('minecraft:connection_north') == true && query.block_state('minecraft:connection_south') == true && query.block_state('minecraft:connection_east') == true && query.block_state('minecraft:connection_west') == false",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -8, 0, -8 ], "size": [ 9, 16, 16 ] }, 
 					"minecraft:selection_box": { "origin": [ -8, 0, -8 ], "size": [ 9, 16, 16 ] } 
 			}
 			},
 			{
-				"condition": "query.block_state('vc:connection_north') == true && query.block_state('vc:connection_south') == true && query.block_state('vc:connection_east') == false && query.block_state('vc:connection_west') == true",
+				"condition": "query.block_state('minecraft:connection_north') == true && query.block_state('minecraft:connection_south') == true && query.block_state('minecraft:connection_east') == false && query.block_state('minecraft:connection_west') == true",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -1, 0, -8 ], "size": [ 9, 16, 16 ] }, 
 					"minecraft:selection_box": { "origin": [ -1, 0, -8 ], "size": [ 9, 16, 16 ] } 
@@ -179,14 +182,14 @@
 
 			//east and west connected 3
 			{
-				"condition": "query.block_state('vc:connection_north') == true && query.block_state('vc:connection_south') == false && query.block_state('vc:connection_east') == true && query.block_state('vc:connection_west') == true",
+				"condition": "query.block_state('minecraft:connection_north') == true && query.block_state('minecraft:connection_south') == false && query.block_state('minecraft:connection_east') == true && query.block_state('minecraft:connection_west') == true",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -8, 0, -8 ], "size": [ 16, 16, 9 ] }, 
 					"minecraft:selection_box": { "origin": [ -8, 0, -8 ], "size": [ 16, 16, 9 ] } 
 			}
 			},
 			{
-				"condition": "query.block_state('vc:connection_north') == false && query.block_state('vc:connection_south') == true && query.block_state('vc:connection_east') == true && query.block_state('vc:connection_west') == true",
+				"condition": "query.block_state('minecraft:connection_north') == false && query.block_state('minecraft:connection_south') == true && query.block_state('minecraft:connection_east') == true && query.block_state('minecraft:connection_west') == true",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -8, 0, -1 ], "size": [ 16, 16, 9 ] }, 
 					"minecraft:selection_box": { "origin": [ -8, 0, -1 ], "size": [ 16, 16, 9 ] } 
@@ -196,14 +199,14 @@
 			//corners
 			
 			{
-				"condition": "query.block_state('vc:connection_north') == false && query.block_state('vc:connection_south') == true && query.block_state('vc:connection_east') == true && query.block_state('vc:connection_west') == false",
+				"condition": "query.block_state('minecraft:connection_north') == false && query.block_state('minecraft:connection_south') == true && query.block_state('minecraft:connection_east') == true && query.block_state('minecraft:connection_west') == false",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -8, 0, -1 ], "size": [ 9, 16, 9 ] }, 
 					"minecraft:selection_box": { "origin": [ -8, 0, -1 ], "size": [ 9, 16, 9 ] } 
 			}
 			},
 			{
-				"condition": "query.block_state('vc:connection_north') == true && query.block_state('vc:connection_south') == false && query.block_state('vc:connection_east') == false && query.block_state('vc:connection_west') == true",
+				"condition": "query.block_state('minecraft:connection_north') == true && query.block_state('minecraft:connection_south') == false && query.block_state('minecraft:connection_east') == false && query.block_state('minecraft:connection_west') == true",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -1, 0, -8 ], "size": [ 9, 16, 9 ] }, 
 					"minecraft:selection_box": { "origin": [ -1, 0, -8 ], "size": [ 9, 16, 9 ] } 
@@ -211,14 +214,14 @@
 			},
 
 			{
-				"condition": "query.block_state('vc:connection_north') == false && query.block_state('vc:connection_south') == true && query.block_state('vc:connection_east') == false && query.block_state('vc:connection_west') == true",
+				"condition": "query.block_state('minecraft:connection_north') == false && query.block_state('minecraft:connection_south') == true && query.block_state('minecraft:connection_east') == false && query.block_state('minecraft:connection_west') == true",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -1, 0, -1 ], "size": [ 9, 16, 9 ] }, 
 					"minecraft:selection_box": { "origin": [ -1, 0, -1 ], "size": [ 9, 16, 9 ] } 
 			}
 			},
 			{
-				"condition": "query.block_state('vc:connection_north') == true && query.block_state('vc:connection_south') == false && query.block_state('vc:connection_east') == true && query.block_state('vc:connection_west') == false",
+				"condition": "query.block_state('minecraft:connection_north') == true && query.block_state('minecraft:connection_south') == false && query.block_state('minecraft:connection_east') == true && query.block_state('minecraft:connection_west') == false",
 				"components": { 
 					"minecraft:collision_box": { "origin": [ -8, 0, -8 ], "size": [ 9, 16, 9 ] },
 					"minecraft:selection_box": { "origin": [ -8, 0, -8 ], "size": [ 9, 16, 9 ] } 

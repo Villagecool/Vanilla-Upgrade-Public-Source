@@ -1,10 +1,9 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"menu_category": {
-				"category": "none",
-				"group": "itemGroup.name.commands"
+				"category": "none"
 			},
 			"identifier": "vc:glowing_roots"
 		},
@@ -12,6 +11,7 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.1
 			},
+			"minecraft:random_offset": {},
 			"minecraft:light_dampening": 0,
 			"minecraft:loot": "loot_tables/blocks/glowing_roots.json",
 			"minecraft:light_emission": 5,

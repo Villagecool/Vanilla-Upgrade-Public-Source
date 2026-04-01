@@ -25,6 +25,7 @@
         "c_eat": "controller.animation.termite.eat"
       },
       "scripts": {
+        "scale": "query.is_baby ? 2.0 : 1.0",
         "animate": [
           "look_at_target",
           "move",

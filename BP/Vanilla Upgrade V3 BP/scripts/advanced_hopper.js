@@ -48,9 +48,9 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
 
 		},
 		onTick: e => {
-			let block = e.block; //the hopper
+			const block = e.block; //the hopper
 			if (block.permutation.getState("vc:powered")) return;
-			let entity = block.dimension.getEntitiesAtBlockLocation(block.location)[0];; //the hopper entity
+			const entity = block.dimension.getEntitiesAtBlockLocation(block.location)[0];; //the hopper entity
 			if (!entity) return;
 			let filter = entity.nameTag;
 			let uppercontainer = block.above(1).getComponent("inventory");
@@ -69,8 +69,8 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
 				//addItemToContainer(lowercontainer.container, item, entity)
 			}
 			if (e.block.above(1).isAir || e.block.above(1).typeId == 'vc:advanced_hopper') {
-				let entityAbove = entity.dimension.getEntities({ location: { x: block.location.x, y: block.location.y + 1, z: block.location.z }, maxDistance: 1.5, minDistance: 0, })[0]
-				const itemEntity = entity.dimension.getEntities({ type: "minecraft:item", location: { x: block.location.x, y: block.location.y + 1, z: block.location.z }, maxDistance: 1.5, minDistance: 0, })[0];
+				let entityAbove = entity.dimension.getEntities({ location: block.above(1).location, maxDistance: 1.5, minDistance: 0, })[0]
+				const itemEntity = entity.dimension.getEntities({ type: "minecraft:item", location: block.above(1).location, maxDistance: 1.5, minDistance: 0, })[0];
 				const entityWithContainer = entityAbove.getComponent("inventory");
 				if (entityWithContainer && entityWithContainer.canBeSiphonedFrom) {
 					if (entityAbove.id != entity.id) pullItemFromContainer(entityWithContainer.container, filter, entity)
@@ -79,7 +79,7 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
 					stealItemEntity(itemEntity, filter, entity)
 				}
 			}
-			if (e.block.below(1).isAir || e.block.below(1).typeId == 'vc:advanced_hopper') {
+			if (e.block.below(1).isAir || lowercontainer.typeId == 'vc:advanced_hopper') {
 				let entityBelow = entity.dimension.getEntitiesAtBlockLocation(lowercontainer.location).filter(bruh => { return bruh.id != entity.id })[0]
 				if (entityBelow != undefined && entityBelow.getComponent("inventory") && entityBelow.typeId != 'minecraft:player') {
 					for (let i = 0; i < entity.getComponent("inventory").container.size; i++) {
@@ -300,7 +300,7 @@ function advancedFilterConfig(player, blockentity, getDefs) {
 	const filtlist = ['name is equal to', 'name starts with', 'name ends with', 'amount is greater than', 'amount is less than', 'amount is equal to', 'in list (seperate by \',\')']
 	popUp.dropdown('If filter', filtlist, defSelect)
 	popUp.textField("Value ", "Value", defText);
-	if (item != undefined) popUp.toggle(`Set the filter to §l${item.typeId}`, false)
+	if (item != undefined) popUp.toggle(`Set the filter to §l${item.typeId}`, {defaultValue: false})
 
 	popUp.show(player).then((r) => {
 		if (r.canceled) return;

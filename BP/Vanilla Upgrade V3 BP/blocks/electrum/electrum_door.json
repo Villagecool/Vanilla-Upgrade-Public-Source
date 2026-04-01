@@ -1,10 +1,10 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:electrum_door",
 			"menu_category": {
-				"group": "itemGroup.name.door",
+				"group": "minecraft:itemGroup.name.door",
 				"category": "construction"
 			},
 			"traits": {
@@ -44,10 +44,15 @@
 			"tag:one_way_collidable": {},
 			"tag:non_solid": {},
 			"tag:door": {},
-			"minecraft:custom_components": [
-				"vc:door",
-				"vc:redstone"
-			],
+			"vc:door": {},
+			"vc:redstone": {},
+			"minecraft:redstone_consumer": {
+				"min_power": 0,
+				"propagates_power": false
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 5
+			},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 2.5
 			},

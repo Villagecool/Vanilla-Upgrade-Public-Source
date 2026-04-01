@@ -584,25 +584,25 @@
 			]
 		},
 		"glareizer.none": {
-			"category": "ui",
+			"category": "block",
 			"sounds": [
 				"sounds/item/glareizer/none"
 			]
 		},
 		"glareizer.low": {
-			"category": "ui",
+			"category": "block",
 			"sounds": [
 				"sounds/item/glareizer/low"
 			]
 		},
 		"glareizer.med": {
-			"category": "ui",
+			"category": "block",
 			"sounds": [
 				"sounds/item/glareizer/med"
 			]
 		},
 		"glareizer.high": {
-			"category": "ui",
+			"category": "block",
 			"sounds": [
 				"sounds/item/glareizer/high"
 			]

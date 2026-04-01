@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.50",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "vc:warped_brush_feature"
+    },
+    "places_block": [
+      {"block": {"name": "vc:warped_brush",  "states": { "vc:variant": 0 }}, "weight": 5},
+      {"block": {"name": "vc:warped_brush",  "states": { "vc:variant": 1 }}, "weight": 5},
+      {"block": {"name": "vc:warped_brush",  "states": { "vc:variant": 2 }}, "weight": 5},
+      {"block": {"name": "vc:warped_brush",  "states": { "vc:variant": 3 }}, "weight": 5}
+    ],
+    "enforce_survivability_rules": false,
+    "enforce_placement_rules": true,
+    "randomize_rotation": true,
+    "may_attach_to": {
+      "bottom": [
+        "warped_nylium"
+      ]
+    },
+    "may_replace": [
+      "air",
+      "warped_roots",
+      "nether_sprouts"
+    ]
+  }
+}

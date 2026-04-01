@@ -1,14 +1,14 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"menu_category": {
-				"category": "none",
-				"group": "itemGroup.name.commands"
+				"category": "none"
 			},
 			"identifier": "vc:lumerison_fungus"
 		},
 		"components": {
+			"minecraft:random_offset": {},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.1
 			},
@@ -24,9 +24,7 @@
 					}
 				]
 			},
-			"minecraft:custom_components": [
-				"vc:lumerison_mushroom"
-			],
+			"vc:lumerison_mushroom": {},
 			"minecraft:geometry": "geometry.plant",
 			"minecraft:selection_box": {
 				"origin": [

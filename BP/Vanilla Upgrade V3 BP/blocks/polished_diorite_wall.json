@@ -9,15 +9,16 @@
 				"group": "itemGroup.name.walls"
 			},
 			"states": {
-				"vc:connection_north": [false,true],
-				"vc:connection_east": [false,true],
-				"vc:connection_south": [false,true],
-				"vc:connection_west": [false,true],
 				"vc:post": [ true, false ],
 				"vc:north": [ "none", "tall", "short" ],
 				"vc:south": [ "none", "tall", "short" ],
 				"vc:east": [ "none", "tall", "short" ],
 				"vc:west": [ "none", "tall", "short" ]
+			},
+			"traits": {
+				"minecraft:connection": {
+					"enabled_states": ["minecraft:cardinal_connections"]
+				}
 			}
 		},
 		"components": {

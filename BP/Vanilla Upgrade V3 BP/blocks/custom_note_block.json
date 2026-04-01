@@ -1,11 +1,11 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:custom_note_block",
 			"menu_category": {
 				"category": "none",
-				"group": "itemGroup.name.commands"
+				"group": "minecraft:itemGroup.name.commands"
 			},
 			"states": {
 				"vc:note": [
@@ -63,17 +63,13 @@
 				"allows_wire_to_step_down": true,
 				"redstone_conductor": true
 			},
-			"minecraft:custom_components": [
-				"vc:noteblock",
-				"vc:redstone"
-			],
-			"minecraft:flammable": true,
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "noteblock",
-					"render_method": "opaque"
-				}
-			}
+			"minecraft:redstone_consumer": {
+				"min_power": 0,
+				"propagates_power": false
+			},
+			"vc:noteblock": {},
+			"vc:redstone": {},
+			"minecraft:flammable": true
 		}
 	}
 }

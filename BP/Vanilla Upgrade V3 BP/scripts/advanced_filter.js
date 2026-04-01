@@ -31,6 +31,7 @@ SERVER.world.beforeEvents.itemUse.subscribe((e) => {
                     .dropdown('If filter', filtlist)
                     .textField("Value ", "Value")
                     .show(e.source).then((a) => {
+                        if (a.canceled) return;
                         e.itemStack.setLore([
                             `§r§7§l${filtlist[a.formValues[0]]}§r`,
                             a.formValues[1]
@@ -144,7 +145,7 @@ SERVER.world.afterEvents.itemStartUseOn.subscribe(e => {
     const theForm = new UI.ModalFormData().title('Set Filter');
     states.forEach(state => {
         values.push(`${state} = ${e.block.permutation.getState(state)}`)
-        theForm.toggle(`${state} = ${e.block.permutation.getState(state)}`, true)
+        theForm.toggle(`${state} = ${e.block.permutation.getState(state)}`, {defaultValue: true})
     })
     let lore = ['§r§7§lBlock States: §r']
     e.source.playSound('random.pop', {pitch: 0.5})

@@ -942,6 +942,9 @@
     "vc_vc_glorium_crystal_block": {
       "textures": "textures/blocks/glorium_crystal_block"
     },
+    "vc_warped_brush": {
+      "textures": "textures/blocks/warped_brush"
+    },
     "vc_warped_wart0": {
       "textures": "textures/blocks/warped_wart_stage_0"
     },

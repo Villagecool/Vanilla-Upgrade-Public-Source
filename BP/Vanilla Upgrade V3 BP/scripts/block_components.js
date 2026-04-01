@@ -40,7 +40,7 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
         onPlayerInteract: e => {
             if ((e.block.typeId == 'vc:compressed_copper_door' || e.block.typeId == 'vc:electrum_door') && !(e.block.permutation.getState("vc:upper_bit") ?
                 (e.block.permutation.getState("vc:powered") || e.block.below(1).permutation.getState("vc:powered")) :
-                (e.block.permutation.getState("vc:powered") || e.block.above(1).permutation.getState("vc:powered")))) return;
+                (e.block.permutation.getState("vc:powered") || e.block.above(1).permutation.getState("vc:powered")))) {e.dimension.playSound('dig.copper', e.block.center()); return};
             const open = e.block.permutation.getState("vc:open")
             if (e.block.permutation.getState("vc:upper_bit") == true) {
                 setPermutation(e.block, 'vc:open', !open)
@@ -56,11 +56,11 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
                         `${(!open == true ? 'open' : 'close')}.wooden_door`)
             e.dimension.playSound(sound, e.block.center(), {pitch: getRandomFloat(0.9,1)})
         },
-        onTick: e => {
+        onRedstoneUpdate: e => {
             //console.log(e.block.getRedstonePower())
-            if ((e.block.typeId == 'vc:compressed_copper_door' || e.block.typeId == 'vc:electrum_door') || e.typeId == 'vc:glass_door') return;
+            if ((e.block.typeId == 'vc:compressed_copper_door' || e.block.typeId == 'vc:electrum_door') || e.block.typeId == 'vc:glass_door') return;
             if (e.block.above(1).isAir) return;
-            const wasSucessful = e.block.getRedstonePower() > 0
+            const wasSucessful = e.powerLevel > 0;
 
             if ((wasSucessful && e.block.permutation.getState('vc:powered') == false && e.block.permutation.getState('vc:open') == false) || ( !wasSucessful && e.block.permutation.getState('vc:powered') == true && e.block.permutation.getState('vc:open') == true )) {
                 const open = e.block.getRedstonePower() <= 0;
@@ -86,10 +86,25 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
 
     initEvent.blockComponentRegistry.registerCustomComponent('vc:trapdoor', {
         onPlayerInteract: e => {
-            if ((e.block.typeId == 'vc:compressed_copper_trapdoor' || e.block.typeId == 'vc:electrum_trapdoor') && !e.block.permutation.getState("vc:powered")) return;
+            if ((e.block.typeId == 'vc:compressed_copper_trapdoor' || e.block.typeId == 'vc:electrum_trapdoor') && !e.block.permutation.getState("vc:powered")) {e.dimension.playSound('dig.copper', e.block.center()); return};;
             const open = e.block.permutation.getState("vc:open")
             setPermutation(e.block, 'vc:open', !open)
-            e.block.dimension.runCommand(`execute positioned ${vec3toString(e.block.location)} run playsound ${(!open == true ? 'open' : 'close')}.wooden_trapdoor @a[r=5] ~~~ 0.4`)
+            var sound = (
+                (e.block.typeId == 'vc:compressed_copper_trapdoor' || e.block.typeId == 'vc:electrum_trapdoor') ? `open_trapdoor.copper` :
+                e.block.typeId == 'vc:glass_trapdoor' ? `random.door_${(!open == true ? 'open' : 'close')}` :
+                `${(!open == true ? 'open' : 'close')}.wooden_trapdoor`);
+            e.dimension.playSound(sound, e.block.center(), {pitch: getRandomFloat(0.9,1)})
+        },
+        onRedstoneUpdate: e => {
+            //console.log(e.block.getRedstonePower())
+            if ((e.block.typeId == 'vc:compressed_copper_trapdoor' || e.block.typeId == 'vc:electrum_trapdoor') || e.block.typeId == 'vc:glass_trapdoor') return;
+            const wasSucessful = e.powerLevel > 0;
+        
+            let open = null
+            if (e.block.permutation.getState('vc:open') == true && !wasSucessful && e.previousPowerLevel > 0) {setPermutation(e.block, 'vc:open', false); open = false}
+            else if (e.block.permutation.getState('vc:open') == false && wasSucessful && e.previousPowerLevel <= 0) {setPermutation(e.block, 'vc:open', true); open = true}
+            if (open != null) e.dimension.playSound(`${(open == true ? 'open' : 'close')}.wooden_trapdoor`, e.block.center(), {pitch: getRandomFloat(0.9,1)})
+            //console.warn(`Open = ${open}; sucess = ${wasSucessful}; prev = ${e.previousPowerLevel}`)
         }
     });
 
@@ -109,12 +124,21 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
                 setPermutation(e.block, 'vc:open', 'false')
                 e.block.dimension.runCommand(`playsound close.fence_gate @a ${vec3toString(e.block.location)} 1`)
             }
+        },
+        onRedstoneUpdate: e => {
+            const wasSucessful = e.powerLevel > 0;
+        
+            let open = false
+            if (e.block.permutation.getState('vc:open') != 'false' && !wasSucessful && e.previousPowerLevel > 0) {setPermutation(e.block, 'vc:open', 'false'); open = true}
+            else if (e.block.permutation.getState('vc:open') == 'false' && wasSucessful && e.previousPowerLevel <= 0) {setPermutation(e.block, 'vc:open', 'front'); open = true}
+            if (open) e.block.dimension.runCommand(`playsound close.fence_gate @a ${vec3toString(e.block.location)} 1`)
+            //console.warn(`Open = ${open}; sucess = ${wasSucessful}; prev = ${e.previousPowerLevel}`)
         }
     });
     //removed because unused
     //nvm
     initEvent.blockComponentRegistry.registerCustomComponent('vc:fence', { 
-        onTick: e => {
+        /*onTick: e => {
             try {
                 const block = e.block
                 const north = block.north(1).vcIsSolid()
@@ -128,16 +152,16 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
                     setPermutation(block, "vc:connection_west", west)
                 } catch { }
             } catch (error) { }
-        }
+        }*/
     });
     initEvent.blockComponentRegistry.registerCustomComponent('vc:wall', {
         onTick: e => {
             try {
                 const block = e.block
-                const north = block.permutation.getState('vc:connection_north')
-                const south = block.permutation.getState('vc:connection_south')
-                const east =  block.permutation.getState('vc:connection_east')
-                const west =  block.permutation.getState('vc:connection_west')
+                const north = block.permutation.getState('minecraft:connection_north')
+                const south = block.permutation.getState('minecraft:connection_south')
+                const east =  block.permutation.getState('minecraft:connection_east')
+                const west =  block.permutation.getState('minecraft:connection_west')
                 const aboveperm = block.above(1).permutation;
                 try {
                     setPermutation(block, "vc:north", north ?   (aboveperm.getState('vc:north') != undefined && aboveperm.getState('vc:north') != 'none') || block.above(1).vcIsSolid(e.block.typeId) ? 'tall' : 'short' : 'none')
@@ -384,7 +408,10 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
             else if (dir == "down") coffset = { x: 0, y: -1, z: 0 }
             for (let i = 1; i < 5 + (Math.round(rstrength / 3)); i++) {
                 var offsetblock = block.north(coffset.z * -i).east(coffset.x * -i).above(coffset.y * -i) //idk why .offset() isnt working (i fogrot to include i lmao)
-                if (offsetblock.vcIsSolid()) break;
+                if (offsetblock.vcIsSolid()) {
+                    if (getRandomBool(30)) e.dimension.runCommand(`setblock ${vec3toString(block.north(coffset.z * -(i-1)).east(coffset.x * -(i-1)).above(coffset.y * -(i-1)))} fire["age"=15] keep`); 
+                    break
+                };
                 entities = entities.concat(block.dimension.getEntitiesAtBlockLocation(offsetblock.center()))
                 //console.log(vec3toString(offsetblock.location))
                 //if (Math.random() > 0.00000001) block.dimension.spawnParticle('vc:blue_shell_trail', offsetblock.center())
@@ -969,10 +996,7 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
         }
     });
     initEvent.blockComponentRegistry.registerCustomComponent('vc:die', {
-        onRedstoneUpdate: e => {
-            SERVER.world.sendMessage('Hi it worked!')
-        },
-        onTick: e=> {
+        onTick: e => {
             const dir = e.block.permutation.getState("minecraft:facing_direction");
             const wasSucessful = (
                 dir == 'north' ? e.block.south(-1).getRedstonePower() > 0 :
@@ -1011,8 +1035,8 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
         }
     });
     initEvent.blockComponentRegistry.registerCustomComponent('vc:shelf', {
-        onTick: e => {
-            const powered = e.block.getRedstonePower() > 0
+        onRedstoneUpdate: e => {
+            const powered = e.powerLevel > 0;
 
             if (powered && e.block.permutation.getState('vc:powered_bit') == false) e.dimension.playSound('block.shelf.activate', e.block.center())
             else if (!powered && e.block.permutation.getState('vc:powered_bit') == true) e.dimension.playSound('block.shelf.deactivate', e.block.center())
@@ -1052,17 +1076,17 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
     initEvent.blockComponentRegistry.registerCustomComponent('vc:', {});
     */
 })
-SERVER.world.afterEvents.playerPlaceBlock.subscribe(e => {
+/*SERVER.world.afterEvents.playerPlaceBlock.subscribe(e => {
     //if (e.block.typeId == 'minecraft:lightning_rod' && e.block.below(1).typeId == 'vc:compressed_copper_block') {
     //    e.block.setType('air')
     //    e.block.below(1).setType('air')
     //    e.dimension.spawnEntity('vc:copper_golem', e.block.below(1).bottomCenter())
     //}
-    if (e.block.typeId == 'vc:waterlily_lotus') {
-        e.block.setType('water')
-        e.block.above(1).setType('vc:waterlily_lotus')
-    }
-})
+    //if (e.block.typeId == 'vc:waterlily_lotus') {
+    //    e.block.setType('water')
+    //    e.block.above(1).setType('vc:waterlily_lotus')
+    //}
+})*/
 SERVER.world.afterEvents.itemStartUseOn.subscribe(e => {
     if (e.block.hasTag('vc:stripper')) {
         SERVER.system.run(() => {

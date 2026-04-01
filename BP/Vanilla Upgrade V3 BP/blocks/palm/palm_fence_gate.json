@@ -1,11 +1,11 @@
 {
-    "format_version": "1.21.50",
+    "format_version": "1.26.0",
     "minecraft:block": {
         "description": {
             "identifier": "vc:palm_fence_gate",
             "menu_category": {
                 "category": "construction",
-                "group": "itemGroup.name.fenceGate"
+                "group": "minecraft:itemGroup.name.fenceGate"
             },
             "traits": {
                 "minecraft:placement_direction": {
@@ -35,9 +35,10 @@
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 2.5
             },
-            "minecraft:custom_components": [
-                "vc:fence_gate"
-            ],
+            "vc:fence_gate": {},
+            "minecraft:redstone_consumer": {
+                "min_power": 0
+            },
 			"minecraft:liquid_detection": {
 				"detection_rules": [{
 					"can_contain_liquid": true,

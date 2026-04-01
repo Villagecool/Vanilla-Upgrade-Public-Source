@@ -13,10 +13,14 @@
         "warm": "textures/entity/pig/pig_warm",
         "cold": "textures/entity/pig/pig_cold",
         "saddle": "textures/entity/saddle_v2",
+        "baby_default": "textures/entity/pig/pig_temperate_baby",
+        "baby_warm": "textures/entity/pig/pig_warm_baby",
+        "baby_cold": "textures/entity/pig/pig_cold_baby",
         "technoblade": "textures/entity/pig/pig_crown"
       },
       "geometry": {
         "default": "geometry.pig.v3",
+        "baby": "geometry.pig.baby",
         "technoblade": "geometry.pig_crown"
       },
       "animations": {
@@ -31,22 +35,18 @@
           {
             "walk": "query.modified_move_speed"
           },
-          "look_at_target",
-          {
-            "baby_transform": "query.is_baby"
-          }
+          "look_at_target"
         ],
         "pre_animation": [
           "t.variant = query.property('minecraft:climate_variant');",
           "v.index = (t.variant == 'temperate') ? 0 : ((t.variant == 'warm') ? 1 : 2);"
-        ]
+        ],
+        "scale": "query.is_baby ? 2.0 : 1.0"
       },
       "render_controllers": [
         "controller.render.saddle",
-        "controller.render.pig.v3", 
-        { 
-          "controller.render.pig_crown": "query.is_name_any('Technoblade','technoblade')"
-        }
+        "controller.render.pig.v4",
+        { "controller.render.pig_crown": "query.is_name_any('Technoblade','technoblade') && !query.is_baby" }
       ],
       "spawn_egg": {
         "texture": "spawn_egg_pig"

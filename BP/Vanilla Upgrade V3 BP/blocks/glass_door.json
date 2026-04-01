@@ -1,10 +1,10 @@
 {
-    "format_version": "1.21.50",
+    "format_version": "1.26.0",
     "minecraft:block": {
         "description": {
             "identifier": "vc:glass_door",
             "menu_category": {
-                "group": "itemGroup.name.door",
+                "group": "minecraft:itemGroup.name.door",
                 "category": "construction"
             },
             "traits": {
@@ -43,9 +43,10 @@
             "tag:non_solid": {},
 			"tag:one_way_collidable": {},
             "tag:door": {},
-            "minecraft:custom_components": [
-                "vc:door"
-            ],
+			"vc:door": {},
+			"minecraft:redstone_consumer": {
+				"min_power": 15
+			},
             "minecraft:flammable": {
                 "catch_chance_modifier": 5,
                 "destroy_chance_modifier": 20

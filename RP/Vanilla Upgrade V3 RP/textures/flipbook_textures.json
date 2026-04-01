@@ -34,14 +34,14 @@
   {
     "flipbook_texture": "textures/blocks/flame",
     "atlas_tile": "vc_flame",
-    "ticks_per_frame": 2.5
-  },
+    "ticks_per_frame": 3
+  },/*
   {
     "flipbook_texture": "textures/items/maged_book_a",
     "atlas_tile": "vc_maged_book_a",
     "ticks_per_frame": 4,
     "blend_frames": false
-  },
+  },*/
   {
     "flipbook_texture": "textures/blocks/enchanted_moss",
     "atlas_tile": "vc_enchanted_moss",
@@ -81,7 +81,7 @@
       3
     ],
     "ticks_per_frame": 4
-  },
+  },/*
   {
     "flipbook_texture": "textures/blocks/elax_log",
     "atlas_tile": "vc_elax_log",
@@ -91,7 +91,7 @@
     "flipbook_texture": "textures/blocks/elax_log_weak",
     "atlas_tile": "vc_elax_log_weak",
     "ticks_per_frame": 4
-  },
+  },*/
   {
     "flipbook_texture": "textures/blocks/breezer_blades",
     "atlas_tile": "vc_breezer_blades",

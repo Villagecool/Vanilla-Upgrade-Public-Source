@@ -29,7 +29,7 @@
 				}]
 			},
 			"minecraft:destructible_by_explosion": {
-				"explosion_resistance": 6
+				"explosion_resistance": 5
 			},
 			"minecraft:material_instances": {
 				"*": {
