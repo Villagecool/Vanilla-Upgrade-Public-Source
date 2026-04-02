@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:green_pedals",
 			"menu_category": {
 				"category": "nature",
-				"group": "itemGroup.name.grass"
+				"group": "minecraft:itemGroup.name.grass"
 			}
 		},
 		"components": {

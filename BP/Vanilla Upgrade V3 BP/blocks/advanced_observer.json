@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:advanced_observer",
 			"menu_category": {
 				"category": "items",
-				"group": "itemGroup.name.redstone"
+				"group": "minecraft:itemGroup.name.redstone"
 			},
 			"traits": {
 				"minecraft:placement_direction": {
@@ -33,9 +33,7 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 20
 			},
-			"minecraft:custom_components": [
-				"vc:advanced_observer"
-			],
+			"vc:advanced_observer": {},
 			"minecraft:redstone_conductivity": {
 				"allows_wire_to_step_down": true,
 				"redstone_conductor": true

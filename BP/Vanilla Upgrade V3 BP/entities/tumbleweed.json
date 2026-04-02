@@ -168,6 +168,9 @@
     },
     "events": {
       "die": {
+        "queue_command": {
+          "command": "playsound step.grass @a ~~~"
+        },
         "add": {
           "component_groups": [
             "die"
@@ -175,6 +178,9 @@
         }
       },
       "drop": {
+        "queue_command": {
+          "command": "playsound step.grass @a ~~~"
+        },
         "add": {
           "component_groups": [
             "drop"

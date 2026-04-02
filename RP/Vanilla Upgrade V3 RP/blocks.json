@@ -761,7 +761,7 @@
 	"spew": {
 		"sound": "netherrack"
 	},
-	"spewing_chorus": {
+	"chorus_spew": {
 		"sound": "stone"
 	},
 	"stripped_azalea_log": {

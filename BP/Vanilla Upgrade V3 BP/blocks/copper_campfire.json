@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:copper_campfire",
 			"menu_category": {
 				"category": "none",
-				"group": "itemGroup.name.commands"
+				"group": "minecraft:itemGroup.name.commands"
 			},
 			"traits": {
 				"minecraft:placement_direction": {
@@ -32,9 +32,7 @@
 				"destroy_chance_modifier": 0
 			},
 			"minecraft:light_dampening": 0,
-			"minecraft:custom_components": [
-				"vc:campfire"
-			],
+			"vc:campfire": {},
 			"minecraft:tick": {
 				"looping": true,
 				"interval_range": [
@@ -48,6 +46,26 @@
 					"liquid_type": "water",
 					"on_liquid_touches": "blocking"
 				}]
+			},
+			"minecraft:material_instances": {
+				"fire": {
+					"texture": "vc_copper_campfire",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				},
+				"logs_lit": {
+					"texture": "vc_copper_campfire_log_lit",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				},
+				"*": {
+					"texture": "campfire_log",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
 			},
 			"minecraft:geometry": "geometry.campfire",
 			"minecraft:selection_box": {

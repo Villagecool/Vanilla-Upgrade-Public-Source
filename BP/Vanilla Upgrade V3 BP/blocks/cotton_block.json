@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"menu_category": {
@@ -28,12 +28,7 @@
 				]
 			},
 			"minecraft:friction": 0.2,
-			"minecraft:map_color": "#D2D4D9",
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "vc_cotton_block"
-				}
-			}
+			"minecraft:map_color": "#D2D4D9"
 		}
 	}
 }

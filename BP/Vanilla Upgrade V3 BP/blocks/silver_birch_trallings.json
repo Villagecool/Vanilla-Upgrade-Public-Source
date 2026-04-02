@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:silver_birch_trailings",
 			"menu_category": {
 				"category": "nature",
-				"group": "itemGroup.name.plant"
+				"group": "minecraft:itemGroup.name.plant"
 			}
 		},
 		"components": {
@@ -21,10 +21,17 @@
 				"conditions": [
 					{
 						"block_filter": [
-							"minecraft:leaves",
-							"minecraft:leaves2",
-							"minecraft:azalea_leaves",
-							"minecraft:azalea_leaves_flowered",
+							"oak_leaves",
+							"birch_leaves",
+							"acacia_leaves",
+							"azalea_leaves",
+							"azalea_leaves_flowered",
+							"cherry_leaves",
+							"jungle_leaves",
+							"spruce_leaves",
+							"vc:palm_leaves",
+							"dark_oak_leaves",
+							"mangrove_leaves",
 							"vc:silver_birch_leaves"
 						],
 						"allowed_faces": [

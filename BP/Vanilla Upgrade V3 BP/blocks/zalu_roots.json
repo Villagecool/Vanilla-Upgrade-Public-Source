@@ -1,11 +1,10 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:zalu_roots",
 			"menu_category": {
-				"category": "none",
-				"group": "commands"
+				"category": "none"
 			}
 		},
 		"components": {

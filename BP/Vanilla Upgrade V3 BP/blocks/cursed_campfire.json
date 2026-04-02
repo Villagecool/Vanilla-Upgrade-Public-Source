@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:cursed_campfire",
 			"menu_category": {
 				"category": "none",
-				"group": "itemGroup.name.commands"
+				"group": "minecraft:itemGroup.name.commands"
 			},
 			"traits": {
 				"minecraft:placement_direction": {
@@ -43,10 +43,8 @@
 				}]
 			},
 			"minecraft:light_dampening": 0,
-			"minecraft:custom_components": [
-				"vc:cursed_campfire",
-				"vc:campfire"
-			],
+			"vc:cursed_campfire": {},
+			"vc:campfire": {},
 			"minecraft:geometry": "geometry.campfire",
 			"minecraft:selection_box": {
 				"origin": [
@@ -66,6 +64,26 @@
 					10,
 					16
 				]
+			},
+			"minecraft:material_instances": {
+				"fire": {
+					"texture": "vc_cursed_campfire",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				},
+				"logs_lit": {
+					"texture": "vc_cursed_campfire_log_lit",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				},
+				"*": {
+					"texture": "campfire_log",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
 			},
 			"minecraft:collision_box": {
 				"origin": [

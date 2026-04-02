@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:electrum_slab",
 			"menu_category": {
 				"category": "construction",
-				"group": "itemGroup.name.slab"
+				"group": "minecraft:itemGroup.name.slab"
 			},
 			"traits": {
 				"minecraft:placement_position": {
@@ -30,6 +30,9 @@
 			},
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 5
+			},
+			"minecraft:geometry": {
+				"identifier": "geometry.slab"
 			},
 			"minecraft:material_instances": {
 				"*": {

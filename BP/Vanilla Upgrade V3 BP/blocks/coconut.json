@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:coconut",
 			"menu_category": {
 				"category": "nature",
-				"group": "itemGroup.name.nature"
+				"group": "minecraft:itemGroup.name.nature"
 			},
 			"traits": {
 				"minecraft:placement_position": {
@@ -37,9 +37,7 @@
 				"catch_chance_modifier": 5,
 				"destroy_chance_modifier": 20
 			},
-			"minecraft:custom_components": [
-				"vc:coconut"
-			],
+				"vc:coconut": {},
 			"minecraft:liquid_detection": {
 				"detection_rules": [{
 					"can_contain_liquid": true,

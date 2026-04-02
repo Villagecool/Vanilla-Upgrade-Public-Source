@@ -602,7 +602,7 @@ SERVER.system.beforeEvents.startup.subscribe(initEvent => {
                 }
             }
             //console.warn(sucess)
-            if (sucess > 0) SERVER.system.runTimeout(() => { e.block.setType('vc:saturated_pumice') }, 1)
+            if (sucess > 0) SERVER.system.runTimeout(() => { e.block.setType('vc:saturated_pumice'); e.dimension.playSound('sponge.absorb', e.block.center(), {pitch: getRandomFloat(0.6, 0.8)}) }, 1)
             })
         }
     });

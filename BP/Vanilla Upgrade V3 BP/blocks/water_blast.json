@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:water_blast",
 			"menu_category": {
 				"category": "none",
-				"group": "itemGroup.name.commands"
+				"group": "minecraft:itemGroup.name.commands"
 			},
 			"states": {
 				"vc:top": [
@@ -35,9 +35,7 @@
 					}
 				]
 			},
-			"minecraft:custom_components": [
-				"vc:water_blast"
-			],
+			"vc:water_blast": {},
 			"minecraft:liquid_detection": { //haha you can waterlog water
 				"detection_rules": [{
 					"can_contain_liquid": true,

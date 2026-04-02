@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"use_beta_features": false,
 	"minecraft:block": {
 		"description": {
 			"menu_category": {
 				"category": "nature",
-				"group": "itemGroup.name.leaves"
+				"group": "minecraft:itemGroup.name.leaves"
 			},
 			"identifier": "vc:silver_birch_leaves",
 			"traits": {

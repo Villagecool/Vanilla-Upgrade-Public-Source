@@ -51,6 +51,15 @@
 				}]
 			},
 			"minecraft:light_dampening": 0,
+			"minecraft:item_visual": {
+				"geometry": "geometry.trapdoor",
+				"material_instances": {
+					"*": {
+						"texture": "vc_azalea_trapdoor",
+						"render_method": "blend"
+					}
+				}
+			},
 			"minecraft:geometry": "geometry.trapdoor",
 			"minecraft:material_instances": {
 				"*": {

@@ -1,11 +1,11 @@
 {
-	"format_version": "1.20.30",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:chorus_spew",
 			"menu_category": {
 				"category": "nature",
-				"group": "itemGroup.name.nature"
+				"group": "minecraft:itemGroup.name.nature"
 			},
 			"traits": {
 				"minecraft:placement_position": {
@@ -35,9 +35,7 @@
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 0
 			},
-			"minecraft:custom_components": [
-				"vc:chorus_spew"
-			],
+			"vc:chorus_spew": {},
 			"minecraft:geometry": "geometry.chorus_spew",
 			"minecraft:selection_box": {
 				"origin": [

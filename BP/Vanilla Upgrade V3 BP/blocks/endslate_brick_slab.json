@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:endslate_brick_slab",
 			"menu_category": {
 				"category": "construction",
-				"group": "itemGroup.name.slab"
+				"group": "minecraft:itemGroup.name.slab"
 			},
 			"traits": {
 				"minecraft:placement_position": {
@@ -32,6 +32,7 @@
 					"on_liquid_touches": "blocking"
 				}]
 			},
+			"minecraft:geometry": "geometry.slab",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_endslate_bricks",

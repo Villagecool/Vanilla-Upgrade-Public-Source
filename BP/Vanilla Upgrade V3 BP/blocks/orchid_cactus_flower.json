@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:orchid_cactus_flower",
 			"menu_category": {
 				"category": "nature",
-				"group": "itemGroup.name.nature"
+				"group": "minecraft:itemGroup.name.nature"
 			},
 			"states": {
 				"vc:sides": [
@@ -22,9 +22,6 @@
 			},
 			"minecraft:light_dampening": 0,
 			"minecraft:geometry": "geometry.orchid_cactus_flower",
-			"minecraft:custom_components": [
-				//"vc:flower_cactus"
-			],
 			"minecraft:display_name": "tile.vc:flowering_cactus.name",
 			"minecraft:placement_filter": {
 				"conditions": [

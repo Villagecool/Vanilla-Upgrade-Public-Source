@@ -1,11 +1,11 @@
 	{
-	"format_version": "1.21.50",
+	"format_version": "1.21.70",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:gloricalium_grate",
 			"menu_category": {
 				"category": "construction",
-				"group": "itemGroup.name.metals"
+				"group": "minecraft:itemGroup.name.metals"
 			}
 		},
 		"components": {

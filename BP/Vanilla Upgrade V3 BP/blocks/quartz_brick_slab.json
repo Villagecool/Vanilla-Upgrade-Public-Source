@@ -1,11 +1,11 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.26.0",
 	"minecraft:block": {
 		"description": {
 			"identifier": "vc:quartz_brick_slab",
 			"menu_category": {
 				"category": "construction",
-				"group": "itemGroup.name.slab"
+				"group": "minecraft:itemGroup.name.slab"
 			},
 			"traits": {
 				"minecraft:placement_position": {
@@ -30,6 +30,9 @@
 					"liquid_type": "water",
 					"on_liquid_touches": "blocking"
 				}]
+			},
+			"minecraft:geometry": {
+				"identifier": "geometry.slab"
 			},
 			"minecraft:material_instances": {
 				"*": {
