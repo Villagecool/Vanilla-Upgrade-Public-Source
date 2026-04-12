@@ -55,7 +55,7 @@
 				]
 			},
 			"minecraft:item_visual": {
-					"geometry": "geometry.fence_item",
+					"geometry": "geometry.vc.fence_item",
 					"material_instances": {
 					"*": {
 						"texture": "vc_palm_planks",
@@ -74,7 +74,7 @@
 					"south": "query.block_state('minecraft:connection_south') == true",
 					"west": "query.block_state('minecraft:connection_west') == true"
 				},
-				"identifier": "geometry.fence"
+				"identifier": "geometry.vc.fence"
 			},
 			"minecraft:collision_box": {
 				"origin": [

@@ -39,7 +39,7 @@
 					16
 				]
 			},
-			"minecraft:geometry": "geometry.rail",
+			"minecraft:geometry": "geometry.vc.rail",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_elax_floor_leaves",

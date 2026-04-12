@@ -43,7 +43,7 @@
 				"looping": true
 			},
 			"minecraft:geometry": {
-				"identifier": "geometry.vanilla_portal"
+				"identifier": "geometry.vc.vanilla_portal"
 			},
 			"minecraft:item_visual": {
 				"geometry": "minecraft:geometry.full_block",

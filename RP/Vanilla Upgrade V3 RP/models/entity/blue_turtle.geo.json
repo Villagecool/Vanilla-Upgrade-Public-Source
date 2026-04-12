@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.blue_turtle",
+				"identifier": "geometry.vc.blue_turtle",
 				"texture_width": 128,
 				"texture_height": 64,
 				"visible_bounds_width": 4,

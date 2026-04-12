@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.mellon1",
+				"identifier": "geometry.vc.mellon1",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -57,7 +57,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.mellon2",
+				"identifier": "geometry.vc.mellon2",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -146,7 +146,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.mellon3",
+				"identifier": "geometry.vc.mellon3",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -201,7 +201,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.mellon4",
+				"identifier": "geometry.vc.mellon4",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,

@@ -10,7 +10,7 @@
         "default": "textures/entity/illusioner"
       },
       "geometry": {
-        "default": "geometry.illusioner"
+        "default": "geometry.vc.illusioner"
       },
       "spawn_egg": {
         "texture": "vc_spawn_egg_illusioner",

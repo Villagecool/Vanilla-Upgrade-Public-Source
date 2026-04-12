@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.campfire_big",
+				"identifier": "geometry.vc.campfire_big",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -134,7 +134,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.campfire",
+				"identifier": "geometry.vc.campfire",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -425,7 +425,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.campfire_unlit",
+				"identifier": "geometry.vc.campfire_unlit",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,

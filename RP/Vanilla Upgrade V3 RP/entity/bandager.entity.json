@@ -10,7 +10,7 @@
         "default": "textures/entity/bandager"
       },
       "geometry": {
-        "default": "geometry.bandager"
+        "default": "geometry.vc.bandager"
       },
       "spawn_egg": {
         "texture": "vc_spawn_egg_bandager"

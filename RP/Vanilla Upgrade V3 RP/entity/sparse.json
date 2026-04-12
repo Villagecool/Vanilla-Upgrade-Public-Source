@@ -10,7 +10,7 @@
 				"default": "textures/entity/sparse"
 			},
 			"geometry": {
-				"default": "geometry.sparse"
+				"default": "geometry.vc.sparse"
 			},
 			"animations": {
 				"setup": "animation.sparse.setup",

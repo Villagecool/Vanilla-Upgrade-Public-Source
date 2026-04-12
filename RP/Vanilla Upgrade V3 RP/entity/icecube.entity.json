@@ -10,7 +10,7 @@
         "default": "textures/blocks/ice"
       },
       "geometry": {
-        "default": "geometry.icecube"
+        "default": "geometry.vc.icecube"
       },
       "render_controllers": [ {"controller.render.zombie" : "query.is_alive"} ]
     }

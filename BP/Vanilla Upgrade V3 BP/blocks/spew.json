@@ -24,7 +24,7 @@
 			"minecraft:custom_components": [
 				"vc:spew"
 			],
-			"minecraft:geometry": "geometry.spew",
+			"minecraft:geometry": "geometry.vc.spew",
 			"minecraft:selection_box": {
 				"origin": [
 					-4,

@@ -18,7 +18,7 @@
 			"tag:minecraft:is_shovel_item_destructible": {},
 			"minecraft:destructible_by_explosion": {"explosion_resistance": 25},
 			"tag:non_solid": {},
-			"minecraft:geometry": "geometry.fried_dragon_egg",
+			"minecraft:geometry": "geometry.vc.fried_dragon_egg",
 			"minecraft:selection_box": {
 				"origin": [
 					-8,
@@ -60,7 +60,7 @@
             {
                 "condition": "query.block_state('vc:eat_tens') >= 3 && query.block_state('vc:eat_tens') < 6",
                 "components": {
-                    "minecraft:geometry": "geometry.fried_dragon_egg_2",
+                    "minecraft:geometry": "geometry.vc.fried_dragon_egg_2",
 			        "minecraft:collision_box": {
 			        	"origin": [
 			        		-8,
@@ -78,7 +78,7 @@
             {
                 "condition": "query.block_state('vc:eat_tens') >= 6",
                 "components": {
-                    "minecraft:geometry": "geometry.fried_dragon_egg_3",
+                    "minecraft:geometry": "geometry.vc.fried_dragon_egg_3",
 			        "minecraft:collision_box": {
 			        	"origin": [
 			        		-8,

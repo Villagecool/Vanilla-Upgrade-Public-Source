@@ -35,7 +35,7 @@
 			},
       		"minecraft:flower_pottable": {},
 			"minecraft:embedded_visual": {
-				"geometry": "geometry.plant_pot",
+				"geometry": "geometry.vc.plant_pot",
 				"material_instances": {
 					"*": {
 						"texture": "vc_sapling_palm",
@@ -53,7 +53,7 @@
 				}]
 			},
 			"vc:sapling": {},
-			"minecraft:geometry": "geometry.plant",
+			"minecraft:geometry": "geometry.vc.plant",
 			"minecraft:selection_box": {
 				"origin": [
 					-6,

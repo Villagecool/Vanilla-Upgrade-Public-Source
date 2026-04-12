@@ -38,7 +38,7 @@
 				}]
 			},
       		"minecraft:item_visual": {
-				"geometry": "geometry.wall_item",
+				"geometry": "geometry.vc.wall_item",
         		"material_instances": {
 				  "*": {
 				  	"texture": "polished_granite"
@@ -54,7 +54,7 @@
 			},
 			"minecraft:light_dampening": 0,
 			"minecraft:geometry": {
-				"identifier": "geometry.wall",
+				"identifier": "geometry.vc.wall",
 				"bone_visibility": {
 					"north": "query.block_state('vc:north') != 'none'",
 					"east":   "query.block_state('vc:east') != 'none'",

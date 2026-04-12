@@ -44,7 +44,7 @@
         "high": "animation.glareizer.sound_high"
       },
       "geometry": {
-        "default": "geometry.glareizer"
+        "default": "geometry.vc.glareizer"
       },
       "textures": {
         "default": "textures/items/glareizer",

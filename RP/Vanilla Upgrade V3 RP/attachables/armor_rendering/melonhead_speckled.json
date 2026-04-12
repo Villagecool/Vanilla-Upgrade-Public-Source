@@ -15,9 +15,9 @@
         "top": "textures/blocks/melon_top_speckled"
       },
       "geometry": {
-        "front": "geometry.melonfront",
-        "side": "geometry.melonside",
-        "top": "geometry.melontop"
+        "front": "geometry.vc.melonfront",
+        "side": "geometry.vc.melonside",
+        "top": "geometry.vc.melontop"
       },
       "scripts": {
         "parent_setup": "variable.helmet_layer_visible = 0.0;"

@@ -1,6 +1,6 @@
 {
 	"format_version": "1.8.0",
-	"geometry.villager_v2": {
+	"geometry.vc.villager_v2": {
 		"texturewidth": 64,
 		"textureheight": 64,
 		"visible_bounds_width": 4,

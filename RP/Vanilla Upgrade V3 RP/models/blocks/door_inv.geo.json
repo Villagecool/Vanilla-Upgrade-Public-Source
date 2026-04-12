@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.inv_door",
+				"identifier": "geometry.vc.inv_door",
 				"texture_width": 32,
 				"texture_height": 16,
 				"visible_bounds_width": 4,
@@ -32,7 +32,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.inv_door_open",
+				"identifier": "geometry.vc.inv_door_open",
 				"texture_width": 32,
 				"texture_height": 16,
 				"visible_bounds_width": 4,
@@ -77,7 +77,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.inv_door_upper",
+				"identifier": "geometry.vc.inv_door_upper",
 				"texture_width": 32,
 				"texture_height": 16,
 				"visible_bounds_width": 4,
@@ -121,7 +121,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.inv_door_upper_open",
+				"identifier": "geometry.vc.inv_door_upper_open",
 				"texture_width": 32,
 				"texture_height": 16,
 				"visible_bounds_width": 4,

@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.dispenser_minecart_top",
+				"identifier": "geometry.vc.dispenser_minecart_top",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -63,7 +63,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.dispenser_minecart_sides",
+				"identifier": "geometry.vc.dispenser_minecart_sides",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -133,7 +133,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.dispenser_minecart_front",
+				"identifier": "geometry.vc.dispenser_minecart_front",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -183,7 +183,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.dispenser_minecart_all",
+				"identifier": "geometry.vc.dispenser_minecart_all",
 				"texture_width": 32,
 				"texture_height": 32,
 				"visible_bounds_width": 2,

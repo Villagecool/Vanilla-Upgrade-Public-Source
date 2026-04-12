@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.electrum_nuggets1",
+				"identifier": "geometry.vc.electrum_nuggets1",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -51,7 +51,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.electrum_nuggets2",
+				"identifier": "geometry.vc.electrum_nuggets2",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -129,7 +129,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.electrum_nuggets3",
+				"identifier": "geometry.vc.electrum_nuggets3",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -237,7 +237,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.electrum_nuggets4",
+				"identifier": "geometry.vc.electrum_nuggets4",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,

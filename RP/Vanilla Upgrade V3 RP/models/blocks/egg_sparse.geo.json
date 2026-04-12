@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.egg_sparse",
+				"identifier": "geometry.vc.egg_sparse",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,

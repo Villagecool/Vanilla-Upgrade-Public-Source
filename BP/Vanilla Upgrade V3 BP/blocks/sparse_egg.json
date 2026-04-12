@@ -26,7 +26,7 @@
 			"minecraft:custom_components": [
 				"vc:egg"
 			],
-			"minecraft:geometry": "geometry.egg_sparse",
+			"minecraft:geometry": "geometry.vc.egg_sparse",
 			"minecraft:selection_box": {
 				"origin": [
 					-7,

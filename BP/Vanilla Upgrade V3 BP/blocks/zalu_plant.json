@@ -16,7 +16,7 @@
 			"minecraft:light_dampening": 0,
       		"minecraft:flower_pottable": {},
 			"minecraft:embedded_visual": {
-				"geometry": "geometry.plant_pot",
+				"geometry": "geometry.vc.plant_pot",
 				"material_instances": {
 					"*": {
 						"texture": "vc_zalu_plant",
@@ -45,7 +45,7 @@
 					"on_liquid_touches": "popped"
 				}]
 			},
-			"minecraft:geometry": "geometry.plant",
+			"minecraft:geometry": "geometry.vc.plant",
 			"minecraft:selection_box": {
 				"origin": [
 					-4,

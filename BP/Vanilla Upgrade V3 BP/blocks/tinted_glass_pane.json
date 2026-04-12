@@ -58,7 +58,7 @@
 					"not_south": "query.block_state('minecraft:connection_south') == false",
 					"not_west": "query.block_state('minecraft:connection_west') == false"
 				},
-				"identifier": "geometry.glass_pain"
+				"identifier": "geometry.vc.glass_pain"
 			},
 			"minecraft:selection_box": {
 				"origin": [
@@ -85,7 +85,7 @@
 				]
 			},
             "minecraft:item_visual": {
-                "geometry": "geometry.glass_pain_item",
+                "geometry": "geometry.vc.glass_pain_item",
 			    "material_instances": {
 			    	"*": {
 			    		"texture": "tinted_glass",

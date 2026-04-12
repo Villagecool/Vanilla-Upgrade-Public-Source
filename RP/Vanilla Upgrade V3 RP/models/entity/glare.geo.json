@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.glare",
+				"identifier": "geometry.vc.glare",
 				"texture_width": 128,
 				"texture_height": 64,
 				"visible_bounds_width": 2,

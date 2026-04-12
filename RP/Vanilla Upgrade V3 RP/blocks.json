@@ -226,7 +226,7 @@
 		"textures": "vc_discharged_gloricalium_block"
 	},
 	"discharged_gloricalium_grate": {
-		"sound": "netherite",
+		"sound": "mob_spawner",
 		"textures": "vc_discharged_gloricalium_grate"
 	},
 	//"dried_mud": {
@@ -405,7 +405,7 @@
 		"textures": "vc_gloricalium_block"
 	},
 	"gloricalium_grate": {
-		"sound": "netherite",
+		"sound": "mob_spawner",
 		"textures": "vc_gloricalium_grate"
 	},
 	"glorium_blossom": {

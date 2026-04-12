@@ -47,7 +47,7 @@
 				}]
 			},
             "minecraft:light_dampening": 0,
-            "minecraft:geometry": "geometry.fence_gate",
+            "minecraft:geometry": "geometry.vc.fence_gate",
             "minecraft:placement_filter": {
                 "conditions": [
                     {
@@ -64,7 +64,7 @@
                 }
             },
             "minecraft:item_visual": {
-                "geometry": "geometry.fence_gate_item",
+                "geometry": "geometry.vc.fence_gate_item",
                 "material_instances": {
                     "*": {
                         "texture": "vc_palm_planks",
@@ -101,7 +101,7 @@
             {
                 "condition": "query.block_state('vc:open') == 'false'",
                 "components": {
-                    "minecraft:geometry": "geometry.fence_gate",
+                    "minecraft:geometry": "geometry.vc.fence_gate",
                     "minecraft:collision_box": {
                         "origin": [
                             -8,
@@ -119,14 +119,14 @@
             {
                 "condition": "query.block_state('vc:open') == 'front'",
                 "components": {
-                    "minecraft:geometry": "geometry.fence_gate_open",
+                    "minecraft:geometry": "geometry.vc.fence_gate_open",
                     "minecraft:collision_box": false
                 }
             },
             {
                 "condition": "query.block_state('vc:open') == 'back'",
                 "components": {
-                    "minecraft:geometry": "geometry.fence_gate_open_alt",
+                    "minecraft:geometry": "geometry.vc.fence_gate_open_alt",
                     "minecraft:collision_box": false
                 }
             },

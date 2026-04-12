@@ -10,7 +10,7 @@
         "default": "textures/items/seeds_melon"
       },
       "geometry": {
-        "default": "geometry.melon_seed"
+        "default": "geometry.vc.melon_seed"
       },
       "render_controllers": [ "controller.render.item_sprite" ],
       "animations": {

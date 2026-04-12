@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.fire",
+				"identifier": "geometry.vc.fire",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 3,
@@ -245,7 +245,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.fire_rise",
+				"identifier": "geometry.vc.fire_rise",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 3,
@@ -487,7 +487,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.fire_rise2",
+				"identifier": "geometry.vc.fire_rise2",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 3,

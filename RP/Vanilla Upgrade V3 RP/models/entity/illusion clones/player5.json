@@ -1,6 +1,6 @@
 {
 	"format_version": "1.10.0",
-	"geometry.humanoid.clone5": {
+	"geometry.vc.humanoid.clone5": {
 		"texturewidth": 64,
 		"textureheight": 64,
 		"visible_bounds_width": 4,

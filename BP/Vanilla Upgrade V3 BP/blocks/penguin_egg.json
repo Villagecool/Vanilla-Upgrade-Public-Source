@@ -20,7 +20,7 @@
 			"minecraft:custom_components": [
 				"vc:egg"
 			],
-			"minecraft:geometry": "geometry.penguin_egg",
+			"minecraft:geometry": "geometry.vc.penguin_egg",
 			"minecraft:selection_box": {
 				"origin": [
 					-2.5,

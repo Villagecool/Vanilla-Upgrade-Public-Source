@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.glass_pain_item",
+				"identifier": "geometry.vc.glass_pain_item",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,

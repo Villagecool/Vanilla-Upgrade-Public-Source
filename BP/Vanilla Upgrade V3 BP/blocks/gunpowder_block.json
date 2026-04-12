@@ -15,7 +15,7 @@
 			}
 		},
 		"components": {
-			"minecraft:geometry": "geometry.rail",
+			"minecraft:geometry": "geometry.vc.rail",
 			"minecraft:collision_box": false,
 			"minecraft:selection_box": {
 				"origin": [

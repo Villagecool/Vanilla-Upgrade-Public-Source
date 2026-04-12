@@ -10,7 +10,7 @@
         "default": "textures/blocks/coconut"
       },
       "geometry": {
-        "default": "geometry.coconut"
+        "default": "geometry.vc.coconut"
       },
       "render_controllers": [ "controller.render.item_sprite" ]
     }

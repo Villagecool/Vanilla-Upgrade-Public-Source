@@ -24,7 +24,7 @@
 				"seconds_to_destroy": 3
 			},
 			"minecraft:light_dampening": 15,
-			"minecraft:geometry": "geometry.block",
+			"minecraft:geometry": "geometry.vc.block",
 			"minecraft:custom_components": [
 				"vc:melon_golem_spawn"
 			],

@@ -32,8 +32,8 @@
         "controller_general": "controller.animation.penguin.general"
       },
       "geometry": {
-        "default": "geometry.penguin",
-        "overlay": "geometry.penguin_baby"
+        "default": "geometry.vc.penguin",
+        "overlay": "geometry.vc.penguin_baby"
       },
       "render_controllers": [ 
         { "controller.render.zombie": "!query.is_baby" },

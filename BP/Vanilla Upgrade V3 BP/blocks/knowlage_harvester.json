@@ -25,7 +25,7 @@
 				"seconds_to_destroy": 5
 			},
 			"minecraft:light_emission": 10,
-			"minecraft:geometry": "geometry.knowlage_harvester",
+			"minecraft:geometry": "geometry.vc.knowlage_harvester",
 			"minecraft:crafting_table": {
 				"table_name": "Knowledge Harvester",
 				"grid_size": 3,

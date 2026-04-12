@@ -43,7 +43,7 @@
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 20
 			},
-			"minecraft:geometry": "geometry.breezer",
+			"minecraft:geometry": "geometry.vc.breezer",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_blazer_side",

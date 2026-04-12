@@ -24,7 +24,7 @@
 				"seconds_to_destroy": 0.5
 			},
 			"tag:non_solid": {},
-			"minecraft:geometry": "geometry.cake",
+			"minecraft:geometry": "geometry.vc.cake",
 			"minecraft:selection_box": {
 				"origin": [
 					-7,
@@ -67,7 +67,7 @@
 			{
 				"condition": "query.block_state('vc:eat') == 1",
 				"components": {
-					"minecraft:geometry": "geometry.cake",
+					"minecraft:geometry": "geometry.vc.cake",
 					"minecraft:selection_box": {
 						"origin": [
 							-7,
@@ -97,7 +97,7 @@
 			{
 				"condition": "query.block_state('vc:eat') == 2",
 				"components": {
-					"minecraft:geometry": "geometry.cake1",
+					"minecraft:geometry": "geometry.vc.cake1",
 					"minecraft:selection_box": {
 						"origin": [
 							-7,
@@ -127,7 +127,7 @@
 			{
 				"condition": "query.block_state('vc:eat') == 3",
 				"components": {
-					"minecraft:geometry": "geometry.cake2",
+					"minecraft:geometry": "geometry.vc.cake2",
 					"minecraft:selection_box": {
 						"origin": [
 							-7,
@@ -157,7 +157,7 @@
 			{
 				"condition": "query.block_state('vc:eat') == 4",
 				"components": {
-					"minecraft:geometry": "geometry.cake3",
+					"minecraft:geometry": "geometry.vc.cake3",
 					"minecraft:selection_box": {
 						"origin": [
 							-7,
@@ -187,7 +187,7 @@
 			{
 				"condition": "query.block_state('vc:eat') == 5",
 				"components": {
-					"minecraft:geometry": "geometry.cake4",
+					"minecraft:geometry": "geometry.vc.cake4",
 					"minecraft:selection_box": {
 						"origin": [
 							-7,
@@ -217,7 +217,7 @@
 			{
 				"condition": "query.block_state('vc:eat') == 6",
 				"components": {
-					"minecraft:geometry": "geometry.cake5",
+					"minecraft:geometry": "geometry.vc.cake5",
 					"minecraft:selection_box": {
 						"origin": [
 							-7,
@@ -247,7 +247,7 @@
 			{
 				"condition": "query.block_state('vc:eat') == 7",
 				"components": {
-					"minecraft:geometry": "geometry.cake6",
+					"minecraft:geometry": "geometry.vc.cake6",
 					"minecraft:selection_box": {
 						"origin": [
 							-7,

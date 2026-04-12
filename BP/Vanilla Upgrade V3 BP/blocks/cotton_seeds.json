@@ -23,7 +23,7 @@
 				"seconds_to_destroy": 0.1
 			},
 			"minecraft:light_dampening": 0,
-			"minecraft:geometry": "geometry.plant",
+			"minecraft:geometry": "geometry.vc.plant",
 			"vc:crop": {
 				"max": 5
 			},
@@ -128,7 +128,7 @@
 			{
 				"condition": "query.block_state('vc:growth') == 3",
 				"components": {
-					"minecraft:geometry": "geometry.doublecrop_other",
+					"minecraft:geometry": "geometry.vc.doublecrop_other",
 					"minecraft:loot": "loot_tables/blocks/cotton_plant2.json",
 					"minecraft:selection_box": {
 						"origin": [
@@ -154,7 +154,7 @@
 			{
 				"condition": "query.block_state('vc:growth') == 4",
 				"components": {
-					"minecraft:geometry": "geometry.doublecrop_other",
+					"minecraft:geometry": "geometry.vc.doublecrop_other",
 					"minecraft:loot": "loot_tables/blocks/cotton_plant3.json",
 					"minecraft:selection_box": {
 						"origin": [
@@ -180,7 +180,7 @@
 			{
 				"condition": "query.block_state('vc:growth') == 5",
 				"components": {
-					"minecraft:geometry": "geometry.doublecrop_other",
+					"minecraft:geometry": "geometry.vc.doublecrop_other",
 					"minecraft:loot": "loot_tables/blocks/cotton_plant4.json",
 					"minecraft:selection_box": {
 						"origin": [

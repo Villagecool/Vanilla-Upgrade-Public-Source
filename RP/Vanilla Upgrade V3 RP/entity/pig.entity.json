@@ -21,7 +21,7 @@
       "geometry": {
         "default": "geometry.pig.v3",
         "baby": "geometry.pig.baby",
-        "technoblade": "geometry.pig_crown"
+        "technoblade": "geometry.vc.pig_crown"
       },
       "animations": {
         "setup": "animation.pig.setup",

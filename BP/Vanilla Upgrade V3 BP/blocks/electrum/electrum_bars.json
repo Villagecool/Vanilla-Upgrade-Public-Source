@@ -65,7 +65,7 @@
 					"west": "query.block_state('minecraft:connection_west') == true",
 					"center": "!query.block_state('minecraft:connection_north') && !query.block_state('minecraft:connection_east') && !query.block_state('minecraft:connection_south') && !query.block_state('minecraft:connection_west')"
 				},
-				"identifier": "geometry.bars"
+				"identifier": "geometry.vc.bars"
 			},
 			"minecraft:selection_box": {
 				"origin": [

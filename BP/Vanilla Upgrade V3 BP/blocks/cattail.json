@@ -30,7 +30,7 @@
 				"seconds_to_destroy": 0.1
 			},
 			"minecraft:light_dampening": 0,
-			"minecraft:geometry": "geometry.plant",
+			"minecraft:geometry": "geometry.vc.plant",
 			"minecraft:flammable": {
 				"catch_chance_modifier": 30,
 				"destroy_chance_modifier": 100
@@ -47,7 +47,7 @@
 			"vc:cattail" : {},
 			"minecraft:flower_pottable": {},
 			"minecraft:embedded_visual": {
-				"geometry": "geometry.plant_pot",
+				"geometry": "geometry.vc.plant_pot",
 				"material_instances": {
 					"*": {
 						"texture": "vc_cattail_pot",

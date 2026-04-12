@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.doubleplant",
+				"identifier": "geometry.vc.doubleplant",
 				"texture_width": 32,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -73,7 +73,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.doubleplant_down",
+				"identifier": "geometry.vc.doubleplant_down",
 				"texture_width": 32,
 				"texture_height": 16,
 				"visible_bounds_width": 2,

@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.ender_vaso",
+				"identifier": "geometry.vc.ender_vaso",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,

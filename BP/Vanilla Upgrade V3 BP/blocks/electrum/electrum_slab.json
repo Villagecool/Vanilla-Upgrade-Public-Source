@@ -32,7 +32,7 @@
 				"explosion_resistance": 5
 			},
 			"minecraft:geometry": {
-				"identifier": "geometry.slab"
+				"identifier": "geometry.vc.slab"
 			},
 			"minecraft:material_instances": {
 				"*": {
@@ -46,7 +46,7 @@
 				"condition": "q.block_state('minecraft:vertical_half') == 'bottom'",
 				"components": {
 					"minecraft:geometry": {
-						"identifier": "geometry.slab"
+						"identifier": "geometry.vc.slab"
 					},
 					"minecraft:collision_box": {
 						"origin": [
@@ -78,7 +78,7 @@
 				"condition": "q.block_state('minecraft:vertical_half') == 'top'",
 				"components": {
 					"minecraft:geometry": {
-						"identifier": "geometry.slab_upper"
+						"identifier": "geometry.vc.slab_upper"
 					},
 					"minecraft:liquid_detection": {
 						"detection_rules": [{

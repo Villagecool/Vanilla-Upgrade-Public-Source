@@ -41,7 +41,7 @@
 				"vc:elax_syrup",
 				"vc:vines"
 			],
-			"minecraft:geometry": "geometry.plant",
+			"minecraft:geometry": "geometry.vc.plant",
 			"minecraft:loot": "loot_tables/blocks/elax_syrup.json",
 			"minecraft:placement_filter": {
 				"conditions": [
@@ -92,7 +92,7 @@
 			{
 				"condition": "query.block_state('minecraft:vertical_half') == 'top'",
 				"components": {
-					"minecraft:geometry": "geometry.plant",
+					"minecraft:geometry": "geometry.vc.plant",
 					//"minecraft:queued_ticking": {
 					//	"looping": true,
 					//	"interval_range": [
@@ -109,7 +109,7 @@
 			{
 				"condition": "query.block_state('minecraft:vertical_half') == 'bottom'",
 				"components": {
-					"minecraft:geometry": "geometry.plant_up",
+					"minecraft:geometry": "geometry.vc.plant_up",
 					//"minecraft:queued_ticking": {
 					//	"looping": true,
 					//	"interval_range": [

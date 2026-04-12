@@ -40,7 +40,7 @@
 					}
 				]
 			},
-			"minecraft:geometry": "geometry.pineapple",
+			"minecraft:geometry": "geometry.vc.pineapple",
 			"minecraft:selection_box": {
 				"origin": [
 					-5,

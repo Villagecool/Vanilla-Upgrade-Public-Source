@@ -51,7 +51,7 @@
 			},
 			"vc:breezer": {},
 			"vc:redstone": {},
-			"minecraft:geometry": "geometry.breezer",
+			"minecraft:geometry": "geometry.vc.breezer",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_breezer_side",

@@ -71,7 +71,7 @@
                 "condition": "query.block_state('vc:block_type') == 'slab' && query.block_state('vc:state_bool') == false",
                 "components": {
                     "minecraft:geometry": {
-                        "identifier": "geometry.slab"
+                        "identifier": "geometry.vc.slab"
                     },
                     "minecraft:material_instances": {
                         "*": {
@@ -84,7 +84,7 @@
                 "condition": "query.block_state('vc:block_type') == 'slab' && query.block_state('vc:state_bool') == true",
                 "components": {
                     "minecraft:geometry": {
-                        "identifier": "geometry.slab_upper"
+                        "identifier": "geometry.vc.slab_upper"
                     },
                     "minecraft:material_instances": {
                         "*": {
@@ -97,7 +97,7 @@
                 "condition": "query.block_state('vc:block_type') == 'stairs' && query.block_state('vc:state_bool') == true",
                 "components": {
                     "minecraft:geometry": {
-                        "identifier": "geometry.stairs_upper"
+                        "identifier": "geometry.vc.stairs_upper"
                     },
                     "minecraft:material_instances": {
                         "*": {
@@ -110,7 +110,7 @@
                 "condition": "query.block_state('vc:block_type') == 'stairs' && query.block_state('vc:state_bool') == false",
                 "components": {
                     "minecraft:geometry": {
-                        "identifier": "geometry.stairs"
+                        "identifier": "geometry.vc.stairs"
                     },
                     "minecraft:material_instances": {
                         "*": {

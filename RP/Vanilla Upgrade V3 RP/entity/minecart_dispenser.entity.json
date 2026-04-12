@@ -14,9 +14,9 @@
       },
       "geometry": {
         "default": "geometry.minecart.v1.8",
-        "front": "geometry.dispenser_minecart_front",
-        "side": "geometry.dispenser_minecart_sides",
-        "top": "geometry.dispenser_minecart_top"
+        "front": "geometry.vc.dispenser_minecart_front",
+        "side": "geometry.vc.dispenser_minecart_sides",
+        "top": "geometry.vc.dispenser_minecart_top"
       },
       "scripts": {
         "pre_animation": [

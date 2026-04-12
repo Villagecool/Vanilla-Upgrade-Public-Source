@@ -8,7 +8,7 @@
         "default": "textures/blocks/tumbleweed"
       },
       "geometry": {
-        "default": "geometry.tumbleweed"
+        "default": "geometry.vc.tumbleweed"
       },
       "animations": {
         "look_at_target": "animation.common.look_at_target",

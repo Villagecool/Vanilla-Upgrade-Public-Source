@@ -39,7 +39,7 @@
 					"on_liquid_touches": "no_reaction"
 				}]
 			},
-			"minecraft:geometry": "geometry.electrum_chain",
+			"minecraft:geometry": "geometry.vc.electrum_chain",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_electrum_chain",

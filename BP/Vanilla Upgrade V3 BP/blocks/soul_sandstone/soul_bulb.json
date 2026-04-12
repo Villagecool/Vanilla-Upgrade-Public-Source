@@ -28,7 +28,7 @@
 					}
 				]
 			},
-			"minecraft:geometry": "geometry.soul_bulb",
+			"minecraft:geometry": "geometry.vc.soul_bulb",
 			"minecraft:selection_box": {
 				"origin": [
 					-4,

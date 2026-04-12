@@ -64,7 +64,7 @@
 			},
 			"minecraft:collision_box": false,
 			"minecraft:light_dampening": 0,
-			"minecraft:geometry": "geometry.plant",
+			"minecraft:geometry": "geometry.vc.plant",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_silver_birch_trailings",

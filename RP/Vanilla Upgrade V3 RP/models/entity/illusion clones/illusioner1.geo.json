@@ -1,6 +1,6 @@
 {
 	"format_version": "1.10.0",
-	"geometry.illusioner": {
+	"geometry.vc.illusioner": {
 		"texturewidth": 64,
 		"textureheight": 64,
 		"visible_bounds_width": 5,
@@ -94,7 +94,7 @@
 			}
 		]
 	},
-	"geometry.illusioner_clone1": {
+	"geometry.vc.illusioner_clone1": {
 		"texturewidth": 64,
 		"textureheight": 64,
 		"visible_bounds_width": 5,

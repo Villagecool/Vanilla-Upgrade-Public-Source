@@ -18,11 +18,11 @@
       "animations": {
         "pos": "animation.sled.move",
         "down": "animation.sled.movement.down",
-        "up": "animation.sled.movement.up",
+        //"up": "animation.sled.movement.up",
         "controller": "controller.animation.sled.general"
       },
       "geometry": {
-        "default": "geometry.sled"
+        "default": "geometry.vc.sled"
       },
       "render_controllers": [
         "controller.render.zombie"

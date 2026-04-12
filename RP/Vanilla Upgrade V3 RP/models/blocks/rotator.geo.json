@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.rotatoranm3",
+				"identifier": "geometry.vc.rotatoranm3",
 				"texture_width": 32,
 				"texture_height": 32,
 				"visible_bounds_width": 3,
@@ -47,7 +47,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.rotatoranm2",
+				"identifier": "geometry.vc.rotatoranm2",
 				"texture_width": 32,
 				"texture_height": 32,
 				"visible_bounds_width": 3,
@@ -131,7 +131,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.rotatoranm1",
+				"identifier": "geometry.vc.rotatoranm1",
 				"texture_width": 32,
 				"texture_height": 32,
 				"visible_bounds_width": 3,
@@ -215,7 +215,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.rotator",
+				"identifier": "geometry.vc.rotator",
 				"texture_width": 32,
 				"texture_height": 32,
 				"visible_bounds_width": 2,

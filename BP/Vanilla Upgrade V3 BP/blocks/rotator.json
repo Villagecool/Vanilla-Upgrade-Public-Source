@@ -35,7 +35,7 @@
 				"redstone_conductor": true
 			},
 			"minecraft:light_dampening": 0,
-			"minecraft:geometry": "geometry.rotator",
+			"minecraft:geometry": "geometry.vc.rotator",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_rotator_side_counterclockwise",
@@ -142,37 +142,37 @@
 			{
 				"condition": "query.block_state('vc:anm') == 1 && query.block_state('vc:direction') == 'counterclockwise'",
 				"components": {
-					"minecraft:geometry": "geometry.rotatoranm3"
+					"minecraft:geometry": "geometry.vc.rotatoranm3"
 				}
 			},
 			{
 				"condition": "query.block_state('vc:anm') == 2 && query.block_state('vc:direction') == 'counterclockwise'",
 				"components": {
-					"minecraft:geometry": "geometry.rotatoranm2"
+					"minecraft:geometry": "geometry.vc.rotatoranm2"
 				}
 			},
 			{
 				"condition": "query.block_state('vc:anm') == 3 && query.block_state('vc:direction') == 'counterclockwise'",
 				"components": {
-					"minecraft:geometry": "geometry.rotatoranm1"
+					"minecraft:geometry": "geometry.vc.rotatoranm1"
 				}
 			},
 			{
 				"condition": "query.block_state('vc:anm') == 1 && query.block_state('vc:direction') == 'clockwise'",
 				"components": {
-					"minecraft:geometry": "geometry.rotatoranm1"
+					"minecraft:geometry": "geometry.vc.rotatoranm1"
 				}
 			},
 			{
 				"condition": "query.block_state('vc:anm') == 2 && query.block_state('vc:direction') == 'clockwise'",
 				"components": {
-					"minecraft:geometry": "geometry.rotatoranm2"
+					"minecraft:geometry": "geometry.vc.rotatoranm2"
 				}
 			},
 			{
 				"condition": "query.block_state('vc:anm') == 3 && query.block_state('vc:direction') == 'clockwise'",
 				"components": {
-					"minecraft:geometry": "geometry.rotatoranm3"
+					"minecraft:geometry": "geometry.vc.rotatoranm3"
 				}
 			}
 		]

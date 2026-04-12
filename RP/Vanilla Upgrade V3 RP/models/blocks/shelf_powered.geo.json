@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.shelf_powered_0",
+				"identifier": "geometry.vc.shelf_powered_0",
 				"texture_width": 32,
 				"texture_height": 32,
 				"visible_bounds_width": 2,
@@ -63,7 +63,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.shelf_powered_1",
+				"identifier": "geometry.vc.shelf_powered_1",
 				"texture_width": 32,
 				"texture_height": 32,
 				"visible_bounds_width": 2,
@@ -123,7 +123,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.shelf_powered_2",
+				"identifier": "geometry.vc.shelf_powered_2",
 				"texture_width": 32,
 				"texture_height": 32,
 				"visible_bounds_width": 2,
@@ -183,7 +183,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.shelf_powered_3",
+				"identifier": "geometry.vc.shelf_powered_3",
 				"texture_width": 32,
 				"texture_height": 32,
 				"visible_bounds_width": 2,

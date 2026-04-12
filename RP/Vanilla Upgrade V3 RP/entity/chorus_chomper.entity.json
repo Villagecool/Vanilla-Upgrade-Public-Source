@@ -10,7 +10,7 @@
 				"default": "textures/entity/chorus_chomper"
 			},
 			"geometry": {
-				"default": "geometry.chorus_chomper"
+				"default": "geometry.vc.chorus_chomper"
 			},
 			"render_controllers": [
 				"controller.render.zombie"

@@ -28,7 +28,7 @@
 			"minecraft:destructible_by_explosion": {"explosion_resistance": 0},
 			"tag:non_solid": {},
 			"minecraft:geometry": {
-				"identifier": "geometry.warped_brush",
+				"identifier": "geometry.vc.warped_brush",
 				"bone_visibility": {
 					"a": "query.block_state('vc:variant') == 1 || query.block_state('vc:variant') == 3",
 					"b": "query.block_state('vc:variant') == 2 || query.block_state('vc:variant') == 3"

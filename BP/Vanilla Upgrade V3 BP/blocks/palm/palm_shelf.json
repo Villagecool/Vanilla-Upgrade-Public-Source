@@ -39,7 +39,7 @@
 				}]
 			},
 			"minecraft:light_dampening": 0,
-			"minecraft:geometry": "geometry.shelf",
+			"minecraft:geometry": "geometry.vc.shelf",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_palm_shelf",
@@ -122,25 +122,25 @@
 			{
 				"condition": "query.block_state('vc:powered_bit') == true && query.block_state('vc:powered_shelf_type') == 0",
 				"components": {
-                    "minecraft:geometry": "geometry.shelf_powered_0"
+                    "minecraft:geometry": "geometry.vc.shelf_powered_0"
 				}
 			},
 			{
 				"condition": "query.block_state('vc:powered_bit') == true && query.block_state('vc:powered_shelf_type') == 1",
 				"components": {
-                    "minecraft:geometry": "geometry.shelf_powered_1"
+                    "minecraft:geometry": "geometry.vc.shelf_powered_1"
 				}
 			},
 			{
 				"condition": "query.block_state('vc:powered_bit') == true && query.block_state('vc:powered_shelf_type') == 2",
 				"components": {
-                    "minecraft:geometry": "geometry.shelf_powered_2"
+                    "minecraft:geometry": "geometry.vc.shelf_powered_2"
 				}
 			},
 			{
 				"condition": "query.block_state('vc:powered_bit') == true && query.block_state('vc:powered_shelf_type') == 3",
 				"components": {
-                    "minecraft:geometry": "geometry.shelf_powered_3"
+                    "minecraft:geometry": "geometry.vc.shelf_powered_3"
 				}
 			}
 		]

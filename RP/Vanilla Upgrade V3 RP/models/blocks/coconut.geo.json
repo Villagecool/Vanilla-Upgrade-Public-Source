@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.coconut_side",
+				"identifier": "geometry.vc.coconut_side",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -51,7 +51,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.coconut",
+				"identifier": "geometry.vc.coconut",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,

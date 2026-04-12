@@ -14,7 +14,7 @@
 		},
 		"components": {
 			"minecraft:light_dampening": 0,
-			"minecraft:geometry": "geometry.stairs",
+			"minecraft:geometry": "geometry.vc.stairs",
 			"minecraft:replaceable": {},
 			"tag:non_solid": {},
 			"minecraft:material_instances": {

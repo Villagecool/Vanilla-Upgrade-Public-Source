@@ -30,7 +30,7 @@
 					}
 				]
 			},
-			"minecraft:geometry": "geometry.plant",
+			"minecraft:geometry": "geometry.vc.plant",
 			"minecraft:selection_box": {
 				"origin": [
 					-5,

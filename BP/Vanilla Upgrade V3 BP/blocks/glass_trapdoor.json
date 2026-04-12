@@ -51,7 +51,7 @@
 			},
 			"minecraft:light_dampening": 0,
 			"minecraft:item_visual": {
-				"geometry": "geometry.trapdoor",
+				"geometry": "geometry.vc.trapdoor",
 				"material_instances": {
 					"*": {
 						"texture": "glass",
@@ -59,7 +59,7 @@
 					}
 				}
 			},
-			"minecraft:geometry": "geometry.trapdoor",
+			"minecraft:geometry": "geometry.vc.trapdoor",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "glass",
@@ -198,7 +198,7 @@
 			{
 				"condition": "query.block_state('vc:open') == false",
 				"components": {
-					"minecraft:geometry": "geometry.trapdoor",
+					"minecraft:geometry": "geometry.vc.trapdoor",
 					"minecraft:selection_box": {
 						"origin": [
 							-8,
@@ -228,7 +228,7 @@
 			{
 				"condition": "query.block_state('vc:open') == true",
 				"components": {
-					"minecraft:geometry": "geometry.trapdoor_open",
+					"minecraft:geometry": "geometry.vc.trapdoor_open",
 					"minecraft:selection_box": {
 						"origin": [
 							-8,

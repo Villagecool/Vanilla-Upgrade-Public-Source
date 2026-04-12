@@ -23,7 +23,7 @@
 				"seconds_to_destroy": 0.5
 			},
 			"minecraft:light_dampening": 0,
-			"minecraft:geometry": "geometry.waterlilly_flower",
+			"minecraft:geometry": "geometry.vc.waterlilly_flower",
 			"minecraft:material_instances": {
 				"lilly": {
 					"texture": "waterlily",

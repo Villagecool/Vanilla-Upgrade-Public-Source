@@ -27,7 +27,7 @@
 		},
 		"components": {
 			"tag:minecraft:is_pickaxe_item_destructible": {},
-			"minecraft:geometry": "geometry.advanced_hopper",
+			"minecraft:geometry": "geometry.vc.advanced_hopper",
 			"minecraft:light_dampening": 5,
 			"minecraft:map_color": "#27272b",
 			"minecraft:destructible_by_mining": {
@@ -165,7 +165,7 @@
 			{
 				"condition": "!(query.block_state('minecraft:block_face') == 'up' || query.block_state('minecraft:block_face') == 'down')",
 				"components": {
-					"minecraft:geometry": "geometry.advanced_hopper_side"
+					"minecraft:geometry": "geometry.vc.advanced_hopper_side"
 				}
 			}
 		]

@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.melonfront",
+				"identifier": "geometry.vc.melonfront",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -28,7 +28,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.melontop",
+				"identifier": "geometry.vc.melontop",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -54,7 +54,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.melonside",
+				"identifier": "geometry.vc.melonside",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,

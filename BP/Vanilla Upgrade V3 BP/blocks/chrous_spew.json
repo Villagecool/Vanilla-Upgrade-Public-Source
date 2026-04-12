@@ -36,7 +36,7 @@
 				"explosion_resistance": 0
 			},
 			"vc:chorus_spew": {},
-			"minecraft:geometry": "geometry.chorus_spew",
+			"minecraft:geometry": "geometry.vc.chorus_spew",
 			"minecraft:selection_box": {
 				"origin": [
 					-4,

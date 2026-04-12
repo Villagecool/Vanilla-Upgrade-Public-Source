@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.advanced_hopper",
+				"identifier": "geometry.vc.advanced_hopper",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 2,

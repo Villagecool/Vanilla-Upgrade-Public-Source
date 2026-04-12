@@ -10,7 +10,7 @@
         "default": "textures/entity/zombie/zombie"
       },
       "geometry": {
-        "default": "geometry.zombie.v1.8"
+        "default": "geometry.vc.zombie.v1.8"
       },
       "spawn_egg": {
         "texture": "vc_spawn_egg_giant"
@@ -81,6 +81,7 @@
         "dirt": "dig.gravel",
         "grunt": "mob.giant.attack",
         "scream": "mob.giant.scream",
+        "idle": "mob.giant.idle",
         "woa": "mob.giant.attack",
         "spawn": "mob.giant.trans"
       },

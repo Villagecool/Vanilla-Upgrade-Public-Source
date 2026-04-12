@@ -12,8 +12,8 @@
         "overlay": "textures/entity/termite_baby"
       },
       "geometry": {
-        "default": "geometry.termite",
-        "overlay": "geometry.termite_baby"
+        "default": "geometry.vc.termite",
+        "overlay": "geometry.vc.termite_baby"
       },
       "animations": {
         "look_at_target": "animation.common.look_at_target",

@@ -67,7 +67,7 @@
 					"ambient_occlusion": false
 				}
 			},
-			"minecraft:geometry": "geometry.campfire",
+			"minecraft:geometry": "geometry.vc.campfire",
 			"minecraft:selection_box": {
 				"origin": [
 					-8,
@@ -116,7 +116,7 @@
 							16
 						]
 					},
-					"minecraft:geometry": "geometry.campfire",
+					"minecraft:geometry": "geometry.vc.campfire",
 					"minecraft:material_instances": {
 						"fire": {
 							"texture": "vc_copper_campfire",
@@ -152,7 +152,7 @@
 							"ambient_occlusion": true
 						}
 					},
-					"minecraft:geometry": "geometry.campfire_unlit"
+					"minecraft:geometry": "geometry.vc.campfire_unlit"
 				}
 			}
 		]

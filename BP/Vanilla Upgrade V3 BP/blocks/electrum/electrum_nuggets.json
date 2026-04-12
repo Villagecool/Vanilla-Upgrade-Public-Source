@@ -26,7 +26,7 @@
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 6
 			},
-			"minecraft:geometry": "geometry.electrum_nuggets1",
+			"minecraft:geometry": "geometry.vc.electrum_nuggets1",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_electrum_nuggets"
@@ -38,7 +38,7 @@
 				"condition": "q.block_state('vc:stack') == 0",
 				"components": {
           "minecraft:loot": "loot_tables/blocks/electrum_nugget_1.json",
-					"minecraft:geometry": "geometry.electrum_nuggets1",
+					"minecraft:geometry": "geometry.vc.electrum_nuggets1",
 					"minecraft:collision_box": {
 						"origin": [-2,0,-2],
 						"size": [4,2,4]
@@ -53,7 +53,7 @@
 				"condition": "q.block_state('vc:stack') == 1",
 				"components": {
           "minecraft:loot": "loot_tables/blocks/electrum_nugget_2.json",
-					"minecraft:geometry": "geometry.electrum_nuggets2",
+					"minecraft:geometry": "geometry.vc.electrum_nuggets2",
 					"minecraft:collision_box": {
 						"origin": [-5,0,-3],
 						"size": [9,6,7]
@@ -68,7 +68,7 @@
 				"condition": "q.block_state('vc:stack') == 2",
 				"components": {
           "minecraft:loot": "loot_tables/blocks/electrum_nugget_3.json",
-					"minecraft:geometry": "geometry.electrum_nuggets3",
+					"minecraft:geometry": "geometry.vc.electrum_nuggets3",
 					"minecraft:collision_box": {
 						"origin": [-6,0,-5],
 						"size": [10,6,9]
@@ -83,7 +83,7 @@
 				"condition": "q.block_state('vc:stack') == 3",
 				"components": {
           "minecraft:loot": "loot_tables/blocks/electrum_nugget_4.json",
-					"minecraft:geometry": "geometry.electrum_nuggets4",
+					"minecraft:geometry": "geometry.vc.electrum_nuggets4",
 					"minecraft:collision_box": {
 						"origin": [-6,0,-5],
 						"size": [12,8,12]

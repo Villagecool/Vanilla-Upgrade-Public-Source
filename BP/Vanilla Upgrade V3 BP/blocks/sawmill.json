@@ -16,7 +16,7 @@
 				"seconds_to_destroy": 5
 			},
 			"minecraft:light_dampening": 5,
-			"minecraft:geometry": "geometry.sawmill",
+			"minecraft:geometry": "geometry.vc.sawmill",
 			"minecraft:crafting_table": {
 				"table_name": "Sawmill",
 				"grid_size": 3,

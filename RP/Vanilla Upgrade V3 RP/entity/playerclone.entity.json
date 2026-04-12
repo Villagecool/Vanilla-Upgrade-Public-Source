@@ -13,8 +13,8 @@
       },
       "geometry": {
         "default": "geometry.humanoid.custom",
-        "shadow1": "geometry.humanoid.shadow1",
-        "shadow2": "geometry.humanoid.shadow2"
+        "shadow1": "geometry.vc.humanoid.shadow1",
+        "shadow2": "geometry.vc.humanoid.shadow2"
       },
       "scripts": {
         "initialize": [

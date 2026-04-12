@@ -22,7 +22,7 @@
 			"minecraft:light_dampening": 0,
 			"minecraft:replaceable": {},
 			"tag:non_solid": {},
-			"minecraft:geometry": "geometry.fence",
+			"minecraft:geometry": "geometry.vc.fence",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_air",

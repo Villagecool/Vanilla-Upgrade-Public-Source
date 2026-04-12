@@ -22,7 +22,7 @@
 			"minecraft:custom_components": [
 				"vc:falling_leaves"
 			],
-			"minecraft:geometry": "geometry.no_see_block",
+			"minecraft:geometry": "geometry.vc.no_see_block",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_elax_leaves",

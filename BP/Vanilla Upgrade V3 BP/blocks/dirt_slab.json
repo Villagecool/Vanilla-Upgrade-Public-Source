@@ -31,7 +31,7 @@
 					"on_liquid_touches": "blocking"
 				}]
 			},
-			"minecraft:geometry": "geometry.slab",
+			"minecraft:geometry": "geometry.vc.slab",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "dirt"
@@ -44,7 +44,7 @@
 				"condition": "q.block_state('minecraft:vertical_half') == 'bottom'",
 				"components": {
 					"minecraft:geometry": {
-						"identifier": "geometry.slab"
+						"identifier": "geometry.vc.slab"
 					},
 					"minecraft:collision_box": {
 						"origin": [
@@ -76,7 +76,7 @@
 				"condition": "q.block_state('minecraft:vertical_half') == 'top'",
 				"components": {
 					"minecraft:geometry": {
-						"identifier": "geometry.slab_upper"
+						"identifier": "geometry.vc.slab_upper"
 					},
 					"minecraft:liquid_detection": {
 						"detection_rules": [{

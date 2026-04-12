@@ -11,7 +11,7 @@
 		"components": {
 			"tag:minecraft:is_hoe_item_destructible": {},
 			"tag:minecraft:is_shears_item_destructible": {},
-			"minecraft:geometry": "geometry.plant",
+			"minecraft:geometry": "geometry.vc.plant",
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.2
 			},
@@ -20,7 +20,7 @@
 			"vc:particle": {},
 			"minecraft:flower_pottable": {},
 			"minecraft:embedded_visual": {
-				"geometry": "geometry.plant_pot",
+				"geometry": "geometry.vc.plant_pot",
 				"material_instances": {
 					"*": {
 						"texture": "vc_bubble_flower",

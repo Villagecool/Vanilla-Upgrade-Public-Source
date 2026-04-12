@@ -33,7 +33,7 @@
 			"vc:sapling": {},
       		"minecraft:flower_pottable": {},
 			"minecraft:embedded_visual": {
-				"geometry": "geometry.plant_pot",
+				"geometry": "geometry.vc.plant_pot",
 				"material_instances": {
 					"*": {
 						"texture": "vc_sapling_elax",
@@ -50,7 +50,7 @@
 					"on_liquid_touches": "popped"
 				}]
 			},
-			"minecraft:geometry": "geometry.plant",
+			"minecraft:geometry": "geometry.vc.plant",
 			"minecraft:selection_box": {
 				"origin": [
 					-6,

@@ -21,7 +21,7 @@
 				"seconds_to_destroy": 0.5
 			},
 			"minecraft:light_dampening": 0,
-			"minecraft:geometry": "geometry.orchid_cactus_flower",
+			"minecraft:geometry": "geometry.vc.orchid_cactus_flower",
 			"minecraft:display_name": "tile.vc:flowering_cactus.name",
 			"minecraft:placement_filter": {
 				"conditions": [
@@ -81,13 +81,13 @@
 			{
 				"condition": "query.block_state('vc:sides') == true",
 				"components": {
-					"minecraft:geometry": "geometry.orchid_cactus_flower"
+					"minecraft:geometry": "geometry.vc.orchid_cactus_flower"
 				}
 			},
 			{
 				"condition": "query.block_state('vc:sides') == false",
 				"components": {
-					"minecraft:geometry": "geometry.orchid_cactus_flower_bottomless"
+					"minecraft:geometry": "geometry.vc.orchid_cactus_flower_bottomless"
 				}
 			}
 		]

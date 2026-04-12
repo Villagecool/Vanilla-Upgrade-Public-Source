@@ -21,7 +21,7 @@ SERVER.world.beforeEvents.playerBreakBlock.subscribe((data) => {
                 if (!player.getDynamicProperty('giantOmenTimer')) SERVER.system.clearRun(timer)
                 //player.runCommand('title @s actionbar ' + Math.round((Date.now()/time)*100) + '%')
                 //console.log(Date.now() + '/' + time)
-                if (SERVER.system.currentTick % 200 == 1) player.runCommand(`title @s actionbar ${msToTime(time-Date.now())}`)
+                if (SERVER.system.currentTick % 200 == 1) player.runCommand(`title @s actionbar \uF213 ${msToTime(time-Date.now())}`)
                 player.runCommand(`particle vc:giant_omen_effect_particle ~~0.5~`)
                 player.setDynamicProperty('giantOmenTimer', `${Date.now()}//${time}`)
                 if (Date.now() >= time) {

@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.doublecrop",
+				"identifier": "geometry.vc.doublecrop",
 				"texture_width": 32,
 				"texture_height": 16,
 				"visible_bounds_width": 2,
@@ -101,7 +101,7 @@
 		},
 		{
 			"description": {
-				"identifier": "geometry.doublecrop_other",
+				"identifier": "geometry.vc.doublecrop_other",
 				"texture_width": 32,
 				"texture_height": 16,
 				"visible_bounds_width": 2,

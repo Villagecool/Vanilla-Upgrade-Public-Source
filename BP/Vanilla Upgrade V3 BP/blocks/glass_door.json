@@ -62,7 +62,7 @@
                 "seconds_to_destroy": 0.45
             },
             "minecraft:light_dampening": 0,
-            "minecraft:geometry": "geometry.door",
+            "minecraft:geometry": "geometry.vc.door",
             "minecraft:placement_filter": {
                 "conditions": [
                     {
@@ -204,56 +204,56 @@
                 "condition": "query.block_state('vc:open') == true && query.block_state('vc:upper_bit') == false",
                 "components": {
                     "tag:open_door": {},
-                    "minecraft:geometry": "geometry.door_open"
+                    "minecraft:geometry": "geometry.vc.door_open"
                 }
             },
             {
                 "condition": "query.block_state('vc:open') == false && query.block_state('vc:upper_bit') == false",
                 "components": {
                     "tag:closed_door": {},
-                    "minecraft:geometry": "geometry.door"
+                    "minecraft:geometry": "geometry.vc.door"
                 }
             },
             {
                 "condition": "query.block_state('vc:open') == true && query.block_state('vc:upper_bit') == true && query.block_state('vc:flipped') == false",
                 "components": {
                     "tag:open_door_upper": {},
-                    "minecraft:geometry": "geometry.door_upper_open"
+                    "minecraft:geometry": "geometry.vc.door_upper_open"
                 }
             },
             {
                 "condition": "query.block_state('vc:open') == false && query.block_state('vc:upper_bit') == true && query.block_state('vc:flipped') == false",
                 "components": {
                     "tag:closed_door_upper": {},
-                    "minecraft:geometry": "geometry.door_upper"
+                    "minecraft:geometry": "geometry.vc.door_upper"
                 }
             },
             {
                 "condition": "query.block_state('vc:open') == true && query.block_state('vc:upper_bit') == true && query.block_state('vc:flipped') == true",
                 "components": {
                     "tag:open_door_upper": {},
-                    "minecraft:geometry": "geometry.inv_door_upper_open"
+                    "minecraft:geometry": "geometry.vc.inv_door_upper_open"
                 }
             },
             {
                 "condition": "query.block_state('vc:open') == false && query.block_state('vc:upper_bit') == true && query.block_state('vc:flipped') == true",
                 "components": {
                     "tag:closed_door_upper": {},
-                    "minecraft:geometry": "geometry.inv_door_upper"
+                    "minecraft:geometry": "geometry.vc.inv_door_upper"
                 }
             },
             {
                 "condition": "query.block_state('vc:open') == true && query.block_state('vc:upper_bit') == false && query.block_state('vc:flipped') == true",
                 "components": {
                     "tag:open_door_upper": {},
-                    "minecraft:geometry": "geometry.inv_door_open"
+                    "minecraft:geometry": "geometry.vc.inv_door_open"
                 }
             },
             {
                 "condition": "query.block_state('vc:open') == false && query.block_state('vc:upper_bit') == false && query.block_state('vc:flipped') == true",
                 "components": {
                     "tag:closed_door_upper": {},
-                    "minecraft:geometry": "geometry.inv_door"
+                    "minecraft:geometry": "geometry.vc.inv_door"
                 }
             },
             {

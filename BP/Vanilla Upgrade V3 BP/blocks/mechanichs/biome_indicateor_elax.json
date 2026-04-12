@@ -14,7 +14,7 @@
 					"texture": "vc_air"
 				}
 			},
-			"minecraft:geometry": "geometry.none",
+			"minecraft:geometry": "geometry.vc.none",
 			"minecraft:selection_box": false,
 			"minecraft:collision_box": false
 		}

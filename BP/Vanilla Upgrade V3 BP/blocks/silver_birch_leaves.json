@@ -44,7 +44,7 @@
 					"on_liquid_touches": "blocking"
 				}]
 			},
-			"minecraft:geometry": "geometry.no_see_block",
+			"minecraft:geometry": "geometry.vc.no_see_block",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "vc_silver_birch_leaves",

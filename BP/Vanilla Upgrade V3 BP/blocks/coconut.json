@@ -31,7 +31,7 @@
 				"explosion_resistance": 0
 			},
 			"minecraft:light_dampening": 0,
-			"minecraft:geometry": "geometry.coconut",
+			"minecraft:geometry": "geometry.vc.coconut",
 			"minecraft:loot": "loot_tables/empty.json",
 			"minecraft:flammable": {
 				"catch_chance_modifier": 5,
@@ -80,7 +80,7 @@
 			{
 				"condition": "query.block_state('minecraft:block_face') == 'up' || query.block_state('minecraft:block_face') == 'down'",
 				"components": {
-					"minecraft:geometry": "geometry.coconut",
+					"minecraft:geometry": "geometry.vc.coconut",
 					"minecraft:selection_box": {
 						"origin": [
 							-4,
@@ -110,7 +110,7 @@
 			{
 				"condition": "query.block_state('minecraft:block_face') == 'north'",
 				"components": {
-					"minecraft:geometry": "geometry.coconut_side",
+					"minecraft:geometry": "geometry.vc.coconut_side",
 					"minecraft:selection_box": {
 						"origin": [
 							-4,
@@ -147,7 +147,7 @@
 			{
 				"condition": "query.block_state('minecraft:block_face') == 'south'",
 				"components": {
-					"minecraft:geometry": "geometry.coconut_side",
+					"minecraft:geometry": "geometry.vc.coconut_side",
 					"minecraft:selection_box": {
 						"origin": [
 							-4,
@@ -184,7 +184,7 @@
 			{
 				"condition": "query.block_state('minecraft:block_face') == 'east'",
 				"components": {
-					"minecraft:geometry": "geometry.coconut_side",
+					"minecraft:geometry": "geometry.vc.coconut_side",
 					"minecraft:selection_box": {
 						"origin": [
 							-4,
@@ -221,7 +221,7 @@
 			{
 				"condition": "query.block_state('minecraft:block_face') == 'west'",
 				"components": {
-					"minecraft:geometry": "geometry.coconut_side",
+					"minecraft:geometry": "geometry.vc.coconut_side",
 					"minecraft:selection_box": {
 						"origin": [
 							-4,

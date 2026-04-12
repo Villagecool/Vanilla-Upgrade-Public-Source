@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.fence_fancy",
+				"identifier": "geometry.vc.fence_fancy",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 3,

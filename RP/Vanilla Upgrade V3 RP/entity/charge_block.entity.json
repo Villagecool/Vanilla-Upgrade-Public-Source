@@ -11,7 +11,7 @@
         "default": "textures/entity/creeper/creeper_armor"
       },
       "geometry": {
-        "default": "geometry.block_charged"
+        "default": "geometry.vc.block_charged"
       },
       "render_controllers": [
         "controller.render.charge"

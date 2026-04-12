@@ -21,7 +21,7 @@
 			"tag:minecraft:is_axe_item_destructible": {},
 			"tag:carnavore": {},
 			"minecraft:loot": "loot_tables/blocks/chorus_carnavorus_plant.json",
-			"minecraft:geometry": "geometry.carnavore_plant",
+			"minecraft:geometry": "geometry.vc.carnavore_plant",
 			"vc:chorus_check_players": {},
 			"minecraft:tick": {
 				"interval_range": [
@@ -55,7 +55,7 @@
 						"seconds_to_destroy": 2
 					},
 					"minecraft:loot": "loot_tables/empty.json",
-					"minecraft:geometry": "geometry.carnavore_plant_stalk",
+					"minecraft:geometry": "geometry.vc.carnavore_plant_stalk",
 					"minecraft:collision_box": {
 						"origin": [
 							-5,
